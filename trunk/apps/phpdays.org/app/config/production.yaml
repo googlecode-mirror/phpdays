@@ -1,0 +1,29 @@
+# CONFIGURATION FOR REAL WORKING APPLICATION
+
+# component name
+db:
+  # schema name
+  default:
+    adapter: mysql
+    host: localhost
+    username: root
+    password: 123321
+    dbname: phpdays
+engine:
+  # collect debug info (1 - enable, 0 - disable)
+  debug: 0
+  # name of you brand (prefix for model classes)
+  brand: phpdays
+log:
+  # show debug info into: firephp, file, sqlite
+  type: file
+  # show errors only with specified levels (levels joided by "bytes or")
+  level: 31
+url:
+  lang: ru
+  ext: html
+view:
+  engine: smarty
+cache:
+  # cache data on this time (in seconds)
+  lifetime: 0
