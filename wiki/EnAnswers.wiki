@@ -1,0 +1,8 @@
+#summary Answers on your questions.
+#labels Lang-En
+
+On this page will publish frequently asked questions and their answers.
+
+=== How to ask a question? ===
+
+To ask a question, you should write a comment at the bottom of this page.
