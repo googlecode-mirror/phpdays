@@ -6,3 +6,5 @@ On this page will publish frequently asked questions and their answers.
 === How to ask a question? ===
 
 To ask a question, you should write a comment at the bottom of this page.
+
+Also you can ask questions in our project [http://groups.google.com/group/phpdays Support Group].
