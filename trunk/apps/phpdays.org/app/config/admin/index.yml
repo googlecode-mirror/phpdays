@@ -1,0 +1,5 @@
+acl:
+  # deny access for all users
+  deny: *
+  # allow access only for users from specified groups
+  allow: [admin]
