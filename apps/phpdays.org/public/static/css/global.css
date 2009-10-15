@@ -1,0 +1,271 @@
+@CHARSET "UTF-8";
+
+/**
+ * Global styles.
+ */
+body {
+  font-family: Arial,sans-serif;
+  font-size: 12px;
+  margin: 20px;
+  text-align: left;
+}
+img {
+  border: none;
+}
+form {
+  border-width: 0px;
+  margin: 0px;
+  padding: 0px;
+}
+.clear {
+  clear: both;
+}
+/** Links */
+a {
+  color: #186adb;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+a.selected {
+  background-color: #f8facb;
+  padding: 0 5pt 0 5pt;
+}
+a.selected:hover {
+  text-decoration: none;
+}
+/** Info messages */
+p.alert {
+  padding: 5px;
+  color: black;
+  font-size: 10px;
+}
+p.alert.success {
+  border: solid 1px #0dbc00;
+  background-color: #81ff77;
+}
+p.alert.info {
+  border: solid 1px #ffbc2b;
+  background-color: #ffd988;
+}
+p.alert.error {
+  border: solid 1px #ff381e;
+  background-color: #ff9a8d;
+}
+/** Changed data highlight */
+.changed {
+  background-color: #f8facb;
+}
+
+
+/** Rounded corners */
+a.rounded, .button {
+  outline: none;
+  border: none;
+  text-decoration: none;
+  cursor: pointer;
+  white-space: nowrap;
+  vertical-align: middle;
+  display: -moz-inline-box;
+  display: inline-block;
+  overflow: visible; /* IE6 form button fix */
+}
+/** Color for backgrounds */
+.bg {
+  background-color: #b3b3b3;
+  padding: 10px;
+}
+/** Border */
+.border {
+  border: solid 1px #b3b3b3;
+  padding: 10px;
+}
+
+
+/**
+ * Page main content.
+ */
+#content {
+  margin-left: 250px;
+  padding: 0 10px 10px 10px;
+  min-height: 700px;
+}
+
+
+/**
+ * Page header titles.
+ */
+#content h1 {
+  font-size: 18px;
+  font-weight: normal;
+  margin: 0 0 10px 0;
+  color: #676767;
+}
+#content h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0 0 10px 10px;
+  padding: 3px 7px;
+  color: #676767;
+  background-color: #D1DCE3;
+}
+
+
+/**
+ * Article short information (author, date, statistic).
+ */
+#content p.about {
+  float: right;
+  width: 280px;
+  padding: 10px;
+  margin: 0 0 10px 10px;
+  font-size: 11px;
+}
+
+
+/**
+ * Article comments.
+ */
+#content>p.comment {
+  padding: 0;
+  margin: 0 0 5px 0;
+  font-size: 11px;
+}
+#content>p.comment>i {
+  display: block;
+  padding: 5px 10px 5px 10px;
+}
+#content>p.comment>b {
+  display: block;
+  padding: 5px 10px 5px 10px;
+  color: #676767;
+}
+/** Comment levels */
+#content>p.comment.level2 {
+  margin-left: 30px;
+}
+#content>p.comment.level3 {
+  margin-left: 60px;
+}
+#content>p.comment.level4 {
+  margin-left: 90px;
+}
+#content>p.comment.level5 {
+  margin-left: 120px;
+}
+
+
+/**
+ * Left side column (logo, menu, adv).
+ */
+#left {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  width: 230px;
+}
+
+
+/**
+ * Block: left side blocks.
+ */
+#left>p {
+  padding: 10px;
+}
+
+
+/**
+ * Block: language selection.
+ */
+#left>.language {
+  font-size: 10px;
+  padding: 0 0 0 10px;
+  margin-bottom: 5px;
+}
+#left>.language>a {
+  font-size: 10px;
+}
+
+
+/**
+ * Block: site logotype.
+ */
+#left>.logo {
+  height: 80px;
+  text-align: center;
+  font-size: 11px;
+}
+#left>.logo>a {
+  display: block;
+  text-align: center;
+  font-size: 32px;
+  font-weight: bold;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+
+/**
+ * Block: user info.
+ */
+#left>.user {
+}
+
+
+/**
+ * Page footer.
+ */
+#footer {
+  padding: 10px;
+  color: #676767;
+  height: 50px;
+}
+#footer>p.copyright {
+  width: 250px;
+  float: left;
+}
+#footer>p.responsibility {
+  width: 200px;
+  float: left;
+}
+#footer>p.counters {
+  float: right;
+  margin-top: 10px;
+}
+
+/**
+ * Blocks.
+ */
+.block_dev_toolbar {
+}
+.block_dev_toolbar>a {
+  margin-right: 5px;
+  font-size: 120%;
+  font-weight: bold;
+}
+.block_dev_toolbar>a:hover {
+  text-decoration: none;
+  background-color: #f8facb;
+}
+
+.bug_list {
+  height: 200px;
+  overflow: auto;
+}
+.bug_list>table {
+  width: 100%;
+}
+.bug_list>table td,
+.bug_list>table th {
+  border: none;
+}
+.bug_list>table td {
+  border-bottom: dashed 1px gray;
+}
+.bug_list>table th.bug_checkbox {
+  width: 20px;
+}
+.bug_list>table th.bug_component {
+  width: 100px;
+}
