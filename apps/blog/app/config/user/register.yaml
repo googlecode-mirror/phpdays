@@ -1,0 +1,19 @@
+form:
+  default:
+    _settings:
+      # send method: post, ajax
+      method: ajax
+    # field name
+    username:
+      type: text
+      required: 1
+      label: User name
+      value: email adress
+      format: {len:"10-20"}
+    age:
+      type: select
+      required: 1
+      label: Age
+      value: 20
+      values: 
+      format: {len:"10-20"}

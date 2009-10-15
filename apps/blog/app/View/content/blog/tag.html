@@ -1,0 +1,21 @@
+{foreach from=$blog_items item='item'}
+<div class="post">
+	<div class="title">
+		<a href="/blog/item/?item={$item->id}">{$item->title}</a>
+	</div>
+	<div class="author">posted on {$item->date_create|date_format}</div>
+
+	<div class="content">
+		<p>{$item->description}</p>
+	</div>
+
+	<div class="nav">
+		<b>Tags:</b>
+		{foreach from=$item->tag item='tag'}
+		<a href="/blog/tag/{$tag->material}">{$tag->material}</a>,
+		{/foreach}
+		<br/>
+		<a href="/blog/item/?item={$item->id}">Read more</a> | Last updated on {$item->date_change|date_format}
+	</div>
+</div>
+{/foreach}
