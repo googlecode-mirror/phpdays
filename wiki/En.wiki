@@ -5,7 +5,7 @@
 
 === Start now ===
 
- * [EnAbout About] project _(features, requirements)_
+ * [EnAbout About] project _(features)_
  * [EnChangelog Changelog] _(changes in project versions)_
  * [EnInstall Install] framework on you server and configure new project
  * [EnUpgrade Upgrade] application from prevoius version
