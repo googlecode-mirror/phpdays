@@ -1,4 +1,5 @@
 #summary Install framework and create new project.
+#sidebar En
 
 === Download ===
 
