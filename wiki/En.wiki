@@ -11,7 +11,7 @@
  * [EnUpgrade Upgrade] application from prevoius version
  * [EnStart QuickStart] help you create first application
  * [EnAnswers Answers] on you questions
- * [http://code.google.com/p/phpdays/w/list?q=label:Lang-En All pages] on english language
+ * [http://code.google.com/p/phpdays/w/list?q=label:Lang-En All pages] in English
 
 === Every day use ===
 
