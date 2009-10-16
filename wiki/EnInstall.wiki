@@ -15,7 +15,7 @@ On you server _(local and real)_ shoul installed:
 
  * unzip the archive
  * upload directory `lib` to your server _(we recommend place directory not in `document_root` directory, for example to `/var/lib`)_
- * configure Apache server for use `/var/www` as `document_root`
+ * configure Apache server for use `/var/www` _(in Linux)_ or `D:/server/www` _(in Windows)_ as `document_root`
 
 === Create new application ===
 
