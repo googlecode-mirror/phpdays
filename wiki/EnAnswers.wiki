@@ -1,5 +1,6 @@
 #summary Answers on your questions.
 #labels Lang-En
+#sidebar En
 
 On this page will publish frequently asked questions and their answers.
 
@@ -8,3 +9,7 @@ On this page will publish frequently asked questions and their answers.
 To ask a question, you should write a comment at the bottom of this page.
 
 Also you can ask questions in our project [http://groups.google.com/group/phpdays Support Group].
+
+=== Online chat ===
+
+<wiki:gadget url="http://etatus.googlepages.com/webmessages_global.xml" width="450" height="270" border="0" /> 
