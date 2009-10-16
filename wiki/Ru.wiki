@@ -15,7 +15,7 @@
 
 === Ежедневное использование ===
 
- * [RuMvc MVC] describes about MVC patterns
+ * [RuMvc MVC] _(Model View Controller - основа phpDays)_
  * [RuLib Библиотека] классов _(описание существующих классов)_
 
 === Для участников проекта _(разработчиков)_ ===
