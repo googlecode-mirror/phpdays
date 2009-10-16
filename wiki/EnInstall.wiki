@@ -58,5 +58,10 @@ Days_Engine::run('/var/www/myblog/app/', 'development');
    * `engine/brand`: name of you application `Myblog` _(capitalize first letter)_
    * `url/base`: path prefix after host name `myblog`
    * `view/engine`: template engine. We recommend use `smarty` or `templum`
+ * replace prefix `App` to `Myblog` in classes in directory `/var/www/myblog/app/Controller`
 
 Save files and open you application by url [http://localhost/myblog].
+
+=== Troubleshooting ===
+
+If start page not shown - please open [http://mozilla-europe.org/firefox Firefox] browser, install [http://getfirebug.com/ FireBug] and [http://www.firephp.org/ FirePHP] extensions. After this press F12 for open FireBug and open [http://localhost/myblog your site]. On tab "Console" see bug messages.
