@@ -65,3 +65,7 @@ Save files and open you application by url [http://localhost/myblog].
 === Troubleshooting ===
 
 If start page not shown - please open [http://mozilla-europe.org/firefox Firefox] browser, install [http://getfirebug.com/ FireBug] and [http://www.firephp.org/ FirePHP] extensions. After this press F12 for open FireBug and open [http://localhost/myblog your site]. On tab "Console" see bug messages.
+
+=== Use many projects ===
+
+One copy of framework used for many projects. Now we see all available projects by adress [http://localhost].
