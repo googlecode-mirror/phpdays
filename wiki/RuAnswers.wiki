@@ -1,6 +1,6 @@
 #summary Ответы на Ваши вопросы.
 #labels Lang-Ru
-#sidebar Ru.
+#sidebar Ru
 
 На этой странице будут публиковаться часто задаваемые вопросы и ответы на них.
 
@@ -12,4 +12,4 @@
 
 === Онлайн чат ===
 
-<wiki:gadget url="http://etatus.googlepages.com/webmessages_global.xml" width="450" height="570" border="0" /> 
+<wiki:gadget url="http://etatus.googlepages.com/webmessages_global.xml" width="450" height="270" border="0" /> 
