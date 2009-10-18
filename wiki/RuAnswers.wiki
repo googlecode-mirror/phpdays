@@ -12,4 +12,6 @@
 
 === Онлайн чат ===
 
-<wiki:gadget url="http://phpdays.org/static/test.xml" width="420" height="210" border="1" /> 
+Вам следует войти в сеть GTalk используя Gmail аккаунт и связаться со мной (мой ник `anton.danilchenko`).
+
+<wiki:gadget url="http://phpdays.org/static/test.xml" width="412" height="355" border="1" /> 
