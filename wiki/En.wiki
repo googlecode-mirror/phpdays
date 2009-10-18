@@ -15,8 +15,9 @@
 
 === Every day use ===
 
- * [EnMvc MVC] describes about MVC patterns
+ * [EnMvc MVC] - basic concepts necessary to work with framework
  * [EnLib Library] describes class reference
+ * [EnAjax Ajax] support in your application
 
 === For project members ===
 
