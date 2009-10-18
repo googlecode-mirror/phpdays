@@ -3,19 +3,19 @@
 
 === Ядро системы ===
 
- * MVC ([RuLibDaysModel Model], [RuLibDaysView View], [RuLibDaysController Controller] - Модель, Представление, Контроллер) - базовые понятия необходимые для работы с фреймворком
+ * MVC ([RuLibDaysModel Days_Model], [RuLibDaysView Days_View], [RuLibDaysController Days_Controller] - Модель, Представление, Контроллер) - базовые понятия необходимые для работы с фреймворком
  * [RuLibDaysConfig Days_Config] - работа с конфигурацией сайта
  * [RuLibDaysDb Days_Db] - работа с базой данных
  * [RuLibDaysDbTable Days_Db_Table] - реализация ORM представления таблиц базы данных
- * [RuLibDaysEngine Engine] - стартовая точка входа
- * [RuLibDaysLog Log] - протоколирование ошибок и отладочной информации
- * [RuLibDaysRequest Request] - запрос от браузера пользователя
- * [RuLibDaysResponse Response] - ответ браузеру пользователя
- * [RuLibDaysUrl Url] - работа с адресной строкой
+ * [RuLibDaysEngine Days_Engine] - стартовая точка входа
+ * [RuLibDaysLog Days_Log] - протоколирование ошибок и отладочной информации
+ * [RuLibDaysRequest Days_Request] - запрос от браузера пользователя
+ * [RuLibDaysResponse Days_Response] - ответ браузеру пользователя
+ * [RuLibDaysUrl Days_Url] - работа с адресной строкой
 
 === В стадии разработки ===
 
- * [RuLibDaysAcl Acl] _(Aceess Control List - список прав доступа)_ - разграничение прав доступа к разделам сайта
- * [RuLibDaysFilter Filter] - фильтрация данных, приходящих от пользователя _(так же известен как валидация или проверка данных)_
- * [RuLibDaysForm Form] - обработка данных, приходящих из html форм
- * [RuLibDaysUser User] - работа с пользователем _(авторизация, аутентификация, завершение сессии)_
+ * [RuLibDaysAcl Days_Acl] _(Aceess Control List - список прав доступа)_ - разграничение прав доступа к разделам сайта
+ * [RuLibDaysFilter Days_Filter] - фильтрация данных, приходящих от пользователя _(так же известен как валидация или проверка данных)_
+ * [RuLibDaysForm Days_Form] - обработка данных, приходящих из html форм
+ * [RuLibDaysUser Days_User] - работа с пользователем _(авторизация, аутентификация, завершение сессии)_
