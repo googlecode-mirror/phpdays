@@ -1,13 +1,13 @@
-#summary Install framework and create new project.
+#summary Install the framework and create a new project.
 #sidebar En
 
 === Download ===
 
-Go to [http://code.google.com/p/phpdays/downloads/list download page] and select last stable version _(alpha, beta, RC - is not stable!)_
+Go to the [http://code.google.com/p/phpdays/downloads/list download page] and select the latest stable version _(alpha, beta, RC - are not stable!)_
 
 === Check requirements ===
 
-On you server _(local and real)_ shoul installed:
+On your server _(local and real)_ should be installed:
  * *Apache* server
  * *PHP* 5.2.6 or newer with modules: php5-mysql, php5-sqlite, pdo, pdo-mysql, pdo-sqlite _(also recommend: php5-syck, php5-curl, php5-xdebug, php-apc, php5-memcache)_
  * *Database* server _(supported MySQL, MSSQL, Postgres, Oracle, SQLite)_
