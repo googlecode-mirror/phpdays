@@ -1,5 +1,6 @@
 #summary Ajax в Вашем приложении.
 #labels Lang-Ru
+#sidebar Ru
 
 === Работа с !JavaScript библиотеками ===
 
