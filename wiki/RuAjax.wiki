@@ -1,7 +1,7 @@
 #summary Ajax в Вашем приложении.
 #labels Lang-Ru
 
-=== Работа с JavaScript библиотеками ===
+=== Работа с !JavaScript библиотеками ===
 
 Мы рекомендуем применять [http://jquery.com jQuery] - простую и понятную JS библиотеку.
 
