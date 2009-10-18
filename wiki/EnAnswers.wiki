@@ -14,4 +14,4 @@ Also you can ask questions in our project [http://groups.google.com/group/phpday
 
 You must log in to GTalk network using the Gmail account and contact me (my nic `anton.danilchenko`).
 
-<wiki:gadget url="http://phpdays.org/static/test.xml" width="412" height="355" border="1" /> 
+<wiki:gadget url="http://phpdays.org/static/test.xml" width="412" height="355" border="0" /> 
