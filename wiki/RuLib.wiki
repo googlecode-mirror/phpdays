@@ -1,0 +1,21 @@
+#summary Библиотека классов phpDays.
+#labels Lang-Ru
+
+=== Ядро системы ===
+
+ * MVC ([RuLibDaysModel Model], [RuLibDaysView View], [RuLibDaysController Controller] - Модель, Представление, Контроллер) - базовые понятия необходимые для работы с фреймворком
+ * [RuLibDaysConfig Days_Config] - работа с конфигурацией сайта
+ * [RuLibDaysDb Days_Db] - работа с базой данных
+ * [RuLibDaysDbTable Days_Db_Table] - реализация ORM представления таблиц базы данных
+ * [RuLibDaysEngine Engine] - стартовая точка входа
+ * [RuLibDaysLog Log] - протоколирование ошибок и отладочной информации
+ * [RuLibDaysRequest Request] - запрос от браузера пользователя
+ * [RuLibDaysResponse Response] - ответ браузеру пользователя
+ * [RuLibDaysUrl Url] - работа с адресной строкой
+
+=== В стадии разработки ===
+
+ * [RuLibDaysAcl Acl] _(Aceess Control List - список прав доступа)_ - разграничение прав доступа к разделам сайта
+ * [RuLibDaysFilter Filter] - фильтрация данных, приходящих от пользователя _(так же известен как валидация или проверка данных)_
+ * [RuLibDaysForm Form] - обработка данных, приходящих из html форм
+ * [RuLibDaysUser User] - работа с пользователем _(авторизация, аутентификация, завершение сессии)_
