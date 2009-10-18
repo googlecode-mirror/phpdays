@@ -12,4 +12,6 @@ Also you can ask questions in our project [http://groups.google.com/group/phpday
 
 === Online chat ===
 
-<wiki:gadget url="http://etatus.googlepages.com/webmessages_global.xml" width="450" height="270" border="0" /> 
+You must log in to GTalk network using the Gmail account and contact me (my nic `anton.danilchenko`).
+
+<wiki:gadget url="http://phpdays.org/static/test.xml" width="412" height="355" border="1" /> 
