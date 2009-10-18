@@ -1,5 +1,6 @@
 #summary Библиотека классов phpDays.
 #labels Lang-Ru
+#sidebar Ru
 
 === Ядро системы ===
 
