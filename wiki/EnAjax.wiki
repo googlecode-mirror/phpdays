@@ -1,5 +1,6 @@
 #summary Ajax in your application.
 #labels Lang-En
+#sidebar En
 
 === Using !JavaScript libraries ===
 
