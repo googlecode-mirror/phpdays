@@ -1,5 +1,6 @@
 #summary phpDays library.
 #labels Lang-En
+#sidebar En
 
 === System engine ===
 
