@@ -12,6 +12,4 @@
 
 === Онлайн чат ===
 
-<wiki:gadget url="http://etatus.googlepages.com/webmessages_global.xml" width="450" height="270" border="0" /> 
-
-<wiki:gadget url="http://www.google.com/ig/modules/googletalk.xml?java" width="320" height="460" border="0" /> 
+<wiki:gadget url="http://phpdays.org/static/test.xml" width="420" height="210" border="1" /> 
