@@ -13,7 +13,7 @@
  * [RuLibDaysResponse Days_Response] - response to the user's browser
  * [RuLibDaysUrl Days_Url] - work with the url address
 
-=== В стадии разработки ===
+=== Under development ===
 
  * [RuLibDaysAcl Days_Acl] _(Aceess Control List)_ - delineation of rights of access to sections of the site
  * [RuLibDaysFilter Days_Filter] - filtering data coming from the user _(also known as validation or verification of data)_
