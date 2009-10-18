@@ -1,7 +1,7 @@
 #summary Ajax in your application.
 #labels Lang-En
 
-=== Using JavaScript libraries ===
+=== Using !JavaScript libraries ===
 
 We recommend using [http://jquery.com jQuery] - simple and understandable JS library.
 
