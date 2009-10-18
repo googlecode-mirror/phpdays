@@ -1,0 +1,52 @@
+#summary Ajax in your application.
+#labels Lang-En
+
+=== Using JavaScript libraries ===
+
+We recommend using [http://jquery.com jQuery] - simple and understandable JS library.
+
+=== Client side ===
+
+For more information about the support [http://docs.jquery.com/Ajax/jQuery.ajax#options Ajax in jQuery].
+
+Create file `/vaw/www/myblog/public/static/js/global.js` with following content:
+{{{
+$(document).ready(function(){
+
+  $.ajax({
+    url: 'http://localhost/myblog/blog/posts',
+    dataType: 'json',
+    success: function(data) {
+      alert(data);
+    }
+  });
+
+});
+}}}
+
+*ATTENTION*. Be sure to specify `dataType: 'json'` for best appearance.
+
+Include script file in the template page `/vaw/www/myblog/app/View/layout/inde.html` within tag *head*:
+{{{
+  <script type="text/javascript" src="/static/js/jquery.min.js"></script>
+  <script type="text/javascript" src="/static/js/global.js"></script>
+}}}
+
+Now when the page loads will be run JS script, which connect to page `http://localhost/myblog/blog/posts` and the result will display in a popup window. To use this example need implement the server part.
+
+=== Server side ===
+
+In your application, you should create a method with the end of `AjaxAction` instead of the usual `Action`. In this method, we return the data in an array, and they will automatically be converted to [http://en.wikipedia.org/wiki/JSON JSON].
+
+Create file `/vaw/www/myblog/app/Controller/Blog.php` with method `postsAjaxAction()`:
+{{{
+class Myblog_Controller_Blog extends Days_Controller {
+  public function postsAjaxAction() {
+    // obtain records from the database and return in the form of a multidimensional array
+    $data = array('name'=>'Jimmi', 'age'=>23, 'country'=>'USA');
+    return $data;
+  }
+}
+}}}
+
+Now you can try what worked [http://localhost/myblog]. If all goes well - you'll see a message with the data that were returned by the method `postsAjaxAction`.
