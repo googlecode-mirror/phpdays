@@ -7,7 +7,7 @@
  * MVC ([RuLibDaysModel Days_Model], [RuLibDaysView Days_View], [RuLibDaysController Days_Controller]) - basic concepts necessary to work with framework
  * [RuLibDaysConfig Days_Config] - work with the configuration of the site
  * [RuLibDaysDb Days_Db] - work with database
- * [RuLibDaysDbTable Days_Db_Table] - implementation ORM representation of database tables
+ * [EnLibDaysDbTable Days_Db_Table] - implementation ORM representation of database tables
  * [RuLibDaysEngine Days_Engine] - starting point of entry
  * [RuLibDaysLog Days_Log] - logging errors and debugging information
  * [RuLibDaysRequest Days_Request] - request from the user's browser
