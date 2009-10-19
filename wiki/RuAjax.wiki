@@ -25,7 +25,7 @@ $(document).ready(function(){
 });
 }}}
 
-*ВНИМАНИЕ*. Обязательно указывайте `dataType: 'json'` для корректного отображения данных.
+*ВНИМАНИЕ* Обязательно указывайте `dataType: 'json'` для корректного отображения данных.
 
 Подключим файл скрипта в шаблон страницы `/vaw/www/myblog/app/View/layout/inde.html` в рамках тега *head*:
 {{{
@@ -37,15 +37,18 @@ $(document).ready(function(){
 
 === Серверная часть ===
 
-В вашем приложении следует создать метод с окончанием `AjaxAction` вместо привычного `Action`. В этом методе мы возвращаем данные в виде массива, и они будут автоматически преобразованы в формат [http://ru.wikipedia.org/wiki/JSON JSON].
+В вашем приложении следует создать метод с окончанием `AjaxAction` вместо привычного `Action`. В этом методе мы возвращаем данные, которые будут отправлены клиенту.
+
+*ВНИМАНИЕ* Для отправки данных в формате [http://ru.wikipedia.org/wiki/JSON JSON] Вам следует подготовить результирующий массив массив и преобразовать его в формат JSON при помощи функции [http://ua2.php.net/json_encode json_encode()].
 
 Создадим файл `/vaw/www/myblog/app/Controller/Blog.php` с методом `postsAjaxAction()`:
 {{{
 class Myblog_Controller_Blog extends Days_Controller {
+  /** Возвращает данные в формате JSON */
   public function postsAjaxAction() {
     // получаем записи из базы данных и возвращаем в виде многомерного массива
     $data = array('name'=>'Jimmi', 'age'=>23, 'country'=>'USA');
-    return $data;
+    return json_encode($data);
   }
 }
 }}}
