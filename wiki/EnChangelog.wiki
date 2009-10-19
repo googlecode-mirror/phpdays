@@ -1,0 +1,15 @@
+#summary List of changes in versions.
+#labels Lang-En
+#sidebar En
+
+== List of changes in version 1.1 ==
+
+=== 1.1 beta1 ^(18 October 2009)^ ===
+
+ * _a list of changes will be available later_
+
+=== Archive versions ===
+
+Select the appropriate version of the framework, to see a list of changes.
+
+ * [EnChangelog1_0 1.0]
