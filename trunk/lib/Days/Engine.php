@@ -160,7 +160,7 @@ final class Days_Engine {
             if (Days_Request::isAjax()) {
                 if (is_null($actionResult))
                     $actionResult = array();
-                $content = json_encode($actionResult);
+                $content = $actionResult;
             }
             // render content
             else {
