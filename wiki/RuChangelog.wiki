@@ -6,7 +6,7 @@
 
 === 1.1 beta2 ===
 
- * r59 *engine* Delete auto-conversion all Ajax data to JSON
+ * r59 *engine* Удалено автоматическое преобразование данных в формат JSON для Ajax запросов
 
 === 1.1 beta1 ^(18 октября 2009)^ ===
 
