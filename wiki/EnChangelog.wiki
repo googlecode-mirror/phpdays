@@ -4,6 +4,10 @@
 
 == List of changes in version 1.1 ==
 
+=== 1.1 beta2 ===
+
+ * r59 *engine* Delete auto-conversion all Ajax data to JSON
+
 === 1.1 beta1 ^(18 October 2009)^ ===
 
  * _a list of changes will be available later_
