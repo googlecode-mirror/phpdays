@@ -4,13 +4,13 @@
 
 === Using !JavaScript libraries ===
 
-We recommend using [http://jquery.com jQuery] - simple and understandable JS library.
+We recommend using [http://jquery.com jQuery] - a simple and easy to understand JS library.
 
 === Client side ===
 
-For more information about the support [http://docs.jquery.com/Ajax/jQuery.ajax#options Ajax in jQuery].
+For more information see [http://docs.jquery.com/Ajax/jQuery.ajax#options Ajax in jQuery].
 
-Create file `/vaw/www/myblog/public/static/js/global.js` with following content:
+Create a new file named `/vaw/www/myblog/public/static/js/global.js` with the following content:
 {{{
 $(document).ready(function(){
 
@@ -27,21 +27,22 @@ $(document).ready(function(){
 
 *ATTENTION* Be sure to specify `dataType: 'json'` for best appearance.
 
-Include script file in the template page `/vaw/www/myblog/app/View/layout/inde.html` within tag *head*:
+Include the script file in the template page `/vaw/www/myblog/app/View/layout/inde.html` within the *head* tag:
 {{{
   <script type="text/javascript" src="/static/js/jquery.min.js"></script>
   <script type="text/javascript" src="/static/js/global.js"></script>
 }}}
 
-Now when the page loads will be run JS script, which connect to page `http://localhost/myblog/blog/posts` and the result will display in a popup window. To use this example need implement the server part.
+Now when the page loads, our JS script will connect to the `http://localhost/myblog/blog/posts` page and the result will be displayed in a popup window. To use this example you have to implement the server side part.
 
 === Server side ===
 
-In your application, you should create a method with the end of `AjaxAction` instead of the usual `Action`. In this method, we return the data and this data send as response.
+In your application, you should create a method with a name ending with `AjaxAction` instead of the usual `Action`. From this method, we return data that will be sent to the
+ client as a response.
 
-*ATTENTION* If you have send data in [http://en.wikipedia.org/wiki/JSON JSON] format, than prepare the result array and convert array to JSON using function [http://php.net/json_encode json_encode()].
+*ATTENTION* To send data in the [http://en.wikipedia.org/wiki/JSON JSON] format, the result must be created as an array and then converted to JSON using the [http://php.net/json_encode json_encode()] function.
 
-Create file `/vaw/www/myblog/app/Controller/Blog.php` with method `postsAjaxAction()`:
+Create a new file named `/vaw/www/myblog/app/Controller/Blog.php` with a `postsAjaxAction()` method:
 {{{
 class Myblog_Controller_Blog extends Days_Controller {
   /** Return data in JSON */
@@ -53,4 +54,4 @@ class Myblog_Controller_Blog extends Days_Controller {
 }
 }}}
 
-Now you can try what worked [http://localhost/myblog]. If all goes well - you'll see a message with the data that were returned by the method `postsAjaxAction`.
+Now you can try to call [http://localhost/myblog] to see that it works. If all goes well - you'll see a message with the data that were returned by the method `postsAjaxAction`.
