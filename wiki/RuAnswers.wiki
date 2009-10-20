@@ -14,4 +14,4 @@
 
 Вам следует войти в сеть GTalk используя Gmail аккаунт и связаться со мной (мой ник `anton.danilchenko`).
 
-<wiki:gadget url="http://phpdays.org/static/test.xml" width="412" height="355" border="0" /> 
+<wiki:gadget url="http://phpdays.org/static/gtalk-ru.xml" height="25" border="1" />
