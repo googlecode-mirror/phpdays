@@ -1,0 +1,28 @@
+#summary Стиль кодирования.
+#labels Lang-Ru
+#sidebar Ru
+
+Для участия в проекте phpDays Вам следует придерживаться единого стиля кодирования _(синтаксис для php, html, css, js и yaml файлов)_.
+
+=== Общие правила ===
+
+ * рекомендуем применять среду разработки IDE [http://netbeans.org/ NetBeans] _(однако можно применять и другую, например [http://eclipse.org/pdt/ Eclipse PDT])_
+ * сохраняйте все файлы в кодировке *UTF-8*
+ * переводы строк должны быть в UNIX формате
+ * настроить IDE для автоматического удаления лишних пробелов в конце строк _(trailing spaces)_
+ * настроить IDE для автоматической замены табуляции на 4 пробела в php файлах и 2 пробела во всех остальных _(в том числе html, css, js, yaml файлах)_
+
+=== Правила работы с php файлами ===
+
+ * [http://cvs.php.net/viewvc.cgi/php-src/CODING_STANDARDS?view=markup php coding standarts]
+ * [http://framework.zend.com/manual/ru/coding-standard.html стандарт кодирования в Zend Framework]
+ * [http://dev.kohanaphp.com/wiki/CodingStyle стандарт кодирования в Kohana framework]
+ * [http://pear.php.net/manual/ru/standards.php стандарты кодирования PEAR]
+ * [http://en.wikipedia.org/wiki/PHPDoc написание комментариев в стиле phpDoc]
+
+Информация о безопасности:
+
+ * [http://ru.wikipedia.org/wiki/SQL-инъекция SQL-инъекция]
+ * [http://ru.wikipedia.org/wiki/Межсайтовый_скриптинг межсайтовый скриптинг XSS]
+ * [http://ru.wikipedia.org/wiki/PHP-инъекция PHP-инъекция]
+ * [http://ru.wikipedia.org/wiki/Подделка_межсайтовых_запросов подделка межсайтовых запросов]
