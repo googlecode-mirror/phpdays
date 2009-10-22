@@ -1,0 +1,28 @@
+#summary Coding style.
+#labels Lang-En
+#sidebar En
+
+To participate in the project phpDays you should follow the same coding style _(syntax for php, html, css, js and yaml files)_.
+
+=== General rules ===
+
+ * recommend a development environment IDE [http://netbeans.org/ NetBeans] _(but can be used and other such as [http://eclipse.org/pdt/ Eclipse PDT])_
+ * keep all the files in *UTF-8* encoding
+ * newlines must be in UNIX format
+ * configure the IDE to automatically remove extra spaces at the end of lines _(trailing spaces)_
+ * configure the IDE to automatically replace tabs by 4 spaces in php files and 2 spaces in all other _(including html, css, js and yaml files)_
+
+=== Rules for work with php files ===
+
+ * [http://cvs.php.net/viewvc.cgi/php-src/CODING_STANDARDS?view=markup php coding standarts]
+ * [http://framework.zend.com/manual/ru/coding-standard.html coding standard in Zend Framework]
+ * [http://dev.kohanaphp.com/wiki/CodingStyle coding standard in the Kohana framework]
+ * [http://pear.php.net/manual/ru/standards.php PEAR Coding Standards]
+ * [http://en.wikipedia.org/wiki/PHPDoc writing comments in phpDoc style]
+
+Safety Information:
+
+ * [http://en.wikipedia.org/wiki/SQL_injection SQL injection]
+ * [http://en.wikipedia.org/wiki/Cross-site_scripting cross-site scripting]
+ * [http://en.wikipedia.org/wiki/Remote_File_Inclusion Remote File Inclusion]
+ * [http://en.wikipedia.org/wiki/Cross-site_request_forgery cross-site request forgery]
