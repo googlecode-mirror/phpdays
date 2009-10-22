@@ -1,0 +1,19 @@
+#summary About phpDays.
+#labels Lang-En
+#sidebar En
+
+With *phpDays* You will be able to speed up and simplify the process of creating a Web site. This site will be easier to maintain and refine.
+
+=== phpDays features ===
+
+ * phpDays built on the basis [EnMvc MVC]
+ * has full support [EnLibDaysDbTable ORM] _(write SQL queries do not need)_
+ * work with the database can be through a [EnLibDaysDb abstraction layer] _(written SQL queries)_
+ * phpDays all settings are set in the [EnLibDaysConfig configuration file] in   [http://ru.wikipedia.org/wiki/YAML YAML] format
+ * classes are loaded automatically _(forget about `include()` and `require()`)_
+ * full support of all written languages _(including Russian)_ through the use of *UTF-8* encoding
+ * full support of [EnAjax AJAX] _(recommend using [http://jquery.com jQuery])_
+ * [EnDaysLog show errors] according to your wishes _(supported output in [http://firephp.org FirePHP], in browser, in simple file, and even in SQLite)_
+ * print information about the applications execution _(executed SQL queries, names of the executed methods)_
+ * convenient class hierarchy _(like used in Zend Framework)_
+ * _and something else_
