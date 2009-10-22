@@ -18,6 +18,7 @@
  * [EnMvc MVC] - basic concepts necessary to work with framework
  * [EnLib Library] describes class reference
  * [EnAjax Ajax] support in your application
+ * [RuMiltisite Miltisite] - create sub-site as site service
 
 === For project members ===
 
