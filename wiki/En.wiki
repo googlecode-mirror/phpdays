@@ -1,26 +1,26 @@
 #summary English start page.
 #labels Featured,Lang-En
 
-*phpDays* - flexible php5 framework based on MVC and ORM patterns.
+*phpDays* - flexible php5 framework based on the MVC and ORM patterns.
 
 === Start now ===
 
- * [EnAbout About] project _(features)_
- * [EnChangelog Changelog] _(changes in project versions)_
- * [EnInstall Install] framework on you server and configure new project
- * [EnUpgrade Upgrade] application from prevoius version
- * [EnStart QuickStart] help you create first application
- * [EnAnswers Answers] on you questions
+ * [EnAbout About] the project _(features)_
+ * [EnChangelog Changelog] _(changes between project versions)_
+ * [EnInstall Install] the framework on your server and then configure a new project
+ * [EnUpgrade Upgrade] an application from a previous version
+ * [EnStart QuickStart] to get your first application up and running
+ * [EnAnswers Answers] to your questions
  * [http://code.google.com/p/phpdays/w/list?q=label:Lang-En All pages] in English
 
 === Every day use ===
 
- * [EnMvc MVC] - basic concepts necessary to work with framework
- * [EnLib Library] describes class reference
- * [EnAjax Ajax] support in your application
- * [RuMiltisite Miltisite] - create sub-site as site service
+ * [EnMvc MVC] - basic concepts necessary to work with the framework
+ * [EnLib Library] class reference descriptions
+ * [EnAjax Ajax] support in your applications
+ * [EnMultisite Multisite] - Manage many sites from one framework installation
 
 === For project members ===
 
- * [EnCodingStyle Coding style] _(syntax of php, html, css, js and yaml files)_
+ * [EnCodingStyle Coding style] _(syntax standards of php, html, css, js and yaml files)_
  * [EnDoc Documentation] create _(wiki page syntax, page names, translations)_
