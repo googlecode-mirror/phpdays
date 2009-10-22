@@ -1,0 +1,14 @@
+This directory contains PHPUnit unit tests (www.phpunit.de) for the phpDays
+package.
+
+To run individual tests manually:
+
+phpunit --include-path <path_to_your_local_phpdays'_svn_repos.> <test_file>
+
+For example:
+
+phpunit --include-path ~/svn/phpdays lib/Days/ViewTest.php
+
+No test suites yet.
+
+Keep the bar green!
