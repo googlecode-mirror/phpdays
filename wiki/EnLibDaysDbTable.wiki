@@ -95,7 +95,7 @@ Is a representation of a real table, and allows you to perform operations on thi
    * `$cond` - conditions imposed on the result
      * `count` _(int)_: count of rows in result set
      * `page` _(int)_: current page number (start from 1)
-     * `columns` -(array)_: column names
+     * `columns` _(array)_: column names
      * `where` _(array)_: pairs `column=>$value` or `column_with_value`
      * `group` _(array)_: group by columns
      * `order` _(array)_: sorting by columns
