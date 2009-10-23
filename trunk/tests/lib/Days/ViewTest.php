@@ -16,6 +16,11 @@ class Days_View_Engine {
 }
 class Days_ViewTest extends PHPUnit_Framework_TestCase {
 
+    public function testNoDirectInstantiation() {
+        $class = new ReflectionClass('Days_View');
+        $this->assertFalse($class->isInstantiable());
+    }
+
     /**
      * @covers Day_View::factory
      */
