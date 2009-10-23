@@ -17,7 +17,16 @@ jQuery.fn.goocorners = function(options) {
     tr = true;
     bl = true;
     br = true;
-    style = 'display: block; height: 1px; overflow: hidden; font-size:1px; position: relative; margin: 0; padding: 0;';
+//    style = 'display: block; height: 1px; overflow: hidden; font-size:1px; position: relative; margin: 0; padding: 0;';
+    style = {
+      'display':   'block',
+      'height':    '1px',
+      'overflow':  'hidden',
+      'font-size': '1px',
+      'position':  'relative',
+      'margin':    0,
+      'padding':   0
+    }
 
     // detect browsers
     var webkit  = (document.body.style.WebkitBorderRadius !== undefined);
@@ -27,18 +36,9 @@ jQuery.fn.goocorners = function(options) {
     // add corners for each element
     return this.each(function(i, e){
         var $e = jQuery(e);
-        // change original element properties
-        var marginTop = parseInt($e.css('margin-top')) || 0;
-        var marginBottom = parseInt($e.css('margin-bottom')) || 0;
-        $e.css('margin-top', (marginTop+radius)+'px');
-        $e.css('margin-bottom', (marginBottom+radius)+'px');
-        $e.css('padding-top', '0px');
-        $e.css('padding-bottom', '0px');
-        /* @fixme: with fixed height - incorrect setted corners */
-        $e.css('height', 'auto');
         // save original style
-        var oldstyle = style;
-        style += 'background-color: ' + $e.css('background-color') + ';';
+//        var oldstyle = style;
+//        style += 'background-color: ' + $e.css('background-color') + ';';
         if (webkit)
             roundWebkit($e);
         else if (mozilla)
@@ -46,7 +46,7 @@ jQuery.fn.goocorners = function(options) {
         else
             roundOthers($e);
         // restore original style
-        style = oldstyle;
+//        style = oldstyle;
     });
 
     function roundWebkit(e) {
@@ -66,8 +66,21 @@ jQuery.fn.goocorners = function(options) {
     }
 
     function roundOthers(e) {
+      style['background-color'] = e.css('background-color');
+        // change original element properties
+        var marginTop    = parseInt(e.css('margin-top'))     || 0;
+        var marginBottom = parseInt(e.css('margin-bottom'))  || 0;
+        var borderWidth  = parseInt(e.css('borderTopWidth')) || 0;
+        var borderColor  = rgb2hex(e.css('borderTopColor'));
+        e.css('margin-top',     (marginTop+radius)+'px');
+        e.css('margin-bottom',  (marginBottom+radius)+'px');
+        e.css('padding-top',    '0px');
+        e.css('padding-bottom', '0px');
+        /* @fixme: with fixed height - incorrect setted corners */
+        e.css('height', 'auto');
+        // set raduius
         var radiusTL=0, radiusTR=0, radiusBL=0, radiusBR=0;
-        var paddingLeft  = parseInt(e.css('padding-left')) || 0;
+        var paddingLeft  = parseInt(e.css('padding-left'))  || 0;
         var paddingRight = parseInt(e.css('padding-right')) || 0;
         var tagBeforeContent = '<div style="font-size: 1px; height: 1px;">';
         var tagAfterContent  = '<div style="font-size: 1px; height: 1px; clear: both;">';
@@ -85,8 +98,8 @@ jQuery.fn.goocorners = function(options) {
             radiusBL = this.radius;
         else if (this.br)
             radiusBR = this.radius;
-        cornersTop    = getCorners(radiusTL, radiusTR, paddingLeft, paddingRight, -1*radius).reverse();
-        cornersBottom = getCorners(radiusBL, radiusBR, paddingLeft, paddingRight, 1);
+        cornersTop    = getCorners(radiusTL, radiusTR, paddingLeft, paddingRight, -1*radius, borderWidth, borderColor).reverse();
+        cornersBottom = getCorners(radiusBL, radiusBR, paddingLeft, paddingRight, 1, borderWidth, borderColor);
         var content =
             tagBeforeContent + cornersTop.join('') + '</div>'
             + e.html() +
@@ -94,25 +107,89 @@ jQuery.fn.goocorners = function(options) {
         e.html(content);
     }
 
-    function getCorners(left, right, marginLeft, marginRight, top) {
-        var corners = new Array;
-        var level = left || right;
-        for (i=level+1; i>0; i--) {
-            // after first line
-            if (i==level) {
-                left  = (left>0 ? left-1 : 0);
-                right = (right>0 ? right-1 : 0);
-                continue;
-            }
-            corners[i] = '<b style="' + this.style + ' top: ' + top + 'px; margin-left: ' + (left-marginLeft) + 'px; margin-right: ' + (right-marginRight) + 'px' + '"></b>';
-            // before last line
-            if (i==2) {
-                left++;
-                right++;
-            }
-            left  = (left>0 ? left-1 : 0);
-            right = (right>0 ? right-1 : 0);
-        }
-        return corners;
+  function getCorners(left, right, marginLeft, marginRight, top, borderWidth, borderColor) {
+    // style for current element only
+    var style = {};
+    jQuery.extend(style, this.style);
+    if (borderWidth>0 && top<0)
+      top--;
+    // change original style
+    var corners = new Array;
+    var level = left || right;
+    var first = true;
+    // with borders
+    if (borderWidth>0) {
+      left--;
+      right--;
     }
+    for (i=level+1; i>0; i--) {
+      if (borderWidth>0) {
+        style['border-right'] = style['border-left'] = (borderWidth)+'px solid '+borderColor;
+      }
+      // first line
+      if (borderWidth>0) {
+        if (first) {
+          style['border-top'] = borderWidth+'px solid '+borderColor;
+          style['height'] = '0px';
+          first = false;
+        } else {
+          style['height'] = this.style['height'];
+          delete style['border-top'];
+        }
+        // 2nd line
+        if (i==level-1) {
+          style['border-right'] = style['border-left'] = (borderWidth+1)+'px solid '+borderColor;
+        }
+      }
+      // not show 2nd line
+      if (i==level) {
+        left  = (left>0 ? left-1 : 0);
+        right = (right>0 ? right-1 : 0);
+        continue;
+      }
+      // additional parameters
+      style['top']          = top+'px';
+      style['margin-left']  = (left-marginLeft)+'px';
+      style['margin-right'] = (right-marginRight)+'px';
+      // insert line
+      corners[i] = '<b style="' + join(style) + '"></b>';
+      // before last line
+      if (i==2) {
+        left++;
+        right++;
+      }
+      // insert additional line after last line
+      if (borderWidth>0 && i==1) {
+        if ('transparent'==style['background-color'])
+          style['background-color'] = 'white';
+        // erace border
+        style['margin-left']  = (left-marginLeft-1)+'px';
+        style['margin-right'] = (right-marginRight-1)+'px';
+        // insert additional line
+        corners[0] = '<b style="' + join(style) + '"></b>';
+      }
+      left  = (left>0 ? left-1 : 0);
+      right = (right>0 ? right-1 : 0);
+    }
+    return corners;
+  }
+
+  /** Join associative array to string */
+  function join(array) {
+    var string = '';
+    var delimiter ='; ';
+    for (element in array)
+      string += element + ': ' + array[element] + delimiter;
+    return string;
+  }
+
+  function rgb2hex(c) {
+    var x = 255;
+    var hex = '';
+    var i;
+    var regexp=/([0-9]+)[, ]+([0-9]+)[, ]+([0-9]+)/;
+    var array=regexp.exec(c);
+    for(i=1;i<4;i++) hex += ('0'+parseInt(array[i]).toString(16)).slice(-2);
+    return '#'+hex;
+  }
 }
