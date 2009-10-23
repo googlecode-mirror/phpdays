@@ -6,10 +6,10 @@ With *phpDays* You will be able to speed up and simplify the process of creating
 
 === phpDays features ===
 
- * phpDays built on the basis [EnMvc MVC]
- * has full support [EnLibDaysDbTable ORM] _(write SQL queries do not need)_
- * work with the database can be through a [EnLibDaysDb abstraction layer] _(written SQL queries)_
- * phpDays all settings are set in the [EnLibDaysConfig configuration file] in   [http://en.wikipedia.org/wiki/YAML YAML] format
+ * phpDays is built on the basis of [EnMvc MVC]
+ * has full support for [EnLibDaysDbTable ORM] _(no need to write SQL queries)_
+ * provides access to databases using a [EnLibDaysDb database abstraction layer] _(writing SQL queries)_
+ * phpDays all settings are set in a [EnLibDaysConfig configuration file] in the [http://en.wikipedia.org/wiki/YAML YAML] format
  * classes are loaded automatically _(forget about `include()` and `require()`)_
  * full support of all written languages _(including Russian)_ through the use of *UTF-8* encoding
  * full support of [EnAjax AJAX] _(recommend using [http://jquery.com jQuery])_
