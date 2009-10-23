@@ -1,7 +1,7 @@
 #summary Русская стартовая страница.
 #labels Featured,Lang-Ru
 
-*phpDays* - гибкий php5 фреймворк основанный на шаблонах проектирования [RuMvc MVC] и ORM.
+*phpDays* - гибкий php5 фреймворк основанный на шаблонах проектирования [RuMvc MVC] и [RuLibDaysDbTable ORM].
 
 === Начните сейчас ===
 
