@@ -24,7 +24,7 @@ First release include ORM implementation, logging, stable project structure, sam
 
 === 1.0 final release - ''9 October 2009'' ===
 
- * [https://sourceforge.net/apps/trac/phpdays/changeset/99 99] improve method `find()` for "one" row: return null if row not exists
+ * [99] improve method `find()` for "one" row: return null if row not exists
  * [98] fix error in method `find()` for "one" row (if row not exists)
  * [97] fix bug with method `create()` in [wiki:EN/lib/Days_Db_Rowset Days_Db_Rowset] and [wiki:EN/lib/Days_Db_Table Days_Db_Table]
  * [96] bring to a working state of php-templates '''(xaoc)'''
