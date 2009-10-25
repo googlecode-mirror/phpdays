@@ -9,7 +9,7 @@
  * [EnChangelog Changelog] _(changes between project versions)_
  * [EnInstall Install] the framework on your server and then configure a new project
  * [EnUpgrade Upgrade] an application from a previous version
- * [EnStart QuickStart] to get your first application up and running
+ * [EnStart Quick start] to get your first application up and running
  * [EnAnswers Answers] to your questions
  * [http://code.google.com/p/phpdays/w/list?q=label:Lang-En All pages] in English
 
@@ -18,7 +18,7 @@
  * [EnMvc MVC] - basic concepts necessary to work with the framework
  * [EnLib Library] class reference descriptions
  * [EnAjax Ajax] support in your applications
- * [EnMultisite Multisite] - Manage many sites from one framework installation
+ * [EnMultisite Multisite] - manage many sites from one framework installation
 
 === For project members ===
 
