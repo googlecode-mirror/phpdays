@@ -1,6 +1,6 @@
 #summary List of Changes in Version 1.0
 #labels Lang-En
-
+#sidebar En
 == Version 1.0 - ''9 October 2009'' ==
 
 First release include ORM implementation, logging, stable project structure, sample applications.
