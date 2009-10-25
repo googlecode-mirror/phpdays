@@ -1,0 +1,104 @@
+#summary List of Changes in Version 1.0
+#labels Lang-En
+
+== Version 1.0 - ''9 October 2009'' ==
+
+First release include ORM implementation, logging, stable project structure, sample applications.
+
+=== 1.0 final release - ''9 October 2009'' ===
+
+ * improve method `find()` for "one" row: return null if row not exists
+ * fix error in method `find()` for "one" row (if row not exists)
+ * fix bug with method `create()` in [wiki:EN/lib/Days_Db_Rowset Days_Db_Rowset] and [wiki:EN/lib/Days_Db_Table Days_Db_Table]
+ * bring to a working state of php-templates '''(xaoc)'''
+ * even small editing the blog-example '''(xaoc)'''
+ * presented in the working condition the blog-example '''(xaoc)'''
+
+=== 1.0 release candidate 2 - ''7 October 2009'' ===
+
+ * improve `profile()` method in [wiki:EN/lib/Days_Log Days_Log] class ''(send message only if firephp logging enabled)''
+ * fix bug with incorrect definition controller/action with empty base path
+ * fix incorrect replace pathes with empty base path
+ * fix show warning on servers without default timezone
+
+=== 1.0 release candidate - ''6 October 2009'' ===
+
+ * add profiling into [wiki:EN/lib/Days_Db_Table Days_Db_Table] class
+ * add `child` and `parent` magic fields into [wiki:EN/lib/Days_Db_Row Days_Db_Row]
+ * add `profile()` method into [wiki:EN/lib/Days_Log Days_Log]
+ * update Spyc yaml parser to version 0.4.5
+ * change applications into "apps" directory (add directories "app" and "public")
+ * add smarty plugin `helper` for call helpers into templates
+ * add support of base path (for work site in directory)
+ * reworked and presented in the working condition the blog-example '''(xaoc)'''
+ * add method `_quote` in [wiki:EN/lib/Days_Db_Table Days_Db_Table] for quote identifiers
+ * quote column names and table names in join statements (method `find()` in [wiki:EN/lib/Days_Db_Table Days_Db_Table])
+ * add prefix to model classes. ''Change this into you projects''
+ * separetely handle `PostAction` before execute specified action
+ * reworked and presented in the working condition the blog-example '''(xaoc)'''
+ * fix bug with connection View in ORM (link MxN), added shielding behalf View '''(xaoc)'''
+ * change application examples (fix bugs)
+ * fix bug in [wiki:EN/lib/Days_Engine Days_Engine] for loading file in `CamelCase`
+ * fix bug #9: use native php templates by default
+ * add new template engine - Dwoo
+ * code cleanup and refactoring
+ * fix #17: test compatibility with php 5.3
+ * change project description to ''"php:Days - flexible php5 framework"''
+
+=== 1.0 beta 3 - ''21 September 2009'' ===
+
+ * change method info() in [wiki:EN/lib/Days_Db_Table Days_Db_Table] for return "null" if column not exists
+ * implement 1x1, 1xN, MxN relations in [wiki:EN/lib/Days_Db_Table Days_Db_Table] (need full tests)
+ * change method info() in [wiki:EN/lib/Days_Db_Table Days_Db_Table] for return info about specified table
+ * refactoring code into [wiki:EN/lib/Days_Engine Days_Engine] class
+ * [wiki:EN/lib/Days_Log Days_Log]: added implementation of the method `logtoSqlite()` '''(xaoc)'''
+ * slightly changed the format of the output `FirePhp` '''(xaoc)'''
+ * improve Days_Log: add error levels
+ * fix bug in [wiki:EN/lib/Days_Log Days_Log]: add method `logtoSqlite` for sqlite logging
+ * add comments into configuration files
+ * add configuration parameter "log/level"
+ * add "View/block" folder into applications for template blocks
+ * refactoring of [wiki:EN/lib/Days_Controller Days_Controller], [wiki:EN/lib/Days_Engine Days_Engine]: pass content template name on controller object creation
+ * refactoring of [wiki:EN/lib/Days_Controller Days_Controller]: change logic in "getContent" method - return content without layout
+ * added method "toArray" for return all data as arrays in [wiki:EN/lib/Days_Db_Rowset Days_Db_Rowset]
+ * fix bug in [wiki:EN/lib/Days_Db_Table Days_Db_Table]: replace creating object from Zend_Db to inner in class
+ * fix bug in [wiki:EN/lib/Days_Db_Row Days_Db_Row] for not existing columns catch exception
+ * fix bug in [wiki:EN/lib/Days_Db_Row Days_Db_Row] in check table structure
+ * improve [wiki:EN/lib/Days_Db_Row Days_Db_Row] to work with parent and itself table
+ * add support `AjaxAction` and `PostAction` in controllers
+
+=== 1.0 beta 2 - ''8 September 2009'' ===
+
+ * fix #12: bug on load configuration file
+
+=== 1.0 beta 1 - ''4 September 2009'' ===
+
+ * added ORM support as [wiki:EN/lib/Days_Db_Table Days_Db_Table] ''(Active Record and Date Mapper patterns)''
+ * added `apps/blog` directory for develop blog application
+ * moved pld test application from `app` to `apps/new`
+ * update Zend Framework library to version 1.9.2
+ * fix bugs
+
+=== 1.0 alpha 5 - ''17 August 2009'' ===
+
+ * added new component [wiki:EN/lib/Days_Db_Table Days_Db_Table] (user for create models)
+ * upgrade Zend Framework to version 1.9.1
+ * fix #1: add prefix for model class name
+
+=== 1.0 alpha 4 - ''10 August 2009'' ===
+
+ * reduce release file size ''(removed not used Zend Framework components)''
+
+=== 1.0 alpha 3 - ''9 August 2009'' ===
+
+ * [wiki:EN/advanced/errorpage show error page] (404 - page not found; redirect; etc)
+ * [wiki:EN/quickstart/ajax ajax support] added
+ * fix #6: Return part of URL adress by parameter number
+
+=== 1.0 alpha 2 - ''30th July 2009'' ===
+
+ * you should now create a `app/Controller/Index.php` instead of the old `app/controller/IndexController.php` to change the structure of the project. See the [wiki:EN/quickstart/controller updated manual]. These changes refer to [wiki:EN/quickstart/model model] and [wiki:EN/quickstart/view presentation]
+
+=== 1.0 alpha 1 - ''23 July 2009'' ===
+
+ * initial release
