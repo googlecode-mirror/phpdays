@@ -1,0 +1,39 @@
+#summary Getting Involved in the Project.
+#sidebar En
+
+If you've become familiar with the project and feel confident and interested in the participating in it, then read the following guidelines.
+
+=== Joining the phpDays team ===
+
+ * leave your request to join the team as a comment on the [EnAnswers Discussions] page or send it to [http://groups.google.com/group/phpdays-en project support group]
+ * in your message state a role you would like to take on _(php developer, web designer, documentation translator, typesetter, !JavaScript developer)_ and include your Gmail address _(your Gmail username is enough)_
+ * after some consideration you'll receive an email with our decision about including you in the project _(if you don't get the response in three days, send your request again)_
+ * if everything goes well, you'll become a member of the project and will be able to do more than a non-member can _(you'll be able to change the project's code, documentation and tasks)_
+ * also you will be added to [http://code.google.com/p/phpdays/people/list the project's member list] _(don't forget to add this link to your resume)_
+
+=== General Information about the Site ===
+
+ * [http://code.google.com/p/phpdays/downloads/list Downloads] - Download page, where the project's working copies are available, intended for the end user
+ * [http://code.google.com/p/phpdays/w/list Wiki] - project's documentation
+ * [http://code.google.com/p/phpdays/issues/list Issues] - list of issues and tasks
+ * [http://code.google.com/p/phpdays/source/list Source] - information about the project's SVN repository and change log history
+
+=== Uploading the Project's working copy ===
+
+ * download and install an SVN client to work with the project's files
+ * download a project's working copy _(for more information see [http://code.google.com/p/phpdays/source/checkout Checkout])_
+ * if you haven't worked with Subversion before, take your time to learn it
+
+=== Правила внесение изменений _(SVN commit)_ ===
+
+Оформляйте комментарии в следующем виде
+ * `Fix #1234: Название исправленной ошибки` - для исправления ошибки номер `1234`. Если ошибки нет в [http://code.google.com/p/phpdays/issues/list Issues] - Вам следует добавить информацию об этой ошибке, а затем произвести `SVN commit`
+ * пишите каждую ошибку в отдельной строке. В конце каждой строки ставьте точку
+
+=== Проверяйте сами себя ===
+
+Настройте [http://blogs.sun.com/netbeansphp/entry/recent_improvements_in_phpunit_support PHPUnit] тесты. Это позволит Вам создавать тесты, гарантирующие что новое исправление в коде не поломало что-то другое. Только после этого следует производить `SVN commit`.
+
+=== Пишите качественный код ===
+
+Прочитайте о [RuCodingStyle стиле кодирования], принятом в нашем проекте. Следование единому стилю позволяем всем разработчикам общаться на едином, понятном всем языке.
