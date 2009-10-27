@@ -24,16 +24,17 @@ If you've become familiar with the project and feel confident and interested in 
  * download a project's working copy _(for more information see [http://code.google.com/p/phpdays/source/checkout Checkout])_
  * if you haven't worked with Subversion before, take your time to learn it
 
-=== Правила внесение изменений _(SVN commit)_ ===
+=== Guidelines for Applying Changes _(SVN commit)_ ===
 
-Оформляйте комментарии в следующем виде
- * `Fix #1234: Название исправленной ошибки` - для исправления ошибки номер `1234`. Если ошибки нет в [http://code.google.com/p/phpdays/issues/list Issues] - Вам следует добавить информацию об этой ошибке, а затем произвести `SVN commit`
- * пишите каждую ошибку в отдельной строке. В конце каждой строки ставьте точку
+For comments follow the format listed below
 
-=== Проверяйте сами себя ===
+ * `Fix #1234: The name of the bug` - for a fix of the error number `1234`. If the bug is not in the [http://code.google.com/p/phpdays/issues/list Issues], then you should add the issue first and only then make a `SVN commit`
+ * write each bug/issue in a separate line. Put a dot at the end of line.
 
-Настройте [http://blogs.sun.com/netbeansphp/entry/recent_improvements_in_phpunit_support PHPUnit] тесты. Это позволит Вам создавать тесты, гарантирующие что новое исправление в коде не поломало что-то другое. Только после этого следует производить `SVN commit`.
+=== Test Yourself ===
 
-=== Пишите качественный код ===
+Set up [http://blogs.sun.com/netbeansphp/entry/recent_improvements_in_phpunit_support PHPUnit]. This will allow you to create unit tests to ensure that a new fix in code will not break something else. Only after this should you run `SVN commit`.
 
-Прочитайте о [RuCodingStyle стиле кодирования], принятом в нашем проекте. Следование единому стилю позволяем всем разработчикам общаться на едином, понятном всем языке.
+=== Write Better Code ===
+
+Read about the [RuCodingStyle coding style] adopted in our project. Following uniform style allows all developers to communicate in a single, comprehensible language. 
