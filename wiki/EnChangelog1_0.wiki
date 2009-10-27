@@ -39,7 +39,7 @@ First release include ORM implementation, logging, stable project structure, sam
  * reworked and presented in the working condition the blog-example *(xaoc)*
  * fix bug with connection View in ORM (link MxN), added shielding behalf View *(xaoc)*
  * change application examples (fix bugs)
- * fix bug in [ENLibDaysEngineDaysEngine] for loading file in `CamelCase`
+ * fix bug in [ENLibDaysEngine DaysEngine] for loading file in `CamelCase`
  * fix bug #9: use native php templates by default
  * add new template engine - Dwoo
  * code cleanup and refactoring
@@ -51,11 +51,11 @@ First release include ORM implementation, logging, stable project structure, sam
  * change method info() in [ENlibDaysDbTable Days_Db_Table] for return "null" if column not exists
  * implement 1x1, 1xN, MxN relations in [ENLibDaysDbTable Days_Db_Table] (need full tests)
  * change method info() in [ENLibDaysDbTable Days_Db_Table] for return info about specified table
- * refactoring code into [ENLibDaysEngineDaysEngine] class
+ * refactoring code into [ENLibDaysEngine DaysEngine] class
  * [ENLibDaysLog Days_Log]: added implementation of the method `logtoSqlite()` *(xaoc)*
  * slightly changed the format of the output `FirePhp` *(xaoc)*
  * improve Days_Log: add error levels
- * fix bug in [ENLibDaysLogDaysLog]: add method `logtoSqlite` for sqlite logging
+ * fix bug in [ENLibDaysLog DaysLog]: add method `logtoSqlite` for sqlite logging
  * add comments into configuration files
  * add configuration parameter "log/level"
  * add "View/block" folder into applications for template blocks
