@@ -10,7 +10,7 @@ First release include ORM implementation, logging, stable project structure, sam
 
  * improve method `find()` for "one" row: return null if row not exists
  * fix error in method `find()` for "one" row (if row not exists)
- * fix bug with method `create()` in [ENLibDaysDbRowset Days_Db_Rowset] and [ENLibDaysDbTable Days_Db_Table]
+ * fix bug with method `create()` in [ENLibDaysDbRowset Days_Db_Rowset] and [http://code.google.com/p/phpdays/wiki/EnLibDaysDbTable Days_Db_Table]
  * bring to a working state of php-templates *(xaoc)*
  * even small editing the blog-example *(xaoc)*
  * presented in the working condition the blog-example *(xaoc)*
