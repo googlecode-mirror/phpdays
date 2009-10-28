@@ -1,4 +1,5 @@
 #summary Deutsche Startseite.
+#labels featured,Lang-De
 
 *phpDays* - ist ein flexibles PHP5 Framework auf der Basis von MVC und ORM Entwurfsmustern.
 
