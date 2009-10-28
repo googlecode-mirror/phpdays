@@ -70,7 +70,7 @@ First release include ORM implementation, logging, stable project structure, sam
 
 === 1.0 beta 2 - _8 September 2009_ ===
 
- * fix bug on load configuration file
+ * fix bug in load configuration file
 
 === 1.0 beta 1 - _4 September 2009_ ===
 
@@ -94,7 +94,7 @@ First release include ORM implementation, logging, stable project structure, sam
 
  * [EnLibDaysLog show error page] (404 - page not found; redirect; etc)
  * [EnAjax ajax support] added
- * fix bug din Return part of URL adress by parameter number
+ * fix bug in Return part of URL address by parameter number
 
 === 1.0 alpha 2 - _30th July 2009_ ===
 
