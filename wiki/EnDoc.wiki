@@ -1,4 +1,5 @@
 #summary Writing the Documentation.
+#labels Lang-En
 #sidebar En
 
 You can help us to improve the documentation, fix errors in it, and translate it into other languages.
