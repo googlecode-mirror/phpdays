@@ -22,5 +22,6 @@
 
 === For project members ===
 
+ * [EnCoding Entry] in the development team
  * [EnCodingStyle Coding style] _(syntax standards of php, html, css, js and yaml files)_
  * [EnDoc Documentation] create _(wiki page syntax, page names, translations)_
