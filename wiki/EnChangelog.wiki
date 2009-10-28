@@ -10,7 +10,12 @@
 
 === 1.1 beta1 ^(18 October 2009)^ ===
 
- * _a list of changes will be available later_
+ * r19-r20 Added [http://templum.googlecode.com Templum] support - new template engine.
+ * [apps/new] Fix css text-align (created by yui library).
+ * Changes in apps/new: added jquery library, added yui css reset, changed index layout.
+ * Fix bug in application "phpdays.org" in tag script.
+ * Add Smarty plugin block for show block template by name.
+ * Add application "phpdays.org" with static main page.
 
 === Archive versions ===
 
