@@ -25,7 +25,7 @@ First release include ORM implementation, logging, stable project structure, sam
 === 1.0 release candidate - _6 October 2009_ ===
 
  * add profiling into [EnLibDaysDbTable Days_Db_Table] class
- * add `child` and `parent` magic fields into [ENLibDaysDbRow Days_Db_Row]
+ * add `child` and `parent` magic fields into [EnLibDaysDbRow Days_Db_Row]
  * add `profile()` method into [EnLibDaysLog Days_Log]
  * update Spyc yaml parser to version 0.4.5
  * change applications into "apps" directory (add directories "app" and "public")
@@ -40,10 +40,10 @@ First release include ORM implementation, logging, stable project structure, sam
  * fix bug with connection View in ORM (link MxN), added shielding behalf View *(xaoc)*
  * change application examples (fix bugs)
  * fix bug in [EnLibDaysEngine DaysEngine] for loading file in `CamelCase`
- * fix bug #9: use native php templates by default
+ * fix bug in use native php templates by default
  * add new template engine - Dwoo
  * code cleanup and refactoring
- * fix #17: test compatibility with php 5.3
+ * fix bug in test compatibility with php 5.3
  * change project description to _"php:Days - flexible php5 framework"_
 
 === 1.0 beta 3 - _21 September 2009_ ===
@@ -52,14 +52,14 @@ First release include ORM implementation, logging, stable project structure, sam
  * implement 1x1, 1xN, MxN relations in [EnLibDaysDbTable Days_Db_Table] (need full tests)
  * change method info() in [EnLibDaysDbTable Days_Db_Table] for return info about specified table
  * refactoring code into [EnLibDaysEngine DaysEngine] class
- * [ENLibDaysLog Days_Log]: added implementation of the method `logtoSqlite()` *(xaoc)*
+ * [EnLibDaysLog Days_Log]: added implementation of the method `logtoSqlite()` *(xaoc)*
  * slightly changed the format of the output `FirePhp` *(xaoc)*
  * improve Days_Log: add error levels
  * fix bug in [EnLibDaysLog DaysLog]: add method `logtoSqlite` for sqlite logging
  * add comments into configuration files
  * add configuration parameter "log/level"
  * add "View/block" folder into applications for template blocks
- * refactoring of [EnLibDaysController Days_Controller], [ENLibDaysEngine Days_Engine]: pass content template name on controller object creation
+ * refactoring of [EnLibDaysController Days_Controller], [EnLibDaysEngine Days_Engine]: pass content template name on controller object creation
  * refactoring of [EnLibDaysController Days_Controller]: change logic in "getContent" method - return content without layout
  * added method "toArray" for return all data as arrays in [EnLibDaysDbRowset Days_Db_Rowset]
  * fix bug in [EnLibDaysDbTable Days_Db_Table]: replace creating object from Zend_Db to inner in class
@@ -70,7 +70,7 @@ First release include ORM implementation, logging, stable project structure, sam
 
 === 1.0 beta 2 - _8 September 2009_ ===
 
- * fix #12: bug on load configuration file
+ * fix bug on load configuration file
 
 === 1.0 beta 1 - _4 September 2009_ ===
 
@@ -84,7 +84,7 @@ First release include ORM implementation, logging, stable project structure, sam
 
  * added new component [EnLibDaysDbTable Days_Db_Table] (user for create models)
  * upgrade Zend Framework to version 1.9.1
- * fix #1: add prefix for model class name
+ * fix bug in add prefix for model class name
 
 === 1.0 alpha 4 - _10 August 2009_ ===
 
@@ -92,13 +92,13 @@ First release include ORM implementation, logging, stable project structure, sam
 
 === 1.0 alpha 3 - _9 August 2009_ ===
 
- * [EnAdvancedErrorpage show error page] (404 - page not found; redirect; etc)
- * [EnQuickstartAjax ajax support] added
- * fix #6: Return part of URL adress by parameter number
+ * [EnLibDaysLog show error page] (404 - page not found; redirect; etc)
+ * [EnAjax ajax support] added
+ * fix bug din Return part of URL adress by parameter number
 
 === 1.0 alpha 2 - _30th July 2009_ ===
 
- * you should now create a `app/Controller/Index.php` instead of the old `app/controller/IndexController.php` to change the structure of the project. See the [EnQuickstartController updated manual]. These changes refer to [EnQuickstartModel model] and [EnQuickstartView presentation]
+ * you should now create a `app/Controller/Index.php` instead of the old `app/controller/IndexController.php` to change the structure of the project. See the [EnMvc updated manual]. These changes refer to [EnMvc model] and [EnMvc presentation]
 
 === 1.0 alpha 1 - _23 July 2009_ ===
 
