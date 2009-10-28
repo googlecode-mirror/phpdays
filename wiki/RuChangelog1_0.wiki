@@ -40,10 +40,10 @@ First release include ORM implementation, logging, stable project structure, sam
  * fix bug with connection View in ORM (link MxN), added shielding behalf View *(xaoc)*
  * change application examples (fix bugs)
  * fix bug in [RuLibDaysEngine Days_Engine] for loading file in `CamelCase`
- * fix bug #9: use native php templates by default
+ * fix bug in use native php templates by default
  * add new template engine - Dwoo
  * code cleanup and refactoring
- * fix #17: test compatibility with php 5.3
+ * fix bug in test compatibility with php 5.3
  * change project description to _"php:Days - flexible php5 framework"_
 
 === 1.0 beta 3 - _21 сентября 2009_ ===
@@ -69,7 +69,7 @@ First release include ORM implementation, logging, stable project structure, sam
 
 === 1.0 beta 2 - _8 сентября 2009_ ===
 
- * fix #12: bug on load configuration file
+ * fix bug in load configuration file
 
 === 1.0 beta 1 - _4 сентября 2009_ ===
 
@@ -83,7 +83,7 @@ First release include ORM implementation, logging, stable project structure, sam
 
  * added new component [RuLibDaysDbTable Days_Db_Table] (user for create models)
  * upgrade Zend Framework to version 1.9.1
- * fix #1: add prefix for model class name
+ * fix bug in add prefix for model class name
 
 === 1.0 alpha 4 - _10 августа 2009_ ===
 
@@ -91,13 +91,13 @@ First release include ORM implementation, logging, stable project structure, sam
 
 === 1.0 alpha 3 - _9 августа 2009_ ===
 
- * [RuAdvancedErrorpage show error page] (404 - page not found; redirect; etc)
- * [RuQuickstartAjax ajax support] added
- * fix #6: Return part of URL adress by parameter number
+ * [RuLibDaysLog show error page] (404 - page not found; redirect; etc)
+ * [RuAjax ajax support] added
+ * fix bug in Return part of URL adress by parameter number
 
 === 1.0 alpha 2 - _30 июля 2009_ ===
 
- * you should now create a `app/Controller/Index.php` instead of the old `app/controller/IndexController.php` to change the structure of the project. See the [RuQuickstartController updated manual]. These changes refer to [RuQuickstartModel model] and [RuQuickstartView presentation]
+ * you should now create a `app/Controller/Index.php` instead of the old `app/controller/IndexController.php` to change the structure of the project. See the [RuMvc updated manual]. These changes refer to [RuMvc model] and [RuMvc presentation]
 
 === 1.0 alpha 1 - _23 июля 2009_ ===
 
