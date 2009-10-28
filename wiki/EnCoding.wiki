@@ -38,4 +38,4 @@ Set up [http://blogs.sun.com/netbeansphp/entry/recent_improvements_in_phpunit_su
 
 === Write Better Code ===
 
-Read about the [RuCodingStyle coding style] adopted in our project. Following uniform style allows all developers to communicate in a single, comprehensible language. 
+Read about the [EnCodingStyle coding style] adopted in our project. Following uniform style allows all developers to communicate in a single, comprehensible language. 
