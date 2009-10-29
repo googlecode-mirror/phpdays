@@ -1,0 +1,23 @@
+#summary Liste der Änderungen der einzelnen Versionen
+#sidebar De
+
+== Änderungen in Version 1.1 ==
+
+=== 1.1 beta2 ===
+
+ * r59 *Engine* Entfernung der automatischen Konvertierung aller Ajax Daten zu JSON
+
+=== 1.1 beta1 ^(18. Oktober 2009)^ ===
+
+ * r19-r20 [http://templum.googlecode.com Templum] wird nun unterstützt - neue Template Engine.
+ * `apps/new`: CSS text-align gefixt (erstellt mit der yui Library).
+ * Änderungen in apps/new: jquery Library, yui CSS Reset, Index-Layout geändert.
+ * Fehler in der Anwendung "phpdays.org" im Tag Script gefixt.
+ * Smarty Plugin Block hinzugefügt, um das Block Template mit Namen anzuzeigen.
+ * Anwendung "phpdays.org" mit fester Startseite hinzugefügt.
+
+=== Versionsarchiv ===
+
+Wähle die gewünschte ältere Version des Frameworks aus, um eine Liste der Änderungen angezeigt zu bekommen.
+
+ * [DeChangelog1_0 1.0]
