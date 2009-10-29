@@ -9,6 +9,7 @@
  * [EnLibDaysDb Days_Db] - work with database
  * [EnLibDaysDbTable Days_Db_Table] - implementation ORM representation of database tables
  * [EnLibDaysEngine Days_Engine] - starting point of entry
+ * [EnLibDaysEvent Days_Event] - implementation of [http://en.wikipedia.org/wiki/Observer_pattern observer] design pattern
  * [EnLibDaysLog Days_Log] - logging errors and debugging information
  * [EnLibDaysRequest Days_Request] - request from the user's browser
  * [EnLibDaysResponse Days_Response] - response to the user's browser
