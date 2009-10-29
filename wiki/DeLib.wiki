@@ -1,0 +1,23 @@
+#summary phpDays Library.
+#labels Lang-De
+#sidebar De
+
+=== Funktionsumfang ===
+
+ * MVC ([DeLibDaysModel Days_Model], [DeLibDaysView Days_View], [DeLibDaysController Days_Controller]) - Grundbegriffe; wichtig zum Arbeiten mit dem Framework
+ * [DeLibDaysConfig Days_Config] - die Konfiguration der Seite bearbeiten
+ * [DeLibDaysDb Days_Db] - bearbeiten der Datenbank
+ * [DeLibDaysDbTable Days_Db_Table] - Implementierung der ORM Darstellung von Datenbank-Tabellen
+ * [DeLibDaysEngine Days_Engine] - am Startpunkt beginnen
+ * [DeLibDaysEvent Days_Event] - Implementierung des [http://de.wikipedia.org/wiki/Observer_(Entwurfsmuster) Observer] Entwurfsmusters
+ * [DeLibDaysLog Days_Log] - Fehler und Debugger-Informationen protokollieren
+ * [DeLibDaysRequest Days_Request] - Anfragen vom Browser erhalten
+ * [DeLibDaysResponse Days_Response] - Dem Browser antworten
+ * [DeLibDaysUrl Days_Url] - die URL des Browsers ändern
+
+=== Wird noch entwickelt.. ===
+
+ * [DeLibDaysAcl Days_Acl] _(Zugriffs-Kontrollliste)_ - Diagramm der Zugriffsrechte zu den einzelnen Bereichen der Seite
+ * [DeLibDaysFilter Days_Filter] - Daten filtern, die vom Benutzer kommen _(wird auch Validation oder Verifikation der Daten genannt)_
+ * [DeLibDaysForm Days_Form] - die Daten von HTML Formularen auswerten und bearbeiten
+ * [DeLibDaysUser Days_User] - Benutzerdaten bearbeiten _(Berechtigung, Authentifizierung, Ende der Sitzung)_
