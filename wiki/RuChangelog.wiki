@@ -11,7 +11,7 @@
 === 1.1 beta1 ^(18 октября 2009)^ ===
 
  * r19-r20 Добавлена поддержка [http://templum.googlecode.com шаблонизатора Templum].
- * apps/new: Fix css text-align (created by yui library).
+ * `apps/new`: Fix css text-align (created by yui library).
  * Changes in apps/new: added jquery library, added yui css reset, changed index layout.
  * Fix bug in application "phpdays.org" in tag script.
  * Add Smarty plugin block for show block template by name.
