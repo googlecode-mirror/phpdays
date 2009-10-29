@@ -83,7 +83,46 @@ $newRow->save();
 
 === Работа с !Days_Db_Table ===
 
-Является представлением реальной таблицы, и позволяет выполнять операции над этой таблицей.
+Первым делом - опишите структуру всех таблиц базы данных в файле `/var/www/myblog/app/config/database.yaml`. У Вас получится что-то похожее на:
+
+{{{
+# site database structure
+catalog:
+  columns:
+    _catalog_id: {type: int, attr: unsigned}
+    _catalog_category_id: {type: int, attr: unsigned}
+    url_name: {type: varchar, len: 100}
+    date_create: {type: date}
+    date_change: {type: date}
+    name: {type: varchar, len: 50}
+    title: {type: varchar, len: 255}
+    description: {type: text}
+    cost: {type: float, attr: unsigned}
+catalog_property:
+  columns:
+    _catalog_property_id: {type: int, attr: unsigned}
+    _catalog_id: {type: int, attr: unsigned}
+    sex: {type: enum, attr: "m,w"}
+    material: {type: varchar, len: 70}
+    color: {type: varchar, len: 70}
+catalog_category:
+  columns:
+    _catalog_category_id: {type: int, attr: unsigned}
+    _catalog_category_pid: {type: int, attr: unsigned}
+    url_name: {type: varchar, len: 100}
+    name: {type: varchar, len: 50}
+    title: {type: varchar, len: 255}
+    description: {type: text}
+catalog_image:
+  columns:
+    _catalog_image_id: {type: int, attr: unsigned}
+    _catalog_id: {type: int, attr: unsigned}
+    src: {type: varchar, len: 100}
+    name: {type: varchar, len: 100}
+    title: {type: varchar, len: 255}
+}}}
+
+!Days_Db_Table является представлением реальной таблицы, и позволяет выполнять операции над этой таблицей.
 
  * `find($type, $cond)` - получить результат в указанном виде
    * `$type` - в каком виде возвратить результат
