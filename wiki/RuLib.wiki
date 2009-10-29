@@ -9,6 +9,7 @@
  * [RuLibDaysDb Days_Db] - работа с базой данных
  * [RuLibDaysDbTable Days_Db_Table] - реализация ORM представления таблиц базы данных
  * [RuLibDaysEngine Days_Engine] - стартовая точка входа
+ * [RuLibDaysEvent Days_Event] - реализация шаблона проектирования [http://ru.wikipedia.org/wiki/Наблюдатель_(шаблон_проектирования) наблюдатель] _(observer)_
  * [RuLibDaysLog Days_Log] - протоколирование ошибок и отладочной информации
  * [RuLibDaysRequest Days_Request] - запрос от браузера пользователя
  * [RuLibDaysResponse Days_Response] - ответ браузеру пользователя
