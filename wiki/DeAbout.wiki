@@ -2,7 +2,7 @@
 #labels Lang-De
 #sidebar De
 
-*phpDays* beschleunigt und vereinfacht das Erstellen Ihrer Website. Mit phpDays ist sie schneller zu warten und einfacher zu bearbeiten und zu erweitern.
+*phpDays* beschleunigt und vereinfacht das Erstellen Ihrer Website. Mit phpDays ist sie schneller zu warten und einfacher zu erweitern.
 
 === phpDays Funktionen ===
 
@@ -15,5 +15,5 @@
  * vollständige Unterstützung von [DeAjax AJAX] _(es wird empfohlen [http://jquery.com jQuery]) zu nutzen_
  * [DeDaysLog Fehler] ihren Wünschen entsprechend ausgeben _(unterstützte Ausgabearten: [http://firephp.org FirePHP], im Browser, in einer normalen Datei, und sogar in SQLite)_
  * Informationen über die ausgeführten Anwendungen können ausgedruckt werden _(ausgeführte SQL Abfragen, Namen der ausgeführten Methoden)_
- * praktische Klassenhierarchie _(so wie z.B im Zend Framework)_
+ * praktische Klassenhierarchie _(so wie z.B auch im Zend Framework)_
  * _und noch einiges mehr..._
