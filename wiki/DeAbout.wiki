@@ -1,0 +1,19 @@
+#summary Über phpDays.
+#labels Lang-De
+#sidebar De
+
+*phpDays* beschleunigt und vereinfacht das Erstellen Ihrer Website. Mit phpDays ist sie schneller zu warten und einfacher zu bearbeiten und zu erweitern.
+
+=== phpDays Funktionen ===
+
+ * phpDays ist auf der Basis von [DeMvc MVC] entwickelt.
+ * unterstützt [DeLibDaysDbTable ORM] _(dann braucht man keine SQL Abfragen mehr zu schreiben)_
+ * erlaubt Datenbankzugriffe durch eine [DeLibDaysDb Datenbankabstraktionsschicht] _(SQL Abfragen schreiben)_
+ * alle Einstellungen von phpDays sind in einer [DeLibDaysConfig Konfigurationsdatei] im [http://de.wikipedia.org/wiki/YAML YAML] Format abgespeichert
+ * Klassen werden automatisch geladen _(dadurch braucht man kein `include()` oder `require()` mehr)_
+ * vollständige Unterstützung aller Sprachen _(auch Russisch)_ durch die Benutzung von *UTF-8*
+ * vollständige Unterstützung von [DeAjax AJAX] _(es wird empfohlen [http://jquery.com jQuery]) zu nutzen_
+ * [DeDaysLog Fehler] ihren Wünschen entsprechend ausgeben _(unterstützte Ausgabearten: [http://firephp.org FirePHP], im Browser, in einer normalen Datei, und sogar in SQLite)_
+ * Informationen über die ausgeführten Anwendungen können ausgedruckt werden _(ausgeführte SQL Abfragen, Namen der ausgeführten Methoden)_
+ * praktische Klassenhierarchie _(so wie z.B im Zend Framework)_
+ * _und noch einiges mehr..._
