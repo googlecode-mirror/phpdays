@@ -7,17 +7,17 @@
 
  * [DeAbout Über] das Projekt _(Funktionen)_
  * [DeChangelog Changelog] _(Änderungen zwischen den Versionen)_
- * [DeInstall Installieren] des Frameworks auf deinem Server und das Erstellen eines neuen Projekts
+ * [DeInstall Installieren] des Frameworks auf Ihrem Server und das Erstellen eines neuen Projekts
  * [DeUpgrade Upgraden] der Anwendung von einer älteren Version
- * [DeStart Schnellstart] um deine erste Anwendung schnell zum Laufen zu kriegen
- * [DeAnswers Antworten] auf deine Fragen
+ * [DeStart Schnellstart] um Ihre erste Anwendung schnell zum Laufen zu kriegen
+ * [DeAnswers Antworten] auf all Ihre Fragen
  * [http://code.google.com/p/phpdays/w/list?q=label:Lang-De Alle Seiten] in Deutsch
 
 === Nützliches ===
 
  * [DeMvc MVC] - Erforderliche Grundbegriffe für das Arbeiten mit dem Framework
  * [DeLib Library] Class Reference
- * [DeAjax Ajax] Unterstützung für deine Projekte
+ * [DeAjax Ajax] Unterstützung für Ihre Projekte
  * [DeMultisite mehrere Seiten] mit einer Framework-Installation verwalten
 
 === Für Projektmitglieder ===
