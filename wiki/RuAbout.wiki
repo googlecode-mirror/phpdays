@@ -6,6 +6,7 @@
 
 === Возможности phpDays ===
 
+ * лучшее [http://code.google.com/p/phpdays/people/list сообщество phpDays]
  * phpDays построен на базе [RuMvc MVC]
  * имеется полная поддержка [RuLibDaysDbTable ORM] _(писать SQL запросы не нужно)_
  * работать с базой данных можно через [RuLibDaysDb слой абстракции] _(пишутся запросы SQL)_
