@@ -7,7 +7,7 @@ Sie können uns dabei helfen, die Dokumentation zu verbessern, Fehler zu korrigi
 === Übersetzen der Dokumentation ===
 
 Um die Dokumentation zu übersetzen, sollten Sie folgendes beachten:
- * Um die Dokumentation zu bearbeiten, müssen Sie sich zuerst anmelden (siehe dazu: [EnCoding Beitritt])
+ * Um die Dokumentation zu bearbeiten, müssen Sie sich zuerst anmelden (siehe dazu: [DeCoding Beitritt])
  * Seitennamen starten mit einem Sprachkürzel _(Ru für Russisch, En für Englisch, De für Deutsch)_
  * Gehen Sie dann zur Seite, die Sie übersetzen wollen _(z.B. [RuAnswers])_
  * Klicken Sie auf "Edit this page" in der blauen Zeile über der Seite, um sie als Wiki-Code angezeigt zu bekommen
