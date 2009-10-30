@@ -6,6 +6,7 @@ With *phpDays* You will be able to speed up and simplify the process of creating
 
 === phpDays features ===
 
+ * best [http://code.google.com/p/phpdays/people/list phpDays community]
  * phpDays is built on the basis of [EnMvc MVC]
  * has full support for [EnLibDaysDbTable ORM] _(no need to write SQL queries)_
  * provides access to databases using a [EnLibDaysDb database abstraction layer] _(writing SQL queries)_
