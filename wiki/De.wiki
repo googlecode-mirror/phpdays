@@ -23,5 +23,6 @@
 === Für Projektmitglieder ===
 
  * [DeCoding Beitritt] ins Entwicklerteam
- * [DeCodingStyle Coding Stil] _(Standard Syntax für PHP, HTML, CSS, js und YAML Dateien)_
+ * [DeCodingStyle Coding Style] _(Standard Syntax für PHP, HTML, CSS, js und YAML Dateien)_
+ * [DeIdea Ideen] zur Verbesserung des Projekts
  * [DeDoc Dokumentation] erstellen _(Wiki Seitensyntax, Seitennamen, Übersetzungen)_
