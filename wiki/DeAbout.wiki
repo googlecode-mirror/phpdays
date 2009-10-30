@@ -6,6 +6,7 @@
 
 === phpDays Funktionen ===
 
+ * phpdays hat eine super [http://code.google.com/p/phpdays/people/list Community] ;)
  * phpDays ist auf der Basis von [DeMvc MVC] entwickelt.
  * unterstützt [DeLibDaysDbTable ORM] _(dann braucht man keine SQL Abfragen mehr zu schreiben)_
  * erlaubt Datenbankzugriffe durch eine [DeLibDaysDb Datenbankabstraktionsschicht] _(SQL Abfragen schreiben)_
