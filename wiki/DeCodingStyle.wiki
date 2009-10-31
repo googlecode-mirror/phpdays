@@ -1,0 +1,27 @@
+#summary Coding Style.
+#labels Lang-De
+#sidebar De
+
+Möchten Sie bei phpDays mitarbeitn, so sollten Sie sich an folgenden Coding Style halten _(Syntax für PHP, HTML, CSS, js und YAML Dateien)_.
+
+=== allgemeine Regeln ===
+
+ * Ich empfehle zum Entwickeln die Entwicklungsumgebung [http://netbeans.org/ NetBeans] _(es können natürlich auch andere benutzt werden, z.B. [http://eclipse.org/pdt/ Eclipse PDT])_
+ * alle Dateien sollten in *UTF-8* vorliegen
+ * Zeilenumbrüche müssen im UNIX-Format sein
+ * Konfigurieren Sie die Entwicklungsumgebung so, dass Leerzeichen am Ende der Zeile automatisch gelöscht werden, Tabs in PHP Dateien automatisch in vier Leerzeichen umgewandelt werden und in anderen Dateien zu zwei Leerzeichen _(einschließlich HTML, CSS, js und YAML Dateien)_
+
+=== Regeln zum Bearbeiten von PHP Dateien ===
+
+ * [http://cvs.php.net/viewvc.cgi/php-src/CODING_STANDARDS?view=markup php coding standarts]
+ * [http://framework.zend.com/manual/ru/coding-standard.html coding standard in Zend Framework]
+ * [http://dev.kohanaphp.com/wiki/CodingStyle coding standard in the Kohana framework]
+ * [http://pear.php.net/manual/ru/standards.php PEAR Coding Standards]
+ * [http://en.wikipedia.org/wiki/PHPDoc writing comments in phpDoc style]
+
+Sicherheitsinformationen:
+
+ * [http://de.wikipedia.org/wiki/SQL-Injection SQL-Injection]
+ * [http://de.wikipedia.org/wiki/Cross-Site_Scripting Cross-Site Scripting]
+ * [http://de.wikipedia.org/wiki/Remote_File_Inclusion Remote File Inclusion]
+ * [http://de.wikipedia.org/wiki/Cross-Site_Request_Forgery Cross-Site Request Forgery]
