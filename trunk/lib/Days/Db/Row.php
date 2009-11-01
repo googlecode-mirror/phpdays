@@ -6,7 +6,7 @@
  *
  * @copyright    Copyright (c) 2009 phpDays foundation (http://phpdays.org)
  * @license      http://www.opensource.org/licenses/mit-license.php The MIT License
- * @link         http://phpdays.sf.net/
+ * @link         http://code.google.com/p/phpdays/wiki/EnLibDaysDbRow
  * @package      phpDays
  * @subpackage   phpDays library
  * @author       Anton Danilchenko <happy@phpdays.org>
@@ -60,6 +60,17 @@ class Days_Db_Row implements ArrayAccess {
         // magic field name
         $offset = $this->_table->column($offset);
         $this->_values[$offset] = $value;
+    }
+
+    /**
+     * Return joined table with special conditions.
+     *
+     * @param string $offset Table name to join
+     * @param array $params Conditions for join table
+     * @return mixed
+     */
+    public function __call($offset, array $params=array()) {
+        return $this->offsetGet($offset);
     }
 
     /**

@@ -6,7 +6,7 @@
  *
  * @copyright    Copyright (c) 2009 phpDays foundation (http://phpdays.org)
  * @license      http://www.opensource.org/licenses/mit-license.php The MIT License
- * @link         http://phpdays.sf.net/
+ * @link         http://code.google.com/p/phpdays/wiki/EnLibDaysDbRowset
  * @package      phpDays
  * @subpackage   phpDays library
  * @author       Anton Danilchenko <happy@phpdays.org>
@@ -164,6 +164,19 @@ class Days_Db_Rowset implements Countable, ArrayAccess, Iterator {
      */
     final public function offsetUnset($offset) {
         unset ($this->_rows[$offset]);
+    }
+
+    /**
+     * Return joined table with special conditions.
+     *
+     * @param string $offset Table name to join
+     * @param array $params Conditions for join table
+     * @return mixed
+     */
+    public function __call($offset, array $params=array()) {
+        if (! $this->valid())
+            return null;
+        return $this->current()->__call($offset, $params);
     }
 
     /**
