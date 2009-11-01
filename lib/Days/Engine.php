@@ -6,7 +6,7 @@
  *
  * @copyright    Copyright (c) 2009 phpDays foundation (http://phpdays.org)
  * @license      http://www.opensource.org/licenses/mit-license.php The MIT License
- * @link         http://phpdays.sf.net/
+ * @link         http://code.google.com/p/phpdays/wiki/EnLibDaysEngine
  * @package      phpDays
  * @subpackage   phpDays library
  * @author       Anton Danilchenko <happy@phpdays.org>
@@ -18,6 +18,7 @@ final class Days_Engine {
     private static $_libPath;
     private static $_appPath;
     private static $_publicPath;
+    private static $_brand;
     /** Debug mode */
     private static $_isDebug = false;
 
@@ -50,27 +51,19 @@ final class Days_Engine {
             case 'Days':
                 $libPath = self::$_libPath;
                 break;
-            // library and main file - one name
-            case 'Spyc':
-            case 'Smarty':
-            case 'Templum':
-            case 'Dwoo':
-            case 'Firephp':
-                $libPath = self::$_libPath . $libName . '/';
-                break;
-            // important: set this option before last option only!
-            case ucfirst(Days_Config::load()->get('engine/brand', 'app')):
+            // application classes
+            case self::$_brand:
                 unset ($classPathRarts[0]);
                 $libPath = self::$_appPath;
                 break;
-            // not supported
+            // library and main file - equal name
             default:
-                throw new Days_Exception("Library class '{$className}' not supported");
+                $libPath = self::$_libPath . $libName . '/';
         }
         $classPath = $libPath . implode('/', $classPathRarts) . '.php';
         // replace underline ('_') to slash ('/')
         if (! file_exists($classPath))
-            throw new Days_Exception("Class '{$className}' not found");
+            return false;
         // include file
         include_once $classPath;
         // check definition
@@ -116,6 +109,8 @@ final class Days_Engine {
         // set debug mode
         if (Days_Config::load()->get('engine/debug', false))
             self::$_isDebug = true;
+        // set brand
+        self::$_brand = ucfirst(Days_Config::load()->get('engine/brand', 'app'));
         // set error level and handler
         $iErrorLevel = (self::isDebug() ? E_ALL|E_STRICT : E_ALL^E_NOTICE);
         error_reporting($iErrorLevel);
@@ -133,6 +128,11 @@ final class Days_Engine {
             Days_Model::setPrefix($brand);
             // set controller params
             $controllerClass = "{$brand}_Controller_" . ucfirst($controller);
+            // use index controller for non-exists controllers
+            if (! class_exists($controllerClass) AND Days_Config::load()->get('url/virtual')) {
+                $controllerClass = "{$brand}_Controller_Index";
+                $controller = 'index';
+            }
             // set action name
             $actionMethod = (Days_Request::isAjax() ? "{$action}AjaxAction" : "{$action}Action");
             // set template path
