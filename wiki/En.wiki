@@ -1,7 +1,7 @@
 #summary English start page.
 #labels Featured,Lang-En
 
-*phpDays* - flexible php5 framework based on the MVC and ORM design patterns.
+*phpDays* - flexible php5 framework based on the [EnMvc MVC] and [EnLibDaysDbTable ORM] design patterns.
 
 === Start now ===
 
