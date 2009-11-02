@@ -9,6 +9,8 @@ For example:
 
 phpunit --include-path ~/svn/phpdays lib/Days/ViewTest.php
 
-No test suites yet.
+To run all tests available in a directory:
+
+phpunit --include-path <path_to_your_local_phpdays'_svn_repos.> <directory>
 
 Keep the bar green!
