@@ -1,7 +1,6 @@
-﻿
-# summary Multisites.
-# labels Lang-En
-# sidebar En
+﻿#summary Multisites.
+#labels Lang-En
+#sidebar En
 
 If a complex, feature-rich section has to be added to a site, it is best to make it as a separate project. Then the project can be integrated into another site. It gives a semblance of Lego bricks, from which you can build a web site on the basis of other projects.
 
@@ -22,9 +21,9 @@ Files and the `static` directory are located in the `/var/www/myblog/public` dir
 We have to create a `/var/www/myblog/public/forum` directory for our new forum section. Copy the contents of `/var/www/forum/public` into the new directory. 
 
 Edit the file `/var/www/myblog/public/forum/index.php`:
-* set the path to the phpDays library
-* set the path to the forum application
-* change the configuration from `development` to `myblog_development`
+ * set the path to the phpDays library
+ * set the path to the forum application
+ * change the configuration from `development` to `myblog_development`
 
 === Explanations ===
 
