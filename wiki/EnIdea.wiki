@@ -6,7 +6,7 @@ On this page we discuss about new ideas for phpDays. Post your ideas below on pa
 
 === Validator ===
 
-[EnLibDaysValidator Days_Validator] - check variable by criterias and return `true` only if data valid.
+[EnLibDaysValidate Days_Validate] - check variable by criterias and return `true` only if data valid.
 
 {{{
 $age = 21;
