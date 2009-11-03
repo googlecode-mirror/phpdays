@@ -22,12 +22,6 @@ class Dwoo {
 
     public function setCacheDir($var) {
     }
-
-    public function get_template_vars($var) {
-    }
-
-    public function get($var) {
-    }
 }
 
 /**

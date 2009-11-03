@@ -11,6 +11,9 @@
  * @subpackage   phpDays library
  * @author       Anton Danilchenko <happy@phpdays.org>
  */
+
+require_once 'lib/Dwoo/Dwoo/Exception.php';
+
 class Days_View_Dwoo implements Days_View_Interface {
     /** @var Dwoo_Data  */
     protected $_vars = array();
@@ -35,8 +38,24 @@ class Days_View_Dwoo implements Days_View_Interface {
         return $this->_engine->get($templatePath, $this->_vars);
     }
 
+    /**
+     * Returns a value of a template variable.
+     * If a template variable does not exist or its value is null,
+     * returns a default value.
+     * 
+     * @param  string $var     a name of a template variable
+     * @param  mixed  $default a default value to return
+     * @return mixed
+     */
     public function get($var, $default=null) {
-        return $this->_engine->get_template_vars($var);
+        $value;
+        try {
+            $value = $this->_vars->get($var);
+        } catch (Dwoo_Exception $e) { 
+            $value = $default;
+        }
+        
+        return $value;
     }
 
     /**
@@ -50,7 +69,7 @@ class Days_View_Dwoo implements Days_View_Interface {
     public function set($var, $value, $merge=false, $delimiter='-') {
         // add value to existing
         if ($merge) {
-            $oldValue = $this->_engine->get_template_vars($var);
+            $oldValue = $this->get($var);
             // set seperator for existing value only
             if (! empty($oldValue))
                 $value = "{$value} {$delimiter} {$oldValue}";
