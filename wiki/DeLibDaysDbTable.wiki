@@ -129,4 +129,4 @@ Repräsentiert eine Tabellenzeile und erlaubt ihnen, diese zu bearbeiten.
  * `toArray()` - gibt die aktuelle Zeile als ein Array zurück
  * `parent` - erhalte alle Parent-Elemente _(wenn Sie eine Spalten ID und PID haben)_
  * `child` - erhalte alle Child-Elemente _(wenn Sie eine Spalten ID und PID haben)_
- * `table_name` - erhalte ähnliche Daten (related records) von der angegebenen Tabelle _(für Kategorien der Tabelle `blog_category` müssen Sie bei der Objekttabelle `blog` nur `category` angeben anstelle von `blog_category`)_
+ * `table_name` - erhalte ähnliche Records von der angegebenen Tabelle _(für Kategorien der Tabelle `blog_category` müssen Sie bei der Objekttabelle `blog` nur `category` angeben anstelle von `blog_category`)_
