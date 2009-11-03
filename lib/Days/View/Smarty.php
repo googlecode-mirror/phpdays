@@ -32,8 +32,18 @@ class Days_View_Smarty implements Days_View_Interface {
         return $this->_engine->fetch($template);
     }
 
+    /** 
+     * Returns a value of a template variable.
+     * If a template variable does not exist or its value is null,
+     * returns a default value.
+     * 
+     * @param string $var     a name of a template variable
+     * @param string $default a default value to return
+     * @return string 
+     */
     public function get($var, $default=null) {
-        return $this->_engine->get_template_vars($var);
+        $value = $this->_engine->get_template_vars($var);
+        return isset($value)? $value : $default;
     }
 
     /**
@@ -46,7 +56,7 @@ class Days_View_Smarty implements Days_View_Interface {
     public function set($var, $value, $merge=false, $delimiter='-') {
         // add value to existing
         if ($merge) {
-            $oldValue = $this->_engine->get_template_vars($var);
+            $oldValue = $this->get($var);
             // set seperator for existing value only
             if (! empty($oldValue))
                 $value = "{$value} {$delimiter} {$oldValue}";

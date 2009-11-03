@@ -14,6 +14,13 @@
 class Days_View_Templum implements Days_View_Interface {
     /** @var Templum */
     protected $_engine;
+    
+    /**
+     * Template variables
+     * 
+     * @var array
+     */
+    private $_vars = array();
 
     public function __construct() {
         // configure template engine
@@ -32,11 +39,20 @@ class Days_View_Templum implements Days_View_Interface {
     public function render($template) {
         if (! $this->_engine->exists($template))
             throw new Days_Exception("Template file '{$template}' not found");
-        return $this->_engine->get($template, get_object_vars($this));
+        return $this->_engine->get($template, $this->_vars);
     }
 
+    /** 
+     * Returns a value of a template variable.
+     * If a template variable does not exist or its value is null,
+     * returns a default value.
+     * 
+     * @param string $var     a name of a template variable
+     * @param string $default a default value to return
+     * @return string 
+     */
     public function get($var, $default=null) {
-        return $this->$var;
+        return isset($this->_vars[$var])? $this->_vars[$var] : $default;
     }
 
     /**
@@ -50,12 +66,12 @@ class Days_View_Templum implements Days_View_Interface {
     public function set($var, $value, $merge=false, $delimiter='-') {
         // add value to existing
         if ($merge) {
-            $oldValue = $this->$var;
+            $oldValue = $this->get($var);
             // set seperator for existing value only
             if (! empty($oldValue))
                 $value = "{$value} {$delimiter} {$oldValue}";
         }
         // set new value
-        $this->$var = $value;
+        $this->_vars[$var] = $value;
     }
 }
