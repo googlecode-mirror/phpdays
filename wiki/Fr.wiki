@@ -11,7 +11,7 @@
  * [FrUpgrade Mettre à jour] votre application depuis une version moins récente
  * [FrStart Guide d'utilisation] pour avoir une application fonctionnelle
  * [FrAnswers Réponses] à vos questions
- * [http://code.google.com/p/phpdays/w/list?q=label:Lang-Fr All pages] en Français
+ * [http://code.google.com/p/phpdays/w/list?q=label:Lang-Fr Toutes les pages] en Français
 
 === Utilisation ===
 
