@@ -1,0 +1,28 @@
+#labels Featured,Lang-Fr
+#Page d'accueil
+
+*phpDays* - un Framework flexible en php5 basé sur l'architecture [EnMvc MVC] et l'[EnLibDaysDbTable ORM].
+
+=== Commencement ===
+
+ * [FrAbout À propos] du projet _(fonctionnalités)_
+ * [FrChangelog Journal des changements] _(changements entre les différentes versions du projet)_
+ * [FrInstall Installer] le Framework sur votre serveur et créer un nouveau projet
+ * [FrUpgrade Mettre à jour] votre application depuis une version moins récente
+ * [FrStart Guide d'utilisation] pour avoir une application fonctionnelle
+ * [FrAnswers Réponses] à vos questions
+ * [http://code.google.com/p/phpdays/w/list?q=label:Lang-Fr All pages] en Français
+
+=== Utilisation ===
+
+ * [FrMvc MVC] - Concepts basiques pour le Framework
+ * [FrLib Bibliothèque] de références pour les descriptions des classes
+ * [FrAjax AJaX] dans vos applications
+ * [FrMultisite Multi-Site] - Gérez plusieurs site web depuis une installation unique du Framework
+
+=== Pour les membres du projet ===
+
+ * [FrCoding Entrer] dans l'équipe de développement
+ * [FrCodingStyle Style de codage] _(Syntaxe standart pour le PHP, le HTML, le CSS, le JS et les fichiers Yaml)_
+ * [FrIdea Idées] pour le projet
+ * [FrDoc Documentation] (création) _(Syntaxe: nom des pages, traductions, syntaxe de la page)_
