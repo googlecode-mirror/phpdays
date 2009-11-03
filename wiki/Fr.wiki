@@ -1,5 +1,5 @@
+#summary French d'accueil
 #labels Featured,Lang-Fr
-#Page d'accueil
 
 *phpDays* - un Framework flexible en php5 basé sur l'architecture [FrMvc MVC] et l' [FrLibDaysDbTable ORM].
 
