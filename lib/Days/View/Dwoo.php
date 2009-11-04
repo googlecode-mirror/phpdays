@@ -12,8 +12,6 @@
  * @author       Anton Danilchenko <happy@phpdays.org>
  */
 
-require_once 'lib/Dwoo/Dwoo/Exception.php';
-
 class Days_View_Dwoo implements Days_View_Interface {
     /** @var Dwoo_Data  */
     protected $_vars = array();
