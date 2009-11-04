@@ -29,20 +29,23 @@ class Days_Event {
         // first event with specified type
         if (! array_key_exists($event, self::$_observers))
             self::$_observers[$event] = array();
-        // add new observer
-        self::$_observers[] = $observer;
+        // add unique observer only
+        if (! in_array($observer, self::$_observers))
+            self::$_observers[] = $observer;
     }
 
     /**
      * Execute all observers for specified event.
      *
      * @param string $event Name of event (user_login_before, user_login_after, user_login_success, user_login_fail)
+     * @param array $params Parameters passed to each event
      */
-    public static function run($event) {
+    public static function run($event, array $params) {
         foreach (self::$_observers as $eventName=>$observers) {
             if ($event==$eventName)
                 foreach ($observers as $observer)
-                    call_user_func($observer);
+                    // call feedback function
+                    call_user_func_array($observer, $params);
         }
     }
 }
