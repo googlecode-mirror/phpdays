@@ -12,6 +12,7 @@ require_once 'lib/Days/View/Dwoo.php';
 require_once 'lib/Days/Engine.php';
 require_once 'lib/Dwoo/Dwoo/IDataProvider.php';
 require_once 'lib/Dwoo/Dwoo/Data.php';
+require_once 'lib/Dwoo/Dwoo/Exception.php';
 
 /**
  * Stubs
