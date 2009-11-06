@@ -1,0 +1,29 @@
+#summary English start page.
+#labels Featured
+
+*phpDays* - un framework in php5 basato sui modelli di progettazione [ItMvc MVC] e [ItLibDaysDbTable ORM].
+
+
+=== Per cominciare ===
+
+ * [ItAbout Informazioni] sul progetto _(funzionalità)_
+ * [ItChangelog Changelog] _(cambiamenti tra le varie versioni)_
+ * [ItInstall Installazione] del framework nel tuo server e configurazione di un nuovo progetto
+ * [ItUpgrade Aggiornare] un applicazione da una versione precedente
+ * [ItStart Guida veloce] per aiutarti a configurare la tua prima applicazione
+ * [ItAnswers Risposte] alle tue domande
+ * [http://code.google.com/p/phpdays/w/list?q=label:Lang-It Tutte le pagine] in Italiano
+
+=== Uso quotidiano ===
+
+ * [ItMvc MVC] - Concetti necessari per un corretto utilizzo del framework
+ * [ItLib Librerie] descrizione delle classi
+ * [ItAjax Ajax] supportato
+ * [ItMultisite Multisite] - Gestisci più siti utilizzando un solo framework.
+
+=== Per i membri del progetto ===
+
+ * [ItCoding Entrare] nel team di sviluppo
+ * [ItCodingStyle Stile di programmazione] _(sintassi standard dei file php, html, css, js e yaml)_
+ * [ItIdea Idee] per far crescere il progetto
+ * [ItDoc Documentazione] creare _(sintassi pagine wiki, nomi delle pagine, traduzioni)_
