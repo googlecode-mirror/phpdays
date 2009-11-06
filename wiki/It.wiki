@@ -1,4 +1,4 @@
-#summary English start page.
+#summary Guida in Italiano.
 #labels Featured
 
 *phpDays* - un framework in php5 basato sui modelli di progettazione [ItMvc MVC] e [ItLibDaysDbTable ORM].
