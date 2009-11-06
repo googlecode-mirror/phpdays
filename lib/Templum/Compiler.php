@@ -18,6 +18,9 @@ class Templum_Compiler {
      * @return string Parsed content
      */
     protected static function _parce($content) {
+        // check content to php tags
+        if (preg_match('`<\?php`', $content))
+            throw new Templum_Exception('Remove all php tags from template');
         // replace blocks: {block_name param=$value} ... {/block_name}
         $content = preg_replace_callback('`\{([^\n ]+)( [^\n]+)?\}(.*)\{/\1\}`Us', array(__CLASS__, '_parceBlock'), $content);
         // replace all instructions: {$value}, {function_name param=$value}
@@ -114,8 +117,13 @@ class Templum_Compiler {
             if (! file_exists($path))
                 throw new Templum_Exception("file `{$path}` not found");
             $content = file_get_contents($path);
-            // load and parce template
-            $templateData = self::_parce($content);
+            try {
+                // load and parce template
+                $templateData = self::_parce($content);
+            }
+            catch (Exception $ex) {
+                throw new Templum_Exception($ex->getMessage() . " file: `{$path}`");
+            }
             // save changed template data to cache
             self::_setCompile($template, $templateData);
         }
