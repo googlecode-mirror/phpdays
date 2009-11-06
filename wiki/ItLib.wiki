@@ -1,0 +1,22 @@
+#summary libreria phpDays
+#sidebar It
+
+=== System engine ===
+
+ * MVC ([ItLibDaysModel Days_Model], [ItLibDaysView Days_View], [ItLibDaysController Days_Controller]) - classi base per lavorare con il framework
+ * [ItLibDaysConfig Days_Config] - interagisce con la configurazione del sito
+ * [ItLibDaysDb Days_Db] - Interagisce con il database
+ * [ItLibDaysDbTable Days_Db_Table] - Implementazione ORM che rappresenta le tabelle del database
+ * [ItLibDaysEngine Days_Engine] - Il punto di partenza del framework
+ * [ItLibDaysEvent Days_Event] - Implementazione del pattern [http://en.wikipedia.org/wiki/Observer_pattern observer].
+ * [ItLibDaysLog Days_Log] - Logga gli errori e i debug
+ * [ItLibDaysRequest Days_Request] - Gestisce le request provenienti dal browser utente
+ * [ItLibDaysResponse Days_Response] - Gestisce le risposte da inviare al browser
+ * [ItLibDaysUrl Days_Url] - Lavora con gli URL
+
+=== In fase di sviluppo ===
+
+ * [ItLibDaysAcl Days_Acl] _(Aceess Control List)_ - Classe per la gestione dei privilegi nelle sezioni del sito.
+ * [ItLibDaysFilter Days_Filter] - Filtra i dati dell'utente _(anche conosciuto come verifica o convalida dei dati)_
+ * [ItLibDaysForm Days_Form] - Gestione dei dati provenienti dai form html.
+ * [ItLibDaysUser Days_User] - Classe di gestione degli utenti _(autorizzazioni, autenticazioni, fine della sessione)_
