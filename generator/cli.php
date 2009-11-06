@@ -3,15 +3,17 @@
 /**
  * Generate application in CLI (command line).
  *
- * FIRST USE
- *  - change path to php executable in first line (unix: /usr/bin/php, windows: C:\php\php.exe)
- *  - open command line tool (unix: gnome-terminal, windows: C:\WINDOWS\system32\cmd.exe). Next - work in terminal
- *  - go to you project root dir (~/workbench/project-name)
- *  - start generator - type path to this file (~/workbench/Phpdays/Phpdays/Tools/Generator/Generator.php)
- *  - type available command
+ * PREPARE GENERATOR
+ *  - open command line tool (linux: gnome-terminal, windows: C:\WINDOWS\system32\cmd.exe)
+ *  - ONLY FOR LINUX: in terminal go to "phpdays/generator" dir and execute command "chmod 755 cli.php"
+ *  - open "cli.php" and change path to php in first line (linux: /usr/bin/php, windows: C:\php\php.exe)
+ *
+ * GENERATE OR CHANGE PROJECT
+ *  - go to you project root dir (linux: cd /path/to/project, windows: cd C:\path\to\project)
+ *  - start generator: type path to current file (linux: /path/to/phpdays/generator/cli.php, windows: C:\path\to\phpdays\generator\cli.php)
+ *  - type commands
  *
  * INSTRUCTION
- *  - start command line tool (unix: terminal, windows: cmd.exe)
  *  - go to site application directory in console
  *  - type path to project generator (/path/to/Generate.php)
  *  - press Enter
