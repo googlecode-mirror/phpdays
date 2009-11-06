@@ -22,7 +22,7 @@
 === Создайте новое приложение ===
 
  * установите опцию `AllowOverride All` в файле конфигурации Apache
- * _ДЛЯ LINUX СЕРВЕРА_ выполните команду `a2enmod rewrite` _(включить Apache mod_rewrite)_
+ * _ДЛЯ LINUX СЕРВЕРА_ выполните команду `sudo a2enmod rewrite && sudo /etc/init.d/apache2 restart` _(включить Apache mod_rewrite)_
  * перейдите в директорию `apps`
  * скопируйте директорию `new` в `document_root` _(в `/var/www`)_
  * переименуйте директорию `new` на действительное название проекта _(для примера будем использовать `myblog`)_
