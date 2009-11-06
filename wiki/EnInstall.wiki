@@ -21,7 +21,7 @@ On your server _(local and real)_ should be installed:
 
 === Create new application ===
 
- * set option `AllowOverride All` in apache configuration
+ * set option `AllowOverride All` in Apache configuration
  * _FOR LINUX SERVER_ execute command `a2enmod rewrite` _(enable Apache mod_rewrite)_
  * go to `apps` directory
  * copy `new` directory to you `document_root` _(to `/var/www`)_
