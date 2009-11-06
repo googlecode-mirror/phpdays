@@ -10,9 +10,11 @@ Supponendo che avessi bisogno di crare un complessa _forum section_ dovrete crea
 
 Il progetto si troverà nella directory `/var/www/forum`.
 
-Ora preparate il vostro forum per l'inclusione in un'altra sezione del sito. Create un nuovo file di configurazione `/var/www/forum/app/config/myblog_development.yaml`. Editarlo per farlo funzionare con il database della vostra applicazione. Settare l'opzione `url/base: myblog/forum`.
+Ora preparate il vostro forum per l'inclusione in un'altra sezione del sito. 
+ * Create un nuovo file di configurazione `/var/www/forum/app/config/myblog_development.yaml`. 
+ * Editarlo per farlo funzionare con il database della vostra applicazione. Settare l'opzione `url/base: myblog/forum`.
 
-Implementare tutte le parti del sito con la stessa procedura, cioè creando un [ItController controller] separato.
+ * Implementare tutte le parti del sito con la stessa procedura, cioè creando un [ItController controller] separato.
 
 
 === Includere il progetto nella sezione corrente del sito ===
