@@ -2,7 +2,7 @@
 /**
  * Engine - start point for web application, based on php:Days framework.
  *
- * Part of "php:Days - php5 framework" project (http://phpdays.sf.net).
+ * Part of "php:Days - php5 framework" project (http://phpdays.googlecode.com).
  *
  * @copyright    Copyright (c) 2009 phpDays foundation (http://phpdays.org)
  * @license      http://www.opensource.org/licenses/mit-license.php The MIT License
