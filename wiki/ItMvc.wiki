@@ -1,0 +1,10 @@
+#summary Che cosa è MVC ?
+#sidebar It
+
+[http://en.wikipedia.org/wiki/Model–view–controller MVC] è una struttura di prograzzione per separare parti differenti di un applicazione dalle altre. Con questo schema diventa facile per i nuovi membri apprendere le funzionalità del progetto stesso.
+
+Segui queste semplici regole quando crei un applicazione:
+
+ * [ItController Controller] - Decide quale azione si deve svolgere. Usa vari modelli per ottenere i dati e li passa al componente View.
+ * [ItView Vew] - Visualizza le informazioni. Rappresenta una pagina html (template) dove i dati vengono passati dal Controller.
+ * [ItModel Model] - Riceve e modifica informazioni da un database.
