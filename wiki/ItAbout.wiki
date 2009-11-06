@@ -1,0 +1,19 @@
+#summary Informazioni su phpDays.
+#sidebar It
+
+Con *phpDays* potrai velocizzare e semplificare il processo di creazione di un sito web rendendolo facile da correggere e progettare.
+
+=== Funzioni phpDays ===
+
+ * la migliore [http://code.google.com/p/phpdays/people/list phpDays community]
+ * phpDays è costruito con lo schema di progettazione [ItMvc MVC]
+ * Supporta la tecnica di programmazione [ItLibDaysDbTable ORM] _(non c'è bisogno di scrivere query SQL)_
+ * Fornisce accesso al database usando l'[ItLibDaysDb database abstraction layer] _(scrive query SQL)_
+ * Tutte le impostazioni di phpDays sono salvate in un [ItLibDaysConfig file di configurazione] nel formato [http://en.wikipedia.org/wiki/YAML YAML]
+ * Le classi vengono caricate automaticamente _(dimenticate l'uso di `include()` e `require()`)_
+ * Supporto di tutte le lingue _(incluso il Russo)_ attraverso l'uso dell'encoding *UTF-8*
+ * Supporto [ItAjax AJAX] _(si raccomanda l'uso di [http://jquery.com jQuery])_
+ * [ItDaysLog Gestione errori] A seconda delle tue esigenze potrai usare [http://firephp.org FirePHP] e visualizzare i log nel browser, salvarli in un file semplice o in SQLite.
+ * Visualizza le informazioni sull'esecuzione di ogni applicazione _(Query sql, nome del metodo eseguito)_
+ * Struttura di classe organizzata _(come quella usata da Zend Framework)_
+ * _e altro ancora_
