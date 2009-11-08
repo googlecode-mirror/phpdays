@@ -1,4 +1,5 @@
 #summary Informazioni su phpDays.
+#labels Lang-It
 #sidebar It
 
 Con *phpDays* potrai velocizzare e semplificare il processo di creazione di un sito web rendendolo facile da correggere e progettare.
