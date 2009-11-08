@@ -1,4 +1,5 @@
 #summary Multisiti.
+#labels Lang-It
 #sidebar It
 
 Se una sezione diventa complessi o piena di funzioni, è consigliabile spostarla in un'altro progetto separato. Quindi quest'ultimo potrà essere integrato all'interno di un'ulteriore sito, dove potrai creare un sito web con le basi degli altri progetti.
@@ -6,7 +7,7 @@ Se una sezione diventa complessi o piena di funzioni, è consigliabile spostarla
 
 === Creare un sito ===
 
-Supponendo che avessi bisogno di crare un complessa _forum section_ dovrete creare un [EnInstall progetto] separato e implementarlo solo nella sezione del forum. Lo stesso metodo deve essere usato con le altre sezioni del sito _(come blog, cataloghi ecc)_.
+Supponendo che avessi bisogno di crare un complessa _forum section_ dovrete creare un [ItInstall progetto] separato e implementarlo solo nella sezione del forum. Lo stesso metodo deve essere usato con le altre sezioni del sito _(come blog, cataloghi ecc)_.
 
 Il progetto si troverà nella directory `/var/www/forum`.
 
