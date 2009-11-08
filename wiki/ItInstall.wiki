@@ -1,4 +1,5 @@
 #summary Installazione del framework e creazione di un nuovo progetto.
+#labels Lang-It
 #sidebar It
 
 === Download ===
