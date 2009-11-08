@@ -1,0 +1,43 @@
+#summary Entrare a far parte del progetto
+#sidebar It
+
+Se hai imparato il progetto e hai una certa confidenza con esso e sei interessato nel contribuire al suo sviluppo, leggi le seguenti linee guida.
+
+
+=== Entrare nel team di phpDays ===
+
+ * Lascia un commento alla pagina [ItAnswers Risposte] o invialo qui [http://groups.google.com/group/phpdays-en Project Support Group].
+ * Nel tuo messaggio specifica il ruolo che vuoi intraprendere -(php developer, web designer, traduttore di documentazione, typesetter, Javascript developer)_ e includi il tuo indirizzo gmail _(Il tuo username gmail)_
+ * Dopo una rapida valutazione riceverai un email con la nostra decisione _(se non ricevi risposta entro 3 giorni, re-invia la tua richiesta)_
+ * Se tutto va bene, diventerai un membro del progetto e potrai avere accesso a particolari funzioni _(potrai cambiare il codice del progetto, la documentazione)_
+ * Inoltre verrai aggiunto a [http://code.google.com/p/phpdays/people/list Lista membri del progetto]
+ 
+
+=== Informazioni generali sul sito ===
+
+ * [http://code.gogogle.com/p/phpdays/downloads/list Downloads] - La pagina di download dove troverai le copie funzionanti per gli utenti finali.
+ * [http://code.google.com/p/phpdays/w/list Wiki] - La documentazione del progetto
+ * [http://code.google.com/p/phpdays/issues/list Problemi] - Lista dei vari problemi del progetto e delle varie correzioni.
+ * [http://code.google.com/p/phpdays/source/list Source] - Informazioni sul repository SVN del progetto e il changelog.
+
+=== Eseguire l'upload di una copia funzionante del progetto ===
+ * scaricare ed installare un client SVN
+ * scaricare una copia funzionante del progetto _(per ulteriori informazioni visitare [http://code.google.com/p/phpdays/source/checkout Checkout])_
+ * Se non hai mai lavorato con Subversion prima d'ora, ora potrai imparare.
+
+
+=== Linee guida per applicare dei cambiamenti _(SVN commit)_ ===
+
+Per i commenti seguire il formato seguente
+
+
+ * `Fix #1234: Il nome del bug` - con il numero di errore `1234`. Se il bug non è presente in [http://code.google.com/p/phpdays/issues/list Issues], dovrai aggiungerlo e dopo eseguire l'`SVN Commit.
+ * scrivere ogni bug/problema in una linea separata. Mettere un punto alla fine della linea.
+
+=== Test personale ===
+
+Installare [http://blogs.sun.com/netbeansphp/entry/recent_improvements_in_phpunit_support PHPUnit]. Quest'ultimo ti aiuterà a creare delle unità di test per assicurarti che il nuovo fix da te creato non intralci altre parte del codice. Solo dopo questo potrai fare un `SVN Commit`.
+
+=== Scrivere codice migliore ===
+
+Leggere la pagina [ItCodingStyle Stile di codice]. Seguendo uno stile di programmazione uniforme farai modo che tutti i programmatori potranno comunicare in un unico, comprensibile linguaggio.
