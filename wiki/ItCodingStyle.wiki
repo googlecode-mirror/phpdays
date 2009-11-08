@@ -1,4 +1,5 @@
 #summary Stile di programmazione.
+#labels Lang-It
 #sidebar It
 
 Per partecipare al progetto phpDays devi seguire alcuni stili di programmazione _(per php,html, css, js e yaml)_.
