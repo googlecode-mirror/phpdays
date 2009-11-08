@@ -1,9 +1,10 @@
 #summary ORM.
+#labels Lang-It
 #sidebar ItLib
 
 === Informazioni generali ===
 
-[http://en.wikipedia.org/wiki/Object-relational_mapping ORM] - Ti permette di lavorare con il database usando gli oggetti del linguaggio PHP. Non c'è bisogno di scrive query sql nè per ottenere nè per salvare dati.
+[http://it.wikipedia.org/wiki/Object-relational_mapping ORM] - Ti permette di lavorare con il database usando gli oggetti del linguaggio PHP. Non c'è bisogno di scrive query sql nè per ottenere nè per salvare dati.
 
 ORM ti aiuterà ad accelerare lo svliuppo dell'applicazione e semplificare il processo di aggiornamento di quest'ultima.
 
