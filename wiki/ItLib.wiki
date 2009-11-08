@@ -1,4 +1,5 @@
 #summary libreria phpDays
+#labels Lang-It
 #sidebar It
 
 === System engine ===
@@ -8,7 +9,7 @@
  * [ItLibDaysDb Days_Db] - Interagisce con il database
  * [ItLibDaysDbTable Days_Db_Table] - Implementazione ORM che rappresenta le tabelle del database
  * [ItLibDaysEngine Days_Engine] - Il punto di partenza del framework
- * [ItLibDaysEvent Days_Event] - Implementazione del pattern [http://en.wikipedia.org/wiki/Observer_pattern observer].
+ * [ItLibDaysEvent Days_Event] - Implementazione del pattern [http://it.wikipedia.org/wiki/Observer_pattern observer].
  * [ItLibDaysLog Days_Log] - Logga gli errori e i debug
  * [ItLibDaysRequest Days_Request] - Gestisce le request provenienti dal browser utente
  * [ItLibDaysResponse Days_Response] - Gestisce le risposte da inviare al browser
