@@ -1,7 +1,8 @@
 #summary Che cosa è MVC ?
+#labels Lang-It
 #sidebar It
 
-[http://en.wikipedia.org/wiki/Model–view–controller MVC] è una struttura di programmazione per separare parti differenti di un applicazione dalle altre. Con questo schema diventa facile per i nuovi membri apprendere le funzionalità del progetto stesso.
+[http://it.wikipedia.org/wiki/Model-View-Controller MVC] è una struttura di programmazione per separare parti differenti di un applicazione dalle altre. Con questo schema diventa facile per i nuovi membri apprendere le funzionalità del progetto stesso.
 
 Segui queste semplici regole quando crei un applicazione:
 
