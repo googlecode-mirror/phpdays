@@ -6,5 +6,5 @@
 Segui queste semplici regole quando crei un applicazione:
 
  * [ItController Controller] - Decide quale azione si deve svolgere. Usa vari modelli per ottenere i dati e li passa al componente View.
- * [ItView Vew] - Visualizza le informazioni. Rappresenta una pagina html (template) dove i dati vengono passati dal Controller.
+ * [ItView View] - Visualizza le informazioni. Rappresenta una pagina html (template) dove i dati vengono passati dal Controller.
  * [ItModel Model] - Riceve e modifica informazioni da un database.
