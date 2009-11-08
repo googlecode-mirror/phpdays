@@ -1,4 +1,5 @@
 #summary Ajax nelle tue applicazioni.
+#labels Deprecated
 #sidebar It
 
 === Usare librerie !JavaScript ===
