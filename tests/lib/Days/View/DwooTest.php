@@ -13,6 +13,7 @@ require_once 'lib/Days/Engine.php';
 require_once 'lib/Dwoo/Dwoo/IDataProvider.php';
 require_once 'lib/Dwoo/Dwoo/Data.php';
 require_once 'lib/Dwoo/Dwoo/Exception.php';
+require_once dirname(__FILE__) . '/InterfaceTest.php';
 
 /**
  * Stubs
@@ -28,27 +29,9 @@ class Dwoo {
 /**
  * Tests for the Days_View_Dwoo class.
  */
-class Days_View_DwooTest extends PHPUnit_Framework_TestCase {
-    protected $view;
+class Days_View_DwooTest extends Days_View_InterfaceTest {
 
     protected function setUp() {
-        $dwoo_data = $this->getMock('Dwoo_Data');
         $this->view = new Days_View_Dwoo();
     }
-
-    /**
-     * @covers Days_View_Dwoo::get
-     */
-    public function testGetDefaultDefaultValue() {
-        $this->assertNull($this->view->get('NoSuchKey'));
-    }
-
-    /**
-     * @covers Days_View_Dwoo::get
-     */
-    public function testGetSpecifiedDefaultValue() {
-        $value = 'Specified Default Value';
-        $this->assertEquals($value, $this->view->get('NoSuchKey', $value));
-    }
 }
-?>

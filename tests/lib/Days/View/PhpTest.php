@@ -9,31 +9,14 @@
 
 require_once 'lib/Days/View/Interface.php';
 require_once 'lib/Days/View/Php.php';
+require_once dirname(__FILE__) . '/InterfaceTest.php';
 
 /**
  * Tests for the Days_View_Php class.
  */
-class Days_View_PhpTest extends PHPUnit_Framework_TestCase {
-    protected $view;
+class Days_View_PhpTest extends Days_View_InterfaceTest {
 
     protected function setUp() {
         $this->view = new Days_View_Php();
     }
-
-    /**
-     * @covers Days_View_Php::get
-     */
-    public function testGetDefaultDefaultValue() {
-        $this->assertNull($this->view->get('NoSuchKey'));
-    }
-
-    /**
-     * @covers Days_View_Php::get
-     */
-    public function testGetSpecifiedDefaultValue() {
-        $value = 'Specified Default Value';
-        $this->assertEquals($value,
-            $this->view->get('NoSuchKey', $value));
-    }
 }
-?>
