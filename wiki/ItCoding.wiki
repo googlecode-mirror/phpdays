@@ -1,4 +1,5 @@
 #summary Entrare a far parte del progetto
+#labels Lang-It
 #sidebar It
 
 Se hai imparato il progetto e hai una certa confidenza con esso e sei interessato nel contribuire al suo sviluppo, leggi le seguenti linee guida.
