@@ -1,0 +1,8 @@
+#summary Improve application base in framework.
+#labels Lang-En
+#sidebar En
+
+For improve existing base of applications _(located in `apps` directory)_ do this:
+ * create new empty project _(in directory `/var/www/`)_
+ * checkout from SVN project _(use path to this project, for example: `https://phpdays.googlecode.com/svn/trunk/apps/phpdays.org`)_
+ * configure project, but no commit configuration files to SVN
