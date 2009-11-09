@@ -2,7 +2,7 @@
 #labels Lang-En
 #sidebar En
 
-=== System engine ===
+=== [En] » System engine ===
 
  * MVC ([EnLibDaysModel Days_Model], [EnLibDaysView Days_View], [EnLibDaysController Days_Controller]) - basic concepts necessary to work with framework
  * [EnLibDaysConfig Days_Config] - work with the configuration of the site
