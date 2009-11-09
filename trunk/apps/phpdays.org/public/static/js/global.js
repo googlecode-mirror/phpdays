@@ -6,5 +6,6 @@ $(document).ready(function(){
     // include files
     $.include('/static/js/i10n.js');
     // add rounded corners
-    $('.rounded').goocorners();
+    $('.rounded').goocorners(6, [1,1,1,1]);
+    $('.rounded_down').goocorners(4, [0,0,1,1]);
 });
