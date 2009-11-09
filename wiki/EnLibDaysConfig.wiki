@@ -14,6 +14,8 @@ $config = Days_Config::load()->get();
 $config = Days_Config::load()->get('db/default');
 // load specified configutation file and return specified option
 $config = Days_Config::load('myconfig')->get('engine/brand');
+// return specified value if option non exists
+$config = Days_Config::load()->get('engine/brand', 'app');
 }}}
 
 === Parameters ===
