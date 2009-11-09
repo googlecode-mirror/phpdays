@@ -2,7 +2,7 @@
 #labels Lang-Ru
 #sidebar Ru
 
-=== Ядро системы ===
+=== [RuLib] » Ядро системы ===
 
  * MVC ([RuLibDaysModel Days_Model], [RuLibDaysView Days_View], [RuLibDaysController Days_Controller] - Модель, Представление, Контроллер) - базовые понятия необходимые для работы с фреймворком
  * [RuLibDaysConfig Days_Config] - работа с конфигурацией сайта
