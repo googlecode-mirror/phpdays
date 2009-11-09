@@ -83,6 +83,11 @@ a.rounded, .button {
 }
 
 
+#menu {
+  background-color: #00a7a7;
+  height: 16px;
+}
+
 /**
  * Page main content.
  */

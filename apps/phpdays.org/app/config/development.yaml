@@ -23,6 +23,7 @@ url:
   lang: ru
   ext: html
   base: phpdays.org
+  virtual: true
 view:
   engine: smarty
 cache:
