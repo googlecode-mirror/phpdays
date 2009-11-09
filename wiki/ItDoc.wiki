@@ -8,10 +8,10 @@ Potrai aiutarci a migliorare la documentazione, fixare gli errori, e tradurre la
 
 Per tradurre la documentazione in un altro linguaggio dovresti seguire le seguenti regole:
  * il nome della pagina inizia con il linguaggio abbreviato _(It per Italiano, En per inglese, Fr per francese)_
- * vai alla pagina che desideri tradurre _(per esempio [ItAnswers answers])_
+ * vai alla pagina che desideri tradurre _(per esempio [ItAnswers])_
  * Clicca "Edit this page" nella parte alta per vedere la pagina nel formato wiki.
  * Copia il contenuto della pagina in lingua originale.
- * Punta il tuo browser in un'altra pagina cambiando il prefisso di quest'ultima _(per esempio, se hai aperto ItAnswers e intendi modificarla in Tedesco, cambia il nome in DeAnswers)_
+ * Punta il tuo browser in un'altra pagina cambiando il prefisso di quest'ultima _(per esempio, se hai aperto [ItAnswers e intendi modificarla in Tedesco, cambia il nome in DeAnswers)_
  * Se la pagina non esiste, ti verrà chiesto di crearla _(cliccare "Create a New Page")_.
  * Incollare il contenuto copiato in lingua originale.
  * Tradurre il testo dal linguaggio originale.
