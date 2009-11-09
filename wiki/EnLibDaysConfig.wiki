@@ -2,7 +2,7 @@
 #labels Lang-En
 #sidebar EnLib
 
-*[EnLibDaysConfig Days_Config]* - work with the configuration of the site.
+*[http://code.google.com/p/phpdays/source/browse/trunk/lib/Days/Config.php Days_Config]* - work with the configuration of the site.
 
 === How to use ===
 
