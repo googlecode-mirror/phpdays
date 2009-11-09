@@ -1,4 +1,4 @@
-#summary Days_Config - Interafisce con la configurazione del sito.
+#summary Days_Config - Interagisce con la configurazione del sito.
 #labels Lang-It
 #sidebar ItLib
 
