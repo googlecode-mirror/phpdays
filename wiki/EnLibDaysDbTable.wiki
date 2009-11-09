@@ -81,7 +81,7 @@ $newRow->name = 'New subcategory';
 $newRow->save();
 }}}
 
-=== Using !Days_Db_Table ===
+=== Using [http://code.google.com/p/phpdays/source/browse/trunk/lib/Days/Db/Table.php Days_Db_Table] ===
 
 Is a representation of a real table, and allows you to perform operations on this table.
 
@@ -104,7 +104,7 @@ Is a representation of a real table, and allows you to perform operations on thi
  * `delete(Days_Db_Row $row)` - delete specified row
  * `join($table)` - attach the specified table to the result
 
-=== Using !Days_Db_Rowset ===
+=== Using [http://code.google.com/p/phpdays/source/browse/trunk/lib/Days/Db/Rowset.php Days_Db_Rowset] ===
 
 Represents a set of rows `Days_Db_Row`. Allows you to change the set of rows.
 
@@ -120,7 +120,7 @@ Also provides data from the current row, as if we are working with this row.
 echo $categories->name;
 }}}
 
-=== Using !Days_Db_Row ===
+=== Using [http://code.google.com/p/phpdays/source/browse/trunk/lib/Days/Db/Row.php Days_Db_Row] ===
 
 Represents a table row and allows you to work with it.
 
