@@ -15,6 +15,7 @@
 
 === Правила работы с php файлами ===
 
+ * [http://en.wikipedia.org/wiki/PHPDoc phpDoc] стандарты
  * [http://cvs.php.net/viewvc.cgi/php-src/CODING_STANDARDS?view=markup php coding standarts]
  * [http://framework.zend.com/manual/ru/coding-standard.html стандарт кодирования в Zend Framework]
  * [http://dev.kohanaphp.com/wiki/CodingStyle стандарт кодирования в Kohana framework]
