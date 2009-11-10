@@ -7,8 +7,8 @@
  * @copyright    Copyright (c) 2009 phpDays foundation (http://phpdays.org)
  * @license      http://www.opensource.org/licenses/mit-license.php The MIT License
  * @link         http://code.google.com/p/phpdays/wiki/EnLibDaysViewInterface
- * @package      phpDays
- * @subpackage   phpDays library
+ * @package      Days
+ * @subpackage   View
  * @author       Anton Danilchenko <happy@phpdays.org>
  */
 interface Days_View_Interface {
