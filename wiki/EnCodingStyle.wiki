@@ -14,6 +14,7 @@ To participate in the project phpDays you should follow the same coding style _(
 
 === Rules for work with php files ===
 
+ * [http://en.wikipedia.org/wiki/PHPDoc phpDoc] standarts
  * [http://cvs.php.net/viewvc.cgi/php-src/CODING_STANDARDS?view=markup php coding standarts]
  * [http://framework.zend.com/manual/ru/coding-standard.html coding standard in Zend Framework]
  * [http://dev.kohanaphp.com/wiki/CodingStyle coding standard in the Kohana framework]
