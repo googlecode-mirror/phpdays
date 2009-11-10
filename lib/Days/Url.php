@@ -8,8 +8,8 @@
  * @license      http://www.opensource.org/licenses/mit-license.php The MIT License
  * @link         http://code.google.com/p/phpdays/wiki/EnLibDaysUrl
  * @see          Days_Request
- * @package      phpDays
- * @subpackage   phpDays library
+ * @package      Days
+ * @subpackage   Days
  * @author       Anton Danilchenko <happy@phpdays.org>
  */
 class Days_Url {
