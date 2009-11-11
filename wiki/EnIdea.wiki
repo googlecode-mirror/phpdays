@@ -29,31 +29,57 @@ Tasks:
 
 [EnLibDaysEvent Days_Event] - implementation of Observer pattern. Help join many components to one system without changes in any component.
 
-In code we insert calls:
+Days library events:
 {{{
-...
+class Days_User {
   public function login($username, $password) {
-    Days_Event::run('user_login_before');
+    Days_Event::run('user.login.before');
     // process loginning
-    if ('user logged successfully') {
-      Days_Event::run('user_login_success');
+    if (/* logged well */) {
+      Days_Event::run('user.login.success');
       ...
     }
     else {
-      Days_Event::run('user_login_fail');
+      Days_Event::run('user.login.fail');
       ...
     }
-    Days_Event::run('user_login_after');
+    Days_Event::run('user.login.after');
   }
 ...
 }}}
 
+Your application events in [EnLibDaysModel models] _(add name of your application before event name)_:
+{{{
+class Myapp_Model_Rss {
+  public function import($path) {
+    Days_Event::run('myapp.rss.import.before');
+    // process loginning
+    if (/* data loaded from RSS */) {
+      Days_Event::run('myapp.rss.import.success');
+      ...
+    }
+    else {
+      Days_Event::run('myapp.rss.import.fail');
+      ...
+    }
+    Days_Event::run('myapp.rss.import.after');
+  }
+}
+}}}
+
 Now, we have add to site forum with user autorization. We use events in forum.
 {{{
-Days_Event::add('user_login_success', 'userSuccessLogged');
+// general Days event
+Days_Event::add('user.login.success', 'userSuccessLogged');
 // function called on success logging
 function userSuccessLogged() {
-  echo 'You logged successfully on forum!';
+  echo 'You logged successfully on site!';
+}
+// your application event
+Days_Event::add('myapp.rss.import.fail', 'rssNotLoaded');
+// callback function
+function rssNotLoaded() {
+  echo 'RSS not loaded. Enter correct URL adress';
 }
 }}}
 
