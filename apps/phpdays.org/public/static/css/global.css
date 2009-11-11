@@ -6,7 +6,8 @@
 body {
   font-family: Arial,sans-serif;
   font-size: 12px;
-  margin: 20px;
+  margin: 0px 20px 0px 20px;
+  padding: 0px;
   text-align: left;
 }
 img {
@@ -29,11 +30,11 @@ a:hover {
   text-decoration: underline;
 }
 a.selected {
-  background-color: #f8facb;
+  background-color: #bcdeff;
   padding: 0 5pt 0 5pt;
 }
 a.selected:hover {
-  text-decoration: none;
+  /*background-color: transparent;*/
 }
 /** Info messages */
 p.alert {
@@ -73,8 +74,7 @@ a.rounded, .button {
 }
 /** Color for backgrounds */
 .bg {
-  background-color: #b3b3b3;
-  padding: 10px;
+  background-color: #e0f0ff;
 }
 /** Border */
 .border {
@@ -84,16 +84,32 @@ a.rounded, .button {
 
 
 #menu {
-  background-color: #00a7a7;
   height: 16px;
+  font-weight: bold;
+}
+#menu>a {
+  margin: 0 5px;
+}
+#menu>a.logo {
+  margin: 0 15px;
+  font-weight: normal;
+}
+#menu>.language {
+  padding-top: 5px;
+  display: none;
+  position: absolute;
+}
+#menu>.language>a {
+  display: block;
+  padding: 0 15px;
 }
 
 /**
  * Page main content.
  */
 #content {
-  margin-left: 250px;
-  padding: 0 10px 10px 10px;
+  margin-right: 250px;
+  padding: 10px 10px 0 10px;
   min-height: 700px;
 }
 
@@ -113,7 +129,6 @@ a.rounded, .button {
   margin: 0 0 10px 10px;
   padding: 3px 7px;
   color: #676767;
-  background-color: #D1DCE3;
 }
 
 
@@ -164,10 +179,10 @@ a.rounded, .button {
 /**
  * Left side column (logo, menu, adv).
  */
-#left {
+#sidebar {
   position: absolute;
-  left: 20px;
-  top: 20px;
+  right: 20px;
+  top: 50px;
   width: 230px;
 }
 
@@ -175,7 +190,7 @@ a.rounded, .button {
 /**
  * Block: left side blocks.
  */
-#left>p {
+#sidebar>p {
   padding: 10px;
 }
 
@@ -183,12 +198,12 @@ a.rounded, .button {
 /**
  * Block: language selection.
  */
-#left>.language {
+#sidebar>.language {
   font-size: 10px;
   padding: 0 0 0 10px;
   margin-bottom: 5px;
 }
-#left>.language>a {
+#sidebar>.language>a {
   font-size: 10px;
 }
 
@@ -196,12 +211,12 @@ a.rounded, .button {
 /**
  * Block: site logotype.
  */
-#left>.logo {
+#sidebar>.logo {
   height: 80px;
   text-align: center;
   font-size: 11px;
 }
-#left>.logo>a {
+#sidebar>.logo>a {
   display: block;
   text-align: center;
   font-size: 32px;
@@ -214,7 +229,7 @@ a.rounded, .button {
 /**
  * Block: user info.
  */
-#left>.user {
+#sidebar>.user {
 }
 
 
@@ -230,9 +245,14 @@ a.rounded, .button {
   width: 250px;
   float: left;
 }
-#footer>p.responsibility {
-  width: 200px;
+#footer>p.menu {
+  width: 100px;
   float: left;
+  font-weight: bold;
+}
+#footer>p.menu>a {
+  display: block;
+  font-weight: normal;
 }
 #footer>p.counters {
   float: right;

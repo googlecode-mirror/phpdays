@@ -68,10 +68,6 @@ jQuery.fn.goocorners = function(size, options) {
     var marginBottom = parseInt(e.css('margin-bottom'))  || 0;
     var borderWidth  = parseInt(e.css('borderTopWidth')) || 0;
     var borderColor  = rgb2hex(e.css('borderTopColor'));
-    e.css('margin-top',     (marginTop+radius)+'px');
-    e.css('margin-bottom',  (marginBottom+radius)+'px');
-    e.css('padding-top',    '0px');
-    e.css('padding-bottom', '0px');
     /* @fixme: with fixed height - incorrect setted corners */
     e.css('height', 'auto');
     // set raduius
@@ -94,6 +90,13 @@ jQuery.fn.goocorners = function(size, options) {
       radiusBL = this.radius;
     else if (this.br)
       radiusBR = this.radius;
+    // set style for rounded block
+    if (radiusTL || radiusTR)
+      e.css('margin-top',     (marginTop+radius)+'px');
+    if (radiusBL || radiusBR)
+      e.css('margin-bottom',  (marginBottom+radius)+'px');
+    e.css('padding-top',    '0px');
+    e.css('padding-bottom', '0px');
     cornersTop    = (radiusTL || radiusTR)
       ? getCorners(radiusTL, radiusTR, paddingLeft, paddingRight, -1*radius, borderWidth, borderColor).reverse()
       : [];

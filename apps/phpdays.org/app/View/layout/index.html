@@ -22,8 +22,15 @@
 </head>
 <body>
 
-  <div id="menu" class="rounded_down">
-    Menu
+  <div id="menu" class="rounded_down bg">
+    <a href="/" class="logo"><b>php</b><i>days</i></a>
+    {block name='languages'}
+    <a href="#">Development</a>
+    <a href="#" class="selected">Blog</a>
+    <a href="#">Answers</a>
+    <a href="#">People</a>
+    <a href="#">Job</a>
+    <a href="#">Journal</a>
   </div>
 
   <div id="content">
@@ -32,14 +39,6 @@
       <a href="#">Eclipse</a> &raquo;
       <a href="#" class="">Released new version 2.1 RC3</a>
     </h1>
-    <p class="about bg rounded">
-      <b>Published:</b> 6 June 2009 (changed <b>6 June 2009</b>)<br/>
-      <b>Author:</b> <a href="/">Anton Danilchenko</a><br/>
-      <b>Tags:</b> <a href="/">Eclipse</a>, <a href="/">PHP</a>, <a href="/">PDT</a><br/>
-      <b>Comments:</b> <a href="/"><b>152</b></a> (last: today 12:45)<br/>
-      <b>Statistic:</b> <b>154</b> visits (14 today)<br/>
-      <b>Rating:</b> <b>4.8</b> (17 votes). You vote: <a href="#">good</a> or <a href="#">bad</a>
-    </p>
 
     <p>Eclipse PHP Development Tools (PDT) 2.0 is now available from the Eclipse.org download site and from the Zend/PDT Community site (includes Eclipse PDT and Zend Debugger which enables users to perform local and remote debugging).</p>
     <p>The Eclipse PDT team would like to thank everyone who made this release possible. As always, our Eclipse PDT community has provided countless new features, bug fixes, documentation, etc. We'd also like to thank the Eclipse Dynamic Languages Toolkit team for cooperating and helping us with the new infrastructure.</p>
@@ -118,9 +117,16 @@
     <div class="clear"></div>
   </div>
 
-  <div id="left">
-    {block name='languages'}
-    {block name='logo'}
+  <div id="sidebar">
+    <p class="about bg rounded">
+      <b>Published:</b> 6 June 2009 (changed <b>6 June 2009</b>)<br/>
+      <b>Author:</b> <a href="/">Anton Danilchenko</a><br/>
+      <b>Tags:</b> <a href="/">Eclipse</a>, <a href="/">PHP</a>, <a href="/">PDT</a><br/>
+      <b>Comments:</b> <a href="/">152</a> (last added: today 12:45)<br/>
+      <b>Statistic:</b> <a href="/">154</a> visits (14 today)<br/>
+      <b>Rating:</b> <a href="/">4.8</a> (17 votes)<br/>
+      <b>You vote:</b> <a href="#">good</a> or <a href="#">bad</a>
+    </p>
     {block name='user_info'}
     {block name='tag_top20'}
     {block name='ad_left'}
@@ -129,10 +135,12 @@
   <div id="footer" class="bg rounded">
     <p class="copyright">
       Copyright &copy; 2009 <a href="http://danilchenko.pp.ua">Anton Danilchenko</a><br/>
-      Copy text and graphical materials on other sites denied!<br/>
+      Our site is not responsible for the content of copyright materials.<br/>
     </p>
-    <p class="responsibility">
-      Наш сайт не несет ответственности за содержимое авторских материалов.
+    <p class="menu">
+      Menu
+      <a href="#">Contacts</a>
+      <a href="#">Statistic</a>
     </p>
     <p class="counters">
       <img src="http://top100-images.rambler.ru/top100/banner-88x31-rambler-gray2.gif" alt="Top 100" />
