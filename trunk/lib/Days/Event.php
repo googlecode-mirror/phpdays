@@ -27,11 +27,13 @@ class Days_Event {
             throw new Days_Exception("Observer function not found `{$observer}`");
         }
         // first event with specified type
-        if (! array_key_exists($event, self::$_observers))
+        if (! array_key_exists($event, self::$_observers)){
             self::$_observers[$event] = array();
+        }
         // add unique observer only
-        if (! in_array($observer, self::$_observers))
-            self::$_observers[] = $observer;
+        if (! in_array($observer, self::$_observers[$event])){
+            self::$_observers[$event][] = $observer;
+        }
     }
 
     /**
