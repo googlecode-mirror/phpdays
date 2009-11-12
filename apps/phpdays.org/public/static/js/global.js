@@ -8,6 +8,7 @@ $(document).ready(function(){
     // add rounded corners
     $('.rounded').goocorners(6, [1,1,1,1]);
     $('.rounded_down').goocorners(4, [0,0,1,1]);
+    $('.rounded_top').goocorners(4, [1,1,0,0]);
     // language panel (over on logo)
     $('.logo').mouseover(function(){
       $('div.language').fadeIn("normal");
