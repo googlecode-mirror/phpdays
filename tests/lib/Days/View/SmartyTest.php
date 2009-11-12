@@ -10,11 +10,9 @@
 require_once 'lib/Days/View/Interface.php';
 require_once 'lib/Days/View/Smarty.php';
 require_once 'lib/Smarty/Smarty.php';
-require_once 'lib/Days/Engine.php';
-require_once 'lib/Days/Config.php';
-require_once 'lib/Days/Config/Yaml.php';
-require_once 'lib/Spyc/Spyc.php';
 require_once dirname(__FILE__) . '/InterfaceTest.php';
+require_once dirname(__FILE__) . '/_stubs/Days_Engine.php';
+require_once dirname(__FILE__) . '/_stubs/Days_Config.php';
 
 /**
  * Tests for the Days_View_Smarty class.
