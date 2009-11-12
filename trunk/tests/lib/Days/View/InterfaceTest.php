@@ -17,6 +17,11 @@ abstract class Days_View_InterfaceTest extends PHPUnit_Framework_TestCase {
      */
     protected $view;
 
+    public function testTemplateNotFound() {
+        $this->setExpectedException('Days_Exception');
+        $this->view->render('NoSuchFile');
+    }
+    
     public function testGetDefaultDefaultValue() {
         $this->assertNull($this->view->get('NoSuchKey'));
     }

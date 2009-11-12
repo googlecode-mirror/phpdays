@@ -9,22 +9,12 @@
 
 require_once 'lib/Days/View/Interface.php';
 require_once 'lib/Days/View/Dwoo.php';
-require_once 'lib/Days/Engine.php';
 require_once 'lib/Dwoo/Dwoo/IDataProvider.php';
 require_once 'lib/Dwoo/Dwoo/Data.php';
 require_once 'lib/Dwoo/Dwoo/Exception.php';
 require_once dirname(__FILE__) . '/InterfaceTest.php';
-
-/**
- * Stubs
- */
-class Dwoo {
-    public function setCompileDir($var) {
-    }
-
-    public function setCacheDir($var) {
-    }
-}
+require_once dirname(__FILE__) . '/_stubs/Days_Engine.php';
+require_once dirname(__FILE__) . '/_stubs/Dwoo.php';
 
 /**
  * Tests for the Days_View_Dwoo class.
