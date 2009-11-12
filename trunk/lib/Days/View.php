@@ -12,10 +12,19 @@
  * @author       Anton Danilchenko <happy@phpdays.org>
  */
 class Days_View {
+    private $_rootDir;
+
     public static function factory($engine) {
         $engine = ucfirst($engine);
         $className = "Days_View_{$engine}";
         return new $className();
+    }
+    
+    protected function _rootDir($dir=null) {
+        // return dir
+        if (is_null($dir))
+            return $this->_rootDir;
+        $this->_rootDir = $dir;
     }
 
     private function __construct() {

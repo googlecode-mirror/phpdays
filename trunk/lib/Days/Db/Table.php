@@ -249,6 +249,31 @@ class Days_Db_Table {
         return $rowset;
     }
 
+    /**
+     * Rename current table.
+     *
+     * @param string $newName New table name
+     * @return Days_Db
+     */
+    public function rename($newName) {
+        $this->_db->query("RENAME TABLE `{$this->_name}` TO `{$newName}`");
+        return $this;
+    }
+
+    /**
+     * Create copy of current table.
+     *
+     * @param string $newName New table name
+     * @param bool $withContent Also copy current table content to new table
+     * @return Days_Db
+     */
+    public function copy($newName, $withContent=false) {
+        $this->_db->query("CREATE TABLE `{$newName}` LIKE `{$this->_name}`");
+        if ($withContent)
+            $this->_db->query("INSERT INTO `{$newName}` SELECT * FROM `{$this->_name}` ");
+        return $this;
+    }
+
     public function save(Days_Db_Row $row) {
         if (! isset($row->id))
             $this->_insert($row);
