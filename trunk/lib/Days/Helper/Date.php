@@ -11,5 +11,5 @@
  * @subpackage   Helper
  * @author       Anton Danilchenko <happy@phpdays.org>
  */
-class Days_Helper_Date {
+class Days_Helper_Date extends Days_Helper_Abstract {
 }
