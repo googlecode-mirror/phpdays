@@ -1,6 +1,6 @@
 <?php
 /**
- * Controller - adapter interface.
+ * Interface View - interface for all adapters.
  *
  * Part of "php:Days - php5 framework" project (http://phpdays.googlecode.com).
  *

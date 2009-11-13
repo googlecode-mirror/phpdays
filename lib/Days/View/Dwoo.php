@@ -1,6 +1,6 @@
 <?php
 /**
- * View - Dwoo adapter.
+ * Dwoo View - Dwoo adapter.
  *
  * Part of "php:Days - php5 framework" project (http://phpdays.googlecode.com).
  *
@@ -12,7 +12,7 @@
  * @author       Anton Danilchenko <happy@phpdays.org>
  */
 
-class Days_View_Dwoo implements Days_View_Interface {
+class Days_View_Dwoo extends Days_View_Abstract implements Days_View_Interface {
     /** @var Dwoo_Data  */
     protected $_vars = array();
     /** @var Dwoo */

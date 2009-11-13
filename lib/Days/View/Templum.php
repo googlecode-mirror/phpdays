@@ -1,6 +1,6 @@
 <?php
 /**
- * View - Templum adapter.
+ * Templum View - Templum adapter.
  *
  * Part of "php:Days - php5 framework" project (http://phpdays.googlecode.com).
  *
@@ -11,7 +11,7 @@
  * @subpackage   View
  * @author       Anton Danilchenko <happy@phpdays.org>
  */
-class Days_View_Templum implements Days_View_Interface {
+class Days_View_Templum extends Days_View_Abstract implements Days_View_Interface {
     /** @var Templum */
     protected $_engine;
     

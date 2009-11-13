@@ -1,6 +1,6 @@
 <?php
 /**
- * View - php adapter.
+ * Php View - php adapter.
  *
  * Part of "php:Days - php5 framework" project (http://phpdays.googlecode.com).
  *
@@ -11,7 +11,7 @@
  * @subpackage   View
  * @author       Anton Danilchenko <happy@phpdays.org>
  */
-class Days_View_Php implements Days_View_Interface {
+class Days_View_Php extends Days_View_Abstract implements Days_View_Interface {
     /** @var array */
     protected $_vars = array();
 
@@ -19,35 +19,34 @@ class Days_View_Php implements Days_View_Interface {
     }
 
     public function render($template) {
-        $templatePath = Days_Engine::appPath() . 'View/' . $template;
-        if (! file_exists($templatePath))
-            throw new Days_Exception("Template file '{$template}' not found");
-        extract($this->_vars);
-
-        //connection and perform template
-        ob_start();
-        require ($templatePath);
-        return ob_get_clean();
+        return $this->_include($template, $this->_vars);
     }
 
+    /**
+     * Return value of specified variable.
+     *
+     * @param string $var Variable name
+     * @param mixed $default Return this value if variable not exists
+     * @return mixed
+     */
     public function get($var, $default=null) {
         return (isset($this->_vars[$var]) ? $this->_vars[$var] : $default);
     }
 
     /**
+     * Set variable.
      *
-     * @param <type> $var
-     * @param <type> $value
-     * @param bool $merge Merge new value with old value
+     * @param string $var Variable name
+     * @param mixed $value Variable value
      * @param string $delimiter Values separator
      */
-    public function set($var, $value, $merge=false, $delimiter='-') {
+    public function set($var, $value, $delimiter=null) {
         // add value to existing
-        if ($merge) {
+        if (! is_null($delimiter) AND is_string($delimiter)) {
             $oldValue = $this->get($var, '');
             // set seperator for existing value only
             if (! empty($oldValue))
-                $value = "{$value} {$delimiter} {$oldValue}";
+                $value = "{$value}{$delimiter}{$oldValue}";
         }
         // set new value
         $this->_vars[$var] = $value;
