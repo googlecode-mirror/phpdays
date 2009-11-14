@@ -13,11 +13,14 @@
  */
 
 class Days_View_Dwoo extends Days_View_Abstract implements Days_View_Interface {
-    /** @var Dwoo_Data  */
+    /** @var Dwoo_Data Template variables */
     protected $_vars = array();
-    /** @var Dwoo */
+    /** @var Dwoo Template engine */
     protected $_engine;
 
+    /**
+     * Initialize template engine.
+     */
     public function __construct() {
         // create template engine instance
         $this->_engine = new Dwoo();
@@ -29,6 +32,12 @@ class Days_View_Dwoo extends Days_View_Abstract implements Days_View_Interface {
 //        $this->_engine->caching       = Days_Config::load()->get('cache/lifetime', 0) > 0;
     }
 
+    /**
+     * Return result template with setted variables.
+     *
+     * @param string $template Template name
+     * @return string
+     */
     public function render($template) {
         $templatePath = Days_Engine::appPath() . 'View/' . $template;
         if (! file_exists($templatePath))
@@ -38,30 +47,28 @@ class Days_View_Dwoo extends Days_View_Abstract implements Days_View_Interface {
 
     /**
      * Returns a value of a template variable.
+     *
      * If a template variable does not exist or its value is null,
      * returns a default value.
-     * 
-     * @param  string $var     a name of a template variable
-     * @param  mixed  $default a default value to return
-     * @return mixed
+     *
+     * @param string $var Name of a template variable
+     * @param string $default Default value to return
+     * @return string
      */
     public function get($var, $default=null) {
-        $value;
+        $value = $default;
         try {
             $value = $this->_vars->get($var);
-        } catch (Dwoo_Exception $e) { 
-            $value = $default;
+        } catch (Dwoo_Exception $e) {
         }
-        
         return $value;
     }
 
     /**
-     * Set value to variable.
+     * Set variable.
      *
      * @param string $var Variable name
      * @param mixed $value Variable value
-     * @param bool $merge Merge new value with old value
      * @param string $delimiter Values separator
      */
     public function set($var, $value, $delimiter=null) {

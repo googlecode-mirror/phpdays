@@ -11,25 +11,14 @@
  * @subpackage   View
  * @author       Anton Danilchenko <happy@phpdays.org>
  */
-abstract class Days_View_Abstract {
-    protected function _include($template, array $params=array()) {
-        // check template file
-        $templatePath = Days_Engine::appPath() . 'View/' . $template;
-        if (! file_exists($templatePath))
-            throw new Days_Exception("Template file '{$template}' not found");
-        // load template
-        extract($params);
-        ob_start();
-        require ($templatePath);
-        return ob_get_clean();
-    }
-
+abstract class Days_View_Abstract implements Days_View_Interface {
     protected function _helper($name, $method, array $params=array()) {
         // set correct helper name
         $name = ucfirst($name);
         $name = "Days_Helper_{$name}";
-        // create helper
-//        $helper = new $name();
+        // check helper
+        if (! class_exists($name) OR ! is_callable($name))
+            return null;
         // return helper result
         return call_user_func_array(array($name, $method), $params);
     }

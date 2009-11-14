@@ -12,9 +12,12 @@
  * @author       Anton Danilchenko <happy@phpdays.org>
  */
 class Days_View_Smarty extends Days_View_Abstract implements Days_View_Interface {
-    /** @var Smarty */
+    /** @var Smarty Template engine */
     protected $_engine;
 
+    /**
+     * Initialize template engine.
+     */
     public function __construct() {
         // create template engine instance
         $this->_engine = new Smarty();
@@ -26,20 +29,27 @@ class Days_View_Smarty extends Days_View_Abstract implements Days_View_Interface
         $this->_engine->plugins_dir   = array('phpdays', 'plugins');
     }
 
+    /**
+     * Return result template with setted variables.
+     *
+     * @param string $template Template name
+     * @return string
+     */
     public function render($template) {
         if (! $this->_engine->template_exists($template))
             throw new Days_Exception("Template file '{$template}' not found");
         return $this->_engine->fetch($template);
     }
 
-    /** 
+    /**
      * Returns a value of a template variable.
+     *
      * If a template variable does not exist or its value is null,
      * returns a default value.
-     * 
-     * @param string $var     a name of a template variable
-     * @param string $default a default value to return
-     * @return string 
+     *
+     * @param string $var Name of a template variable
+     * @param string $default Default value to return
+     * @return string
      */
     public function get($var, $default=null) {
         $value = $this->_engine->get_template_vars($var);
@@ -47,10 +57,10 @@ class Days_View_Smarty extends Days_View_Abstract implements Days_View_Interface
     }
 
     /**
+     * Set variable.
      *
-     * @param <type> $var
-     * @param <type> $value
-     * @param bool $merge Merge new value with old value
+     * @param string $var Variable name
+     * @param mixed $value Variable value
      * @param string $delimiter Values separator
      */
     public function set($var, $value, $delimiter=null) {
