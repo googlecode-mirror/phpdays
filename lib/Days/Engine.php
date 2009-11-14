@@ -107,8 +107,7 @@ final class Days_Engine {
         // set path for config
         Days_Config::setConfigPath(self::$_appPath . 'config/');
         // set debug mode
-        if (Days_Config::load()->get('engine/debug', false))
-            self::$_isDebug = true;
+        self::$_isDebug = (bool)Days_Config::load()->get('engine/debug', false);
         // set brand
         self::$_brand = ucfirst(Days_Config::load()->get('engine/brand', 'app'));
         // set error level and handler
@@ -116,7 +115,7 @@ final class Days_Engine {
         error_reporting($iErrorLevel);
         setlocale(LC_ALL, 'ru_RU.UTF-8', 'RUS', 'RU');
 
-        if (Days_Config::load()->get('engine/enable_autorun', true)) {
+        if (Days_Config::load()->get('engine/autorun', 1)) {
             $autorun_dir_path=self::$_appPath . 'autorun/';
             $autorun_dir=opendir($autorun_dir_path);
             if($autorun_dir) {
