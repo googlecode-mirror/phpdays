@@ -8,6 +8,7 @@
  */
 
 require_once 'lib/Days/View/Interface.php';
+require_once 'lib/Days/View/Abstract.php';
 require_once 'lib/Days/View/Templum.php';
 require_once dirname(__FILE__) . '/InterfaceTest.php';
 require_once dirname(__FILE__) . '/_stubs/Days_Engine.php';
@@ -22,7 +23,7 @@ class Days_View_TemplumTest extends Days_View_InterfaceTest {
 	/**
 	 * @var string
 	 */
-    protected static $tempDir;
+    protected static $tempDir = null;
 
     public static function setUpBeforeClass() {
         self::$tempDir = self::_tempDir() . '/';
@@ -35,11 +36,12 @@ class Days_View_TemplumTest extends Days_View_InterfaceTest {
         self::_rmDir(self::$tempDir);
     }
     protected function setUp() {
-        if (!isset(self::$tempDir)) {
-            $this->fail('Could not create a temporary directory');
-        }
         Days_Engine::setAppDir(self::$tempDir);
         $this->view = new Days_View_Templum();
+    }
+    
+    protected function assertPreConditions() {
+        $this->assertNotNull(self::$tempDir);
     }
 
     private static function _tempDir() {
