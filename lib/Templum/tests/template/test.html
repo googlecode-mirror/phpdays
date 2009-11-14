@@ -22,5 +22,20 @@
     Variable $records is empty!
   {/loop}
 
+<h3>Filters</h3>
+
+  <p>{$name|default value='Guest'|crop len=10 suffix='...'}</p>
+
+<h3>Functions</h3>
+
+  <p>Year {date format='YYYY'}</p>
+  <p>Pages {pages total=10 page=5}</p>
+
+<h3>Include file</h3>
+
+  <blockquote>
+  {include file='test2.html'}
+  </blockquote>
+
 </body>
 </html>
