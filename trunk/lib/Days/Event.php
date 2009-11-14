@@ -43,7 +43,7 @@ class Days_Event {
      * @param array $params Parameters passed to each event
      */
     public static function run($event, array $params=array()) {
-
+        //get all event observers
         $observers=self::get($event);
         foreach ($observers as $observer) {
             // call feedback function
@@ -51,7 +51,7 @@ class Days_Event {
         }
     }
 
-	/**
+    /**
      * Get all observers for specified event.
      *
      * @param string $event Name of event (user_login_before, user_login_after, user_login_success, user_login_fail)
@@ -61,7 +61,6 @@ class Days_Event {
         if(isset(self::$_observers[$event]) && is_array(self::$_observers[$event])) {
             return self::$_observers[$event];
         }
-
         return array();
     }
 }

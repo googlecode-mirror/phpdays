@@ -15,7 +15,7 @@ engine:
   # name of you brand (prefix for model classes)
   brand: phpdays
   # enable autorun files from the folder app/autorun (1 - enable, 0 - disable)
-  enable_autorun: 1
+  autorun: 1
 log:
   # show debug info into: firephp, file, sqlite
   type: firephp
@@ -24,7 +24,7 @@ log:
 url:
   lang: ru
   ext: html
-  base:
+  base: phpdays.org
   virtual: true
 view:
   engine: smarty

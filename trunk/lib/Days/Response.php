@@ -28,7 +28,7 @@ class Days_Response {
     private static $_sContent = '';
 
 
-	/**
+    /**
      * Get content
      *
      * @return string
@@ -37,7 +37,7 @@ class Days_Response {
         return self::$_sContent;
     }
 
-	/**
+    /**
      * Set content
      *
      * @param $sContent string
