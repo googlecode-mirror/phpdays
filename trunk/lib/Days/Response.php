@@ -27,6 +27,26 @@ class Days_Response {
     /** Page content */
     private static $_sContent = '';
 
+
+	/**
+     * Get content
+     *
+     * @return string
+     */
+    public static function getContent() {
+        return self::$_sContent;
+    }
+
+	/**
+     * Set content
+     *
+     * @param $sContent string
+     * @return string
+     */
+    public static function setContent($sContent) {
+        self::$_sContent = $sContent;
+    }
+
     /**
      * Add header to list.
      *
