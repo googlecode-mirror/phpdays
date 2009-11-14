@@ -1,6 +1,6 @@
 <?php
 /**
- * Show variable or set specified value.
+ * Show links to pages.
  *
  * Parameters:
  *  - total: count of all available pages
@@ -14,7 +14,7 @@
  * @author Anton Danilchenko <anton.danilchenko@gmail.com>
  */
 class Templum_Component_Function_Pages implements Templum_Component_Function_Abstract {
-    protected $_required = array('total', 'center', 'page');
+    protected $_required = array('total');
 
     /**
      * Return result of current helper.

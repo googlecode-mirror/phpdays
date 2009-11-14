@@ -1,6 +1,6 @@
 <?php
 /**
- * Templum - php template engine.
+ * Show array variable in loop.
  *
  * Parameters:
  *  - var: name of variable
