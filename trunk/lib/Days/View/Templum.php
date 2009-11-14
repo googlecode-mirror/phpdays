@@ -63,13 +63,13 @@ class Days_View_Templum extends Days_View_Abstract implements Days_View_Interfac
      * @param bool $merge Merge new value with old value
      * @param string $delimiter Values separator
      */
-    public function set($var, $value, $merge=false, $delimiter='-') {
+    public function set($var, $value, $delimiter=null) {
         // add value to existing
-        if ($merge) {
+        if (is_string($delimiter)) {
             $oldValue = $this->get($var);
             // set seperator for existing value only
             if (! empty($oldValue))
-                $value = "{$value} {$delimiter} {$oldValue}";
+                $value = "{$value}{$delimiter}{$oldValue}";
         }
         // set new value
         $this->_vars[$var] = $value;

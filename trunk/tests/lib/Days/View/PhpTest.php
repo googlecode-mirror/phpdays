@@ -8,6 +8,7 @@
  */
 
 require_once 'lib/Days/View/Interface.php';
+require_once 'lib/Days/View/Abstract.php';
 require_once 'lib/Days/View/Php.php';
 require_once dirname(__FILE__) . '/InterfaceTest.php';
 require_once dirname(__FILE__) . '/_stubs/Days_Engine.php';
