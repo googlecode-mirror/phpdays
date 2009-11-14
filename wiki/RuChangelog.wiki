@@ -6,7 +6,19 @@
 
 === 1.1 beta2 ===
 
- * r59 *engine* Удалено автоматическое преобразование данных в формат JSON для Ajax запросов
+ * Создана структура приложения phpdays.org, оформлен внешний вид.
+ * Добавлен класс [RuLibDaysEvent Days_Event], реализующий паттерн Observer(Наблюдатель).
+ * Добавлены модульные тесты для классов Days_View`_*` и Days_Event
+ * r59 *engine* Удалено автоматическое преобразование данных в формат JSON для Ajax запросов.
+ * r193 Fix bug in Templum: throw exception if template contein php tags.
+ * r200 Change url from sf.net to googlecode.com.
+ * r247 Create Days_Tool_AppGenerator. Change @package and @subpackage in all Days classes.
+ * r255 Add class Days_Router. Add methods "copy" and "rename" to Days_Db_Table.
+ * r262 Refactor View classes. Add empty helpers base.
+ * r263 Extend helper classes by Days_Helper_Abstract.
+ * r266 Fix #22: Extract Days_Exception from Engine.php
+ * r267 Added methods Days_Response::getContent and Days_Response::setContent for comfort and control output of the engine
+ * r268 Added method Days_Event:: get($event) for all subscribers of certain event.
 
 === 1.1 beta1 ^(18 октября 2009)^ ===
 
