@@ -115,6 +115,21 @@ final class Days_Engine {
         $iErrorLevel = (self::isDebug() ? E_ALL|E_STRICT : E_ALL^E_NOTICE);
         error_reporting($iErrorLevel);
         setlocale(LC_ALL, 'ru_RU.UTF-8', 'RUS', 'RU');
+
+        if (Days_Config::load()->get('engine/enable_autorun', true)) {
+            $autorun_dir_path=self::$_appPath . 'autorun/';
+            $autorun_dir=opendir($autorun_dir_path);
+            if($autorun_dir) {
+                while($file=readdir($autorun_dir)) {
+                    if(is_file($autorun_dir_path.$file) && preg_match('#\.php$#',$file)) {
+                        require_once $autorun_dir_path.$file;
+                    }
+                }
+            }
+        }
+
+        Days_Event::run('system.ready');
+
         // doesn't send execution errors to user
         ob_start();
         try {
@@ -123,6 +138,9 @@ final class Days_Engine {
             $action = Days_Url::getSpec('action');
             $ext = Days_Url::getSpec('ext');
             $brand = Days_Config::load()->get('engine/brand', 'app');
+
+            Days_Event::run('system.pre_controller');
+
             // set module path
             Days_Model::setPath(self::appPath() . 'Model/');
             Days_Model::setPrefix($brand);
@@ -145,6 +163,9 @@ final class Days_Engine {
                 throw new Days_Exception("Controller '{$controllerClass}' should be extended from 'Days_Controller'");
             // call init() method for prepare object
             $controllerObj->init();
+
+            Days_Event::run('system.post_init_controller');
+
             // execute PostAction before call specified action
             if (Days_Request::isPost()) {
                 $actionPost = "{$action}PostAction";
@@ -168,6 +189,9 @@ final class Days_Engine {
                 $content = call_user_func(array($controllerObj, 'getContent'));
                 Days_Response::addHeader($ext);
             }
+
+            Days_Event::run('system.post_controller');
+
             // set data to response
             Days_Response::addContent($content);
         }
@@ -187,8 +211,14 @@ final class Days_Engine {
         }
         // save errors
         Days_Log::save();
+
+        Days_Event::run('system.shutdown');
+
         // send content to user
+        Days_Event::run('system.send_headers');
         Days_Response::sendHeaders();
+
+        Days_Event::run('system.send_content');
         Days_Response::sendContent();
     }
 }
