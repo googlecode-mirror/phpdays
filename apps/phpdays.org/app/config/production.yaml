@@ -22,6 +22,8 @@ log:
 url:
   lang: ru
   ext: html
+  base:
+  virtual: true
 view:
   engine: smarty
 cache:
