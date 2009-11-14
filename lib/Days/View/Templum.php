@@ -12,16 +12,14 @@
  * @author       Anton Danilchenko <happy@phpdays.org>
  */
 class Days_View_Templum extends Days_View_Abstract implements Days_View_Interface {
-    /** @var Templum */
+    /** @var Templum Template engine */
     protected $_engine;
-    
-    /**
-     * Template variables
-     * 
-     * @var array
-     */
+    /** @var array Template variables */
     private $_vars = array();
 
+    /**
+     * Initialize template engine.
+     */
     public function __construct() {
         // configure template engine
         $config = array(
@@ -36,6 +34,12 @@ class Days_View_Templum extends Days_View_Abstract implements Days_View_Interfac
         $this->_engine = Templum::singleton();
     }
 
+    /**
+     * Return result template with setted variables.
+     *
+     * @param string $template Template name
+     * @return string
+     */
     public function render($template) {
         if (! $this->_engine->exists($template))
             throw new Days_Exception("Template file '{$template}' not found");
@@ -44,11 +48,12 @@ class Days_View_Templum extends Days_View_Abstract implements Days_View_Interfac
 
     /** 
      * Returns a value of a template variable.
+     *
      * If a template variable does not exist or its value is null,
      * returns a default value.
-     * 
-     * @param string $var     a name of a template variable
-     * @param string $default a default value to return
+     *
+     * @param string $var Name of a template variable
+     * @param string $default Default value to return
      * @return string 
      */
     public function get($var, $default=null) {
@@ -56,11 +61,10 @@ class Days_View_Templum extends Days_View_Abstract implements Days_View_Interfac
     }
 
     /**
-     * Set value.
+     * Set variable.
      *
-     * @param string $var
-     * @param mixed $value
-     * @param bool $merge Merge new value with old value
+     * @param string $var Variable name
+     * @param mixed $value Variable value
      * @param string $delimiter Values separator
      */
     public function set($var, $value, $delimiter=null) {
