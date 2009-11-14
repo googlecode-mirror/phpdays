@@ -10,12 +10,12 @@
 require_once 'lib/Days/View/Interface.php';
 require_once 'lib/Days/View/Abstract.php';
 require_once 'lib/Days/View/Dwoo.php';
+require_once 'lib/Days/Exception.php';
 require_once 'lib/Dwoo/Dwoo/IDataProvider.php';
 require_once 'lib/Dwoo/Dwoo/Data.php';
 require_once 'lib/Dwoo/Dwoo/Exception.php';
 require_once dirname(__FILE__) . '/InterfaceTest.php';
 require_once dirname(__FILE__) . '/_stubs/Days_Engine.php';
-require_once dirname(__FILE__) . '/_stubs/Days_Exception.php';
 require_once dirname(__FILE__) . '/_stubs/Dwoo.php';
 
 /**

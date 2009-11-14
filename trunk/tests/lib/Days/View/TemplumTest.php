@@ -10,10 +10,10 @@
 require_once 'lib/Days/View/Interface.php';
 require_once 'lib/Days/View/Abstract.php';
 require_once 'lib/Days/View/Templum.php';
+require_once 'lib/Days/Exception.php';
 require_once dirname(__FILE__) . '/InterfaceTest.php';
 require_once dirname(__FILE__) . '/_stubs/Days_Engine.php';
 require_once dirname(__FILE__) . '/_stubs/Days_Config.php';
-require_once dirname(__FILE__) . '/_stubs/Days_Exception.php';
 require_once 'lib/Templum/Templum.php';
 
 /**

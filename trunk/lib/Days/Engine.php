@@ -192,5 +192,3 @@ final class Days_Engine {
         Days_Response::sendContent();
     }
 }
-
-class Days_Exception extends Exception {}
