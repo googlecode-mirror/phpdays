@@ -3,7 +3,7 @@
 
 *phpDays* - ist ein flexibles PHP5 Framework auf der Basis von MVC und ORM Entwurfsmustern.
 
-=== Start ===
+=== [De] » Start ===
 
  * [DeAbout Über] das Projekt _(Funktionen)_
  * [DeChangelog Changelog] _(Änderungen zwischen den Versionen)_
