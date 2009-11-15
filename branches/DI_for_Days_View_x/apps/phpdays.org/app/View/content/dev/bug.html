@@ -1,0 +1,31 @@
+<ul>
+  On this page show:
+  <li> all available bugs (sorted by date)
+  <li> sort bugs by column
+  <li> hide/show completed bugs
+  <li> <b>piority</b>: show text color in red, black, blue
+  <li> <b>status</b>: show text in strike if completed
+  <li> additional information show on mouse over on line (customer, reporter, create date, date of schedule)
+</ul>
+
+<a href="/dev/editbug">Create new bug</a>
+<form action="" method="post" class="bug_list border">
+  <table>
+    <thead class="bg">
+      <tr>
+        <th class="bug_checkbox"><input type="checkbox" name="bug_delete"></th>
+        <th class="bug_component">Component</th>
+        <th class="bug_title">Title</th>
+      </tr>
+    </thead>
+    <tbody>
+      {foreach from=$bugs item='bug'}
+      <tr>
+        <th><input type="checkbox" name="bug_delete"></th>
+        <td>{$bug.component}</td>
+        <td>{$bug.title}</td>
+      </tr>
+      {/foreach}
+    </tbody>
+  </table>
+</form>

@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Test Templum in life</title>
+</head>
+<body>
+
+<h3>Variables</h3>
+
+  <p><b>$project_name:</b> {$project_name}</p>
+  <p><b>$PROJECT_NAME:</b> {$PROJECT_NAME}</p>
+  <p><b>$user.name:</b> {$user->name}</p>
+  <p><b>$user.phone.mobile1:</b> {$user->phone->mobile1}</p>
+  <p><b>$user.phone.home:</b> {$user->phone->home} <i>(not exists)</i></p>
+
+<h3>Loops</h3>
+
+  {loop var=$records key=$key value=$value}
+    {$key}: {$value}<br/>
+  {else}
+    Variable $records is empty!
+  {/loop}
+
+<h3>Filters</h3>
+
+  <p>{$name|default value='Guest'|crop len=10 suffix='...'}</p>
+
+<h3>Functions</h3>
+
+  <p>Year {date format='YYYY'}</p>
+  <p>Pages {pages total=10 page=5}</p>
+
+<h3>Include file</h3>
+
+  <blockquote>
+  {include file='test2.html'}
+  </blockquote>
+
+</body>
+</html>

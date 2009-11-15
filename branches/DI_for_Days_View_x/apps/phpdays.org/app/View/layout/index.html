@@ -1,0 +1,158 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+    <title>{$title}</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="title" content="{$title}">
+    <meta name="description" content="{$description}">
+    <meta name="keywords" content="{$keywords}">
+    <meta http-equiv="content-language" content="{$url->lang}">
+    <link rel="shortcut icon" href="http://{$url->host}/static/img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="http://{$url->host}/static/img/favicon.ico" type="image/x-icon">
+    <!-- link rel="alternate" type="application/rss+xml" title="Новости сайта RSS" href="http://{$url->host}/rss/{$url->service}.xml" -->
+    <link rel="stylesheet" type="text/css" href="/static/css/yui/reset-min.css" media="all">
+    <link rel="stylesheet" type="text/css" href="/static/css/yui/base-min.css" media="all">
+    <link rel="stylesheet" type="text/css" href="/static/css/yui/fonts-min.css" media="all">
+    <link rel="stylesheet" type="text/css" href="/static/css/yui/grids-min.css" media="all">
+    <link rel="stylesheet" type="text/css" href="/static/css/global.css">
+    <script type="text/javascript" src="/static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/static/js/jquery/include.js"></script>
+    <script type="text/javascript" src="/static/js/jquery/goocorners.js"></script>
+    <script type="text/javascript" src="/static/js/global.js"></script>
+</head>
+<body>
+
+  <div id="menu" class="rounded_down bg">
+    <a href="/" class="logo"><b>php</b><i>days</i></a>
+    {block name='languages'}
+    <a href="#">Development</a>
+    <a href="#" class="selected">Blog</a>
+    <a href="#">Answers</a>
+    <a href="#">People</a>
+    <a href="#">Job</a>
+    <a href="#">Journal</a>
+  </div>
+
+  <div id="content">
+    <h1>
+      <a href="#">News</a> &raquo;
+      <a href="#">Eclipse</a> &raquo;
+      <a href="#" class="">Released new version 2.1 RC3</a>
+    </h1>
+
+    <p>Eclipse PHP Development Tools (PDT) 2.0 is now available from the Eclipse.org download site and from the Zend/PDT Community site (includes Eclipse PDT and Zend Debugger which enables users to perform local and remote debugging).</p>
+    <p>The Eclipse PDT team would like to thank everyone who made this release possible. As always, our Eclipse PDT community has provided countless new features, bug fixes, documentation, etc. We'd also like to thank the Eclipse Dynamic Languages Toolkit team for cooperating and helping us with the new infrastructure.</p>
+    <p>Fully compliant with Eclipse standards, the new 2.0 release enables PHP developers to leverage a wide variety of Eclipse projects, such as Web Tools Project (WTP) and Dynamic Language Toolkit (DLTK), for faster and easier development. PDT 2.0 also offers strong support for Object-Oriented Programming (OOP) in PHP.</p>
+
+    <h2 class="changed">What's New in PDT 2.0?</h2>
+    <p class="changed">PDT 2.0 was designed based on principles different to those of Eclipse PDT 1.0. For example, different techniques were used to model workspace projects. PDT 2.0 now uses an indexing and caching mechanism for improved performance and experience with code assist and navigation. Moreover, since PHP provides enhanced Object-Oriented features like inheritance and polymorphism, PDT 2.0 provides enhanced features such as type hierarchy, override indicators and type navigation for programmers who utilize these language properties.</p>
+    <h2>Lighter and Faster</h2>
+    <p>As previously mentioned, PDT 2.0 is based on the robust Eclipse framework for caching and indexing language elements, utilizing the proven mechanism used by the Eclipse Dynamic Languages Toolkit project. In addition, PDT 2.0 has a reduced list of dependencies which includes only those features that are a "must have" for PHP developers (so no more unnecessary Java or J2EE components in the tool). Of course, Eclipse provides an easy way to add extra plug-ins as required.</p>
+    <h2>Type hierarchy</h2>
+    <p>The Type Hierarchy view is exceptionally useful for viewing and navigating OO PHP code. There are three presentation formats available through this view: the Type Hierarchy, the Supertype Hierarchy, and the Subtype Hierarchy. These three presentation formats revolve around a focal point type, indicated by the label decoration, which is the type on which the view was opened. When viewing classes, the view displays the class hierarchy from the object through to all of the class and subclasses. When viewing interfaces, the view displays all classes that implement the interface and their subtypes. When viewing supertypes, the view displays classes that are extended and interfaces that are implemented. When viewing subtypes, the view displays a class and its subclasses or an interface and the classes that implement it.</p>
+    {$content}
+
+    <h2>Comments (151). <a href="#">Add your comment</a></h2>
+    <p class="comment level1">
+      <i class="border rounded">
+        Good idea!<br/>
+        I use it in my experiens.<br/>
+        This very simple of use!
+      </i>
+      <b>
+        By <a href="#">Anton Danilchenko</a>, 27 June 2009.
+        <a href="#">Reply on comment</a>.
+        Your vote: <a href="#">good</a> or <a href="#">bad</a>.
+      </b>
+    </p>
+    <p class="comment level2">
+      <i class="border rounded">
+        Good idea!<br/>
+        I use it in my experiens.<br/>
+        This very simple of use!
+      </i>
+      <b>
+        By <a href="#">Anton Danilchenko</a>, 27 June 2009.
+        <a href="#">Reply on comment</a>.
+        Your vote: <a href="#">good</a> or <a href="#">bad</a>.
+      </b>
+    </p>
+    <p class="comment level3">
+      <i class="border rounded">
+        Good idea!<br/>
+        I use it in my experiens.<br/>
+        This very simple of use!
+      </i>
+      <b>
+        By <a href="#">Anton Danilchenko</a>, 27 June 2009.
+        <a href="#">Reply on comment</a>.
+        Your vote: <a href="#">good</a> or <a href="#">bad</a>.
+      </b>
+    </p>
+    <p class="comment level4">
+      <i class="border rounded">
+        Good idea!<br/>
+        I use it in my experiens.<br/>
+        This very simple of use!
+      </i>
+      <b>
+        By <a href="#">Anton Danilchenko</a>, 27 June 2009.
+        <a href="#">Reply on comment</a>.
+        Your vote: <a href="#">good</a> or <a href="#">bad</a>.
+      </b>
+    </p>
+    <p class="comment level3">
+      <i class="border rounded">
+        Good idea!<br/>
+        I use it in my experiens.<br/>
+        This very simple of use!
+      </i>
+      <b>
+        By <a href="#">Anton Danilchenko</a>, 27 June 2009.
+        <a href="#">Reply on comment</a>.
+        Your vote: <a href="#">good</a> or <a href="#">bad</a>.
+      </b>
+    </p>
+
+    <div class="clear"></div>
+  </div>
+
+  <div id="sidebar">
+    <p class="about bg rounded">
+      <b>Published:</b> 6 June 2009 (changed <b>6 June 2009</b>)<br/>
+      <b>Author:</b> <a href="/">Anton Danilchenko</a><br/>
+      <b>Tags:</b> <a href="/">Eclipse</a>, <a href="/">PHP</a>, <a href="/">PDT</a><br/>
+      <b>Comments:</b> <a href="/">152</a> (last added: today 12:45)<br/>
+      <b>Statistic:</b> <a href="/">154</a> visits (14 today)<br/>
+      <b>Rating:</b> <a href="/">4.8</a> (17 votes)<br/>
+      <b>You vote:</b> <a href="#">good</a> or <a href="#">bad</a>
+    </p>
+    {block name='user_info'}
+    {block name='tag_top20'}
+    {block name='ad_left'}
+  </div>
+
+  <div id="footer" class="bg rounded_top">
+    <p class="copyright">
+      Copyright &copy; 2009 <a href="http://danilchenko.pp.ua">Anton Danilchenko</a><br/>
+      Our site is not responsible for the content of copyright materials.<br/>
+    </p>
+    <p class="menu">
+      Team
+      <a href="#">Contacts</a>
+      <a href="#">Statistic</a>
+    </p>
+    <p class="menu">
+      About
+      <a href="#">Contacts</a>
+      <a href="#">Statistic</a>
+    </p>
+    <p class="menu">
+      Statistic
+      <img src="http://top100-images.rambler.ru/top100/banner-88x31-rambler-gray2.gif" alt="Top 100" />
+      <img src="http://top100-images.rambler.ru/top100/banner-88x31-rambler-gray2.gif" alt="Top 100" />
+    </p>
+  </div>
+
+</body>
+</html>

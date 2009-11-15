@@ -1,0 +1,28 @@
+<ul>
+  On this page show:
+  <li> all available tasks (sorted by date)
+  <li> sort tasks by column
+  <li> hide/show completed tasks
+</ul>
+
+<a href="/dev/edittask">Create new task</a>
+<form action="" method="post" class="bug_list border">
+  <table>
+    <thead class="bg">
+      <tr>
+        <th class="bug_checkbox"><input type="checkbox" name="bug_delete"></th>
+        <th class="bug_component">Component</th>
+        <th class="bug_title">Title</th>
+      </tr>
+    </thead>
+    <tbody>
+      {foreach from=$tasks item='task'}
+      <tr>
+        <th><input type="checkbox" name="bug_delete"></th>
+        <td>{$task.component}</td>
+        <td>{$task.title}</td>
+      </tr>
+      {/foreach}
+    </tbody>
+  </table>
+</form>

@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>{$title}</title>
+	<meta name="title" content="{$title}">
+	<meta name="description" content="{$description}">
+	<meta name="keywords" content="{$keywords}">
+	<link rel="stylesheet" type="text/css" href="/static/css/yii-style.css" media="all" />
+	<script type="text/javascript" src="/static/js/jquery/jquery.min.js" ></script>
+</head>
+
+<body class="page">
+
+<div id="container">
+  <div id="header">
+    <h1><a href="/blog/">My Blog</a></h1>
+  </div><!-- header -->
+
+	<div id="sidebar">
+
+		<div class="portlet">
+			<div class="header">Tags</div>
+			<div class="content">
+
+			</div><!-- content -->
+		</div><!-- portlet -->
+
+		<div class="portlet">
+			<div class="header">Recent Comments</div>
+				<div class="content">
+				<ul>
+
+				</ul>
+			</div><!-- content -->
+		</div><!-- portlet -->
+	</div><!-- sidebar -->
+
+	<div id="content">
+	  {$content}<br/>
+	</div><!-- content -->
+
+	<br class="clearfloat" />
+
+	<div id="footer">
+	  <p>Powered by <a href="http://phpdays.googlecode.com">php:Days</a>.</p>
+	</div><!-- footer -->
+</div><!-- container -->
+</body>
+</html>
