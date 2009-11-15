@@ -3,7 +3,7 @@
 
 *phpDays* - un framework in php5 basato sui modelli di progettazione [ItMvc MVC] e [ItLibDaysDbTable ORM].
 
-=== Per cominciare ===
+=== [It] » Per cominciare ===
 
  * [ItAbout Informazioni] sul progetto _(funzionalità)_
  * [ItChangelog Changelog] _(cambiamenti tra le varie versioni)_
