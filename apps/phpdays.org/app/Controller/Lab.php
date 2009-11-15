@@ -1,6 +1,6 @@
 <?php
 /**
- * Dev controller - bug tracker, wiki, code browser.
+ * Lab controller - bug tracker, wiki, code browser.
  *
  * Use "php:Days - php5 framework" (http://phpdays.googlecode.com).
  *
@@ -11,7 +11,7 @@
  * @subpackage  phpDays library
  * @author      Anton Danilchenko <happy@phpdays.org>
  */
-class Phpdays_Controller_Dev extends Days_Controller {
+class Phpdays_Controller_Lab extends Days_Controller {
     /** Project name */
     protected $_projectName;
     /** Bug id */
