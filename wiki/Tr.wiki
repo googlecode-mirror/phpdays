@@ -1,29 +1,29 @@
-#summary Turkish start page.
+#summary Türkçe kılavuz.
 #labels Featured,Lang-Tr
 
-*phpDays* - flexible php5 framework based on the [EnMvc MVC] and [EnLibDaysDbTable ORM] design patterns.
+*phpDays* - [TrMvc MVC] ve [TrLibDaysDbTable ORM] tasarım modelleri tabanlı esnek php5 framework.
 
 === [Tr] » Şimdi başlayın ===
 
- * [EnAbout About] the project _(features)_
- * [EnChangelog Changelog] _(changes between project versions)_
- * [EnInstall Install] the framework on your server and then configure a new project
- * [EnUpgrade Upgrade] an application from a previous version
- * [EnStart Quick start] to get your first application up and running
- * [EnAnswers Answers] to your questions
- * [http://code.google.com/p/phpdays/w/list?q=label:Lang-En All pages] in English
+ * [TrAbout Proje hakkında] _(özellikler)_
+ * [TrChangelog Değişim günlüğü] _(proje versiyonları arasındaki değişiklikler)_
+ * [TrInstall Kurulum]: Frameworku sunucunuza kurun ve yeni bir proje yapılandırın
+ * [TrUpgrade Yükseltme]: Uygulamayı önceki bir versiyondan yükseltmek
+ * [TrStart Hızlı başlangıç]: İlk uygulamanızı oluşturmak ve çalıştırmak
+ * [TrAnswers Cevaplar]: Sorularınıza cevaplar
+ * [http://code.google.com/p/phpdays/w/list?q=label:Lang-Tr Tüm Türkçe sayfalar]
 
 === Günlük kullanım ===
 
- * [EnMvc MVC] - basic concepts necessary to work with the framework
- * [EnLib Library] class reference descriptions
- * [EnAjax Ajax] support in your applications
- * [EnMultisite Multisite] - manage many sites from one framework installation
+ * [TrMvc MVC] - basic concepts necessary to work with the framework
+ * [TrLib Library] class reference descriptions
+ * [TrAjax Ajax] support in your applications
+ * [TrMultisite Multisite] - manage many sites from one framework installation
 
 === Proje üyeleri için ===
 
- * [EnCoding Entry] in the development team
- * [EnCodingStyle Coding style] _(syntax standards of php, html, css, js and yaml files)_
- * [EnCodingApp Improve application] base in framework
- * [EnIdea Ideas] for improve project
- * [EnDoc Documentation] create _(wiki page syntax, page names, translations)_
+ * [TrCoding Katılım]: Geliştirme takımına katılmak
+ * [TrCodingStyle Kodlama stili] _(php, html, css, js ve yaml dosyalarının söz dizimi standartları)_
+ * [TrCodingApp Uygulama geliştir]: Framework uygulama temelini geliştirmek
+ * [TrIdea Fikirler]: Projeyi geliştirmek için fikirler
+ * [TrDoc Dökümantasyon] oluşturmak _(wiki sayfa yapısı, sayfa adları, çeviriler)_
