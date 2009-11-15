@@ -1,0 +1,80 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+    <title>{$title}</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="title" content="{$title}">
+    <meta name="description" content="{$description}">
+    <meta name="keywords" content="{$keywords}">
+    <meta http-equiv="content-language" content="{$url->lang}">
+    <link rel="shortcut icon" href="http://{$url->host}/static/img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="http://{$url->host}/static/img/favicon.ico" type="image/x-icon">
+    <!-- link rel="alternate" type="application/rss+xml" title="RSS feed" href="http://{$url->host}/rss/{$url->service}.xml" -->
+    <link rel="stylesheet" type="text/css" href="/static/css/yui/reset-min.css" media="all">
+    <link rel="stylesheet" type="text/css" href="/static/css/yui/base-min.css" media="all">
+    <link rel="stylesheet" type="text/css" href="/static/css/yui/fonts-min.css" media="all">
+    <link rel="stylesheet" type="text/css" href="/static/css/yui/grids-min.css" media="all">
+    <link rel="stylesheet" type="text/css" href="/static/css/global.css">
+    <script type="text/javascript" src="/static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/static/js/jquery/include.js"></script>
+    <script type="text/javascript" src="/static/js/jquery/goocorners.js"></script>
+    <script type="text/javascript" src="/static/js/global.js"></script>
+</head>
+<body>
+
+  <div id="menu" class="rounded_down bg">
+    <a href="/" class="logo"><b>php</b><i>days</i></a>
+    {block name='languages'}
+    <a href="/lab">Development</a>
+    <a href="/blog" class="selected">Blog</a>
+    <a href="/answers">Answers</a>
+    <a href="/people">People</a>
+    <a href="/job">Job</a>
+    <a href="/journal">Journal</a>
+  </div>
+
+  <div id="content">
+    {block name="lab/menu"}
+    {$content}
+    <div class="clear"></div>
+  </div>
+
+  <div id="sidebar">
+    <p class="about bg rounded">
+      <b>Published:</b> 6 June 2009<br/>
+      <b>Changed:</b> 15 November 2009<br/>
+      <b>Author:</b> <a href="/">Anton Danilchenko</a><br/>
+      <b>Tags:</b> <a href="/">Eclipse</a>, <a href="/">PHP</a>, <a href="/">PDT</a><br/>
+      <b>Comments:</b> <a href="/">152</a> (last: today 12:45)<br/>
+      <b>Statistic:</b> <a href="/">154</a> visits (14 today)<br/>
+      <b>Rating:</b> <a href="/">4.8</a> (17 votes)<br/>
+      <b>You vote:</b> <a href="#">good</a> or <a href="#">bad</a>
+    </p>
+    {block name='user_info'}
+    {block name='ad_left'}
+  </div>
+
+  <div id="footer" class="bg rounded_top">
+    <p class="copyright">
+      Copyright &copy; 2009 <a href="http://danilchenko.pp.ua">Anton Danilchenko</a><br/>
+      Our site is not responsible for the content of copyright materials.<br/>
+    </p>
+    <p class="menu">
+      Team
+      <a href="#">Contacts</a>
+      <a href="#">Statistic</a>
+    </p>
+    <p class="menu">
+      About
+      <a href="#">Contacts</a>
+      <a href="#">Statistic</a>
+    </p>
+    <p class="menu">
+      Statistic
+      <img src="http://top100-images.rambler.ru/top100/banner-88x31-rambler-gray2.gif" alt="Top 100" />
+      <img src="http://top100-images.rambler.ru/top100/banner-88x31-rambler-gray2.gif" alt="Top 100" />
+    </p>
+  </div>
+
+</body>
+</html>
