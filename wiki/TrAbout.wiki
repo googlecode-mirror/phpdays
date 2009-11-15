@@ -9,7 +9,7 @@
  * phpDays [TrMvc MVC] temelinde oluşturulmuştur
  * [TrLibDaysDbTable ORM] için tam desteğe sahiptir _(SQL sorguları yazmaya gerek yok)_
  * [TrLibDaysDb database abstraction layer] kullanarak veritabanlarına erişim sağlar _(SQL sorguları yazma)_
- * phpDays'in tüm ayarları [http://en.wikipedia.org/wiki/YAML YAML] formatında [EnLibDaysConfig konfigürasyon dosyası] içerisinde tutulur
+ * phpDays'in tüm ayarları [http://en.wikipedia.org/wiki/YAML YAML] formatında [TrLibDaysConfig konfigürasyon dosyası] içerisinde tutulur
  * sınıflar otomatik olarak yüklenir _(`include()` ve `require()`u unutun)_
  * *UTF-8* kodlaması ile _(Türkçe dahil)_ tüm yazım dillerini tam destekler
  * [TrAjax AJAX] için tam destek _([http://jquery.com jQuery] ile tavsiye edilir)_
