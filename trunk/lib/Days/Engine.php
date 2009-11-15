@@ -122,7 +122,7 @@ final class Days_Engine {
                 throw new Days_Exception("Method $autorunClass::run not found");
             call_user_func(array($autorunClass, 'run'));
         }
-        Days_Event::run('system.ready');
+        Days_Event::run('engine.start');
         // doesn't send execution errors to user
         ob_start();
         try {
@@ -131,7 +131,7 @@ final class Days_Engine {
             $action = Days_Url::getSpec('action');
             $ext = Days_Url::getSpec('ext');
             $brand = Days_Config::load()->get('engine/brand', 'app');
-            Days_Event::run('system.pre_controller');
+            Days_Event::run('controller.start');
             // set module path
             Days_Model::setPath(self::appPath() . 'Model/');
             Days_Model::setPrefix($brand);
@@ -154,7 +154,7 @@ final class Days_Engine {
                 throw new Days_Exception("Controller '{$controllerClass}' should be extended from 'Days_Controller'");
             // call init() method for prepare object
             $controllerObj->init();
-            Days_Event::run('system.post_init_controller');
+            Days_Event::run('controller.post.init');
             // execute PostAction before call specified action
             if (Days_Request::isPost()) {
                 $actionPost = "{$action}PostAction";
@@ -178,7 +178,7 @@ final class Days_Engine {
                 $content = call_user_func(array($controllerObj, 'getContent'));
                 Days_Response::addHeader($ext);
             }
-            Days_Event::run('system.post_controller');
+            Days_Event::run('controller.end');
             // set data to response
             Days_Response::addContent($content);
         }
@@ -198,12 +198,12 @@ final class Days_Engine {
         }
         // save errors
         Days_Log::save();
-        Days_Event::run('system.shutdown');
+        Days_Event::run('engine.end');
         // send headers to user
-        Days_Event::run('system.send_headers');
+        Days_Event::run('response.send.headers');
         Days_Response::sendHeaders();
         // send content to user
-        Days_Event::run('system.send_content');
+        Days_Event::run('response.send.content');
         Days_Response::sendContent();
     }
 }
