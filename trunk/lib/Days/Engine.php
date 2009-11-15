@@ -115,18 +115,12 @@ final class Days_Engine {
         error_reporting($iErrorLevel);
         setlocale(LC_ALL, 'ru_RU.UTF-8', 'RUS', 'RU');
         if (Days_Config::load()->get('engine/autorun', 1)) {
-            $autorun_dir_path=self::$_appPath . 'autorun/';
-            if(is_dir($autorun_dir_path)) {
-                $autorun_dir=opendir($autorun_dir_path);
-                if($autorun_dir) {
-                    while($file=readdir($autorun_dir)) {
-                        if(is_file($autorun_dir_path.$file) && preg_match('`\.php$`',$file)) {
-                            require_once $autorun_dir_path.$file;
-                        }
-                    }
-                    closedir($autorun_dir);
-                }
-            }
+            $autorunClass = self::$_brand."_Controller_System_Autorun";
+            if (! class_exists($autorunClass))
+                throw new Days_Exception("Class $autorunClass not found");
+            if (! is_callable(array($autorunClass, 'run')))
+                throw new Days_Exception("Method $autorunClass::run not found");
+            call_user_func(array($autorunClass, 'run'));
         }
         Days_Event::run('system.ready');
         // doesn't send execution errors to user
