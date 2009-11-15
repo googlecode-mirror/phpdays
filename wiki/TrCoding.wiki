@@ -2,15 +2,15 @@
 #labels Lang-Tr
 #sidebar Tr
 
-Projeye aşina olduysanız ve projede yer almaktan eminseniz ve ilgi duyuyorsanız, o zaman aşağıdaki yönergeleri okuyun.
+İngilizce biliyorsanız, projeye aşina olduysanız ve projede yer almaktan eminseniz ve ilgi duyuyorsanız, o zaman aşağıdaki yönergeleri okuyun.
 
 === phpDays Ekibine katılmak ===
 
- * leave your request to join the team as a comment on the [TrAnswers Discussions] page or send it to [http://groups.google.com/group/phpdays-en project support group]
- * in your message state a role you would like to take on _(php developer, web designer, documentation translator, typesetter, !JavaScript developer)_ and include your Gmail address _(your Gmail username is enough)_
- * after some consideration you'll receive an email with our decision about including you in the project _(if you don't get the response in three days, send your request again)_
- * if everything goes well, you'll become a member of the project and will be able to do more than a non-member can _(you'll be able to change the project's code, documentation and tasks)_
- * also you will be added to [http://code.google.com/p/phpdays/people/list the project's member list] _(don't forget to add this link to your resume)_
+ * ekibe katılma talebinizi [EnAnswers Tartışmalar] sayfasına ingilizce yorum olarak ekleyin veya [http://groups.google.com/group/phpdays-en proje destek grubu]na gönderin (Sadece ingilizce)
+ * mesajınızda ingilizce olarak üstlenmek istediğiniz görevi belirtin _(php geliştiricisi, web tasarımcısı, dökümantasyon çevirmeni, dizgici, !JavaScript geliştiricisi)_ ve Gmail adresinizi ekleyin _(Gmail kullanıcı adınız yeterlidir)_
+ * bazı değerlendirmelerden sonra projeye katılmanız hakkındaki kararımızı içeren bir eposta alacaksınız _(eğer üç gün içinde cevap almazsanız, talebinizi tekrar gönderin)_
+ * herşey iyi giderse, projenin bir üyesi olacaksınız ve üye olmayanların yapabildiğinden daha fazlasını yapabileceksiniz _(projenin kodunu, dökümantasyonu ve görevleri değiştirebileceksiniz)_
+ * aynı zamanda [http://code.google.com/p/phpdays/people/list projenin üye listesi]ne ekleneceksiniz _(bu linki özgeçmişinize eklemeyi unutmayın)_
 
 === Site hakkında Genel Bilgi ===
 
@@ -21,21 +21,21 @@ Projeye aşina olduysanız ve projede yer almaktan eminseniz ve ilgi duyuyorsan�
 
 === Projenin çalışan kopyasını yüklemek ===
 
- * download and install an SVN client to work with the project's files
- * download a project's working copy _(for more information see [http://code.google.com/p/phpdays/source/checkout Checkout])_
- * if you haven't worked with Subversion before, take your time to learn it
+ * projenin dosyalarıyla çalışmak için bir SVN istemcisi indirip kurun
+ * projenin çalışan bir kopyasını indirin _(daha fazla bilgi için: [http://code.google.com/p/phpdays/source/checkout Checkout])_
+ * eğer daha önce Subversion ile çalışmadıysanız, zamanınızı ayırıp öğrenin
 
 === Değişikleri Uygulamak için Yönergeler _(SVN commit)_ ===
 
-For comments follow the format listed below
+Yorumlar için aşağıdaki formatı takip edin 
 
- * `Fix #1234: The name of the bug` - for a fix of the error number `1234`. If the bug is not in the [http://code.google.com/p/phpdays/issues/list Issues], then you should add the issue first and only then make a `SVN commit`
- * write each bug/issue in a separate line. Put a dot at the end of line.
+ * `Fix #1234: Açığın adı (ingilizce)` - `1234` numaralı hatanın çözümü için. Eğer açık [http://code.google.com/p/phpdays/issues/list Sorunlar] listesinde yoksa, o zaman öncelikle sorunu eklemelisiniz ve sadece bundan sonra `SVN commit` yapmalısınız.
+ * her açığı/sorunu ayrı bir satırda yazın. Satırın sonuna nokta koymayın.
 
 === Kendiniz Deneyin ===
 
-Set up [http://blogs.sun.com/netbeansphp/entry/recent_improvements_in_phpunit_support PHPUnit]. This will allow you to create unit tests to ensure that a new fix in code will not break something else. Only after this should you run `SVN commit`.
+[http://blogs.sun.com/netbeansphp/entry/recent_improvements_in_phpunit_support PHPUnit] kurun. Bu, koddaki yeni düzenlemenin başka birşeyi bozmayacağından emin olmanız için ünite testler oluşturmanıza imkan tanıyacaktır. Sadece bundan sonra `SVN commit` yapmalısınız.
 
 === Daha İyi Kod Yazın ===
 
-Read about the [TrCodingStyle coding style] adopted in our project. Following uniform style allows all developers to communicate in a single, comprehensible language. 
+Projemizde benimsenmiş [TrCodingStyle kodlama stili]ni okuyun. Tek stili uygulamak tüm geliştiricilerin tek ve anlaşılır dilde iletişim kurmalarına imkan tanır. 
