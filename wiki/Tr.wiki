@@ -1,0 +1,42 @@
+#summary Turkish start page.
+#labels Featured,Lang-Tr-Turkishtranslation
+
+*phpDays* - flexible php5 framework based on the [EnMvc MVC] and [EnLibDaysDbTable ORM] design patterns.
+
+=== [En] » Start now ===
+
+ * [EnAbout About] the project _(features)_
+ * [EnChangelog Changelog] _(changes between project versions)_
+ * [EnInstall Install] the framework on your server and then configure a new project
+ * [EnUpgrade Upgrade] an application from a previous version
+ * [EnStart Quick start] to get your first application up and running
+ * [EnAnswers Answers] to your questions
+ * [http://code.google.com/p/phpdays/w/list?q=label:Lang-En All pages] in English
+
+=== Every day use ===
+
+ * [EnMvc MVC] - basic concepts necessary to work with the framework
+ * [EnLib Library] class reference descriptions
+ * [EnAjax Ajax] support in your applications
+ * [EnMultisite Multisite] - manage many sites from one framework installation
+
+=== For project members ===
+
+ * [EnCoding Entry] in the development team
+ * [EnCodingStyle Coding style] _(syntax standards of php, html, css, js and yaml files)_
+ * [EnCodingApp Improve application] base in framework
+ * [EnIdea Ideas] for improve project
+ * [EnDoc Documentation] create _(wiki page syntax, page names, translations)_
+
+
+= Introduction =
+
+Add your content here.
+
+
+= Details =
+
+Add your content here.  Format your content with:
+  * Text in *bold* or _italic_
+  * Headings, paragraphs, and lists
+  * Automatic links to other wiki pages
