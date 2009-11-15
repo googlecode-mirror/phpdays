@@ -114,18 +114,16 @@ final class Days_Engine {
         $iErrorLevel = (self::isDebug() ? E_ALL|E_STRICT : E_ALL^E_NOTICE);
         error_reporting($iErrorLevel);
         setlocale(LC_ALL, 'ru_RU.UTF-8', 'RUS', 'RU');
-        if (Days_Config::load()->get('engine/autorun', 1)) {
-            $autorunClass = self::$_brand."_Controller_System_Autorun";
-            if (! class_exists($autorunClass))
-                throw new Days_Exception("Class $autorunClass not found");
-            if (! is_callable(array($autorunClass, 'run')))
-                throw new Days_Exception("Method $autorunClass::run not found");
-            call_user_func(array($autorunClass, 'run'));
-        }
-        Days_Event::run('engine.start');
-        // doesn't send execution errors to user
+        // not send execution errors to user
         ob_start();
         try {
+            if (Days_Config::load()->get('engine/autorun', 1)) {
+                $autorunClass = self::$_brand."_Controller_System_Autorun";
+                // run predefined class
+                if (class_exists($autorunClass) AND is_callable(array($autorunClass, 'run')))
+                    call_user_func(array($autorunClass, 'run'));
+            }
+            Days_Event::run('engine.start');
             // get url info
             $controller = Days_Url::getSpec('controller');
             $action = Days_Url::getSpec('action');
