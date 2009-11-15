@@ -98,6 +98,7 @@ a.rounded, .button {
   padding-top: 5px;
   display: none;
   position: absolute;
+  z-index: 100;
 }
 #menu>.language>a {
   display: block;
@@ -262,14 +263,14 @@ a.rounded, .button {
 /**
  * Blocks.
  */
-.block_dev_toolbar {
+.block_lab_menu {
 }
-.block_dev_toolbar>a {
-  margin-right: 5px;
+.block_lab_menu>a {
+  margin-right: 10px;
   font-size: 120%;
   font-weight: bold;
 }
-.block_dev_toolbar>a:hover {
+.block_lab_menu>a:hover {
   text-decoration: none;
   background-color: #f8facb;
 }
