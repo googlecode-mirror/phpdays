@@ -124,7 +124,7 @@ final class Days_Engine {
                             require_once $autorun_dir_path.$file;
                         }
                     }
-                    closedir($autorun_dir_path);
+                    closedir($autorun_dir);
                 }
             }
         }
