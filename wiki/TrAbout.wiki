@@ -1,5 +1,6 @@
 #summary phpDays hakkında
 #labels Lang-Tr
+#sidebar Tr
 
 *phpDays* ile Web sitesi oluşturma sürecini hızlandırma ve basitleştirme imkanına sahip olacaksınız. Bu sitenin bakımı ve geliştirmesi daha kolay olacaktır.
 
