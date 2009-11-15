@@ -10,30 +10,40 @@
 
 == Системные события ==
 
-*system.ready* - событие наступает сразу после чтения конфигурационного файла, до начала работы ядра фреймворка. Подписаться на это событие можно, создав файл в app/autorun вашего приложения c вызовом Days_Event::add, параметр engine/autorun должен быть равен 1.
+*engine.start* - событие наступает сразу после чтения конфигурационного файла, до начала работы ядра фреймворка.
 
-*system.pre_controller* - событие, отрабатывающее сразу после определения какой контроллер нужно выполнять.
+*controller.start* - событие, отрабатывающее сразу после определения какой контроллер нужно выполнять, перед исполнением самого контроллера.
 
-*system.post_init_controller* - наступает после отработки метода init() вызываемого контроллера.
+*controller.post.init* - наступает после отработки метода init() вызываемого контроллера.
 
-*system.post_controller* - событие после получения контента от контроллера, но до включения его в контент страницы.
+*controller.end* - событие после получения контента от контроллера, но до включения его в контент страницы.
 
-*system.shutdown* - событие завершения работы ядра фреймворка.
+*engine.end* - событие завершения работы ядра фреймворка.
 
-*system.send_headers* - событие перед отправкой заголовков сгенерированной страницы.
+*response.send.headers* - событие перед отправкой заголовков сгенерированной страницы.
 
-*system.send_content* - событие перед отправкой контента страницы.
+*response.send.content* - событие перед отправкой контента страницы.
+
+Подписаться на ранние события ядра можно, создав файл app/Controller/System/Autorun.php с классом App_Controller_System_Autorun, где App - префикс вашего приложения.
+{{{
+class Phpdays_Controller_System_Autorun {
+
+    /**
+     * Defines a list of subscribers to the event
+     */
+    public static function run() {
+        Days_Event::add('engine.start','session_start');
+    }
+}
+}}}
+В статическом методе run() класса указываем вызовы Days_Event::add и остальной код, который необходимо выполнить сразу после инициализации ядра фреймворка. Параметр engine/autorun в конфигурационном файле приложения должен быть равен 1.
 
 === Пример ===
 
-Подписка на событие *system.send_content*
+Подписка на событие *engine.end*
 
 {{{
-Days_Event::add('system.send_content','del_whitespace');
-
-function del_whitespace() {
-    Days_Response::setContent(preg_replace('#\s{2,}#','',Days_Response::getContent()));
-}
+Days_Event::add('engine.end','Days_Log::save');
 }}}
 
 
