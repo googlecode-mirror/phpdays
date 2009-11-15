@@ -9,7 +9,7 @@
     <meta http-equiv="content-language" content="{$url->lang}">
     <link rel="shortcut icon" href="http://{$url->host}/static/img/favicon.ico" type="image/x-icon">
     <link rel="icon" href="http://{$url->host}/static/img/favicon.ico" type="image/x-icon">
-    <!-- link rel="alternate" type="application/rss+xml" title="Новости сайта RSS" href="http://{$url->host}/rss/{$url->service}.xml" -->
+    <!-- link rel="alternate" type="application/rss+xml" title="RSS feed" href="http://{$url->host}/rss/{$url->service}.xml" -->
     <link rel="stylesheet" type="text/css" href="/static/css/yui/reset-min.css" media="all">
     <link rel="stylesheet" type="text/css" href="/static/css/yui/base-min.css" media="all">
     <link rel="stylesheet" type="text/css" href="/static/css/yui/fonts-min.css" media="all">
@@ -25,12 +25,12 @@
   <div id="menu" class="rounded_down bg">
     <a href="/" class="logo"><b>php</b><i>days</i></a>
     {block name='languages'}
-    <a href="#">Development</a>
-    <a href="#" class="selected">Blog</a>
-    <a href="#">Answers</a>
-    <a href="#">People</a>
-    <a href="#">Job</a>
-    <a href="#">Journal</a>
+    <a href="http://lab.phpdays.org">Development</a>
+    <a href="/blog" class="selected">Blog</a>
+    <a href="/answers">Answers</a>
+    <a href="/people">People</a>
+    <a href="/job">Job</a>
+    <a href="/journal">Journal</a>
   </div>
 
   <div id="content">
