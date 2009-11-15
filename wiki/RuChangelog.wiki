@@ -14,11 +14,18 @@
  * r200 Change url from sf.net to googlecode.com.
  * r247 Create Days_Tool_AppGenerator. Change @package and @subpackage in all Days classes.
  * r255 Add class Days_Router. Add methods "copy" and "rename" to Days_Db_Table.
- * r262 Refactor View classes. Add empty helpers base.
+ * r262, r275 Refactor View classes. Add empty helpers base.
  * r263 Extend helper classes by Days_Helper_Abstract.
  * r266 Fix #22: Extract Days_Exception from Engine.php
  * r267 Added methods Days_Response::getContent and Days_Response::setContent for comfort and control output of the engine
  * r268 Added method Days_Event:: get($event) for all subscribers of certain event.
+ * r282 First Helpers
+ * r283 [lib/Templum] Create new Pages function.
+ * r284 [lib/Templum] Create new Collect block.
+ * r285 [lib/Templum] Add new tests in template.
+ * r288 Creating a branch for Issue #24
+ * r290 [apps/phpdays.org] Change menu links.
+ * r291 [apps/phpdays.org] Rename service "dev" to "lab".
 
 === 1.1 beta1 ^(18 октября 2009)^ ===
 
