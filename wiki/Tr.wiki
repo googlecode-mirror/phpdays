@@ -1,5 +1,5 @@
 #summary Turkish start page.
-#labels Featured,Lang-Tr-Turkishtranslation
+#labels Featured,Lang-Tr
 
 *phpDays* - flexible php5 framework based on the [EnMvc MVC] and [EnLibDaysDbTable ORM] design patterns.
 
