@@ -3,7 +3,7 @@
 
 *phpDays* - un Framework flexible en php5 basé sur l'architecture [FrMvc MVC] et l' [FrLibDaysDbTable ORM].
 
-=== Commencement ===
+=== [Fr] » Commencement ===
 
  * [FrAbout À propos] du projet _(fonctionnalités)_
  * [FrChangelog Journal des changements] _(changements entre les différentes versions du projet)_
