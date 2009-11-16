@@ -6,7 +6,7 @@
 
 === phpDays Ekibine katılmak ===
 
- * ekibe katılma talebinizi [EnAnswers Tartışmalar] sayfasına ingilizce yorum olarak ekleyin veya [http://groups.google.com/group/phpdays-en proje destek grubu]na gönderin (Sadece ingilizce)
+ * ekibe katılma talebinizi [TrAnswers Tartışmalar] sayfasına ingilizce yorum olarak ekleyin veya [http://groups.google.com/group/phpdays-en proje destek grubu]na gönderin (Sadece ingilizce)
  * mesajınızda ingilizce olarak üstlenmek istediğiniz görevi belirtin _(php geliştiricisi, web tasarımcısı, dökümantasyon çevirmeni, dizgici, !JavaScript geliştiricisi)_ ve Gmail adresinizi ekleyin _(Gmail kullanıcı adınız yeterlidir)_
  * bazı değerlendirmelerden sonra projeye katılmanız hakkındaki kararımızı içeren bir eposta alacaksınız _(eğer üç gün içinde cevap almazsanız, talebinizi tekrar gönderin)_
  * herşey iyi giderse, projenin bir üyesi olacaksınız ve üye olmayanların yapabildiğinden daha fazlasını yapabileceksiniz _(projenin kodunu, dökümantasyonu ve görevleri değiştirebileceksiniz)_
