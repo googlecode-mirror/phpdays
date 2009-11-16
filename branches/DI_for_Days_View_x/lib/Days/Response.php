@@ -40,7 +40,7 @@ class Days_Response {
     /**
      * Set content
      *
-     * @param $sContent string
+     * @param string $sContent
      * @return string
      */
     public static function setContent($sContent) {
@@ -50,8 +50,8 @@ class Days_Response {
     /**
      * Add header to list.
      *
-     * @param $sType string: Type of header
-     * @param $sValue string: Destination path (only for 'redirect' and 'reload' types)
+     * @param string $sType : Type of header
+     * @param string $sValue : Destination path (only for 'redirect' and 'reload' types)
      * @return void
      */
     public static function addHeader($sType, $sValue='') {
@@ -62,6 +62,7 @@ class Days_Response {
     /**
      * Set content to send.
      *
+     * @param string $sContent
      * @return void
      */
     public static function addContent($sContent) {
@@ -184,6 +185,7 @@ class Days_Response {
      * - relative (without http://host.com)
      * - reload current page (empty string)
      *
+     * @param string $sDestination
      * @return void
      */
     private static function _sendHeadersRedirect($sDestination='') {
