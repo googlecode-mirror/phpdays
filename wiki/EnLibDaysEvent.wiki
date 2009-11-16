@@ -1,0 +1,107 @@
+#summary Implementation of the Observer Design Pattern
+#sidebar EnLib
+
+== Overview ==
+
+The [http://code.google.com/p/phpdays/source/browse/trunk/lib/Days/Event.php Days_Event] class implements the Observer pattern, it allows you to subscribe (assign a callback function) to a specific event and notify (call assigned callback functions) when the event occurs. There can be several subscribers to a single event, they are notified in the order of subscription.
+
+Events can be system or user events.
+
+== System Events ==
+
+*engine.start* - this event occurs immediately after reading the configuration file, prior to the framework core's start up.
+
+*controller.start* - this event occurs immediately after a controller has been chosen but before the execution of the controller.
+
+*controller.post.init* - this event occurs after a controller's init() method.
+
+*controller.end* - this event occurs after receiving content from a controller, but before including it in the page's content.
+
+*engine.end* - this event occurs when the framework core is finished.
+
+*response.send.headers* - this event occurs before sending headers of a generated page.
+
+*response.send.content* - this event occurs before sending the page's content.
+
+You can subscribe to the earlier system events by creating a app/Controller/System/Autorun.php file with a App_Controller_System_Autorun class, where App is a prefix of your application.
+{{{
+class App_Controller_System_Autorun {
+
+    / **
+     * Defines a list of subscribers to the event
+     * /
+    public static function run() {
+        Days_Event::add('engine.start', 'session_start')
+    }
+}
+}}}
+The static method run() contains a call to Days_Event::add and the rest of the code that must be executed immediately after the framework core's initialization. The engine/autorun parameter in the application's configuration file must be set to 1.
+
+=== Example ===
+
+Subscribe to the *engine.end* event
+
+{{{
+Days_Event::add('engine.end','Days_Log::save');
+}}}
+
+
+== User Events ==
+
+In your application, you can define your own custom events. In this case your application is responsible for notifying subscribers when the custom events occur. Start names of the custom events with your application's prefix.
+
+=== Examples ===
+
+1) Events from the framework's [EnLibDaysUser Days_User] class
+{{{
+class Days_User {
+  public function login($username, $password) {
+    Days_Event::run('user.login.before');
+    / / Process logging
+    if (/ * logged well * /) {
+      Days_Event::run('user.login.success');
+      ...
+    }
+    else {
+      Days_Event::run('user.login.fail');
+      ...
+    }
+    Days_Event::run('user.login.after');
+  }
+...
+}}}
+
+2) A custom event in the annex
+{{{
+class Myapp_Model_Rss {
+  public function import($path) {
+    Days_Event::run('myapp.rss.import.before');
+    / / Process logging
+    if (/ * data loaded from RSS * /) {
+      Days_Event::run('myapp.rss.import.success');
+      ...
+    }
+    else {
+      Days_Event::run('myapp.rss.import.fail');
+      ...
+    }
+    Days_Event::run('myapp.rss.import.after');
+  }
+}
+}}}
+
+3) Subscribe to user events in the annex
+{{{
+/ / General Days event
+Days_Event::add('user.login.success','userSuccessLogged');
+/ / Function called on success logging
+function userSuccessLogged() {
+  echo 'You logged successfully on site!';
+}
+/ / Your application event
+Days_Event::add('myapp.rss.import.fail', 'rssNotLoaded');
+/ / Callback function
+function rssNotLoaded() {
+  echo 'RSS not loaded. Enter correct URL adress';
+}
+}}}
