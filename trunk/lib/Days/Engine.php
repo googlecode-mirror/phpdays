@@ -102,7 +102,7 @@ final class Days_Engine {
         spl_autoload_register(array(__CLASS__, 'autoload'));
         date_default_timezone_set('Europe/Helsinki');
         // set config main file
-        if (! is_empty($mode))
+        if (! empty($mode))
             Days_Config::setDefaultConfig($mode);
         // set path for config
         Days_Config::setConfigPath(self::$_appPath . 'config/');
