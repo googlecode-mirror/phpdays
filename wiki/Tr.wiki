@@ -15,10 +15,10 @@
 
 === Günlük kullanım ===
 
- * [TrMvc MVC] - basic concepts necessary to work with the framework
- * [TrLib Library] class reference descriptions
- * [TrAjax Ajax] support in your applications
- * [TrMultisite Multisite] - manage many sites from one framework installation
+ * [TrMvc MVC] - framework ile çalışmak için gereken basit konseptler
+ * [TrLib Library]: Sınıf referans açıklamaları
+ * [TrAjax Ajax]: Uygulamalarınızda Ajax desteği
+ * [TrMultisite Multisite] - sadece bir framework kurulumundan birçok siteyi yönetin
 
 === Proje üyeleri için ===
 
