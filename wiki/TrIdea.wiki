@@ -1,0 +1,5 @@
+#summary Projeyi geliştirmek için fikirler.
+#labels Lang-Tr
+#sidebar Tr
+
+Bu sayfada phpDays için yeni fikirleri tartışıyoruz. Fikirlerinizi aşağıya yorumlar bölümüne gönderin.
