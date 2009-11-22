@@ -10,11 +10,10 @@
 require_once 'lib/Days/View/Interface.php';
 require_once 'lib/Days/View/Abstract.php';
 require_once 'lib/Days/View/Smarty.php';
-require_once 'lib/Smarty/Smarty.php';
+require_once 'lib/Days/View/Config.php';
 require_once 'lib/Days/Exception.php';
+require_once 'lib/Smarty/Smarty.php';
 require_once dirname(__FILE__) . '/InterfaceTest.php';
-require_once dirname(__FILE__) . '/_stubs/Days_Engine.php';
-require_once dirname(__FILE__) . '/_stubs/Days_Config.php';
 
 /**
  * Tests for the Days_View_Smarty class.
@@ -22,6 +21,6 @@ require_once dirname(__FILE__) . '/_stubs/Days_Config.php';
 class Days_View_SmartyTest extends Days_View_InterfaceTest {
 
     protected function setUp() {
-        $this->view = new Days_View_Smarty();
+        $this->view = new Days_View_Smarty(new Days_View_Config());
     }
 }
