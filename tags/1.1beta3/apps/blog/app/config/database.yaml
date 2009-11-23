@@ -1,0 +1,27 @@
+# site database structure
+blog:
+  columns:
+    _blog_id: {type: int, attr: unsigned}
+    _blog_category_id: {type: int, attr: unsigned}
+    date_create: {type: date}
+    date_change: {type: date}
+    title: {type: varchar, len: 120}
+    description: {type: text}
+    content: {type: text}
+    status: {type: enum, attr: [active,inactive,draft]}
+blog_category:
+  columns:
+    _blog_category_id: {type: int, attr: unsigned}
+    url_name: {type: varchar, len: 100}
+    name: {type: varchar, len: 50}
+    title: {type: varchar, len: 255}
+    desctiption: {type: text}
+  dependent: [post]
+blog_tag:
+  columns:
+    _blog_tag_id: {type: int, attr: unsigned}
+	_blog_id: {type: int, attr: unsigned}
+	material: {type: varchar, len: 70}
+	color: {type: varchar, len: 70}
+  reference:
+	post: [blog, _blog_id, _blog_id]
