@@ -29,7 +29,6 @@ class Days_View_Dwoo extends Days_View_Abstract implements Days_View_Interface {
         $this->_engine = new Dwoo(
             $viewConfig->getCompileDir(),
             $viewConfig->getCacheDir());
-        //$this->_engine->setCacheTime($viewConfig->getCaching());
         // collect vars
         $this->_vars = new Dwoo_Data(); 
     }

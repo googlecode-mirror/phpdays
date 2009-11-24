@@ -57,7 +57,7 @@ class Days_View_Config {
     /**
      * Get the directory where templates are stored.
      * 
-     * @return string directory for templates.
+     * @return string Directory for templates.
      */
     public function getTemplateDir() {
         return self::$_templateDir;
@@ -66,7 +66,7 @@ class Days_View_Config {
     /**
      * Get the directory where the compiled templates are stored.
      * 
-     * @return string directory for compiled templates.
+     * @return string Directory for compiled templates.
      */
     public function getCompileDir() {
         return self::$_compileDir;
@@ -75,7 +75,7 @@ class Days_View_Config {
     /**
      * Get the directory where the cached templates are stored.
      * 
-     * @return string directory for cached templates.
+     * @return string Directory for cached templates.
      */
     public function getCacheDir() {
         return self::$_cacheDir;
@@ -84,7 +84,7 @@ class Days_View_Config {
     /**
      * Get time for how long cached templates are valid.
      * 
-     * @return int time in seconds for how long templates are cached.
+     * @return int Time in seconds for how long templates are cached.
      */
     public function getCaching() {
         return self::$_caching;
