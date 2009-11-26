@@ -7,7 +7,7 @@ On this page we discuss new ideas for phpDays. Post your ideas below in comments
 
 === Models with data checking ===
 
-I am learning the  Python language and its Django framework. I am also learning about the Google App Engine.
+I am learning the *Python* language and its *Django* framework. I am also learning about the *Google AppEngine*.
 
 I like its models very much. We do not create a database and do not describe a database in files. We create model classes with field descriptions. At launch, our application generates a database structure and then uses it. Very simple to use!
 
@@ -23,6 +23,19 @@ class App_Model_User extends Days_Model {
 The base class `Days_Model` implements base methods for different field types.
 
 Also the database structure is generated from this file (using reflection).
+
+==== Models in configuration file ====
+
+For rapid web site development and lightweight maintain I propose use simple for understand configuration file where we describe all models in our project. After start application automaticalli check all models on modifications. If models changed - run models generator.
+
+Models generator migrate old models structure to new models _(if it possible)_. If migration not supported - all data backed up to file _(sql file with old structure and data, old model files, old models configuration file)_. After this created new empty models _(model files, database structure)_.
+_(ATTENTION. Maybe need rename old tables by adding prefix "`_`")_
+
+In models definition included validators. This very useful.
+
+*See:* sample models in [http://code.google.com/p/phpdays/source/browse/trunk/apps/phpdays.org/app/config/models.yaml models.yaml]
+
+----
 
 === Validator ===
 
@@ -44,6 +57,8 @@ if (Days_Validator::check($mail, 'str: {max: 70}, email, required'))
 
 Tasks:
  * simplify a criteria format _(good if data passes as string `check($age, 'int: {max: 50, min: 18}')` or similar format)_
+
+----
 
 === Event (issue #15) ===
 
@@ -103,7 +118,9 @@ function rssNotLoaded() {
 }
 }}}
 
-See also: [http://docs.kohanaphp.com/general/events Kohana events], [http://devzone.zend.com/article/4284-Observer-pattern-in-PHP Zend Observer].
+*See:* [http://docs.kohanaphp.com/general/events Kohana events], [http://devzone.zend.com/article/4284-Observer-pattern-in-PHP Zend Observer].
+
+----
 
 === Form ===
 
