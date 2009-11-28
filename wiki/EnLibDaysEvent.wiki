@@ -1,6 +1,7 @@
 #summary Implementation of the Observer Design Pattern
 #labels Lang-En
 #sidebar EnLib
+<wiki:comment>revision: 1</wiki:comment>
 
 == Overview ==
 

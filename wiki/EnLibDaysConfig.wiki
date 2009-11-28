@@ -1,6 +1,7 @@
 #summary Days_Config - work with the configuration of the site.
 #labels Lang-En
 #sidebar EnLib
+<wiki:comment>revision: 1</wiki:comment>
 
 *[http://code.google.com/p/phpdays/source/browse/trunk/lib/Days/Config.php Days_Config]* - work with the configuration of the site.
 

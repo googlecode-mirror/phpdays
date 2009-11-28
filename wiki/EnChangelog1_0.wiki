@@ -1,6 +1,7 @@
 #summary List of Changes in Version 1.0
 #labels Lang-En
 #sidebar En
+<wiki:comment>revision: 1</wiki:comment>
 
 == Version 1.0 - _9 October 2009_ ==
 

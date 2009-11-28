@@ -1,6 +1,7 @@
 ﻿#summary Multisites.
 #labels Lang-En
 #sidebar En
+<wiki:comment>revision: 1</wiki:comment>
 
 If a complex, feature-rich section has to be added to a site, it is best to make it as a separate project. Then the project can be integrated into another site. It gives a semblance of Lego bricks, from which you can build a web site on the basis of other projects.
 

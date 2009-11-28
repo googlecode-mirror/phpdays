@@ -1,6 +1,7 @@
 #summary ORM to work with tables.
 #labels Lang-En
 #sidebar EnLib
+<wiki:comment>revision: 1</wiki:comment>
 
 === General information ===
 

@@ -1,5 +1,6 @@
 #summary English start page.
 #labels Featured,Lang-En
+<wiki:comment>revision: 1</wiki:comment>
 
 *phpDays* - flexible php5 framework based on the [EnMvc MVC] and [EnLibDaysDbTable ORM] design patterns.
 

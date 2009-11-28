@@ -1,6 +1,7 @@
 #summary Ajax in your application.
 #labels Lang-En
 #sidebar En
+<wiki:comment>revision: 1</wiki:comment>
 
 === Using !JavaScript libraries ===
 

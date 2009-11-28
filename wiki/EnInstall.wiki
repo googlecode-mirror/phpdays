@@ -1,6 +1,7 @@
 #summary Install the framework and create a new project.
 #labels Lang-En
 #sidebar En
+<wiki:comment>revision: 1</wiki:comment>
 
 === Download ===
 

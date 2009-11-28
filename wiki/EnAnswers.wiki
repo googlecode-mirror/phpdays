@@ -1,6 +1,7 @@
 #summary Answers on your questions.
 #labels Lang-En
 #sidebar En
+<wiki:comment>revision: 1</wiki:comment>
 
 On this page will publish frequently asked questions and their answers.
 

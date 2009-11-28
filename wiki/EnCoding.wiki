@@ -1,6 +1,7 @@
 #summary Getting Involved in the Project.
 #labels Lang-En
 #sidebar En
+<wiki:comment>revision: 1</wiki:comment>
 
 If you've become familiar with the project and feel confident and interested in the participating in it, then read the following guidelines.
 

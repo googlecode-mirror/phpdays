@@ -1,6 +1,7 @@
 #summary What is MVC?
 #labels Lang-En
 #sidebar En
+<wiki:comment>revision: 1</wiki:comment>
 
 [http://en.wikipedia.org/wiki/Model–view–controller MVC] is an architectural solution that allows to separate different parts of an application from each other. Due to this approach, it becomes easier to understand the project and for new members to learn its features.
 

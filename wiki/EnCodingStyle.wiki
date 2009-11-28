@@ -1,6 +1,7 @@
 #summary Coding style.
 #labels Lang-En
 #sidebar En
+<wiki:comment>revision: 1</wiki:comment>
 
 To participate in the project phpDays you should follow the same coding style _(syntax for php, html, css, js and yaml files)_.
 

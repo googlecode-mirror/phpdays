@@ -1,6 +1,7 @@
 #summary Making a Web Site Faster.
 #labels Lang-En
 #sidebar En
+<wiki:comment>revision: 1</wiki:comment>
 
 To make effective use of a server's resources and their allocation reasonable we recommend applying some useful technologies.
 

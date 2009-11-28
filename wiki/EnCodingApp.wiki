@@ -1,6 +1,7 @@
 #summary Improving the application base in the framework.
 #labels Lang-En
 #sidebar En
+<wiki:comment>revision: 1</wiki:comment>
 
 To improve the existing base of applications _(located in `apps` directory)_ do the following:
  * create a new empty project _(in the `/var/www/` directory)_
