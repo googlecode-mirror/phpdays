@@ -1,6 +1,7 @@
 #summary Writing the Documentation.
 #labels Lang-En
 #sidebar En
+<wiki:comment>revision: 1</wiki:comment>
 
 You can help us to improve the documentation, fix errors in it, and translate it into other languages.
 
@@ -19,5 +20,7 @@ To translate the documentation into other languages you should know the followin
  * add/edit a `#sidebar Xx` line  _(where Xx is the language of the newly translated page)_
  * click "Preview" to check the page's formatting
  * click "Save page" to save the page
+
+When a document is translated a wiki comment with a revision number (`<wiki:comment>revision: xx</wiki:comment>`) must be copied from the original document.
 
 To follow changes in the documentation go to [http://code.google.com/p/phpdays/source/list Source - Changes] _(available at the top)_.
