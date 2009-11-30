@@ -44,8 +44,8 @@ class Days_View_Config {
         }
                     
         self::$_appDir = $appPath;
-        if ('/' != substr(self::$_appDir, -1)) {
-            self::$_appDir .= '/';
+        if (DIRECTORY_SEPARATOR != substr(self::$_appDir, -1)) {
+            self::$_appDir .= DIRECTORY_SEPARATOR;
         }
         self::$_templateDir = self::$_appDir . self::TEMPLATE_DIR;
         self::$_compileDir = self::$_appDir . self::COMPILE_DIR;
