@@ -14,7 +14,7 @@ ORM will help you to accelerate the application development and simplify the pro
 Create a class for the desired table `blog_category` _(stores category posts)_. To do this we create a file "/var/www/myblog/app/Model/Table/*Blog/Category.php*" with class definition:
 {{{
 <?php
-class Myblog_Model_Table_Blog_Category extends Days_Db_Table {
+class Model_Table_Blog_Category extends Days_Db_Table {
     protected $_name = 'blog_category';
 }
 }}}
