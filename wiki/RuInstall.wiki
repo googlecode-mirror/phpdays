@@ -59,10 +59,8 @@ Days_Engine::run('/var/www/myblog/app/', 'development');
  * _ДЛЯ LINUX СЕРВЕРА_ измените права доступа к директориям для записи: `/var/www/myblog/app/system/cache`, `/var/www/myblog/app/system/log` и `/var/www/myblog/app/system/view` _(откройте консоль и наберите команду `chmod 0777 path1 path2 path3`)_
  * откройте файл `/var/www/myblog/app/config/development.yaml` и измените следующие строки:
    * `db`: измените информацию о соединении с базой данных
-   * `engine/brand`: имя Вашего приложения `Myblog` _(с большой буквы)_
    * `url/base`: префикс в url адресе после имени сайта `myblog`
    * `view/engine`: шаблонизатор. Мы рекомендуем применять `smarty` или `templum`
- * измените префикс `App` на `Myblog` в классах внутри директории `/var/www/myblog/app/Controller`
 
 Сохраните файлы и откройте Ваше приложение по адресу [http://localhost/myblog].
 
