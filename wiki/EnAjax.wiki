@@ -38,14 +38,13 @@ Now when the page loads, our JS script will connect to the `http://localhost/myb
 
 === Server side ===
 
-In your application, you should create a method with a name ending with `AjaxAction` instead of the usual `Action`. From this method, we return data that will be sent to the
- client as a response.
+In your application, you should create a method with a name ending with `AjaxAction` instead of the usual `Action`. From this method, we return data that will be sent to the client as a response.
 
 *ATTENTION* To send data in the [http://en.wikipedia.org/wiki/JSON JSON] format, the result must be created as an array and then converted to JSON using the [http://php.net/json_encode json_encode()] function.
 
 Create a new file named `/vaw/www/myblog/app/Controller/Blog.php` with a `postsAjaxAction()` method:
 {{{
-class Myblog_Controller_Blog extends Days_Controller {
+class Controller_Blog extends Days_Controller {
   /** Return data in JSON */
   public function postsAjaxAction() {
     // obtain records from the database and return in the form of a multidimensional array
