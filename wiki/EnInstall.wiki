@@ -7,7 +7,7 @@
 
 Go to the [http://code.google.com/p/phpdays/downloads/list download page] and select the latest stable version _(alpha, beta, RC - are not stable!)_.
 
-*ATTENTION* Use *phpdays 1.1 beta* instead of *phpdays 1.0 final* release. In *phpdays 1.0 final* release we found many critical bugs.
+*ATTENTION* Use *phpdays 1.1 beta* instead of *phpdays 1.0 final* release. In *phpdays 1.0 final* release we found many critical bugs, which were fixed in *phpdays 1.1 beta*.
 
 === Check requirements ===
 
