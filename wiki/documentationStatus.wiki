@@ -10,7 +10,7 @@
 || [EnChangelog1_0 Changelog1_0]     || ?  ||    || -  || -  || ?  || -  ||
 || [EnCoding Coding]                 || ?  ||    || -  || ?  || ?  || ?  ||
 || [EnCodingApp CodingApp]           || -  ||    || -  || -  || -  || -  ||
-|| [EnCodingStyle CodingStyle        || ?  ||    || -  || ?  || ?  || -  ||
+|| [EnCodingStyle CodingStyle]       || ?  ||    || -  || ?  || ?  || -  ||
 || [EnDoc Doc]                       || ?  ||    || -  || ?  || ?  || -  ||
 || [EnIdea Idea]                     || -  ||    || -  || ?  || -  || ?  ||
 || [EnInstall Install]               || ?  ||    || -  || ?  || ?  || -  ||
