@@ -66,7 +66,7 @@ Days_Engine::run('/var/www/myblog/app/', 'development');
 
 === Решение проблем ===
 
-Если стартовая страница не отображается - то пожалуйста откройте [http://mozilla-europe.org/firefox Firefox] брайзер, установите расширения [http://getfirebug.com/ FireBug] и [http://www.firephp.org/ FirePHP]. После этого нажмите F12 для открытия окна FireBug и перейдите к [http://localhost/myblog вашему сайту]. На вкладке "консоль" просмотрите список возникших ошибок.
+Если стартовая страница не отображается - то пожалуйста откройте [http://mozilla-europe.org/firefox Firefox] брайзер, установите расширения [http://getfirebug.com/ FireBug] и [http://www.firephp.org/ FirePHP]. После этого нажмите F12 для открытия окна !FireBug и перейдите к [http://localhost/myblog вашему сайту]. На вкладке "консоль" просмотрите список возникших ошибок.
 
 === Используйте несколько проектов ===
 
