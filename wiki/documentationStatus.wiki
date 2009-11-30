@@ -1,21 +1,23 @@
 #summary Documentation status. 30.11.2009
-|| Document || De || En || Fr || It || Ru || Tr || 
-|| _Root_ || ? ||   || ? || ? || ? || ? || 
-|| About || ? ||   || - || ? || ? || ? || 
-|| Ajax || ? ||   || - || ? || ? || - || 
-|| Answers || ? ||   || - || ? || ? || ? || 
-|| Changelog || ? ||   || - || - || ? || - || 
-|| Changelog1_0 || ? ||   || - || - || ? || - || 
-|| Coding || ? ||   || - || ? || ? || ? || 
-|| CodingApp || - ||   || - || - || - || - || 
-|| CodingStyle || ? ||   || - || ? || ? || - || 
-|| Doc || ? ||   || - || ? || ? || - || 
-|| Idea || - ||   || - || ? || - || ? || 
-|| Install || ? ||   || - || ? || ? || - || 
-|| Lib || ? ||   || - || ? || ? || - || 
-|| LibDaysConfig || - ||   || - || ? || - || - || 
-|| LibDaysDbTable || ? ||   || - || ? || ? || - || 
-|| LibDaysEvent || - ||   || - || - || ? || - || 
-|| Multisite || - ||   || - || ? || ? || - || 
-|| Mvc || - ||   || - || ? || ? || - || 
-|| Speedup || - ||   || - || - || ? || - || 
+#labels Lang-En
+
+|| Document                          || De || En || Fr || It || Ru || Tr ||
+|| _Root_                            || ?  ||    || ?  || ?  || ?  || ?  ||
+|| [EnAbout About]                   || ?  ||    || -  || ?  || ?  || ?  ||
+|| [EnAjax Ajax]                     || ?  ||    || -  || ?  || ?  || -  ||
+|| [EnAnswers Answers]               || ?  ||    || -  || ?  || ?  || ?  ||
+|| [EnChangelog Changelog]           || ?  ||    || -  || -  || ?  || -  ||
+|| [EnChangelog1_0 Changelog1_0]     || ?  ||    || -  || -  || ?  || -  ||
+|| [EnCoding Coding]                 || ?  ||    || -  || ?  || ?  || ?  ||
+|| [EnCodingApp CodingApp]           || -  ||    || -  || -  || -  || -  ||
+|| [EnCodingStyle CodingStyle        || ?  ||    || -  || ?  || ?  || -  ||
+|| [EnDoc Doc]                       || ?  ||    || -  || ?  || ?  || -  ||
+|| [EnIdea Idea]                     || -  ||    || -  || ?  || -  || ?  ||
+|| [EnInstall Install]               || ?  ||    || -  || ?  || ?  || -  ||
+|| [EnLib Lib]                       || ?  ||    || -  || ?  || ?  || -  ||
+|| [EnLibDaysConfig LibDaysConfig]   || -  ||    || -  || ?  || -  || -  ||
+|| [EnLibDaysDbTable LibDaysDbTable] || ?  ||    || -  || ?  || ?  || -  ||
+|| [EnLibDaysEvent LibDaysEvent]     || -  ||    || -  || -  || ?  || -  ||
+|| [EnMultisite Multisite]           || -  ||    || -  || ?  || ?  || -  ||
+|| [EnMvc Mvc]                       || -  ||    || -  || ?  || ?  || -  ||
+|| [EnSpeedup Speedup]               || -  ||    || -  || -  || ?  || -  ||
