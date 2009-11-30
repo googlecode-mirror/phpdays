@@ -5,7 +5,7 @@
 
 === [EnLib] » System engine ===
 
- * MVC ([EnLibDaysModel Days_Model], [EnLibDaysView Days_View], [EnLibDaysController Days_Controller]) - basic concepts necessary to work with framework
+ * [EnMvc MVC] ([EnLibDaysModel Days_Model], [EnLibDaysView Days_View], [EnLibDaysController Days_Controller]) - basic concepts necessary to work with framework
  * [EnLibDaysConfig Days_Config] - work with the configuration of the site
  * [EnLibDaysDb Days_Db] - work with database
  * [EnLibDaysDbTable Days_Db_Table] - implementation ORM representation of database tables
