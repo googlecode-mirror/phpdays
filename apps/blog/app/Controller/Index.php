@@ -8,10 +8,10 @@
  * @license     http://www.opensource.org/licenses/mit-license.php The MIT License
  * @link        http://phpdays.googlecode.com/
  * @package     phpDays
- * @subpackage  phpDays library
+ * @subpackage  application
  * @author      Anton Danilchenko <happy@phpdays.org>
  */
-class App_Controller_Index extends Days_Controller {
+class Controller_Index extends Days_Controller {
     /**
      * Call before all controller actions.
      */

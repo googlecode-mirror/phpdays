@@ -9,7 +9,7 @@
  * @link         http://phpdays.googlecode.com/
  * @see          Days_Model
  * @package      phpDays
- * @subpackage   phpDays library
+ * @subpackage   application
  * @author       Anton Danilchenko <happy@phpdays.org>
  */
 class App_Model_Image extends Days_Db_Table {
