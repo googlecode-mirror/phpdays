@@ -15,8 +15,8 @@ engine:
   # name of you brand (prefix for model classes)
   brand: app
 log:
-  # show debug info into: firephp, file, sqlite
-  type: firephp
+  # show debug info into: firephp, file, sqlite, browser
+  type: browser
   # show errors only with specified levels (levels joided by "bytes or")
   level: 31
 url:

@@ -12,8 +12,10 @@
  * @author       Anton Danilchenko <happy@phpdays.org>
  */
 class Days_Model {
+    private $_id;
+    private $_name;
     private static $_path;
-    private static $_prefix;
+    private static $_prefix = '';
     /** Models instances */
     private static $_models = array();
 
@@ -45,6 +47,14 @@ class Days_Model {
 
     public static function setPrefix($prefix) {
         self::$_prefix = ucfirst($prefix) . '_';
+    }
+
+    public function __construct($name) {
+        $this->_name = $name;
+    }
+
+    public function key() {
+        return "{$this->_name}_{$this->_id}";
     }
 
     /**

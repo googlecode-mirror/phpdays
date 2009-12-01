@@ -18,7 +18,6 @@ final class Days_Engine {
     private static $_libPath;
     private static $_appPath;
     private static $_publicPath;
-    private static $_brand;
     /** Debug mode */
     private static $_isDebug = false;
 
@@ -52,8 +51,8 @@ final class Days_Engine {
                 $libPath = self::$_libPath;
                 break;
             // application classes
-            case self::$_brand:
-                unset ($classPathRarts[0]);
+            case 'Model':
+            case 'Controller':
                 $libPath = self::$_appPath;
                 break;
             // library and main file - equal name
@@ -102,14 +101,12 @@ final class Days_Engine {
         spl_autoload_register(array(__CLASS__, 'autoload'));
         date_default_timezone_set('Europe/Helsinki');
         // set config main file
-        if (! is_null($mode))
+        if (! empty($mode))
             Days_Config::setDefaultConfig($mode);
         // set path for config
         Days_Config::setConfigPath(self::$_appPath . 'config/');
         // set debug mode
         self::$_isDebug = (bool)Days_Config::load()->get('engine/debug', false);
-        // set brand
-        self::$_brand = ucfirst(Days_Config::load()->get('engine/brand', 'app'));
         // set error level and handler
         $iErrorLevel = (self::isDebug() ? E_ALL|E_STRICT : E_ALL^E_NOTICE);
         error_reporting($iErrorLevel);
@@ -118,7 +115,7 @@ final class Days_Engine {
         ob_start();
         try {
             if (Days_Config::load()->get('engine/autorun', 1)) {
-                $autorunClass = self::$_brand."_Controller_System_Autorun";
+                $autorunClass = "Controller_System_Autorun";
                 // run predefined class
                 if (class_exists($autorunClass) AND is_callable(array($autorunClass, 'run')))
                     call_user_func(array($autorunClass, 'run'));
@@ -128,16 +125,14 @@ final class Days_Engine {
             $controller = Days_Url::getSpec('controller');
             $action = Days_Url::getSpec('action');
             $ext = Days_Url::getSpec('ext');
-            $brand = Days_Config::load()->get('engine/brand', 'app');
             Days_Event::run('controller.start');
             // set module path
             Days_Model::setPath(self::appPath() . 'Model/');
-            Days_Model::setPrefix($brand);
             // set controller params
-            $controllerClass = "{$brand}_Controller_" . ucfirst($controller);
+            $controllerClass = "Controller_" . ucfirst($controller);
             // use index controller for non-exists controllers
             if (! class_exists($controllerClass) AND Days_Config::load()->get('url/virtual')) {
-                $controllerClass = "{$brand}_Controller_Index";
+                $controllerClass = "Controller_Index";
                 $controller = 'index';
             }
             // set action name
