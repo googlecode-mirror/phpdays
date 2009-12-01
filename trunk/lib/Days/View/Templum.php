@@ -20,16 +20,10 @@ class Days_View_Templum extends Days_View_Abstract implements Days_View_Interfac
     /**
      * Initialize template engine.
      */
-    public function __construct() {
+    public function __construct(Days_View_Config $viewConfig) {
         // configure template engine
-        $config = array(
-            'template_dir'  => Days_Engine::appPath() . 'View/',
-            'compile_dir'   => Days_Engine::appPath() . 'system/view/',
-            'cache_dir'     => Days_Engine::appPath() . 'system/cache/',
-            'caching'       => Days_Config::load()->get('cache/lifetime', 0) > 0,
-        );
-        Templum::setTemplateDir($config['template_dir']);
-        Templum::setCompileDir($config['compile_dir']);
+        Templum::setTemplateDir($viewConfig->getTemplateDir());
+        Templum::setCompileDir($viewConfig->getCompileDir());
         // create template engine instance
         $this->_engine = Templum::singleton();
     }

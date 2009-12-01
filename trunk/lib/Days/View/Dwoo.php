@@ -17,19 +17,20 @@ class Days_View_Dwoo extends Days_View_Abstract implements Days_View_Interface {
     protected $_vars = array();
     /** @var Dwoo Template engine */
     protected $_engine;
+    /** @var string Template directory */
+    private $_templateDir;
 
     /**
      * Initialize template engine.
      */
-    public function __construct() {
+    public function __construct(Days_View_Config $viewConfig) {
+        $this->_templateDir = $viewConfig->getTemplateDir();
         // create template engine instance
-        $this->_engine = new Dwoo();
+        $this->_engine = new Dwoo(
+            $viewConfig->getCompileDir(),
+            $viewConfig->getCacheDir());
         // collect vars
         $this->_vars = new Dwoo_Data(); 
-        // configure template engine
-        $this->_engine->setCompileDir(Days_Engine::appPath() . 'system/view/');
-        $this->_engine->setCacheDir(Days_Engine::appPath() . 'system/cache/');
-//        $this->_engine->caching       = Days_Config::load()->get('cache/lifetime', 0) > 0;
     }
 
     /**
@@ -39,7 +40,7 @@ class Days_View_Dwoo extends Days_View_Abstract implements Days_View_Interface {
      * @return string
      */
     public function render($template) {
-        $templatePath = Days_Engine::appPath() . 'View/' . $template;
+        $templatePath = $this->_templateDir . $template;
         if (! file_exists($templatePath))
             throw new Days_Exception("Template file '{$template}' not found");
         return $this->_engine->get($templatePath, $this->_vars);

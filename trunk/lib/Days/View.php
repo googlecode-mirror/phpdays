@@ -12,12 +12,26 @@
  * @author       Anton Danilchenko <happy@phpdays.org>
  */
 class Days_View {
+
+    /** @var Days_View_Config View configuration */
+    private static $_viewConfig = null;
+    
     public static function factory($engine) {
         $engine = ucfirst($engine);
         $className = "Days_View_{$engine}";
-        return new $className();
+        return new $className(self::getViewConfig());
     }
 
     private function __construct() {
+    }
+
+    public static function setViewConfig(Days_View_Config $config) {
+        self::$_viewConfig = $config;
+    }
+    public static function getViewConfig() {
+        if (!isset(self::$_viewConfig)) {
+            self::$_viewConfig = new Days_View_Config();
+        }
+        return self::$_viewConfig;
     }
 }
