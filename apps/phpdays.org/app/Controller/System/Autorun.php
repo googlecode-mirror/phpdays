@@ -8,10 +8,10 @@
  * @license     http://www.opensource.org/licenses/mit-license.php The MIT License
  * @link        http://phpdays.googlecode.com/
  * @package     phpDays
- * @subpackage  application
+ * @subpackage  phpDays library
  * @author      Alexandr Janzen <xaoc2007@gmail.com>
  */
-class Controller_System_Autorun {
+class Phpdays_Controller_System_Autorun {
 
     /**
      * Defines a list of subscribers to the event

@@ -35,12 +35,12 @@ class Days_Controller {
         $this->_view->set('content', $this->_view->render($this->_content));
         // return only content
         if (! $withLayout)
-            return self::_postFilter($this->_view->get('content'));
+            return self::postFilter($this->_view->get('content'));
         // insert content into layout
-        return self::_postFilter($this->_view->render($this->_layout));
+        return self::postFilter($this->_view->render($this->_layout));
     }
 
-    protected static function _postFilter($content) {
+    protected static function postFilter($content) {
         // add base path after all url adresses
         $basePath = Days_Config::load()->get('url/base', '');
         if (''!=$basePath)

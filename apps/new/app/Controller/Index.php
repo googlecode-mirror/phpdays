@@ -8,10 +8,10 @@
  * @license     http://www.opensource.org/licenses/mit-license.php The MIT License
  * @link        http://phpdays.googlecode.com/
  * @package     phpDays
- * @subpackage  application
+ * @subpackage  phpDays library
  * @author      Anton Danilchenko <happy@phpdays.org>
  */
-class Controller_Index extends Days_Controller {
+class App_Controller_Index extends Days_Controller {
     /**
      * Call before all controller actions.
      */
@@ -28,6 +28,23 @@ class Controller_Index extends Days_Controller {
      *   http://phpdays.dev/index/index
      */
     public function indexAction() {
+        Days_Event::add('user_login_success',
+            'Days_User::isLoggedIn');
+        Days_Event::run('user_login_success',
+            array(0=>'Days_User::isLoggedIn'));
         $this->_view->set('welcome', 'Welcome to phpDays development!');
     }
+
+    /*
+     * Login action
+     *
+     * Call if typed path:
+     *   http://phpdays.dev/index/login
+     *   http://phpdays.dev/index/login/?u=username&p=password
+     */
+    public function loginAction() {
+        Days_User::login();
+        $this->_view->set('welcome', 'Welcome to phpDays development!');
+    }
+
 }
