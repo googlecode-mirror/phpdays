@@ -6,16 +6,16 @@
  * @package      phpDays
  * @subpackage   tests
  */
-
+require_once dirname(__FILE__) . '/_stubs/Days_Engine.php';
+require_once dirname(__FILE__) . '/_stubs/Days_Config.php';
 /**
  * Common tests for classes implementing the Days_View_Interface
  * interface.
  */
 abstract class Days_View_InterfaceTest extends PHPUnit_Framework_TestCase {
-    /**
-     * @var Days_View_Interface
-     */
+    /** @var Days_View_Interface */
     protected $view;
+    protected static $viewConfig;
 
     public function testTemplateNotFound() {
         $this->setExpectedException('Days_Exception');
@@ -73,5 +73,56 @@ abstract class Days_View_InterfaceTest extends PHPUnit_Framework_TestCase {
             array("\n"),
             array("\t")
             );
+    }
+
+    /**
+     * Fixture setup.
+     */
+    
+    /** @var array View configuration */
+    //protected static $viewConfig = null;
+        
+    /** @var string Application directory */
+    private static $_tempDir = null;
+
+    public static function setUpBeforeClass() {
+        self::$_tempDir = self::_tempDir() . '/';
+        Days_Engine::$appDir = self::$_tempDir;
+        self::_createDirTree();
+    }
+    public static function tearDownAfterClass() {
+        self::_rmDir(self::$_tempDir);    
+    }
+    
+    protected function assertPreConditions() {
+        $this->assertNotNull(self::$_tempDir);
+    }
+
+    /**
+     * End of the fuxture setup.
+     */
+    
+    /** 
+     * Utility functions
+     */
+    private static function _tempDir() {
+        $tempName = tempnam(sys_get_temp_dir(), 'phpdays_');
+        if ($tempName && unlink($tempName) && mkdir($tempName)) {
+            return $tempName;
+        } else {
+            return null;
+        }
+    }
+    private static function _rmDir($dir) {
+        foreach (glob("$dir/*") as $file) {
+            is_dir($file) ? self::_rmDir($file) : unlink($file);
+        }
+        file_exists($dir) && rmdir($dir);
+    }
+    private static function _createDirTree() {
+        $config = new Days_View_Config();
+        mkdir($config->getTemplateDir());
+        mkdir($config->getCompileDir(), 0777, true);
+        mkdir($config->getCacheDir(), 0777, true); 
     }
 }

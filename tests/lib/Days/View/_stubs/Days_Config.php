@@ -17,6 +17,6 @@ class Days_Config {
     }
     
     public function get($var1, $var2) {
-        return false;
+        return 543;
     }
 }

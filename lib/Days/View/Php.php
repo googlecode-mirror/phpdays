@@ -14,11 +14,15 @@
 class Days_View_Php extends Days_View_Abstract implements Days_View_Interface {
     /** @var array Template variables */
     protected $_vars = array();
+    
+    /** @var string Directory with templates */
+    private $_templateDir;
 
     /**
      * Initialize template engine.
      */
-    public function __construct() {
+    public function __construct(Days_View_Config $viewConfig) {
+        $this->_templateDir = $viewConfig->getTemplateDir();
     }
 
     /**
@@ -73,7 +77,7 @@ class Days_View_Php extends Days_View_Abstract implements Days_View_Interface {
      */
     protected function _include($template, array $vars=array()) {
         // check template file
-        $templatePath = Days_Engine::appPath() . 'View/' . $template;
+        $templatePath = $this->_templateDir . $template;
         if (! file_exists($templatePath))
             throw new Days_Exception("Template file '{$template}' not found");
         // load template

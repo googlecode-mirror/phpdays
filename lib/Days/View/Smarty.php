@@ -18,14 +18,17 @@ class Days_View_Smarty extends Days_View_Abstract implements Days_View_Interface
     /**
      * Initialize template engine.
      */
-    public function __construct() {
+    public function __construct(Days_View_Config $viewConfig) {
         // create template engine instance
         $this->_engine = new Smarty();
         // configure template engine
-        $this->_engine->template_dir  = Days_Engine::appPath() . 'View/';
-        $this->_engine->compile_dir   = Days_Engine::appPath() . 'system/view/';
-        $this->_engine->cache_dir     = Days_Engine::appPath() . 'system/cache/';
-        $this->_engine->caching       = Days_Config::load()->get('cache/lifetime', 0) > 0;
+        $this->_engine->template_dir  = $viewConfig->getTemplateDir();
+        $this->_engine->compile_dir   = $viewConfig->getCompileDir();
+        $this->_engine->cache_dir     = $viewConfig->getCacheDir();
+        if ($viewConfig->getCaching() > 0) {
+            $this->_engine->cache_lifetime = $viewConfig->getCaching();
+            $this->_engine->caching       = 1;
+        }
         $this->_engine->plugins_dir   = array('phpdays', 'plugins');
     }
 
