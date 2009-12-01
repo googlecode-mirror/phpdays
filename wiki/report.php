@@ -163,6 +163,7 @@ function createWikiPage($status) {
         }
         $table[] = $line . "\n";
     }
+    $table[] = "\n";
     $table[] = printLegend();
     file_put_contents($file, $table);
 }

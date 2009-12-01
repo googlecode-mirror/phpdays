@@ -23,6 +23,7 @@ file run the script and commit the change to the wiki's svn repository.
 || Multisite || - ||   || - || ? || ? || - || 
 || Mvc || - ||   || - || ? || ? || - || 
 || Speedup || - ||   || - || - || ? || - || 
+
  -  missing file
  +  old revision, has to be updated
  ?  missing revision
