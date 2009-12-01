@@ -57,10 +57,6 @@ class Days_Log {
                     case 'sqlite':
                         self::logtoSqlite($messages, $sErrorFile, $sLogDir);
                         break;
-                    //send to browser
-                    case 'browser':
-                    	self::logtoBrowser($messages);
-                    	break;
                     // send to FirePHP
                     case 'fb':
                     case 'firebug':
@@ -149,21 +145,6 @@ class Days_Log {
     protected static function logtoFirephp($messages, $level=self::INFO) {
         foreach ($messages as $message)
             Firephp::getInstance(true)->log($message, self::getLevel($level));
-    }
-
-    /**
-     * Display error log in Browser
-     *
-     * @param string $messages Error messages
-     */
-    protected static function logtoBrowser($messages){
-        $messages=implode("<br>",$messages);
-        $popup="<script language='javascript'>
-        winopen=window.open('','ErrorPage','width=500,height=250,location=0,toolbar=0,menubar=0,status=1,scrollbars=1,resizable=1,top=10,left=750');
-        winopen.document.write('<html><head><title>ErrorPage</title></head><body>{$messages}</body></html>');
-        winopen.document.close();
-        </script>";
-        echo $popup;
     }
 
     /**
