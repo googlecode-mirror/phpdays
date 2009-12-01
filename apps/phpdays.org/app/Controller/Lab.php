@@ -8,10 +8,10 @@
  * @license     http://www.opensource.org/licenses/mit-license.php The MIT License
  * @link        http://phpdays.googlecode.com/
  * @package     phpDays
- * @subpackage  phpDays library
+ * @subpackage  application
  * @author      Anton Danilchenko <happy@phpdays.org>
  */
-class Phpdays_Controller_Lab extends Days_Controller {
+class Controller_Lab extends Days_Controller {
     /** Project name */
     protected $_projectName;
     /** Bug id */

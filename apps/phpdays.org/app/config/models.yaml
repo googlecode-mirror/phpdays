@@ -1,0 +1,83 @@
+# MODELS DESCRIPTION FOR CURRENT PROJECT
+
+# AVAILABLE FIELD TYPES:
+*:
+  required: this value required to fill
+  key: this column is key. In models automatically add key field
+  index: index for this column
+  unique: unique column with index
+string:
+  max: maximum length
+  min: minimum length
+  breaks: available line breaks in string
+text:
+  max: maximum length
+  min: minimum length
+email:
+url:
+  http: with http prefix
+int:
+  max: maximum value
+  min: minimum value
+  positive: available only positive values (start from 0)
+float:
+  max: maximum value
+  min: minimum value
+  positive: available only positive values (start from 0)
+username:
+  max: maximum length
+  min: minimum length
+password:
+  max: maximum length
+  min: minimum length
+date:
+  max: maximum value (dd-mm-yyyy)
+  min: minimum value (dd-mm-yyyy)
+time:
+datetime:
+phone:
+adress:
+country:
+city:
+zipcode:
+  max: maximum length
+  min: minimum length
+ModelName:
+
+# "+" before type - presented as list of this types
+
+# TODO
+# - base model on other model (extend model)
+
+User:
+  name: {type: string, max: 70, required}
+  email: {type: email}
+  birthdate: {type: date, min: 1-1-1950, max: 1-1-2010}
+#  age: {type: int, min: 18, max: 70}
+#  groups: {type: +UserGroup}
+
+UserGroup:
+  name: {type: string, max: 200, required, key}
+  created: {type: date}
+  users: {type: +User}
+  admins: {type: +User, required}
+  moderators: {type: +User}
+
+Blog:
+  name: {type: string, max: 50, required}
+
+BlogPost:
+  url: {type: string, max: 50, required}
+  title: {type: string, max: 150, required}
+  content: {type: text, max: 5000, required}
+  blog: {type: Blog}
+  category: {type: BlogCategory}
+  tags: {type: BlogTag}
+
+BlogCategory:
+  url: {type: string, max: 50, required}
+  name: {type: string, max: 50, required}
+
+BlogTag:
+  url: {type: string, max: 50, required}
+  name: {type: string, max: 50, required}
