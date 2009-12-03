@@ -7,6 +7,7 @@ To participate in the project phpDays you should follow the same coding style _(
 
 === General rules ===
 
+ * save all files and folders in lower case only _(use `file_name.html` instead of `fileName.html`)_. _In Windows this create a problems_
  * recommend a development environment IDE [http://netbeans.org/ NetBeans] _(but can be used and other such as [http://eclipse.org/pdt/ Eclipse PDT])_
  * keep all the files in *UTF-8* encoding
  * newlines must be in UNIX format
