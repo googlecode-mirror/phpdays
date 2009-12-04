@@ -14,6 +14,35 @@ To participate in the project phpDays you should follow the same coding style _(
  * configure the IDE to automatically remove extra spaces at the end of lines _(trailing spaces)_
  * configure the IDE to automatically replace tabs by 4 spaces in php files and 2 spaces in all other _(including html, css, js and yaml files)_
 
+=== Code sample ===
+
+{{{
+class Days_Model_User {
+  // first position for constants: usee capital letters
+  const USER_FIELD = 'username';
+  // second position: properties. For private and protested properties use "_" prefix
+  private $_name;
+  protected $_name2;
+
+  // third position: methods
+  public static function test($x) {
+    if (10==$x) {
+       return true;
+    }
+    return false;
+  }
+
+  // before function definition set only one empty line
+  protected function _test2($x, $y=10) {
+    // not use empty lines into function code
+    if ($x==$y) {
+       return true;
+    }
+    return false;
+  }
+}
+}}}
+
 === Rules for work with php files ===
 
  * [http://en.wikipedia.org/wiki/PHPDoc phpDoc] standarts
