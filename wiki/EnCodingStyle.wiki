@@ -49,7 +49,7 @@ Use this regular expressions for automatically format code:
 || From          || To        || Description                        ||
 || `\t`          || `....`    || replace tab to 4 spaces            ||
 || `[ ]+$`       ||           || delete all spaces in end of line   ||
-|| `!([a-z])`    || `! $1`    || set space after not operator       ||
+|| `!([a-z$])`   || `! $1`    || set space after not operator       ||
 || `^[\t ]*\n`   ||           || delete empty lines                 ||
 || `\)[ \t]*\n[ \t]*\{`                   || ) {\n  || set java code style           ||
 || `^([ \t]*)(public|protected|private)`  || \n$1$2 || set `{` in line with function ||
