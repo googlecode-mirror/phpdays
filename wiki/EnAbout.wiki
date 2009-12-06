@@ -19,3 +19,8 @@ With *phpDays* You will be able to speed up and simplify the process of creating
  * print information about the applications execution _(executed SQL queries, names of the executed methods)_
  * convenient class hierarchy _(like used in Zend Framework)_
  * _and something else_
+
+=== Around the phpDays ===
+
+ * [http://www.firephp.org/Wiki/Libraries/PhpDays FirePHP] integration
+ * [http://freshmeat.net/projects/phpdays FreshMeat] record
