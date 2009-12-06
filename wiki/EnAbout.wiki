@@ -22,5 +22,9 @@ With *phpDays* You will be able to speed up and simplify the process of creating
 
 === Around the phpDays ===
 
+ * [http://linux.softpedia.com/get/Internet/HTTP-WWW-/php-Days-50148.shtml SoftPedia] about phpDays
  * [http://www.firephp.org/Wiki/Libraries/PhpDays FirePHP] integration
+ * [http://www.ohloh.net/p/phpdays Ohloh] record
  * [http://freshmeat.net/projects/phpdays FreshMeat] record
+ * [http://launchpad.net/phpdays/ LaunchPad]
+ * [http://www.facebook.com/group.php?gid=158477950902 FaceBook] group
