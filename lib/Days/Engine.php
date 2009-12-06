@@ -151,9 +151,9 @@ final class Days_Engine {
             // execute PostAction before call specified action
             if (Days_Request::isPost()) {
                 $actionPost = "{$action}PostAction";
-                if (! method_exists($controllerObj, $actionPost))
-                    throw new Days_Exception("Action {$actionPost} in controller {$controllerClass} not defined");
-                call_user_func(array($controllerObj, $actionPost));
+                if (method_exists($controllerObj, $actionPost)) {
+                    call_user_func(array($controllerObj, $actionPost));
+                }
             }
             // call specified action
             if (! method_exists($controllerObj, $actionMethod))
