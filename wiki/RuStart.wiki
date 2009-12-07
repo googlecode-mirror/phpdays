@@ -2,7 +2,7 @@
 #labels Lang-Ru
 #sidebar Ru
 
-=== Оглавление ===
+=== [Ru RU] » Оглавление ===
 
  * [RuStartAbout общие сведения]
  * [RuStartModel модели] приложения
