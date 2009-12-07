@@ -52,6 +52,7 @@ Use this regular expressions for automatically format code:
 || `!([a-z$])`        || `! $1`      || set space after not operator       ||
 || `^[\t ]*\n`        ||             || delete empty lines                 ||
 || `else *\n([ ]*)\{` || `else\n$1{` || set `{` after `else`               ||
+|| `if(`              || `if (`      || use space after if and elseif      ||
 || `\)[ ]*\n[ ]*\{`   || `) {\n`     || set java code style                ||
 || `^([ ]*)(public|protected|private)`  || \n$1$2 || set `{` in line with function ||
 
