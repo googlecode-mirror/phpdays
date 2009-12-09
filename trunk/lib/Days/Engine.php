@@ -21,7 +21,7 @@ final class Days_Engine {
     /** Debug mode */
     private static $_isDebug = false;
 
-    /** Singleton */
+    /* Singleton */
     public static function run($appPath, $mode=null) {
         if (! isset(self::$_instance)) {
             self::$_instance = new self($appPath, $mode);
@@ -37,11 +37,11 @@ final class Days_Engine {
      */
     public static function autoload($className) {
         // set correct class name
-        $classPathRarts = explode('_', $className);
-        for ($i=0; $i<count($classPathRarts); $i++)
-            $classPathRarts[$i] = ucfirst($classPathRarts[$i]);
+        $classPathParts = explode('_', $className);
+        for ($i=0; $i<count($classPathParts); $i++)
+            $classPathParts[$i] = ucfirst($classPathParts[$i]);
         // get library name (start from upper case letter)
-        $libName = $classPathRarts[0];
+        $libName = $classPathParts[0];
         // path to library
         $libPath = '';
         // check action type
@@ -59,7 +59,7 @@ final class Days_Engine {
             default:
                 $libPath = self::$_libPath . $libName . '/';
         }
-        $classPath = $libPath . implode('/', $classPathRarts) . '.php';
+        $classPath = $libPath . implode('/', $classPathParts) . '.php';
         // replace underline ('_') to slash ('/')
         if (! file_exists($classPath))
             return false;
@@ -70,18 +70,38 @@ final class Days_Engine {
             throw new Days_Exception("Class or interface `{$className}` not defined in file `{$classPath}`");
     }
 
+    /**
+     * Returns the debug mode
+     *
+     * @return boolean
+     */
     public static function isDebug() {
         return self::$_isDebug;
     }
 
+    /**
+     * Returns the full path to the libraries framework
+     *
+     * @return string
+     */
     public static function libPath() {
         return self::$_libPath;
     }
 
+    /**
+     * Returns the full path to the program portion of the application
+     *
+     * @return string
+     */
     public static function appPath() {
         return self::$_appPath;
     }
 
+    /**
+     * Returns the full path to the public part of the application
+     *
+     * @return string
+     */
     public static function publicPath() {
         return self::$_publicPath;
     }
@@ -99,7 +119,6 @@ final class Days_Engine {
         self::$_publicPath = getcwd() . '/';
         set_include_path(get_include_path() . PATH_SEPARATOR . self::$_libPath);
         spl_autoload_register(array(__CLASS__, 'autoload'));
-        date_default_timezone_set('Europe/Helsinki');
         // set config main file
         if (! empty($mode))
             Days_Config::setDefaultConfig($mode);
@@ -111,6 +130,12 @@ final class Days_Engine {
         $iErrorLevel = (self::isDebug() ? E_ALL|E_STRICT : E_ALL^E_NOTICE);
         error_reporting($iErrorLevel);
         setlocale(LC_ALL, 'ru_RU.UTF-8', 'RUS', 'RU');
+        //set timezone
+        if ($timezone=Days_Config::load()->get('engine/timezone', false)) {
+            date_default_timezone_set($timezone);
+        } else {
+            date_default_timezone_set('Europe/Helsinki');
+        }
         // not send execution errors to user
         ob_start();
         try {
