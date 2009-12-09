@@ -12,5 +12,5 @@
  * @subpackage   application
  * @author       Anton Danilchenko <happy@phpdays.org>
  */
-class App_Model_Table_Blog_Tag extends Days_Db_Table {
+class Model_Table_Blog_Tag extends Days_Db_Table {
 }

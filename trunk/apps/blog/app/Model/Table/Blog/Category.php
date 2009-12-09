@@ -1,6 +1,6 @@
 <?php
 /**
- * Tag model - work with tags.
+ * Category model - work with categories.
  *
  * Part of "php:Days - php5 framework" project (http://phpdays.googlecode.com).
  *
@@ -12,5 +12,5 @@
  * @subpackage   application
  * @author       Anton Danilchenko <happy@phpdays.org>
  */
-class App_Model_Tag extends Days_Db_Table {
+class Model_Table_Blog_Category extends Days_Db_Table {
 }

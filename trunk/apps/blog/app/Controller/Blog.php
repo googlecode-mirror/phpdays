@@ -51,12 +51,24 @@ class Controller_Blog extends Days_Controller {
 
 
 	/**
-     * Tag action.
+     * Get posts by tag
      *
      * Call if typed path:
      *   http://phpdays.dev/blog/item/?item=1
      */
     public function tagAction() {
+        $blog = Days_Model::factory('table_blog');
+        $this->_view->set('blog_items', $blog->find('last', array('count'=>12)));
+    }
+
+
+	/**
+     * Get posts by category
+     *
+     * Call if typed path:
+     *   http://phpdays.dev/blog/category/category_url_name/
+     */
+    public function categoryAction() {
         $blog = Days_Model::factory('table_blog');
         $this->_view->set('blog_items', $blog->find('last', array('count'=>12)));
     }
