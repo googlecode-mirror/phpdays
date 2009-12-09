@@ -30,4 +30,3 @@ class Days_ViewTest extends PHPUnit_Framework_TestCase {
         $this->assertTrue($ref == $factory_ref);
     }
 }
-?>
