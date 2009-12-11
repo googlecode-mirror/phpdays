@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="744.09448819"
+   height="1052.3622047"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.47pre4 "
+   sodipodi:docname="logo">
+  <defs
+     id="defs4">
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient3848">
+      <stop
+         style="stop-color:#baffab;stop-opacity:1;"
+         offset="0"
+         id="stop3850" />
+      <stop
+         style="stop-color:#baffab;stop-opacity:0;"
+         offset="1"
+         id="stop3852" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient3626">
+      <stop
+         style="stop-color:#9b5f00;stop-opacity:1;"
+         offset="0"
+         id="stop3628" />
+      <stop
+         id="stop3764"
+         offset="0.5"
+         style="stop-color:#cb7b00;stop-opacity:1;" />
+      <stop
+         style="stop-color:#de8700;stop-opacity:1;"
+         offset="1"
+         id="stop3630" />
+    </linearGradient>
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="0 : 526.18109 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="744.09448 : 526.18109 : 1"
+       inkscape:persp3d-origin="372.04724 : 350.78739 : 1"
+       id="perspective10" />
+    <filter
+       inkscape:collect="always"
+       id="filter3802"
+       x="-0.27720386"
+       width="1.5544077"
+       y="-0.10521108"
+       height="1.2104222">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="2.5013317"
+         id="feGaussianBlur3804" />
+    </filter>
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3848"
+       id="radialGradient3854"
+       cx="60"
+       cy="137.36218"
+       fx="60"
+       fy="137.36218"
+       r="30"
+       gradientUnits="userSpaceOnUse" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="1"
+     inkscape:pageshadow="2"
+     inkscape:zoom="2.8284271"
+     inkscape:cx="99.772439"
+     inkscape:cy="1010.742"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="true"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     inkscape:window-width="1024"
+     inkscape:window-height="544"
+     inkscape:window-x="-4"
+     inkscape:window-y="-4"
+     inkscape:window-maximized="1">
+    <inkscape:grid
+       type="xygrid"
+       id="grid2816"
+       empspacing="5"
+       visible="true"
+       enabled="true"
+       snapvisiblegridlinesonly="true"
+       dotted="true" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot3634"
+       style="font-size:40px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"><flowRegion
+         id="flowRegion3636"><rect
+           id="rect3638"
+           width="100.2"
+           height="54.200001"
+           x="59.799999"
+           y="48.162182" /></flowRegion><flowPara
+         id="flowPara3640">1st2e2fefe</flowPara></flowRoot>    <rect
+       style="fill:#e6e6e6;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       id="rect3822"
+       width="50"
+       height="50"
+       x="5"
+       y="7.3621826"
+       rx="6"
+       ry="6"
+       inkscape:export-filename="D:\Docs\NetBeansProjects\phpdays.org\app\system\doc\design\logo-gmail.png"
+       inkscape:export-xdpi="106.29205"
+       inkscape:export-ydpi="106.29205" />
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot3856"
+       style="font-size:14px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+       transform="translate(15.900314,-89.464282)"
+       inkscape:export-filename="D:\Docs\NetBeansProjects\phpdays.org\app\system\doc\design\logo-gmail.png"
+       inkscape:export-xdpi="106.29205"
+       inkscape:export-ydpi="106.29205"><flowRegion
+         id="flowRegion3858"><rect
+           id="rect3860"
+           width="110.72878"
+           height="31.498657"
+           x="-11.667262"
+           y="104.13199"
+           style="font-size:14px" /></flowRegion><flowPara
+         id="flowPara3862"
+         style="font-size:22px;font-family:Arial Narrow;-inkscape-font-specification:Arial Narrow"><flowSpan
+           style="font-size:22px;font-style:italic;-inkscape-font-specification:Arial Narrow Italic"
+           id="flowSpan3870">&lt;?php</flowSpan><flowSpan
+           style="font-size:22px;font-weight:bold;-inkscape-font-specification:Arial Narrow Bold"
+           id="flowSpan3866">Days</flowSpan></flowPara></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot3872"
+       style="font-size:14px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#b3b3b3;stroke:none;font-family:Bitstream Vera Sans"
+       transform="translate(-7.2441795,-114.68213)"
+       inkscape:export-xdpi="106.29205"
+       inkscape:export-ydpi="106.29205"
+       inkscape:export-filename="D:\Docs\NetBeansProjects\phpdays.org\app\system\doc\design\logo-gmail.png"><flowRegion
+         id="flowRegion3874"><rect
+           id="rect3876"
+           width="121.17995"
+           height="16.704847"
+           x="-2.4748738"
+           y="153.98302"
+           style="font-size:14px;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#b3b3b3" /></flowRegion><flowPara
+         id="flowPara3878"
+         style="font-size:12px;font-style:italic;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#b3b3b3;font-family:Arial Narrow;-inkscape-font-specification:Arial Narrow Bold Italic">f r a m e w o r k</flowPara></flowRoot>  </g>
+</svg>

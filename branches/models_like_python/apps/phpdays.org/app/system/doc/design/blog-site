@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="1000"
+   height="800"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.47pre4 r22446"
+   sodipodi:docname="blog-site">
+  <defs
+     id="defs4">
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="0 : 526.18109 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="744.09448 : 526.18109 : 1"
+       inkscape:persp3d-origin="372.04724 : 350.78739 : 1"
+       id="perspective10" />
+    <inkscape:perspective
+       id="perspective3771"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="1"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1"
+     inkscape:cx="295.98"
+     inkscape:cy="686.46663"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="true"
+     inkscape:window-width="1280"
+     inkscape:window-height="950"
+     inkscape:window-x="0"
+     inkscape:window-y="25"
+     inkscape:window-maximized="1"
+     showguides="true"
+     inkscape:guide-bbox="true">
+    <inkscape:grid
+       type="xygrid"
+       id="grid2816"
+       empspacing="5"
+       visible="true"
+       enabled="true"
+       snapvisiblegridlinesonly="true"
+       dotted="false"
+       empcolor="#0000ff"
+       empopacity="0.10980392" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-252.36218)">
+    <path
+       style="fill:#e0f0ff;fill-opacity:1;stroke:none"
+       d="M 20 0 L 20 6 L 20 10 L 20 14 C 20 17.324 22.676 20 26 20 L 974.90625 20 C 978.23025 20 980.90625 17.324 980.90625 14 L 980.90625 6 C 980.90625 5.8492183 980.88611 5.7101666 980.875 5.5625 L 980.875 0 L 980 0 L 975.875 0 L 974.90625 0 L 26 0 L 20 0 z "
+       transform="translate(0,252.36218)"
+       id="rect2818" />
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot3595"
+       style="font-size:18px;font-style:normal;font-weight:normal;fill:#00a5ff;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+       transform="translate(8.642578,212.407)"><flowRegion
+         id="flowRegion3597"><rect
+           id="rect3599"
+           width="91.357422"
+           height="27.455179"
+           x="28"
+           y="39"
+           style="font-size:18px;fill:#00a5ff;fill-opacity:1;stroke:none" /></flowRegion><flowPara
+         id="flowPara3601"
+         style="font-size:18px;fill:#00a5ff;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"><flowSpan
+           style="font-size:18px;font-weight:bold;fill:#00a5ff;fill-opacity:1;stroke:none;-inkscape-font-specification:Arial Bold"
+           id="flowSpan3607">php</flowSpan><flowSpan
+           style="font-size:18px;font-style:italic;fill:#00a5ff;fill-opacity:1;stroke:none;-inkscape-font-specification:Arial Italic"
+           id="flowSpan3609">days</flowSpan></flowPara></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot3611"
+       style="font-size:40px;font-style:normal;font-weight:normal;fill:#0080cb;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+       transform="translate(-3.0800781,263.85653)"><flowRegion
+         id="flowRegion3613"><rect
+           id="rect3615"
+           width="416.08008"
+           height="16.50565"
+           x="127"
+           y="-8"
+           style="fill:#0080cb;fill-opacity:1" /></flowRegion><flowPara
+         style="font-size:14px;font-weight:bold;fill:#0080cb;font-family:Arial;-inkscape-font-specification:Arial Bold;fill-opacity:1"
+         id="flowPara3619">Development | <flowSpan
+   style="fill:#00a5ff;fill-opacity:1"
+   id="flowSpan3732">Blog</flowSpan> | Answers | People | Job | Journal</flowPara></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot3629"
+       style="font-size:32px;font-style:normal;font-weight:normal;fill:#0080cb;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
+       transform="translate(-1.4375,235.9207)"><flowRegion
+         id="flowRegion3631"><rect
+           id="rect3633"
+           width="960"
+           height="37"
+           x="20"
+           y="43"
+           style="font-size:32px;fill:#0080cb;fill-opacity:1;font-family:Arial;-inkscape-font-specification:Arial" /></flowRegion><flowPara
+         id="flowPara3635"
+         style="font-size:24;fill:#0080cb;fill-opacity:1">Section name / Subcategory / Article long title and many more</flowPara></flowRoot>    <rect
+       style="fill:#e0f0ff;fill-opacity:1;stroke:none;stroke-opacity:1"
+       id="rect3645"
+       width="200"
+       height="24.999998"
+       x="780"
+       y="282.36218" />
+    <rect
+       style="fill:#00a7a7;fill-opacity:1;stroke:none"
+       id="rect3671"
+       width="1000"
+       height="140"
+       x="0"
+       y="660"
+       transform="translate(0,252.36218)" />
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot3673"
+       style="font-size:14px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
+       transform="translate(0,252.36218)"><flowRegion
+         id="flowRegion3675"><rect
+           id="rect3677"
+           width="192"
+           height="112"
+           x="20"
+           y="672"
+           style="font-size:14px;font-family:Arial;-inkscape-font-specification:Arial" /></flowRegion><flowPara
+         id="flowPara3693">About</flowPara><flowPara
+         id="flowPara3711"
+         style="fill:#e6e6e6">Terms of use</flowPara><flowPara
+         id="flowPara3695"
+         style="fill:#e6e6e6">User support</flowPara><flowPara
+         id="flowPara3697"
+         style="fill:#e6e6e6">Statistic</flowPara><flowPara
+         id="flowPara3707"
+         style="fill:#e6e6e6">Advertising</flowPara></flowRoot>    <rect
+       style="fill:#e0f0ff;fill-opacity:1;stroke:none;stroke-opacity:1"
+       id="rect3721"
+       width="200"
+       height="24.999998"
+       x="780"
+       y="317.36218" />
+    <rect
+       style="fill:#ffffff;stroke:#00a5ff;stroke-width:1.15305436000000006;stroke-opacity:1"
+       id="rect3655"
+       width="140"
+       height="16"
+       x="835"
+       y="322.36218" />
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot3723"
+       style="font-size:40px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+       transform="translate(-10.628906,240.85653)"><flowRegion
+         id="flowRegion3725"><rect
+           id="rect3727"
+           width="155"
+           height="18"
+           x="795"
+           y="82" /></flowRegion><flowPara
+         id="flowPara3729"
+         style="font-size:14px;font-family:Arial;-inkscape-font-specification:Arial">Search</flowPara></flowRoot>    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:#00a5ff;stroke-opacity:1"
+       id="rect3731"
+       width="65"
+       height="16"
+       x="835"
+       y="287.36218" />
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot3735"
+       style="font-size:40px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+       transform="translate(-5.0253906,253.68564)"><flowRegion
+         id="flowRegion3737"><rect
+           id="rect3739"
+           width="41"
+           height="16"
+           x="789"
+           y="34" /></flowRegion><flowPara
+         id="flowPara3741"
+         style="font-size:14px;font-family:Arial;-inkscape-font-specification:Arial">Login</flowPara></flowRoot>    <rect
+       y="287.36218"
+       x="910"
+       height="16"
+       width="65"
+       id="rect3743"
+       style="fill:#ffffff;fill-opacity:1;stroke:#00a5ff;stroke-opacity:1" />
+    <rect
+       style="fill:#e0f0ff;fill-opacity:1;stroke:none"
+       id="rect3761"
+       width="95"
+       height="95"
+       x="25"
+       y="272.36218" />
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot3745"
+       style="font-size:40px;font-style:normal;font-weight:normal;fill:#0080cb;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+       transform="translate(9,251.68564)"><flowRegion
+         id="flowRegion3747"><rect
+           id="rect3749"
+           width="85"
+           height="86.676537"
+           x="21"
+           y="24"
+           style="fill:#0080cb;fill-opacity:1" /></flowRegion><flowPara
+         id="flowPara3751"
+         style="font-size:14px;font-weight:bold;fill:#db5018;fill-opacity:1;font-family:Arial;-inkscape-font-specification:Arial Bold">English</flowPara><flowPara
+         style="font-size:14px;font-weight:bold;fill:#186adb;fill-opacity:1;font-family:Arial;-inkscape-font-specification:Arial Bold"
+         id="flowPara3753">Русский</flowPara><flowPara
+         style="font-size:14px;font-weight:bold;fill:#186adb;fill-opacity:1;font-family:Arial;-inkscape-font-specification:Arial Bold"
+         id="flowPara3759">Украинский</flowPara><flowPara
+         style="font-size:14px;font-weight:bold;fill:#186adb;fill-opacity:1;font-family:Arial;-inkscape-font-specification:Arial Bold"
+         id="flowPara3755">German</flowPara><flowPara
+         style="font-size:14px;font-weight:bold;fill:#186adb;fill-opacity:1;font-family:Arial;-inkscape-font-specification:Arial Bold"
+         id="flowPara3757">French</flowPara></flowRoot>    <rect
+       style="fill:#e0f0ff;fill-opacity:1;stroke:none"
+       id="rect3646"
+       width="130"
+       height="120"
+       x="185"
+       y="307.36218" />
+    <rect
+       style="fill:#bcdeff;fill-opacity:1;stroke:none"
+       id="rect3648"
+       width="130"
+       height="20"
+       x="185"
+       y="307.36218" />
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:none"
+       id="rect3650"
+       width="120"
+       height="10"
+       x="190"
+       y="312.36218" />
+    <rect
+       style="fill:#bcdeff;fill-opacity:1;stroke:none"
+       id="rect3672"
+       width="130"
+       height="20"
+       x="185"
+       y="347.36218" />
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot3652"
+       style="font-size:14px;font-style:normal;font-weight:normal;fill:#0080cb;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+       transform="translate(-5,257.36218)"><flowRegion
+         id="flowRegion3654"><rect
+           id="rect3656"
+           width="119"
+           height="89.5"
+           x="196"
+           y="75.5"
+           style="font-size:14px;fill:#0080cb;fill-opacity:1" /></flowRegion><flowPara
+         id="flowPara3658"
+         style="font-weight:bold;fill:#0080cb;fill-opacity:1;font-family:Arial;-inkscape-font-specification:Arial Bold">Eclipse</flowPara><flowPara
+         id="flowPara3660"
+         style="font-weight:bold;fill:#0080cb;fill-opacity:1;font-family:Arial;-inkscape-font-specification:Arial Bold">NetBeans</flowPara><flowPara
+         id="flowPara3664"
+         style="font-weight:bold;fill:#0080cb;fill-opacity:1;font-family:Arial;-inkscape-font-specification:Arial Bold">gEdit</flowPara><flowPara
+         id="flowPara3668"
+         style="font-weight:bold;fill:#0080cb;fill-opacity:1;font-family:Arial;-inkscape-font-specification:Arial Bold">Zend Studio 6.0</flowPara></flowRoot>  </g>
+</svg>
