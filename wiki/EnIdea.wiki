@@ -71,6 +71,12 @@ $myBlogPosts = new Model_BlogPost();
 $myBlogPosts->with($comments, $user);
 }}}
 
+=== Development ===
+
+See code of [http://code.google.com/p/phpdays/source/browse/branches/models_like_python/lib/Days/Model.php Days_Model] class. This main class for implement this perfect functionality.
+
+Please, help us implement this in this month. This need as main goal in release *phpDays 1.1*.
+
 ----
 
 == Validator ==
