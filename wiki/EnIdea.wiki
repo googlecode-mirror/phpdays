@@ -71,6 +71,21 @@ $myBlogPosts = new Model_BlogPost();
 $myBlogPosts->with($comments, $user);
 }}}
 
+Find all comments in blogs, owned by specified users only:
+{{{
+// find users by email
+$users = new Model_Users('email=:1',
+                         array(
+                           'user1@phpdays.org',
+                           'user1@phpdays.org',
+                           'user3@phpdays.org'
+                         ));
+// find blogs, owned by users
+$blogs = new Model_Blog('owner=:1', $users);
+// find comments from this blogs
+$comments = new Model_BlogComment('blog=:1', $blogs);
+}}}
+
 === Development ===
 
 See code of [http://code.google.com/p/phpdays/source/browse/branches/models_like_python/lib/Days/Model.php Days_Model] class. This main class for implement this perfect functionality.
