@@ -42,7 +42,7 @@ $blogs = new Model_Blog('name=:1', 'About life');
 // create user object
 $users = new Model_Users();
 // add conditions from referenced models
-$users->with($comments, $blog);
+$users->with($comments, $blogs);
 
 // show all users
 foreach ($users as $user) {
