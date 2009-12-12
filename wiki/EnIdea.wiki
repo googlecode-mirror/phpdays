@@ -92,6 +92,13 @@ See code of [http://code.google.com/p/phpdays/source/browse/branches/models_like
 
 Please, help us implement this in this month. This need as main goal in release *phpDays 1.1*.
 
+If user use call `witch(model1, model2, ...)` - than into model processed:
+ * all models cached in one array where described all models. This file saved once, and regenerated on each change in model classes
+ * find all pathes from current model to all specified models. If not find - throw exception
+ * join all model tables and set "where" conditions from passed models
+ * execute statement and fill all rows for current model only
+ * for represent ROW need use Days_Db_Row class _(need to create it)_
+
 ----
 
 == Validator ==
