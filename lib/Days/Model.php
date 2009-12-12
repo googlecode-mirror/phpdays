@@ -22,19 +22,17 @@ abstract class Days_Model {
     /**
      * Create model object and set conditions.
      *
-     * @param string $conditions Condition string with numerical placeholders
-     * @param mixed Palceholders values
-     * @return this
+     * @param mixed Condition and placeholder values
      */
-    public static function find($conditions) {
+    public function __construct($conditions) {
         // get all parameters, passed to method
         $params = func_get_args();
-        // create new instance of current object
-        $model = new self();
+        // autodetect name of current model and save it
+        $this->_name = substr(__CLASS__, strpos(__CLASS__, 'Model_'));
         // set conditions to current model object
-        call_user_func_array(array($this, 'where'), $params);
-        // return prepared model
-        return $model;
+        if (count($params) > 0) {
+            $this->where($params);
+        }
     }
 
     /**
@@ -126,14 +124,4 @@ abstract class Days_Model {
 //    public function key() {
 //        return "{$this->name()}_{$this->_id}";
 //    }
-
-    /**
-     * Use find() method for create object instance.
-     *
-     * Singleton pattern implementation.
-     */
-    private function __construct() {
-        // autodetect name of current model and save it
-        $this->_name = substr(__CLASS__, strpos(__CLASS__, 'Model_'));
-    }
 }
