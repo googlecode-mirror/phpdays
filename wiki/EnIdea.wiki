@@ -77,7 +77,7 @@ Find all comments in blogs, owned by specified users only:
 $users = new Model_Users('email=:1',
                          array(
                            'user1@phpdays.org',
-                           'user1@phpdays.org',
+                           'user2@phpdays.org',
                            'user3@phpdays.org'
                          ));
 // find blogs, owned by users
