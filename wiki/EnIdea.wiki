@@ -96,8 +96,8 @@ If user use call `witch(model1, model2, ...)` - than into model processed:
  * all models cached in one array where described all models. This file saved once, and regenerated on each change in model classes
  * find all pathes from current model to all specified models. If not find - throw exception
  * join all model tables and set "where" conditions from passed models
- * execute statement and fill all rows for current model only
  * for represent ROW need use Days_Db_Row class _(need to create it)_
+ * execute statement and fill all rows for current model only. This execute only by first call `__get()` _(and equialent)_ method for recive data from model
 
 ----
 
