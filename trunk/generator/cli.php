@@ -58,10 +58,11 @@ try {
     // start screen (introduction)
     print "\tPHPDAYS APPLICATION GENERATOR\n";
     print "\n";
-    print "Syntax: command controller_name: action1 action2 action3\n";
+    print "Syntax: command [app_name|controller_name] parameter1 parameter2 parameter3\n";
     print "Example: add user: register login logout new\n";
     print "\n";
     print "Commands:\n";
+    print " - NEW:     create new project\n";
     print " - ADD:     create new controller with actions (always create default action 'index')\n";
     print " - DEL:     delete actions in controller. Backup files save in directory 'backup'\n";
     print " - REPLACE: replace selected actions in controller to new empty actions. Backup files save in directory 'backup'\n";
@@ -73,22 +74,32 @@ try {
         // read command
         print 'Command: ';
         // reads one line from STDIN
-        $sCommandLine = trim(fgets(STDIN));
+        $commandLine = trim(fgets(STDIN));
         // execute command
-        if ('' != $sCommandLine) {
+        if ('' != $commandLine) {
             // clear string
-            $sCommandLine = str_replace(array(',',';',':','\\'), '', $sCommandLine);
+            $commandLine = str_replace(array(',',';',':','\\'), '', $commandLine);
             // parse string
-            $aCommandLineParams = explode(' ', $sCommandLine);
-            foreach ($aCommandLineParams as &$sParam)
+            $aCommandLineParams = explode(' ', $commandLine);
+            foreach ($aCommandLineParams as &$sParam){
+                if($aCommandLineParams[0]=='new'){
+                    if($aCommandLineParams[1]){
+                        break;
+                    }
+                }
                 $sParam = strtolower(trim($sParam));
+            }
             // set correct params
-            $sCommand = array_shift($aCommandLineParams);
+            $command = array_shift($aCommandLineParams);
             $sController = array_shift($aCommandLineParams);
             // execute command
-            switch ($sCommand) {
-                case 'add':
+            switch ($command) {
                 case 'new':
+                    //create new project
+                    $generator->createProject($sController);
+                    echo "Project '{$sController}' succesfully created.\n";
+                    break;
+                case 'add':
                 case 'create':
                     // create actions
                     if($generator->add($sController, $aCommandLineParams)) {
@@ -120,7 +131,7 @@ try {
                     print "Command not supported!\n";
             }
         }
-    } while('' != $sCommandLine);
+    } while('' != $commandLine);
 }
 catch (Exception $ex) {
     print $ex->getMessage();

@@ -43,6 +43,25 @@ class Days_Tool_AppGenerator {
     }
 
     /**
+     * Create a new project
+     *
+     * @param $proj_name: Name of the project to be created
+     * @return bool
+     */
+    public function createProject($proj_name){
+        $proj_root = realpath(__FILE__.'/../../../../..');
+        $proj_dir = $proj_root."/{$proj_name}";
+        if(is_dir($proj_dir)){
+            throw new Exception("Project '{$proj_name}' already exists");
+        }
+        if(!mkdir($proj_dir,0755)){
+            throw new Exception ("Directory '{$proj_dir}' could not be created.\nFail! Project '{$proj_name}' not created");
+        }
+        $source_dir = $proj_root.'/phpDays/apps/new';
+        $this->_copyDir($source_dir,$proj_dir);
+    }
+
+    /**
      * Create new controller with actions.
      *
      * Always create action "index".
@@ -53,8 +72,8 @@ class Days_Tool_AppGenerator {
      * @return
      */
     public function add($sController, array $aActions=array(), $bReplace=false) {
-        list($sType,$sControllerName)=explode('/',$sController);
-        switch ($sType) {
+        list($type,$sControllerName)=explode('/',$sController);
+        switch ($type) {
             case 'site':
                 $sApplicationPath=$this->_sProjectDir."";
                 if (! is_dir($sApplicationPath))
@@ -79,10 +98,10 @@ class Days_Tool_AppGenerator {
             case 'content':
             case 'block':
             case 'form':
-                $sTControllerPath=dirname(__FILE__).'/site/application/'.$sType.'/'.$sType;
-                $sTAction=$sType;
-                if( ($sType=='content') ) {
-                    $sTControllerPath=dirname(__FILE__).'/site/application/'.$sType.'/index';
+                $sTControllerPath=dirname(__FILE__).'/site/application/'.$type.'/'.$type;
+                $sTAction=$type;
+                if($type=='content'){
+                    $sTControllerPath=dirname(__FILE__).'/site/application/'.$type.'/index';
                     $sTAction='index';
                     // set default path
                     if( (empty($aActions) || ! in_array('index', $aActions) ) ) {
@@ -105,10 +124,10 @@ class Days_Tool_AppGenerator {
                 break;
 
             case 'frame':
-                $sTFramePath=dirname(__FILE__).'/site/application/'.$sType;
+                $sTFramePath=dirname(__FILE__).'/site/application/'.$type;
                 $sTAction='index';
 
-                $sFramePath = "{$this->_sProjectDir}/application/{$sType}";
+                $sFramePath = "{$this->_sProjectDir}/application/{$type}";
                 $this->addAction($sTFramePath,$sTAction,$sFramePath, $sControllerName, $bReplace);
 
                 echo "Frame {$sControllerName} is added\n";
