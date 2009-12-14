@@ -59,7 +59,7 @@ echo '</ul>';
 require_once '/var/lib/Days/Engine.php';
 Days_Engine::run('/var/www/myblog/app/', 'development');
 }}}
- * _FOR LINUX SERVER_ change directories permission fot write to: `/var/www/myblog/app/system/cache`, `/var/www/myblog/app/system/log` and `/var/www/myblog/app/system/view` _(open terminal and type command `chmod 0777 path1 path2 path3`)_
+ * _FOR LINUX SERVER_ change directories permission for write to: `/var/www/myblog/app/system/cache`, `/var/www/myblog/app/system/log` and `/var/www/myblog/app/system/view` _(open terminal and type command `chmod 0777 path1 path2 path3`)_
  * open `/var/www/myblog/app/config/development.yaml` and change next lines _([EnLibDaysConfig additional info])_:
    * `db`: correct database connection info
    * `url/base`: path prefix after host name `myblog`
