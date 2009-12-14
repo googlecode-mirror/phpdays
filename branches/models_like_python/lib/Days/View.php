@@ -12,10 +12,15 @@
  * @author       Anton Danilchenko <happy@phpdays.org>
  */
 class Days_View {
-
     /** @var Days_View_Config View configuration */
     private static $_viewConfig = null;
-    
+
+    /**
+     * Create template engine instance.
+     *
+     * @param string $engine Template engine name
+     * @return Days_View_Abstract
+     */
     public static function factory($engine) {
         $engine = ucfirst($engine);
         $className = "Days_View_{$engine}";
@@ -28,8 +33,9 @@ class Days_View {
     public static function setViewConfig(Days_View_Config $config) {
         self::$_viewConfig = $config;
     }
+
     public static function getViewConfig() {
-        if (!isset(self::$_viewConfig)) {
+        if (! isset (self::$_viewConfig)) {
             self::$_viewConfig = new Days_View_Config();
         }
         return self::$_viewConfig;

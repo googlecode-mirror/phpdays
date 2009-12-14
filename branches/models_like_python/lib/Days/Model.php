@@ -16,6 +16,10 @@ abstract class Days_Model {
     protected $_name;
     /** @var int Count of returned rows in result set (maximum value is 1000) */
     protected $_limit = 1000;
+    /** @var int Page number for results show */
+    protected $_page = 1;
+    /** @var array Sort order (column names) */
+    protected $_sort = array();
     /** @var array Conditions as [tableName]=>[where clause with inserted values] */
     protected $_where = array();
 
@@ -39,6 +43,7 @@ abstract class Days_Model {
      * Add conditions from passed models and find references between models.
      *
      * @param Days_Model $model Model object (pass many models in next parameters)
+     * @return Days_Model
      */
     public function with(Days_Model $model) {
         // get all parameters, passed to method
@@ -68,7 +73,7 @@ abstract class Days_Model {
      *
      * @param string $conditions Condition string with numerical placeholders
      * @param mixed Palceholders values
-     * @return this
+     * @return Days_Model
      */
     public function where($conditions=null) {
         // get all parameters, passed to method
@@ -97,11 +102,34 @@ abstract class Days_Model {
      * Set limit of returned lines.
      *
      * @param int $rows Count of result rows
-     * @return this
+     * @param int $page Number of page
+     * @return Days_Model
      */
-    public function limit($rows) {
-        if ($rows < 1000 AND $rows>0) {
+    public function limit($rows, $page=1) {
+        // set page number
+        if (is_numeric($page) AND $page >= 1) {
+            $this->_page = $page;
+        }
+        // set limit of rows
+        if ($rows < 1000 AND $rows > 0) {
             $this->_limit = $rows;
+        }
+        // link to current model
+        return $this;
+    }
+
+    /**
+     * Set sort order of returned lines.
+     *
+     * @param int $column Name of column with ASC or DESC
+     * @return Days_Model
+     */
+    public function sort($column) {
+        // get all parameters, passed to method
+        $params = func_get_args();
+        // set parameters to sort order
+        foreach ($params as $column) {
+            $this->_sort[] = $column;
         }
         // link to current model
         return $this;
