@@ -151,8 +151,6 @@ final class Days_Engine {
             $action = Days_Url::getSpec('action');
             $ext = Days_Url::getSpec('ext');
             Days_Event::run('controller.start');
-            // set module path
-            Days_Model::setPath(self::appPath() . 'Model/');
             // set controller params
             $controllerClass = "Controller_" . ucfirst($controller);
             // use index controller for non-exists controllers
