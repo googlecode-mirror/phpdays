@@ -12,12 +12,14 @@
  * @author       Anton Danilchenko <happy@phpdays.org>
  */
 class Days_Controller {
-    /** @var Days_View */
+    /** @var Days_View_Abstract */
     protected $_view;
-    /** Path to content template */
+    /** @var string Path to content template */
     protected $_content;
-    /** Path to layout template */
+    /** @var string Path to layout template */
     protected $_layout;
+    /** @var array Template variables */
+    protected $_variables = array();
 
     /**
      * Create template engine object.
@@ -31,6 +33,10 @@ class Days_Controller {
     }
 
     public function getContent($withLayout=true) {
+        // set variables to view
+        foreach ($this->_variables as $name=>$value) {
+            $this->_view->set($name, $value);
+        }
         // set main content in layout
         $this->_view->set('content', $this->_view->render($this->_content));
         // return only content
@@ -63,5 +69,15 @@ class Days_Controller {
      * Always call after create object instance.
      */
     public function init() {
+    }
+
+    /**
+     * Set variable to template.
+     *
+     * @param sthing $name Name of template variable
+     * @param mixed $value Value, setted to template variable
+     */
+    public function __set($name, $value) {
+        $this->_variables[$name] = $value;
     }
 }
