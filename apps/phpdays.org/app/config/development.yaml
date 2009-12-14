@@ -12,8 +12,6 @@ db:
 engine:
   # collect debug info (1 - enable, 0 - disable)
   debug: 1
-  # name of you brand (prefix for model classes)
-  brand: phpdays
   # enable autorun files from the folder app/autorun (1 - enable, 0 - disable)
   autorun: 1
 log:

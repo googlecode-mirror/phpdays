@@ -19,5 +19,10 @@ class Controller_Index extends Days_Controller {
 
     /** Index action */
     public function indexAction() {
+        // find blog posts
+        $blogPosts = new Model_BlogPost();
+        $blogPosts->limit(10)->sort('date DESC');
+        // set data to template
+        $this->posts = $blogPosts;
     }
 }
