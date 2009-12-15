@@ -28,6 +28,7 @@ class Days_View {
     public static function setViewConfig(Days_View_Config $config) {
         self::$_viewConfig = $config;
     }
+    
     public static function getViewConfig() {
         if (!isset(self::$_viewConfig)) {
             self::$_viewConfig = new Days_View_Config();

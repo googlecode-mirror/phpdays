@@ -1,6 +1,7 @@
 <?php
 /**
- *
+ * Unit tests for classes implementing Days_View_Interface.
+ * 
  * @copyright    Copyright (c) 2009 phpDays foundation (http://phpdays.org)
  * @license      http://www.opensource.org/licenses/mit-license.php The MIT License
  * @package      phpDays
@@ -13,6 +14,7 @@ require_once dirname(__FILE__) . '/_stubs/Days_Config.php';
  * interface.
  */
 abstract class Days_View_InterfaceTest extends PHPUnit_Framework_TestCase {
+
     /** @var Days_View_Interface */
     protected $view;
     protected static $viewConfig;
@@ -113,12 +115,14 @@ abstract class Days_View_InterfaceTest extends PHPUnit_Framework_TestCase {
             return null;
         }
     }
+    
     private static function _rmDir($dir) {
         foreach (glob("$dir/*") as $file) {
             is_dir($file) ? self::_rmDir($file) : unlink($file);
         }
         file_exists($dir) && rmdir($dir);
     }
+    
     private static function _createDirTree() {
         $config = new Days_View_Config();
         mkdir($config->getTemplateDir());

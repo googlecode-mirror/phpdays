@@ -1,6 +1,7 @@
 <?php
 /**
- *
+ * This is a fake class for Days_Config.
+ * 
  * @copyright    Copyright (c) 2009 phpDays foundation (http://phpdays.org)
  * @license      http://www.opensource.org/licenses/mit-license.php The MIT License
  * @package      phpDays
