@@ -13,18 +13,15 @@
  */
 
 class Days_View_Config {
+
     /** @var string Subdirectory for templates. */
     const TEMPLATE_DIR = 'View/';
-    
     /** @var string Subdirectory for compiled templates. */
     const COMPILE_DIR  = 'system/view/';
-    
     /** @var string Subdirectory for cached templates. */
     const CACHE_DIR    = 'system/cache/';
-    
     /** @var string Application's directory. */
     private static $_appDir = null;
-
     /** @var string Template directory. */
     private static $_templateDir;
     
@@ -42,7 +39,6 @@ class Days_View_Config {
         if (0 == strcmp($appPath, self::$_appDir)) {
             return;
         }
-                    
         self::$_appDir = $appPath;
         if (DIRECTORY_SEPARATOR != substr(self::$_appDir, -1)) {
             self::$_appDir .= DIRECTORY_SEPARATOR;

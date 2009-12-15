@@ -1,6 +1,7 @@
 <?php
 /**
- *
+ * This is a fake class for Days_Engine.
+ * 
  * @copyright    Copyright (c) 2009 phpDays foundation (http://phpdays.org)
  * @license      http://www.opensource.org/licenses/mit-license.php The MIT License
  * @package      phpDays
@@ -11,6 +12,7 @@
  * A stub for the Days_Engine class.
  */
 class Days_Engine {
+
     public static $appDir = '';
 
     public static function appPath() {
@@ -19,6 +21,5 @@ class Days_Engine {
    
     public static function setAppDir($dir) {
         self::$appDir = $dir;
-        return;
     }  
 }
