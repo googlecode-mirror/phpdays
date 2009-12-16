@@ -12,8 +12,7 @@
  * A stub for the Days_Engine class.
  */
 class Days_Engine {
-
-    public static $appDir = '';
+    private static $appDir = '';
 
     public static function appPath() {
         return self::$appDir;
