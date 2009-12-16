@@ -2,11 +2,11 @@
 #labels Lang-Ru
 #sidebar En
 
-=== [Ru RU] »Table of Contents ===
+=== [En EN] » Table of Contents ===
 
- * [RuStartAbout general information]
- * application's [RuStartModel models]
- * application's [RuStartController controllers]
- * [RuStartView page presentation] to a user
- * processing html [RuStartForm forms]
- * adding [RuStartAjax Ajax] to an application
+ * [EnStartAbout general information]
+ * application's [EnStartModel models]
+ * application's [EnStartController controllers]
+ * [EnStartView page presentation] to a user
+ * processing html [EnStartForm forms]
+ * adding [EnStartAjax Ajax] to an application
