@@ -1,13 +1,12 @@
-﻿
-#summary Quick Start - Learn by examples.
+﻿#summary Quick Start - Learn by examples.
 #labels Lang-Ru
 #sidebar En
 
 === [Ru RU] »Table of Contents ===
 
-* [RuStartAbout general information]
-* application's [RuStartModel models]
-* application's [RuStartController controllers]
-* [RuStartView page presentation] to a user
-* processing html [RuStartForm forms]
-* adding [RuStartAjax Ajax] to an application
+ * [RuStartAbout general information]
+ * application's [RuStartModel models]
+ * application's [RuStartController controllers]
+ * [RuStartView page presentation] to a user
+ * processing html [RuStartForm forms]
+ * adding [RuStartAjax Ajax] to an application
