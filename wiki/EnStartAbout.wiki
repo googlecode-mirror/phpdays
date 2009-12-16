@@ -1,5 +1,4 @@
-﻿
-#summary Overview (quick start).
+﻿#summary Overview (quick start).
 #labels Lang-En
 #sidebar EnStart
 
@@ -23,8 +22,8 @@ The `config` directory contains application's configuration files: `development.
 
 Now you can see the three most important directories with which we will work constantly: `Model`, `View`, `Controller` (abbreviated as [EnMvc MVC] - read more about it).
 
-=== Creating blog ===
+=== Creating a blog site ===
 
-Where to start? Let's create a simple but very effective example - blog. We need users be able to browse articles on the site, register and write their own articles, add comments.
+Where to start? Let's create a simple but very effective example - a blog site. We need users be able to browse articles on the site, register and write their own articles, add comments.
 
 Let's see how quickly and elegantly it can be done in 2 hours. Is it enough time? Then proceed to the next part - [EnStartModel application's models].
