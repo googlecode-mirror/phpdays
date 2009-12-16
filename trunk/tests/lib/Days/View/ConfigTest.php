@@ -17,19 +17,19 @@ class Days_View_ConfigTest extends PHPUnit_Framework_TestCase {
 
     public function testSlashAdded() {
         $dir = 'app directory';
-        Days_Engine::$appDir = $dir;
+        Days_Engine::setAppDir($dir);
         $config = new Days_View_Config();
         $dir .= '/';
         $this->assertEquals($dir . Days_View_Config::TEMPLATE_DIR,
             $config->getTemplateDir());
-        Days_Engine::$appDir = $dir;
+        Days_Engine::setAppDir($dir);
         $this->assertEquals($dir . Days_View_Config::TEMPLATE_DIR,
             $config->getTemplateDir());
     }
     
     public function testDirectories() {
         $dir = 'app directory/';
-        Days_Engine::$appDir = $dir;
+        Days_Engine::setAppDir($dir);
         $config = new Days_View_Config();
         $this->assertEquals($dir . Days_View_Config::TEMPLATE_DIR,
             $config->getTemplateDir());

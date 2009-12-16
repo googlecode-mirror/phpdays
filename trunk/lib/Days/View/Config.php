@@ -13,7 +13,6 @@
  */
 
 class Days_View_Config {
-
     /** @var string Subdirectory for templates. */
     const TEMPLATE_DIR = 'View/';
     /** @var string Subdirectory for compiled templates. */

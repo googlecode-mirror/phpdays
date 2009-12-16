@@ -14,7 +14,6 @@ require_once dirname(__FILE__) . '/_stubs/Days_Config.php';
  * interface.
  */
 abstract class Days_View_InterfaceTest extends PHPUnit_Framework_TestCase {
-
     /** @var Days_View_Interface */
     protected $view;
     protected static $viewConfig;
@@ -89,7 +88,7 @@ abstract class Days_View_InterfaceTest extends PHPUnit_Framework_TestCase {
 
     public static function setUpBeforeClass() {
         self::$_tempDir = self::_tempDir() . '/';
-        Days_Engine::$appDir = self::$_tempDir;
+        Days_Engine::setAppDir(self::$_tempDir);
         self::_createDirTree();
     }
     public static function tearDownAfterClass() {
