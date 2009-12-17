@@ -9,8 +9,8 @@ If you have not read about [EnLibDaysModel models] yet - now it's time to do it.
 
 === Creating models for the blog application ===
 
-In the directory `app / Model` create the following files:
-* `Blog.php` - represents a specific blog. There can be several blogs and each of them has its own subject.
+In the directory `app/Model` create the following files:
+ * `Blog.php` - represents a specific blog. There can be several blogs and each of them has its own subject.
 {{{
 <?php
 class Model_Blog extends Days_Model {
@@ -21,7 +21,7 @@ class Model_Blog extends Days_Model {
     protected $_changed = 'type: DateTime, now: always, required';
 }
 }}}
-* `BlogPost.php` - represents an article in the blog. Comments can be added to an article.
+ * `BlogPost.php` - represents an article in the blog. Comments can be added to an article.
 {{{
 <?php
 class Model_BlogPost extends Days_Model {
@@ -37,15 +37,15 @@ class Model_BlogPost extends Days_Model {
     protected $_media = 'type: + String';
 }
 }}}
-* `BlogCategory.php` - is a message category _(music, news, misc, etc.)_
-}}}
+ * `BlogCategory.php` - is a message category _(music, news, misc, etc.)_
+{{{
 <?php
 class Model_BlogCategory extends Days_Model {
     protected $_name = 'type: String, min: 2, max: 50, required';
     protected $_url = 'type: String, min: 2, max: 50, required';
 }
 }}}
-* ` BlogTag.php `- tags used to mark an article
+ * ` BlogTag.php `- tags used to mark an article
 {{{
 <?php
 class Model_BlogTag extends Days_Model {
@@ -53,7 +53,7 @@ class Model_BlogTag extends Days_Model {
     protected $_url = 'type: String, min: 2, max: 70, required, unique';
 }
 }}}
-* `BlogComment` - comments on an article. We'll extend the standard Comment model.
+ * `BlogComment` - comments on an article. We'll extend the standard Comment model.
 {{{
 <?php
 class Model_BlogComment extends Days_Model_Comment {
@@ -63,7 +63,7 @@ class Model_BlogComment extends Days_Model_Comment {
     protected $_created = 'type: DateTime, now: create';
 }
 }}}
-* `User.php` - a site's user. We'll extend the standard User model.
+ * `User.php` - a site's user. We'll extend the standard User model.
 {{{
 <?php
 class Model_User extends Days_Model_User {
