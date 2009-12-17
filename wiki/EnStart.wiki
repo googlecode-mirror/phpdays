@@ -1,6 +1,7 @@
-﻿#summary Quick Start - Learn by examples.
+#summary Quick Start - Learn by examples.
 #labels Lang-Ru
 #sidebar En
+<wiki:comment>revision: 1</wiki:comment>
 
 === [En EN] » Table of Contents ===
 

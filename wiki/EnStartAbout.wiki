@@ -1,6 +1,7 @@
-﻿#summary Overview (quick start).
+#summary Overview (quick start).
 #labels Lang-En
 #sidebar EnStart
+<wiki:comment>revision: 1</wiki:comment>
 
 === Quick Startup Guide ===
 

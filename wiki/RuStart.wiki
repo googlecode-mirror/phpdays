@@ -1,6 +1,7 @@
 #summary Быстрый старт - учитесь на примерах.
 #labels Lang-Ru
 #sidebar Ru
+<wiki:comment>revision: 1</wiki:comment>
 
 === [Ru RU] » Оглавление ===
 
