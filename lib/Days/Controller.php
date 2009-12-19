@@ -40,18 +40,11 @@ class Days_Controller {
         // set main content in layout
         $this->_view->set('content', $this->_view->render($this->_content));
         // return only content
-        if (! $withLayout)
+        if (! $withLayout) {
             return self::_postFilter($this->_view->get('content'));
+        }
         // insert content into layout
         return self::_postFilter($this->_view->render($this->_layout));
-    }
-
-    protected static function _postFilter($content) {
-        // add base path after all url adresses
-        $basePath = Days_Config::load()->get('url/base', '');
-        if (''!=$basePath)
-            $content = preg_replace('`(= *[\'"]/)`', "\$1{$basePath}/", $content);
-        return $content;
     }
 
     /**
@@ -61,14 +54,77 @@ class Days_Controller {
      * @param bool $rewrite Replace defined layout name
      */
     public function setLayout($template, $rewrite=true) {
-        if (is_null($this->_layout) OR $rewrite)
+        if (is_null($this->_layout) OR $rewrite) {
             $this->_layout = "layout/{$template}." . Days_Url::getSpec('ext');
+        }
     }
 
     /**
      * Always call after create object instance.
      */
     public function init() {
+    }
+
+    /**
+     * Return SESSION variable by name.
+     *
+     * @return mixed
+     */
+    public function session($name, $value=null) {
+        // set value
+        if (! is_null($value)) {
+            Days_Request::setSession($name, $value);
+        }
+        // return value
+        return Days_Request::getSession($name);
+    }
+
+    /**
+     * Return POST variable by name.
+     *
+     * @return mixed
+     */
+    public function post($name, $value=null) {
+        // set value
+        if (! is_null($value)) {
+            Days_Request::setPost($name, $value);
+        }
+        // return value
+        return Days_Request::getPost($name);
+    }
+
+    /**
+     * Return URL variable by name.
+     *
+     * @return mixed
+     */
+    public function url($name, $value=null) {
+        // set value
+        if (! is_null($value)) {
+            Days_Url::set($name, $value);
+        }
+        // return value
+        return Days_Url::get($name);
+    }
+
+    /**
+     * Add EVENT handler by event name.
+     *
+     * @return mixed
+     */
+    public function event($name, array $observer) {
+        // set value
+        return Days_Event::add($name, $observer);
+    }
+
+    /**
+     * Add log message to developer only.
+     *
+     * @return bool Message saved to log
+     */
+    public function log($message) {
+        // set value
+        return Days_Log::add($message);
     }
 
     /**
@@ -79,5 +135,14 @@ class Days_Controller {
      */
     public function __set($name, $value) {
         $this->_variables[$name] = $value;
+    }
+
+    protected static function _postFilter($content) {
+        // add base path after all url adresses
+        $basePath = Days_Config::load()->get('url/base', '');
+        if ('' != $basePath) {
+            $content = preg_replace('`(= *[\'"]/)`', "\$1{$basePath}/", $content);
+        }
+        return $content;
     }
 }

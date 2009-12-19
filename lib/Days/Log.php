@@ -21,14 +21,16 @@ class Days_Log {
 
     public static function add($message, $category='app', $level=self::INFO) {
         // add unique message
-        if ('' != $message AND ! in_array($message, self::$_errors))
+        if ('' != $message AND ! in_array($message, self::$_errors)) {
             self::$_errors[] = array($message, $category, $level, microtime(true));
+        }
     }
 
     public static function profile($message, $category='app') {
         // not send message
-        if (! Days_Config::load()->get('engine/debug', false))
+        if (! Days_Config::load()->get('engine/debug')) {
             return;
+        }
         // send message now
         switch (strtolower(Days_Config::load()->get('log/type', 'file'))) {
             // send to FirePHP
@@ -50,8 +52,9 @@ class Days_Log {
             // save log
             if (Days_Config::load()->get('engine/debug', false)) {
                 $messages = self::getMessages($level);
-                if(count($messages)==0)
+                if (count($messages)==0) {
                     return;
+                }
                 switch (strtolower(Days_Config::load()->get('log/type', 'file'))) {
                     // save to SQLite
                     case 'sqlite':
@@ -134,8 +137,9 @@ class Days_Log {
         $sSystemInfo .= '  IP:                  ' . $_SERVER['REMOTE_ADDR'] . "\n";
         $sSystemInfo .= '  Query string:        http://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'] . "\n";
         // set previous page adress
-        if(isset($_SERVER['HTTP_REFERER']))
+        if(isset($_SERVER['HTTP_REFERER'])) {
             $sSystemInfo .= '  Previous page:       ' . $_SERVER['HTTP_REFERER'] . "\n";
+        }
         $sMessages = implode("\n", $messages) . "\n\n";
         error_log($sSystemInfo . $sMessages, 3, "{$sLogDir}/{$sErrorFile}.err");
     }
@@ -147,8 +151,9 @@ class Days_Log {
      * @param string $level Error type
      */
     protected static function logtoFirephp($messages, $level=self::INFO) {
-        foreach ($messages as $message)
+        foreach ($messages as $message) {
             Firephp::getInstance(true)->log($message, self::getLevel($level));
+        }
     }
 
     /**
@@ -156,9 +161,9 @@ class Days_Log {
      *
      * @param string $messages Error messages
      */
-    protected static function logtoBrowser($messages){
-        $messages=implode("<br>",$messages);
-        $popup="<script language='javascript'>
+    protected static function logtoBrowser($messages) {
+        $messages = implode("<br>",$messages);
+        $popup = "<script language='javascript'>
         winopen=window.open('','ErrorPage','width=500,height=250,location=0,toolbar=0,menubar=0,status=1,scrollbars=1,resizable=1,top=10,left=750');
         winopen.document.write('<html><head><title>ErrorPage</title></head><body>{$messages}</body></html>');
         winopen.document.close();
@@ -174,10 +179,12 @@ class Days_Log {
      */
     protected static function getMessages($level=null) {
         $errMessages = array ();
-        foreach (self::$_errors as $errorInfo)
+        foreach (self::$_errors as $errorInfo) {
             // get messages with specified level
-            if (is_null($level) OR ($level & $errorInfo[2]))
-                $errMessages[] = $errorInfo[0];//"{$errorInfo[3]}: {$errorInfo[0]}";
+            if (is_null($level) OR ($level & $errorInfo[2])) {
+                $errMessages[] = $errorInfo[0];
+            }
+        }
         return $errMessages;
     }
 

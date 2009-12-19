@@ -145,6 +145,16 @@ abstract class Days_Model {
     }
 
     /**
+     * Return database object.
+     *
+     * @param string $schema Name of database configuration section
+     * @return Days_Db
+     */
+    public function db($schema=null) {
+        return Days_Db::factory($schema);
+    }
+
+    /**
      * Return unique key for current row.
      *
      * @return string
