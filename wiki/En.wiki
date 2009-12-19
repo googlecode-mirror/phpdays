@@ -2,9 +2,13 @@
 #labels Featured,Lang-En
 <wiki:comment>revision: 1</wiki:comment>
 
+[En English], [Ru Русский], [De Deutsche], [Fr French], [It Italiano], [Tr Türkçe]
+
+----
+
 *phpDays* - flexible php5 framework based on the [EnMvc MVC] and [EnLibDaysDbTable ORM] design patterns.
 
-=== [En] » Start now ===
+=== Start now ===
 
  * [EnAbout About] the project _(features)_
  * [EnChangelog Changelog] _(changes between project versions)_
