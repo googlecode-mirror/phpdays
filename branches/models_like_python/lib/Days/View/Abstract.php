@@ -16,10 +16,12 @@ abstract class Days_View_Abstract implements Days_View_Interface {
         // set correct helper name
         $name = ucfirst($name);
         $name = "Days_Helper_{$name}";
+        $method = array($name, $method);
         // check helper
-        if (! class_exists($name) OR ! is_callable($name))
+        if (! class_exists($name) OR ! is_callable($method)) {
             return null;
+        }
         // return helper result
-        return call_user_func_array(array($name, $method), $params);
+        return call_user_func_array($method, $params);
     }
 }
