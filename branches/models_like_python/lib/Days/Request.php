@@ -33,7 +33,6 @@ class Days_Request {
         return ('xmlhttprequest' == strtolower(self::server('HTTP_X_REQUESTED_WITH')));
     }
 
-
     /**
      * Check current request type and return true if it is POST.
      *
@@ -43,4 +42,29 @@ class Days_Request {
         return ('POST' == $_SERVER["REQUEST_METHOD"]);
     }
 
+    /**
+     * Set and get POST value.
+     *
+     * @return bool
+     */
+    public static function post($name, $value=null) {
+        // set variable
+        if (! is_null($value)) {
+            $_POST[$name] = $value;
+        }
+        return (isset($_POST[$name]) ? $_POST[$name] : null);
+    }
+
+    /**
+     * Set and get SESSION value.
+     *
+     * @return bool
+     */
+    public static function session($name, $value=null) {
+        // set variable
+        if (! is_null($value)) {
+            $_SESSION[$name] = $value;
+        }
+        return (isset($_SESSION[$name]) ? $_SESSION[$name] : null);
+    }
 }

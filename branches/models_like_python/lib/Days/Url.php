@@ -28,8 +28,9 @@ class Days_Url {
         $basePath = trim($basePath, '/');
         $urlAdress = (string)substr(trim($_SERVER['REQUEST_URI'], '/'), strlen($basePath));
         // parse path
-        if (0 == preg_match('`^(.+)\.([a-z]{2})\.([a-z]{3,5})/?$`', $urlAdress, $aMatches))
+        if (0 == preg_match('`^(.+)\.([a-z]{2})\.([a-z]{3,5})/?$`', $urlAdress, $aMatches)) {
             $aMatches = array(1=>$urlAdress, 2=>$sDefaultLang, 3=>$sDefaultExt);
+        }
         // explode path to variables
         $aPath = explode('/', trim($aMatches[1], '/'));
         // set system variables
@@ -42,17 +43,20 @@ class Days_Url {
         // set user variables
         foreach ($aPath as $iNum=>$sValue) {
             // not handle first two parameters (servise and action name)
-            if ($iNum<=1)
+            if ($iNum<=1) {
                 continue;
+            }
             // parse parameter as "name:value"
             $aParams = explode(':', $sValue, 2);
             $sName = $aParams[0];
             $sValue = isset($aParams[1]) ? $aParams[1] : '';
             // set value
-            if (''!=$sValue)
+            if ('' != $sValue) {
                 $this->_params[$sName] = $sValue;
-            else
+            }
+            else {
                 $this->_params[] = $sName;
+            }
         }
     }
 
@@ -62,8 +66,9 @@ class Days_Url {
      * @return Days_Url
      */
     public static function init() {
-        if (! isset(self::$_obj))
+        if (! isset(self::$_obj)) {
             self::$_obj = new self();
+        }
         return self::$_obj;
     }
 
@@ -78,16 +83,19 @@ class Days_Url {
         // get url object
         $url = self::init();
         // return all variables
-        if (is_null($paramName))
+        if (is_null($paramName)) {
             return $url->_params;
+        }
         // prepare variable name
         $paramName = strtolower($paramName);
         // numerical parameter (start from index 1)
-        if (is_numeric($paramName))
+        if (is_numeric($paramName)) {
             $paramName = ($paramName<=0) ? 0 : $paramName-1;
+        }
         // check variables
-        if (isset($url->_params[$paramName]))
+        if (isset($url->_params[$paramName])) {
             return $url->_params[$paramName];
+        }
         // return default variable
         return $default;
     }
@@ -96,13 +104,15 @@ class Days_Url {
         // get url object
         $url = self::init();
         // return all variables
-        if (is_null($paramName))
+        if (is_null($paramName)) {
             return $url->_specParams;
+        }
         // prepare variable name
         $paramName = strtolower($paramName);
         // check variables
-        if (isset($url->_specParams[$paramName]))
+        if (isset($url->_specParams[$paramName])) {
             return $url->_specParams[$paramName];
+        }
         // return default variable
         return $default;
     }
