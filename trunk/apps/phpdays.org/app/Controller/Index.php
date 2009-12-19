@@ -30,11 +30,10 @@ class Controller_Index extends Days_Controller {
         // set value
         $this->post('name', 'Anton');
         $this->session('email', 'test@mail.com');
-        $this->url('address', 'Ukraine, Dnipropetrovsk');
         // send message to developer (in firebug or in log file)
         $this->log('All right. All work well!');
         // add event handler (need create method for handle this event)
-        $this->event('user/logged', array($this, '_onUserLogin'));
+//        $this->event('user/logged', array($this, '_onUserLogin'));
         // set data to template
         $this->posts = $blogPosts;
     }

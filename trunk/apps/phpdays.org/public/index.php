@@ -5,5 +5,5 @@ if ($_SERVER['REQUEST_URI'] == $_SERVER["SCRIPT_NAME"]) {
     exit();
 }
 // set error level
-require_once '../../phpdays/lib/Days/Engine.php';
+require_once '../../phpdays2/lib/Days/Engine.php';
 Days_Engine::run('../app/', 'development');
