@@ -36,12 +36,12 @@ date:
 time:
 datetime:
 phone:
-adress:
-country:
-city:
-zipcode:
-  max: maximum length
-  min: minimum length
+address:
+  country:
+  city:
+  zipcode:
+    max: maximum length
+    min: minimum length
 ModelName:
 
 # "+" before type - presented as list of this types
@@ -70,7 +70,7 @@ BlogPost:
   url: {type: string, max: 50, required}
   title: {type: string, max: 150, required}
   content: {type: text, max: 5000, required}
-  blog: {type: Blog}
+  blog: {type: Blog, required}
   category: {type: BlogCategory}
   tags: {type: BlogTag}
 
