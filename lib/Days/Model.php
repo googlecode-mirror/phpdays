@@ -28,7 +28,7 @@ abstract class Days_Model {
      *
      * @param mixed Condition and placeholder values
      */
-    public function __construct($conditions) {
+    public function __construct() {
         // get all parameters, passed to method
         $params = func_get_args();
         // autodetect name of current model and save it

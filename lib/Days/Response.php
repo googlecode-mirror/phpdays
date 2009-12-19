@@ -23,61 +23,61 @@ class Days_Response {
     /** Show 404 error page */
     const NOT_FOUND   = '404';
     /** Header list */
-    private static $_aHeaders = array();
+    private static $_headers = array();
     /** Page content */
-    private static $_sContent = '';
+    private static $_content = '';
 
 
     /**
-     * Get content
+     * Get content.
      *
      * @return string
      */
     public static function getContent() {
-        return self::$_sContent;
+        return self::$_content;
     }
 
     /**
-     * Set content
+     * Set content.
      *
-     * @param string $sContent
+     * @param string $content
      * @return string
      */
-    public static function setContent($sContent) {
-        self::$_sContent = $sContent;
-    }
-
-    /**
-     * Add header to list.
-     *
-     * @param string $sType : Type of header
-     * @param string $sValue : Destination path (only for 'redirect' and 'reload' types)
-     * @return void
-     */
-    public static function addHeader($sType, $sValue='') {
-        // add only unique headers
-        self::$_aHeaders[$sType] = $sValue;
+    public static function setContent($content) {
+        self::$_content = $content;
     }
 
     /**
      * Set content to send.
      *
-     * @param string $sContent
+     * @param string $content
      * @return void
      */
-    public static function addContent($sContent) {
-        self::$_sContent .= $sContent;
+    public static function addContent($content) {
+        self::$_content .= $content;
+    }
+
+    /**
+     * Add header to list.
+     *
+     * @param string $type Type of header
+     * @param string $value Destination path (only for 'redirect' and 'reload' types)
+     * @return void
+     */
+    public static function addHeader($type, $value='') {
+        // add only unique headers
+        self::$_headers[$type] = $value;
     }
 
     /**
      * Send one header.
      *
-     * @return bool: Headers sent
+     * @return bool Headers sent
      */
     public static function sendHeaders() {
         // headers already sent
-        if (headers_sent($sFilename, $iLinenum)) {
-            Days_Log::add("Headers not sent such as sended in file '{$sFilename}' on line {$iLinenum}");
+        if (headers_sent($fileName, $line)) {
+            Days_Log::add("Headers not sent such as sended in file '{$fileName}' on line {$line}");
             return false;
         }
         // on Ajax query
@@ -89,13 +89,13 @@ class Days_Response {
             return true;
         }
         // send special headers only
-        foreach (self::$_aHeaders as $sType=>$sValue)
-            switch((string)$sType) {
+        foreach (self::$_headers as $type=>$value)
+            switch((string)$type) {
                 case self::NOT_FOUND:
                     Header('HTTP/1.0 404 Not Found');
                     return true;
                     break;
-                case '403':
+                case self::FORBIDDEN:
                     Header('HTTP/1.1 403 Forbidden');
                     return true;
                     break;
@@ -106,14 +106,14 @@ class Days_Response {
                     break;
                 case self::REDIRECT:
                 case self::RELOAD:
-                    self::_sendHeadersRedirect($sValue);
+                    self::_sendHeadersRedirect($value);
                     return true;
                     break;
             }
         // send all additional headers
-        foreach (self::$_aHeaders as $sType=>$sValue)
+        foreach (self::$_headers as $type=>$value) {
             // send header info
-            switch((string)$sType) {
+            switch ((string)$type) {
                 case 'htm':
                 case 'html':
                 case 'xhtml':
@@ -150,6 +150,7 @@ class Days_Response {
                     self::_sendHeadersNocache();
                     break;
             }
+        }
         // all headers sent
         return true;
     }
@@ -163,7 +164,7 @@ class Days_Response {
         // send cookie
         session_write_close();
         // send content
-        echo self::$_sContent;
+        echo self::$_content;
     }
 
     /**
@@ -185,22 +186,24 @@ class Days_Response {
      * - relative (without http://host.com)
      * - reload current page (empty string)
      *
-     * @param string $sDestination
+     * @param string $destination
      * @return void
      */
-    private static function _sendHeadersRedirect($sDestination='') {
+    private static function _sendHeadersRedirect($destination='') {
         global $_SERVER;
         // set full adress (with prefix http://)
-        $sRedirectUrl = $sDestination;
+        $redirectUrl = $destination;
         // set current protocol
-        $Protocol = (empty($_SERVER['HTTPS']) ? 'http://' : 'https://' );
+        $protocol = (empty($_SERVER['HTTPS']) ? 'http://' : 'https://' );
         // reload current page
-        if ('' == $sDestination)
-            $sRedirectUrl = $Protocol . $_SERVER['HTTP_HOST'] . '/' . ltrim($_SERVER['REQUEST_URI'], '/');
+        if ('' == $destination) {
+            $redirectUrl = $protocol . $_SERVER['HTTP_HOST'] . '/' . ltrim($_SERVER['REQUEST_URI'], '/');
+        }
         // short adress (without prefix http://)
-        elseif (! preg_match('`^https?://`', $sDestination))
-            $sRedirectUrl = $Protocol . $_SERVER['HTTP_HOST'] . '/' . ltrim($sDestination, '/');
+        elseif (! preg_match('`^https?://`', $destination)) {
+            $redirectUrl = $protocol . $_SERVER['HTTP_HOST'] . '/' . ltrim($destination, '/');
+        }
         // location to absolute url
-        Header("Location: {$sRedirectUrl}");
+        Header("Location: {$redirectUrl}");
     }
 }

@@ -73,10 +73,10 @@ class Days_Controller {
     public function session($name, $value=null) {
         // set value
         if (! is_null($value)) {
-            Days_Request::setSession($name, $value);
+            Days_Request::session($name, $value);
         }
         // return value
-        return Days_Request::getSession($name);
+        return Days_Request::session($name);
     }
 
     /**
@@ -87,10 +87,10 @@ class Days_Controller {
     public function post($name, $value=null) {
         // set value
         if (! is_null($value)) {
-            Days_Request::setPost($name, $value);
+            Days_Request::post($name, $value);
         }
         // return value
-        return Days_Request::getPost($name);
+        return Days_Request::post($name);
     }
 
     /**
@@ -98,11 +98,7 @@ class Days_Controller {
      *
      * @return mixed
      */
-    public function url($name, $value=null) {
-        // set value
-        if (! is_null($value)) {
-            Days_Url::set($name, $value);
-        }
+    public function url($name) {
         // return value
         return Days_Url::get($name);
     }
@@ -125,6 +121,26 @@ class Days_Controller {
     public function log($message) {
         // set value
         return Days_Log::add($message);
+    }
+
+    /**
+     * Redirect to specified page.
+     *
+     * @param string $path Path to page for redirect
+     */
+    public function redirect($path=null) {
+        // reload page
+        if (is_null($path)) {
+            throw new Days_Exception('', Days_Response::RELOAD);
+        }
+        // go to special page
+        if (404==$path) {
+            throw new Days_Exception('', Days_Response::NOT_FOUND);
+        }
+        if (403==$path) {
+            throw new Days_Exception('', Days_Response::FORBIDDEN);
+        }
+        throw new Days_Exception($path, Days_Response::REDIRECT);
     }
 
     /**
