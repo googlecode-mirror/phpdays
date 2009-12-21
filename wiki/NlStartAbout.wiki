@@ -2,7 +2,7 @@
 #sidebar EnStart
 <wiki:comment>revision: 1</wiki:comment>
 
-=== Quick Startup Guide ===
+=== Snelstart Handleiding ===
 
 First [EnInstall install the phpDays framework] on your server. Learn about phpDays' [EnCodingStyle coding standard] _(this will help you and other project members to understand the code you created even a few years later)_.
 
