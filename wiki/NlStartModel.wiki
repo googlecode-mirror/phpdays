@@ -2,9 +2,9 @@
 #sidebar EnStart
 <wiki:comment>revision: 1</wiki:comment>
 
-We need to create all the models that might be used in our blog application. We can use phpDays' standard _basic models_, as well as we can expand them to fit your requirements. And that is what we'll do.
+Alle modellen die gebruikt worden, worden verwerkt in onze blog applicatie. We kunnen gebruik maken van standaard basis phpDays 'modellen, we kunnen ze uitbreiden naar uw wensen en het beste wat bij u past. En dat is wat wij doen.
 
-If you have not read about [EnLibDaysModel models] yet - now it's time to do it. Below we'll create models for our application.
+Als u nog niets gelezen heeft over de de modellen? dan is het tijd om dat te doen. Hieronder wij maken modellen [EnLibDaysModel models] voor onze toepassing.
 
 === Creating models for the blog application ===
 
