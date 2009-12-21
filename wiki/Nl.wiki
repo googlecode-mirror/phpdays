@@ -10,8 +10,8 @@
 
 === Begin Nu ===
 
- * [EnAbout About] the project _(features)_
- * [EnChangelog Changelog] _(changes between project versions)_
+ * [EnAbout About] het project _(kenmerken)_
+ * [EnChangelog Changelog] _(veranderingen tussen project-versies)_
  * [EnInstall Install] the framework on your server and then configure a new project
  * [EnUpgrade Upgrade] an application from a previous version
  * [EnStart Quick start] to get your first application up and running
