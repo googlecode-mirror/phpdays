@@ -6,9 +6,9 @@
 
 ----
 
-*phpDays* - flexible php5 framework based on the [EnMvc MVC] and [EnLibDaysDbTable ORM] design patterns.
+*phpDays* -  flexibele php5 kader gebaseerd op de [EnMvc MVC] en [EnLibDaysDbTable ORM] design patterns.
 
-=== Start Direct ===
+=== Begin Nu ===
 
  * [EnAbout About] the project _(features)_
  * [EnChangelog Changelog] _(changes between project versions)_
