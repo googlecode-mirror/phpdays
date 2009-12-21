@@ -28,13 +28,13 @@ class Model_User extends Days_Model_User {
 }
 }}}
 
-The base class `Days_Model` implements base methods for different field types.
+De basis klasse `Days_Model` implementeert uitvalsbasis voor verschillende soorten velden.
 
-Also the database structure is generated from this file (using reflection).
+Ook de database structuur wordt gegenereerd uit dit bestand (met behulp van reflectie).
 
-=== How it works ===
+=== Hoe werkt het ===
 
-Select all users, who post comments today in blog "About life":
+Selecteer alle gebruikers, die reacties plaatsen vandaag in blog "Over leven":
 {{{
 $comments = new Model_BlogComment('created<=:1 AND created>=:2', '2009-12-12 23:59:59', '2009-12-12 00:00:00');
 $blogs = new Model_Blog('name=:1', 'About life');
