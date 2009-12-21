@@ -1,12 +1,12 @@
-#summary Quick Start - Learn by examples.
-#sidebar En
+#summary Snel Start - Leer van voorbeelden.
+#sidebar Nl
 <wiki:comment>revision: 1</wiki:comment>
 
-=== [En EN] » Table of Contents ===
+=== [En NL] » Table of Contents ===
 
- * [EnStartAbout general information]
- * application's [EnStartModel models]
- * application's [EnStartController controllers]
- * [EnStartView page presentation] to a user
+ * [EnStartAbout Algemene informatie]
+ * applicaties [EnStartModel models]
+ * applicaties [EnStartController controllers]
+ * [EnStartView pagina presentatie] een gebruiker
  * processing html [EnStartForm forms]
- * adding [EnStartAjax Ajax] to an application
+ * toevoegen [EnStartAjax Ajax] tot een applicatie
