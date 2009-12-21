@@ -15,7 +15,7 @@
  * [EnInstall Install] het kader op uw server en vervolgens configureren van een nieuw project
  * [EnUpgrade Upgrade] een aanvraag van een vorige versie
  * [EnStart Snel start] voor je eerste applicaties als ze draaien
- * [EnAnswers Answers] Antwoord op u vragen
+ * [EnAnswers Antwoord] Antwoord op u vragen
  * [http://code.google.com/p/phpdays/w/list?q=label:Lang-En Alle pagina's] in het Engels
 
 === Elke dag gebruik ===
