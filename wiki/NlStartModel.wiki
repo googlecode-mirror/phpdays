@@ -6,7 +6,7 @@ Alle modellen die gebruikt worden, worden verwerkt in onze blog applicatie. We k
 
 Als u nog niets gelezen heeft over de de modellen? dan is het tijd om dat te doen. Hieronder wij maken modellen [EnLibDaysModel models] voor onze toepassing.
 
-=== Creating models for the blog application ===
+=== Het creëren van modellen voor de blog toepassing ===
 
 In the directory `app/Model` create the following files:
  * `Blog.php` - represents a specific blog. There can be several blogs and each of them has its own subject.
