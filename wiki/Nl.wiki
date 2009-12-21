@@ -12,20 +12,20 @@
 
  * [EnAbout About] het project _(kenmerken)_
  * [EnChangelog Changelog] _(veranderingen tussen project-versies)_
- * [EnInstall Install] the framework on your server and then configure a new project
- * [EnUpgrade Upgrade] an application from a previous version
+ * [EnInstall Install] het kader op uw server en vervolgens configureren van een nieuw project
+ * [EnUpgrade Upgrade] een aanvraag van een vorige versie
  * [EnStart Quick start] to get your first application up and running
- * [EnAnswers Answers] to your questions
- * [http://code.google.com/p/phpdays/w/list?q=label:Lang-En All pages] in English
+ * [EnAnswers Answers] Antwoord op u vragen
+ * [http://code.google.com/p/phpdays/w/list?q=label:Lang-En Alle pagina's] in het Engels
 
-=== Every day use ===
+=== Elke dag gebruik ===
 
  * [EnMvc MVC] - basic concepts necessary to work with the framework
  * [EnLib Library] class reference descriptions
  * [EnAjax Ajax] support in your applications
  * [EnMultisite Multisite] - manage many sites from one framework installation
 
-=== For project members ===
+=== Voor projectleden ===
 
  * [EnCoding Entry] in the development team
  * [EnCodingStyle Coding style] _(syntax standards of php, html, css, js and yaml files)_
