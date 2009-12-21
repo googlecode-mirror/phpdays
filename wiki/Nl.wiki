@@ -14,21 +14,21 @@
  * [EnChangelog Changelog] _(veranderingen tussen project-versies)_
  * [EnInstall Install] het kader op uw server en vervolgens configureren van een nieuw project
  * [EnUpgrade Upgrade] een aanvraag van een vorige versie
- * [EnStart Quick start] to get your first application up and running
+ * [EnStart Snel start] voor je eerste applicaties als ze draaien
  * [EnAnswers Answers] Antwoord op u vragen
  * [http://code.google.com/p/phpdays/w/list?q=label:Lang-En Alle pagina's] in het Engels
 
 === Elke dag gebruik ===
 
- * [EnMvc MVC] - basic concepts necessary to work with the framework
- * [EnLib Library] class reference descriptions
- * [EnAjax Ajax] support in your applications
- * [EnMultisite Multisite] - manage many sites from one framework installation
+ * [EnMvc MVC] - Basisbegrippen die nodig zijn om te werken met het kader
+ * [EnLib Library] klasse referentie beschrijvingen
+ * [EnAjax Ajax] ondersteuning in uw toepassingen
+ * [EnMultisite Multisite] - beheren van veel sites in framework
 
 === Voor projectleden ===
 
- * [EnCoding Entry] in the development team
- * [EnCodingStyle Coding style] _(syntax standards of php, html, css, js and yaml files)_
+ * [EnCoding Entry] Inschrijving in het development team
+ * [EnCodingStyle Coding style] _(syntaxis normen van php, html, css, js en YAML-bestanden)_
  * [EnCodingApp Improve application] base in framework
- * [EnIdea Ideas] for improve project
- * [EnDoc Documentation] create _(wiki page syntax, page names, translations)_es
+ * [EnIdea Ideas] voor verbetering van het project
+ * [EnDoc Documentation] maak _(wiki pagina syntax, pagina names, translations)_es
