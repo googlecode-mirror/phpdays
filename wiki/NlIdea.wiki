@@ -49,7 +49,7 @@ foreach ($users as $user) {
 }
 }}}
 
-Find all blog posts, where current user write comment:
+Vind alle blog posts, waar de huidige gebruikers schrijven:
 {{{
 // find user by email
 $user = new Model_Users('email=:1', 'Ilove@phpdays.org');
