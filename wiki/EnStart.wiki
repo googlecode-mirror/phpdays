@@ -5,7 +5,7 @@
 
 === [En NL] » Table of Contents ===
 
- * [EnStartAbout general information]
+ * [EnStartAbout Algemene informatie]
  * applicaties [EnStartModel models]
  * applicaties [EnStartController controllers]
  * [EnStartView page presentation] een gebruiker
