@@ -1,4 +1,4 @@
-#summary Install the framework and create a new project.
+#summary Installeer in een framework en maak een nieuw project.
 #sidebar En
 <wiki:comment>revision: 1</wiki:comment>
 
