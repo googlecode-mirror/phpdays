@@ -4,7 +4,7 @@
 
 === Snelstart Handleiding ===
 
-First [EnInstall install the phpDays framework] on your server. Learn about phpDays' [EnCodingStyle coding standard] _(this will help you and other project members to understand the code you created even a few years later)_.
+Eerst [EnInstall installeer de phpDays framework] op je server. Leer over phpDays' [EnCodingStyle coding standard] _(Dit zal u helpen en andere projectleden te begrijpen van de code die u hebt gemaakt, zelfs een paar jaar later)_.
 
 === Project Structure ===
 
