@@ -6,9 +6,23 @@
  *  into the svn repository.
  * 
  */
+define("OLD_REVISION", -4);
 define("MISSING_FILE", -3);
 define("FILE_ERROR", -2);
 define("MISSING_REVISION", -1);
+define("OK", 0);
+$statusDesc = array( 
+    MISSING_FILE => array('symbol' => '-',
+        'description' => 'missing file'),
+    FILE_ERROR => array('symbol' => 'e',
+        'description' => 'error reading file'),
+    MISSING_REVISION => array('symbol' => '?',
+        'description' => 'missing revision number'),
+    OLD_REVISION => array('symbol' => '+',
+        'description' => 'old revision'),
+    OK => array('symbol' => ' ',
+        'description' => 'OK')
+    );
 
 $docs = getStatus();
 doReport($docs);
@@ -24,6 +38,7 @@ function getStatus() {
 
     $docs = array();
     $languages = array();
+    $topRevisions = array();
 	foreach (glob('*.wiki') as $filename) {
 	    if (1 != preg_match($filePattern, "$filename", $matches)) {
 	        continue;
@@ -42,7 +57,10 @@ function getStatus() {
 	    $languages[$lang] = $lang;
 	    $docs[$doc][$lang] = $result;
 	}
-	
+	// Get the top revision number for each document.
+	foreach (array_keys($docs) as $doc) {
+	    $topRevisions[$doc] = getTopRevision($docs[$doc]);
+	}
 	// Find missing files.
 	foreach (array_keys($docs) as $doc) {
 	    foreach ($languages as $lang) {
@@ -51,9 +69,42 @@ function getStatus() {
 	        }
 	    }
 	}
+	createReportTable($docs, $languages, $topRevisions);
 	return $docs;
 }
-
+/**
+ * Prepare the report table.
+ */
+function createReportTable($docs, $languages, $topRevisions) {
+    global $statusDesc;
+    sort($languages);
+    $names = array_keys($docs);
+    sort($names);
+    $reportTable = array();    
+    // Create a table header.
+    $reportTable[] = array_merge(array('Document', 'Top Rev.'),
+        $languages);
+    foreach ($names as $name) {
+        $line = array();
+        $line[] = empty($name) ? '_Root_' : $name;
+        $revision = $topRevisions[$name];
+        $line[] = $revision;
+        foreach ($languages as $lang) {
+            $status = $docs[$name][$lang];
+            $out = '';
+            if ($status < 0) {
+                $out = $statusDesc[$status]['symbol'];
+            } else if ($status == $revision) {
+                $out = $statusDesc[OK]['symbol'];
+            } else {
+                $out = $statusDesc[OLD_REVISION]['symbol'];
+            }
+            $line[] = $out;
+        }
+        $reportTable[] = $line;
+    }
+    print_r($reportTable);
+}
 /** 
  * Get the maximum name length.
  */
@@ -150,12 +201,13 @@ function doReport($docs) {
     createWikiPage($status, $topRevisions);
 }
 function printLegend() {
-    $out =  <<<EndOfLegend
- -  missing file
- +  old revision, has to be updated
- ?  missing revision
- e  error reading file
-EndOfLegend;
+    global $statusDesc;
+    $out = '';
+    foreach ($statusDesc as $item) {
+        $out .= $item['symbol'] 
+            . ' ' . $item['description'] 
+            . "\n";
+    }
     return $out;
 }
 function getWikiHeader() {
