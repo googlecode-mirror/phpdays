@@ -1,4 +1,4 @@
-#samenvatting blog applicatie modellen (snel start).
+#summary blog application's models (quick start).
 #sidebar EnStart
 <wiki:comment>revision: 1</wiki:comment>
 
