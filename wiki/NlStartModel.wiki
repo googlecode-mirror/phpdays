@@ -72,10 +72,11 @@ class Model_User extends Days_Model_User {
 }
 }}}
 
-=== What we've created ===
+=== Wat we hebben gemaakt ===
 
-We have created a class for models that represent objects of a data storage. The data is stored in a repository and later we can retrieve it and pass it to a user. This way we do not work directly with a data storage but with objects that are automatically converted to a data in the repository.
 
-Notice that we did not declare any specialized data, such as key fields of objects. Key fields are created automatically.
+We hebben een klasse voor modellen die objecten voor een data-opslag. De gegevens worden opgeslagen in een repository en later kunnen we die ophalen en doorgeven aan een gebruiker. Op deze manier doen we niet direct werken met een data-opslag, maar met objecten die automatisch worden geconverteerd naar een data in de repository.
 
-Now it's time to move on to creating [EnStartController application's controllers].
+Wat we opmerkte is dat we niet kunnen verklaren over eventuele specialistische gegevens, zoals de belangrijkste gebieden van objecten. Key velden worden automatisch aangemaakt.
+
+Nu is het tijd om verder te gaan tot het creëren [EnStartController application's controllers] van controllers applicaties.
