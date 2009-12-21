@@ -10,7 +10,7 @@ Ik ben het leren van de Python * * taal en haar * Django * kader. Ik ben ook ler
 
 Ik vind modellen zeer leuk. Wij creëren geen een database en geen beschrijving van een database in bestanden. Wij creëren model klassen met veld-beschrijvingen. Bij de lancering, onze applicatie genereert een database structuur en dat wordt vervolgens weer gebruikt. Dus het is zeer eenvoudig te gebruiken!
 
-Bijvoorbeeld, het creëren van een model klasse _(see [http://code.google.com/p/phpdays/source/browse/#svn/trunk/apps/phpdays.org/app/Model more examples])_:
+Bijvoorbeeld, het creëren van een model klasse _(Kijk voor [http://code.google.com/p/phpdays/source/browse/#svn/trunk/apps/phpdays.org/app/Model voorbeelden])_:
 {{{
 class Model_Blog extends Days_Model {
     protected $_name    = 'type: String, min: 2, max: 100, required';
