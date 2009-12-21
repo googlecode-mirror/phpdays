@@ -8,6 +8,6 @@
  * [EnStartAbout Algemene informatie]
  * applicaties [EnStartModel models]
  * applicaties [EnStartController controllers]
- * [EnStartView page presentation] een gebruiker
+ * [EnStartView pagina presentatie] een gebruiker
  * processing html [EnStartForm forms]
  * toevoegen [EnStartAjax Ajax] tot een applicatie
