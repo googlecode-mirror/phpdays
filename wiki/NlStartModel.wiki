@@ -1,3 +1,0 @@
-#samenvatting blog applicatie modellen (snel start).
-#sidebar EnStart
-<wiki:comment>revision: 1</wiki:comment>
