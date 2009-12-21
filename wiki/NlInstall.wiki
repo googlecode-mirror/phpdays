@@ -2,32 +2,32 @@
 #sidebar En
 <wiki:comment>revision: 1</wiki:comment>
 
-=== Download ===
+=== Downloaden ===
 
-Go to the [http://code.google.com/p/phpdays/downloads/list download page] and select the latest stable version _(alpha, beta, RC - are not stable!)_.
+Ga naar [http://code.google.com/p/phpdays/downloads/list download page] en selecteer de laatste stabiele versie _(alpha, beta, RC - is niet stabiel!)_.
 
-*ATTENTION* Use *phpdays 1.1 beta* instead of *phpdays 1.0 final* release. In *phpdays 1.0 final* release we found many critical bugs, which were fixed in *phpdays 1.1 beta*.
+*ATTENTIE* Gebruik *phpdays 1.1 beta* plaats van *phpdays 1.0 final* release. In *phpdays 1.0 final* release vonden we veel kritische bugs, deze werden opgelost in *phpdays 1.1 beta*.
 
-=== Check requirements ===
+=== Check Eisen ===
 
-On your server _(local and real)_ should be installed:
+Op je server _(lokaal en reëel)_ moeten worden geinstalleerd:
  * *Apache* server
  * *PHP* 5.2.6 or newer with modules: php5-mysql, php5-sqlite, pdo, pdo-mysql, pdo-sqlite _(also recommend: php5-syck, php5-curl, php5-xdebug, php-apc, php5-memcache)_
- * *Database* server _(supported MySQL, MSSQL, Postgres, Oracle, SQLite)_
+ * *Database* server _(ondersteund MySQL, MSSQL, Postgres, Oracle, SQLite)_
 
-=== Install framework ===
+=== Installeer framework ===
 
- * unzip the archive
- * upload directory `lib` to your server _(we recommend place directory not in `document_root` directory, for example to `/var/lib`)_
- * configure Apache server for use `/var/www` _(in Linux)_ or `D:/server/www` _(in Windows)_ as `document_root`
+ * Pak de file uit
+ * upload directory `lib` naar je server _(vervang niet de directory plaats in `document_root` directory, bijvoorbeeld voor `/var/lib`)_
+ * configureer Apache server voor `/var/www` _(in Linux)_ of `D:/server/www` _(in Windows)_ als `document_root`
 
-=== Create new application ===
+=== Maak een nieuwe applicatie ===
 
- * set option `AllowOverride All` in Apache configuration
- * _FOR LINUX SERVER_ execute command `sudo a2enmod rewrite && sudo /etc/init.d/apache2 restart` _(enable Apache mod_rewrite)_
- * go to `apps` directory
- * copy `new` directory to you `document_root` _(to `/var/www`)_
- * rename `new` directory to real project name _(for example use `myblog`)_
+ * Zet de options `AllowOverride All` aan in Apache configuratie.
+ * _Voor LINUX SERVER_ uitvoeren commando `sudo a2enmod rewrite && sudo /etc/init.d/apache2 herstart` _(zet aan Apache mod_rewrite)_
+ * Ga naar `apps` directorie
+ * Copy `nieuw` directorie naar jou `document_root` _(to `/var/www`)_
+ * Vervang de naam `new` directorie naar de echte naam van het project _(for example use `myblog`)_
  * _FOR LOCAL SERVER_ create `.htaccess` file in `/var/www` with content
 {{{
 # no scan directories
@@ -53,7 +53,7 @@ foreach ($dirs as $dir) {
 }
 echo '</ul>';
 }}}
- * open `/var/www/myblog/public/index.php` and change path to phpDays framework and you application dir
+ * open `/var/www/myblog/public/index.php` en verander het pad naar phpDays framework en naar je applicatie directory.
 {{{
 require_once '/var/lib/Days/Engine.php';
 Days_Engine::run('/var/www/myblog/app/', 'development');
@@ -64,12 +64,12 @@ Days_Engine::run('/var/www/myblog/app/', 'development');
    * `url/base`: path prefix after host name `myblog`
    * `view/engine`: template engine. We recommend use `smarty` or `templum`
 
-Save files and open you application by url [http://localhost/myblog].
+Sla alle bestanden op en open het in je applicatie bij deze url [http://localhost/myblog].
 
-=== Troubleshooting ===
+=== Problemen ===
 
-If start page not shown - please open [http://mozilla-europe.org/firefox Firefox] browser, install [http://getfirebug.com/ FireBug] and [http://www.firephp.org/ FirePHP] extensions. After this press F12 for open [http://getfirebug.com/ FireBug] and open [http://localhost/myblog your site]. On tab "Console" see bug messages.
+Als de startpagina niet weergegeven wordt - open dan [http://mozilla-europe.org/firefox Firefox] browser te installeren [http://getfirebug.com/ FireBug] en [http://www.firephp.org/ FirePHP] extensies. Na deze uitgevoerd te hebben druk op F12 voor open [http://getfirebug.com/ FireBug] en open [http://localhost/myblog uw site]. Op het tabblad "Console" see bug berichten.
 
-=== Use many projects ===
+=== Gebruik veel projecten ===
 
-One copy of framework used for many projects. Now we see all available projects by adress [http://localhost].
+Een exemplaar van een framework wordt gebruikt voor vele projecten. Nu zien we alle beschikbare projecten van adres [http://localhost].
