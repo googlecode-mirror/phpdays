@@ -1,5 +1,3 @@
-#summary NlStart
-
 #summary Quick Start - Learn by examples.
 #sidebar En
 <wiki:comment>revision: 1</wiki:comment>
