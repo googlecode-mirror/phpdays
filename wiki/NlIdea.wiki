@@ -70,7 +70,7 @@ $myBlogPosts = new Model_BlogPost();
 $myBlogPosts->with($comments, $user);
 }}}
 
-Find all comments in blogs, owned by specified users only:
+Zoek alle reacties in blogs, eigendom van de gespecificeerde gebruikers alleen:
 {{{
 // find users by email
 $users = new Model_Users('email=:1',
@@ -85,11 +85,11 @@ $blogs = new Model_Blog('owner=:1', $users);
 $comments = new Model_BlogComment('blog=:1', $blogs);
 }}}
 
-=== Development ===
+=== Ontwikkeling ===
 
-See code of [http://code.google.com/p/phpdays/source/browse/branches/models_like_python/lib/Days/Model.php Days_Model] class. This main class for implement this perfect functionality.
+Zie de code [http://code.google.com/p/phpdays/source/browse/branches/models_like_python/lib/Days/Model.php Days_Model] class. Deze belangrijkste klasse voor de uitvoering van deze perfecte functionaliteit.
 
-Please, help us implement this in this month. This need as main goal in release *phpDays 1.1*.
+Alsjeblieft, help ons met het inplannen van deze maand. Deze is het belangrijkste voor onze eerste release *phpDays 1.1*.
 
 If user use call `witch(model1, model2, ...)` - than into model processed:
  * all models cached in one array where described all models. This file saved once, and regenerated on each change in model classes
