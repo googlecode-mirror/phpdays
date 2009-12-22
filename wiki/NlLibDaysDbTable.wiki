@@ -1,4 +1,4 @@
-#summary ORM to work with tables.
+#summary ORM te werken met tabellen.
 #sidebar EnLib
 <wiki:comment>revision: 1</wiki:comment>
 
