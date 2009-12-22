@@ -2,18 +2,18 @@
 #sidebar En
 <wiki:comment>revision: 1</wiki:comment>
 
-To participate in the project phpDays you should follow the same coding style _(syntax for php, html, css, js and yaml files)_.
+Om deel te nemen aan het project phpDays dient u dezelfde codering stijl volgen _ (syntax voor php, html, css, js en YAML bestanden) _.
 
-=== General rules ===
+=== Algemene regels ===
 
- * save all files and folders in lower case only _(use `file_name.html` instead of `fileName.html`)_. _In Windows this create a problems_
- * recommend a development environment IDE [http://netbeans.org/ NetBeans] _(but can be used and other such as [http://eclipse.org/pdt/ Eclipse PDT])_
- * keep all the files in *UTF-8* encoding
- * newlines must be in UNIX format
- * configure the IDE to automatically remove extra spaces at the end of lines _(trailing spaces)_
- * configure the IDE to automatically replace tabs by 4 spaces in php files and 2 spaces in all other _(including html, css, js and yaml files)_
+* Sla alle bestanden en mappen in kleine letters op _ (gebruik "file_name.html` in plaats van `filename.html`) _. Windows _IN dit creëren een probleem
+* We raden een ontwikkelomgeving IDE aan [http://netbeans.org/ NetBeans] _ (maar kan ook worden gebruikt en/voor andere, zoals [http://eclipse.org/pdt/ Eclipse PDT]) _
+* Houd alle bestanden in * UTF-8-codering *
+ * Newlines moet in UNIX formaat
+  * Het configureren van de IDE moet automatisch verwijderd worden van extra spaties aan het einde van lijnen _ (spaties) _
+* Het configureren van de IDE automatisch tabbladen moet vervangen worden door 4 ruimtes in PHP-bestanden en 2 ruimten in alle andere _ (met inbegrip van HTML, CSS, JS en YAML bestanden) _
 
-=== Code sample ===
+=== Code voorbeeld ===
 
 {{{
 class Days_Model_User {
@@ -42,7 +42,7 @@ class Days_Model_User {
 }
 }}}
 
-=== Autoformat your code ===
+=== Automatische jou formaat aan code ===
 
 Use this regular expressions for automatically format code:
 || *From*             || *To*        || *Description*                      ||
@@ -55,7 +55,7 @@ Use this regular expressions for automatically format code:
 || `\)[ ]*\n[ ]*\{`   || `) {\n`     || set java code style                ||
 || `^([ ]*)(public|protected|private)`  || \n$1$2 || set `{` in line with function ||
 
-=== Rules for work with php files ===
+=== Regels voor het werken met PHP bestanden ===
 
  * [http://en.wikipedia.org/wiki/PHPDoc phpDoc] standarts
  * [http://cvs.php.net/viewvc.cgi/php-src/CODING_STANDARDS?view=markup php coding standarts]
@@ -64,7 +64,7 @@ Use this regular expressions for automatically format code:
  * [http://pear.php.net/manual/ru/standards.php PEAR Coding Standards]
  * [http://en.wikipedia.org/wiki/PHPDoc writing comments in phpDoc style]
 
-Safety Information:
+Veiligheidsinformatie:
 
  * [http://en.wikipedia.org/wiki/SQL_injection SQL injection]
  * [http://en.wikipedia.org/wiki/Cross-site_scripting cross-site scripting]
