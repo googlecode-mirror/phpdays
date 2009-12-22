@@ -21,6 +21,11 @@ To translate the documentation into other languages you should know the followin
  * click "Preview" to check the page's formatting
  * click "Save page" to save the page
 
+Also think next:
+ * not translate keyword `#summary` _(describe page content)_. This line show in [http://code.google.com/p/phpdays/w/list list of all wiki pages]
+ * no tranclate keyword `#sidebar` _(page language)_. Start from capitalize letter
+ * change links to current tranclation. For example, change `[En link text]` to `[Ru текст ссылки]`
+
 When a document is translated a wiki comment with a revision number (`<wiki:comment>revision: xx</wiki:comment>`) must be copied from the original document.
 
 To follow changes in the documentation go to [http://code.google.com/p/phpdays/source/list Source - Changes] _(available at the top)_.
