@@ -4,18 +4,18 @@
 
 === [EnLib] » System engine ===
 
- * [EnMvc MVC] ([EnLibDaysModel Days_Model], [EnLibDaysView Days_View], [EnLibDaysController Days_Controller]) - basic concepts necessary to work with framework
- * [EnLibDaysConfig Days_Config] - work with the configuration of the site
- * [EnLibDaysDb Days_Db] - work with database
- * [EnLibDaysDbTable Days_Db_Table] - implementation ORM representation of database tables
- * [EnLibDaysEngine Days_Engine] - starting point of entry
- * [EnLibDaysEvent Days_Event] - implementation of [http://en.wikipedia.org/wiki/Observer_pattern observer] design pattern
- * [EnLibDaysLog Days_Log] - logging errors and debugging information
- * [EnLibDaysRequest Days_Request] - request from the user's browser
- * [EnLibDaysResponse Days_Response] - response to the user's browser
- * [EnLibDaysUrl Days_Url] - work with the url address
+ * [EnMvc MVC] ([EnLibDaysModel Days_Model], [EnLibDaysView Days_View], [EnLibDaysController Days_Controller]) - basisbegrippen die nodig zijn om te werken met framework
+ * [EnLibDaysConfig Days_Config] - werken met de configuratie van de site
+ * [EnLibDaysDb Days_Db] - werk met database
+ * [EnLibDaysDbTable Days_Db_Table] - implementeren ORM vertegenwoordiging van de database tabellen
+ * [EnLibDaysEngine Days_Engine] - uitgangspunt van binnenkomst
+ * [EnLibDaysEvent Days_Event] - implementeren van [http://en.wikipedia.org/wiki/Observer_pattern observer] design patroon
+ * [EnLibDaysLog Days_Log] fouten opslaan en debugging informatie- 
+ * [EnLibDaysRequest Days_Request] - user antwoordt in de browser
+ * [EnLibDaysResponse Days_Response] - user reactie in de browser
+ * [EnLibDaysUrl Days_Url] - werken met url addressen
 
-=== Under development ===
+=== In ontwikkeling ===
 
  * [EnLibDaysAcl Days_Acl] _(Aceess Control List)_ - delineation of rights of access to sections of the site
  * [EnLibDaysFilter Days_Filter] - filtering data coming from the user _(also known as validation or verification of data)_
