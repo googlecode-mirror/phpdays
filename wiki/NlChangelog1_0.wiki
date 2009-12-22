@@ -1,4 +1,4 @@
-#summary List of Changes in Version 1.0
+#summary Lijst van de wijzigingen in versie 1.0
 #sidebar En
 <wiki:comment>revision: 1</wiki:comment>
 
