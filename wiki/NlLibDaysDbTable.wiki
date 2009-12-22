@@ -18,7 +18,7 @@ class Model_Table_Blog_Category extends Days_Db_Table {
 }
 }}}
 
-Get the necessary table object. This is done as follows:
+Haal de nodige table objecten. Dit is als volgt:
 {{{
 $tableBlogCategory = Days_Model::factory('table_blog_category');
 }}}
