@@ -2,7 +2,7 @@
 #sidebar En
 <wiki:comment>revision: 1</wiki:comment>
 
-=== [EnLib] » System engine ===
+=== [NlLib] » System engine ===
 
  * [EnMvc MVC] ([EnLibDaysModel Days_Model], [EnLibDaysView Days_View], [EnLibDaysController Days_Controller]) - basisbegrippen die nodig zijn om te werken met framework
  * [EnLibDaysConfig Days_Config] - werken met de configuratie van de site
