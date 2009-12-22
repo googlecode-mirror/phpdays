@@ -46,12 +46,12 @@ class Days_Model_User {
 
 Use this regular expressions for automatically format code:
 || *From*             || *To*        || *Description*                      ||
-|| `\t`               || _4 spaces_  || replace tab to 4 spaces            ||
-|| `[ ]+$`            ||             || delete all spaces in end of line   ||
-|| `!([a-z$])`        || `! $1`      || set space after not operator       ||
-|| `^[\t ]*\n`        ||             || delete empty lines                 ||
+|| `\t`               || _4 spaces_  || vervang een tab naar 4 spaties     ||
+|| `[ ]+$`            ||             || verwijder alle spaties aan het einde van de lijn   ||
+|| `!([a-z$])`        || `! $1`      || set ruimte na niet exploitant      ||
+|| `^[\t ]*\n`        ||             || verwijder alle legen lijnen        ||
 || `else *\n([ ]*)\{` || `else\n$1{` || set `{` after `else`               ||
-|| `if(`              || `if (`      || use space after if and elseif      ||
+|| `if(`              || `if (`      || gebruik spatie na    elseif      ||
 || `\)[ ]*\n[ ]*\{`   || `) {\n`     || set java code style                ||
 || `^([ ]*)(public|protected|private)`  || \n$1$2 || set `{` in line with function ||
 
