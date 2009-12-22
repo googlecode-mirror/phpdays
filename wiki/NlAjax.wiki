@@ -1,16 +1,16 @@
-#summary Ajax in your application.
-#sidebar En
+#summary Ajax in jou applicatie.
+#sidebar Nl
 <wiki:comment>revision: 1</wiki:comment>
 
-=== Using !JavaScript libraries ===
+=== Gebruik !JavaScript bibliotheken ===
 
-We recommend using [http://jquery.com jQuery] - a simple and easy to understand JS library.
+Wij raden het gebruik van [http://jquery.com jQuery] - een eenvoudige en gemakkelijk te begrijpen JS bibliotheek.
 
 === Client side ===
 
-For more information see [http://docs.jquery.com/Ajax/jQuery.ajax#options Ajax in jQuery].
+Voor informatie zie [http://docs.jquery.com/Ajax/jQuery.ajax#options Ajax in jQuery].
 
-Create a new file named `/vaw/www/myblog/public/static/js/global.js` with the following content:
+Maak een nieuw bestand genaamd:  `/vaw/www/myblog/public/static/js/global.js` met de volgende inhoud:
 {{{
 $(document).ready(function(){
 
@@ -25,23 +25,23 @@ $(document).ready(function(){
 });
 }}}
 
-*ATTENTION* Be sure to specify `dataType: 'json'` for best appearance.
+*LET OP* Zorg ervoor dat specificeren "datatype:" json "" voor het best eruit komt.
 
-Include the script file in the template page `/vaw/www/myblog/app/View/layout/inde.html` within the *head* tag:
+Neem het script-bestand in de template pagina `/vaw/www/myblog/app/View/layout/inde.html` in de *head* tag:
 {{{
   <script type="text/javascript" src="/static/js/jquery.min.js"></script>
   <script type="text/javascript" src="/static/js/global.js"></script>
 }}}
 
-Now when the page loads, our JS script will connect to the `http://localhost/myblog/blog/posts` page and the result will be displayed in a popup window. To use this example you have to implement the server side part.
+Wanneer de pagina wordt geladen, zal onze JS script verbinding maken met de `http://localhost/myblog/blog/posts" pagina en het resultaat zal worden weergegeven in een pop-up venster. Voor het gebruik van dit voorbeeld moet u de server opgedeeld hebben in verschillende grotes 
 
-=== Server side ===
+=== Server Grote ===
 
-In your application, you should create a method with a name ending with `AjaxAction` instead of the usual `Action`. From this method, we return data that will be sent to the client as a response.
+In u applicatie moet u een method maken en moet eindigen op `AjaxAction` van de gebruikelijke `Action`. Waarvan deze methode, keren we terug naar de gegevens die worden verzonden naar de cliënt als een antwoord.
 
-*ATTENTION* To send data in the [http://en.wikipedia.org/wiki/JSON JSON] format, the result must be created as an array and then converted to JSON using the [http://php.net/json_encode json_encode()] function.
+*LET OP* Zend data in de [http://en.wikipedia.org/wiki/JSON JSON] formaat, het resultaat moet gemaakt worden als een array en dan geconverted worden naar JSON behulp van [http://php.net/json_encode json_encode()] function.
 
-Create a new file named `/vaw/www/myblog/app/Controller/Blog.php` with a `postsAjaxAction()` method:
+Maak een nieuw bestand genaamd `/vaw/www/myblog/app/Controller/Blog.php` met een `postsAjaxAction()` methode:
 {{{
 class Controller_Blog extends Days_Controller {
   /** Return data in JSON */
@@ -52,5 +52,4 @@ class Controller_Blog extends Days_Controller {
   }
 }
 }}}
-
-Now you can try to call [http://localhost/myblog] to see that it works. If all goes well - you'll see a message with the data that were returned by the method `postsAjaxAction`.
+Nu kunt u proberen te bellen [http://localhost/myblog] om te zien dat het werkt. Als alles goed gaat - u zult een bericht met de gegevens die werden geretourneerd door de methode "postsAjaxAction` te zien.
