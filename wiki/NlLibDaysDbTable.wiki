@@ -81,9 +81,9 @@ $newRow->name = 'New subcategory';
 $newRow->save();
 }}}
 
-=== Using [http://code.google.com/p/phpdays/source/browse/trunk/lib/Days/Db/Table.php Days_Db_Table] ===
+=== Gebruik [http://code.google.com/p/phpdays/source/browse/trunk/lib/Days/Db/Table.php Days_Db_Table] ===
 
-Is a representation of a real table, and allows you to perform operations on this table.
+Dit is een echte voorstelling van een echte tabel, en u kunt bewerkingen uitvoeren op deze tabel.
 
  * `find($type, $cond)` - obtain the result in specified form
    * `$type` - in what form to return the result
