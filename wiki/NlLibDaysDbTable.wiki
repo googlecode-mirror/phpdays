@@ -23,7 +23,7 @@ Haal de nodige table objecten. Dit is als volgt:
 $tableBlogCategory = Days_Model::factory('table_blog_category');
 }}}
 
-Obtain data from a table:
+Gegevens te verkrijgen uit een tabel:
 {{{
 // obtain information about a category
 $category = $tableBlogCategory->find('one', array('where'=>array('id'=>10)));
