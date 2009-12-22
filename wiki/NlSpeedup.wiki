@@ -1,4 +1,4 @@
-#summary Making a Web Site Faster.
+#summary Het maken van een website sneller.
 #sidebar En
 <wiki:comment>revision: 1</wiki:comment>
 
