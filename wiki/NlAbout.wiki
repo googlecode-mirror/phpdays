@@ -1,5 +1,5 @@
-#summary About phpDays.
-#sidebar En
+#summary Over phpDays.
+#sidebar Nl
 <wiki:comment>revision: 1</wiki:comment>
 
 With *phpDays* You will be able to speed up and simplify the process of creating a Web site. This site will be easier to maintain and refine.
