@@ -1,0 +1,47 @@
+#summary List of changes in versions.
+#sidebar En
+<wiki:comment>revision: 1</wiki:comment>
+
+== List of changes in version 1.1 ==
+
+=== 1.1 beta3 ===
+
+ * no changes
+
+=== 1.1 beta2 ^(15 November 2009)^ ===
+
+ * Created `apps/phpdays.org`
+ * Added class [EnLibDaysEvent Days_Event], Observer design pattern implementation
+ * Added Unit tests for `Days_View_*` and [EnLibDaysEvent Days_Event]
+ * r59 [EnLibDaysEngine Days_Engine] Delete auto-conversion all Ajax data to JSON
+ * r193 Fix bug in Templum: throw exception if template contein php tags
+ * r200 Change url from sf.net to googlecode.com
+ * r247 Create [EnLibDaysToolAppGenerator Days_Tool_AppGenerator]. Change `@package` and `@subpackage` in all Days classes
+ * r255 Add class [EnLibDaysRouter Days_Router]. Add methods "copy" and "rename" to [EnLibDaysDbTable Days_Db_Table]
+ * r262, r275 Refactor [EnLibDaysView View] classes. Add empty helpers base
+ * r263 Extend helper classes by [EnLibDaysHelperAbstract Days_Helper_Abstract]
+ * r266 Fix #22: Extract [EnLibDaysException Days_Exception] from `Engine.php`
+ * r267 Added methods [EnLibDaysResponse Days_Response]::getContent and [EnLibDaysResponse Days_Response]::setContent for comfort and control output of the engine
+ * r268 Added method [EnLibDaysEvent Days_Event]:: get($event) for all subscribers of certain event
+ * r282 Added first [EnLibDaysHelper Helpers]
+ * r283 `[lib/Templum]` Create new Pages function
+ * r284 `[lib/Templum]` Create new Collect block
+ * r285 `[lib/Templum]` Add new tests in template
+ * r288 Creating a branch for Issue #24
+ * r290 `[apps/phpdays.org]` Change menu links
+ * r291 `[apps/phpdays.org]` Rename service "dev" to "lab"
+
+=== 1.1 beta1 ^(18 October 2009)^ ===
+
+ * r19-r20 Added [http://templum.googlecode.com Templum] support - new template engine.
+ * `apps/new`: Fix css text-align (created by yui library).
+ * Changes in apps/new: added jquery library, added yui css reset, changed index layout.
+ * Fix bug in application "phpdays.org" in tag script.
+ * Add Smarty plugin block for show block template by name.
+ * Add application "phpdays.org" with static main page.
+
+=== Archive versions ===
+
+Select the appropriate version of the framework, to see a list of changes.
+
+ * [EnChangelog1_0 1.0]
