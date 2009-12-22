@@ -1,4 +1,4 @@
-#summary Coding style.
+#summary Coding Stijl.
 #sidebar En
 <wiki:comment>revision: 1</wiki:comment>
 
