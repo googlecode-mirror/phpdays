@@ -21,7 +21,7 @@ Met * phpDays * zal u in staat zijn het proces te versnellen en het creëren van
 
 === Rond de phpDays ===
 
- * [http://linux.softpedia.com/get/Internet/HTTP-WWW-/php-Days-50148.shtml SoftPedia] about phpDays
+ * [http://linux.softpedia.com/get/Internet/HTTP-WWW-/php-Days-50148.shtml SoftPedia] over phpDays
  * [http://www.firephp.org/Wiki/Libraries/PhpDays FirePHP] integration
  * [http://www.ohloh.net/p/phpdays Ohloh] record
  * [http://freshmeat.net/projects/phpdays FreshMeat] record
