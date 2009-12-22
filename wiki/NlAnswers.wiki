@@ -2,16 +2,16 @@
 #sidebar Nl
 <wiki:comment>revision: 1</wiki:comment>
 
-On this page will publish frequently asked questions and their answers.
+Op deze pagina zal de veelgestelde vragen hun antwoorden worden gepubliceerd.
 
-=== How to ask a question? ===
+=== Hoe vraag je een vraag? ===
 
-To ask a question, you should write a comment at the bottom of this page.
+Als je een vraag wilt stellen, moet u een opmerking aan de onderkant van deze pagina worden neergezet.
 
-Also you can ask questions in our project [http://groups.google.com/group/phpdays Support Group].
+Ook kunt u vragen stellen in ons project [http://groups.google.com/group/phpdays Support Group].
 
 === Online chat ===
 
-You must log in to GTalk network using the Gmail account and contact me (my nic `anton.danilchenko`).
+U moet ingelogd zijn op GTalk netwerk en je moet dan inloggen met U Gmail account. Zodra u dat gedaan heeft kunt u contact opnemen met (my nic `anton.danilchenko`).
 
 <wiki:gadget url="http://phpdays.org/static/gtalk/gtalk-en.xml" height="25" border="1" />
