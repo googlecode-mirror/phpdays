@@ -4,22 +4,22 @@
 
 Met * phpDays * zal u in staat zijn het proces te versnellen en het creëren van een website te vereenvoudigen. Deze site zal makkelijker te onderhouden zijn en te verfijnen.
 
-=== phpDays features ===
+=== phpDays functies ===
 
  * best [http://code.google.com/p/phpdays/people/list phpDays community]
- * phpDays is built on the basis of [EnMvc MVC]
- * has full support for [EnLibDaysDbTable ORM] _(no need to write SQL queries)_
- * provides access to databases using a [EnLibDaysDb database abstraction layer] _(writing SQL queries)_
- * phpDays all settings are set in a [EnLibDaysConfig configuration file] in the [http://en.wikipedia.org/wiki/YAML YAML] format
- * classes are loaded automatically _(forget about `include()` and `require()`)_
- * full support of all written languages _(including Russian)_ through the use of *UTF-8* encoding
- * full support of [EnAjax AJAX] _(recommend using [http://jquery.com jQuery])_
- * [EnDaysLog show errors] according to your wishes _(supported output in [http://firephp.org FirePHP], in browser, in simple file, and even in SQLite)_
- * print information about the applications execution _(executed SQL queries, names of the executed methods)_
- * convenient class hierarchy _(like used in Zend Framework)_
+ * phpDays is gebouwd of basis van [EnMvc MVC]
+ * De volledige ondersteuning [EnLibDaysDbTable ORM] _(no need to write SQL queries)_
+ * Biedt toegang tot databases met behulp van een [EnLibDaysDb database abstraction layer] _(writing SQL queries)_
+ * phpDays alle instellingen zijn vastgelegd in een[EnLibDaysConfig configuration file] in het [http://en.wikipedia.org/wiki/YAML YAML] format
+ * De klassen worden automatisch geladen _(forget about `include()` and `require()`)_
+ * Volledige steun van alle geschreven talen _(inclusief Russian)_ door het gebruik van *UTF-8* encoding
+ * Voor het volledige support [EnAjax AJAX] _(recommend using [http://jquery.com jQuery])_
+ * [EnDaysLog show errors] volgens uw wensen _(supported output in [http://firephp.org FirePHP], in browser, in simpele file, en in een SQLite)_
+ * print informatie over de toepassingen uitvoering _(executed SQL queries, namen van de uitgevoerde methoden)_
+ * Handige klasse hiërarchie_(like used in Zend Framework)_
  * _and something else_
 
-=== Around the phpDays ===
+=== Rond de phpDays ===
 
  * [http://linux.softpedia.com/get/Internet/HTTP-WWW-/php-Days-50148.shtml SoftPedia] about phpDays
  * [http://www.firephp.org/Wiki/Libraries/PhpDays FirePHP] integration
