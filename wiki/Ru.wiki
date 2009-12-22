@@ -1,7 +1,7 @@
 #summary Русская стартовая страница.
 #labels Featured,Lang-Ru
 
-[En English], [Ru Русский], [De Deutsche], [Fr French], [It Italiano], [Tr Türkçe]
+[En English], [Ru Русский], [De Deutsche], [Fr French], [It Italiano], [Tr Türkçe], [Nl Nederlandse]
 
 ----
 
