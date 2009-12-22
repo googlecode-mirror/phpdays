@@ -1,5 +1,5 @@
-#summary List of changes in versions.
-#sidebar En
+#summary Lijst van wijzigingen in de versies.
+#sidebar Nl
 <wiki:comment>revision: 1</wiki:comment>
 
 == List of changes in version 1.1 ==
