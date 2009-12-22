@@ -2,7 +2,7 @@
 #labels Featured,Lang-En
 <wiki:comment>revision: 1</wiki:comment>
 
-[En English], [Ru Русский], [De Deutsche], [Fr French], [It Italiano], [Tr Türkçe]
+[En English], [Ru Русский], [De Deutsche], [Fr French], [It Italiano], [Tr Türkçe], [Nl Nederlandse]
 
 ----
 
