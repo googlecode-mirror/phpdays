@@ -1,26 +1,26 @@
-#summary Days_Config - work with the configuration of the site.
-#sidebar EnLib
+#summary Days_Config - werken met de configuratie van de site.
+#sidebar NlLib
 <wiki:comment>revision: 1</wiki:comment>
 
-*[http://code.google.com/p/phpdays/source/browse/trunk/lib/Days/Config.php Days_Config]* - work with the configuration of the site.
+*[http://code.google.com/p/phpdays/source/browse/trunk/lib/Days/Config.php Days_Config]* - Werk met de configuratie van de site.
 
-=== How to use ===
+=== Hoe te gebruiken ===
 
-Example of use in php code:
+Voorbeeld van gebruik in PHP-code:
 {{{
-// load default configutation (default.yaml) and return all sections
+// laad standaard configuratie file (default.yaml) en terug naar de 
 $config = Days_Config::load()->get();
-// return database configuration
+// terug naar de database configuratie
 $config = Days_Config::load()->get('db/default');
-// load specified configutation file and return specified option
+// laat de specifieke configuratie files en ga terug naar specifieke options.
 $config = Days_Config::load('myconfig')->get('engine/brand');
-// return specified value if option not exists
+// terug naar opgegeven waarde als de optie niet bestaat
 $config = Days_Config::load()->get('engine/brand', 'app');
 }}}
 
 === Parameters ===
 
-Available configuration parameters:
+Beschikbaar configuratieparameters:
  * *db* - database configuration
    * *default* - name of section _(for use many databases in one project)_
      * *adapter* - database engine _(available: mysql, mssql, pgsql, sqlite)_
@@ -44,4 +44,4 @@ Available configuration parameters:
  * *cache* - settings for cache support
     * *lifetime* - cache data on this time _(in seconds)_
 
-Configuration file writen on [http://en.wikipedia.org/wiki/YAML YAML syntax] _(see [http://code.google.com/p/phpdays/source/browse/trunk/apps/new/app/config/development.yaml example]).
+Configuratie bestand op schriftelijke [http://en.wikipedia.org/wiki/YAML YAML syntax] _(see [http://code.google.com/p/phpdays/source/browse/trunk/apps/new/app/config/development.yaml example]).
