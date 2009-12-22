@@ -1,10 +1,10 @@
 #summary Lijst van de wijzigingen in versie 1.0
-#sidebar En
+#sidebar Nl
 <wiki:comment>revision: 1</wiki:comment>
 
 == Version 1.0 - _9 October 2009_ ==
 
-First release include ORM implementation, logging, stable project structure, sample applications.
+De eerste release inclusief ORM implementatie, logging, stabiele project structuur, stabiele applicaties.
 
 === 1.0 final release - _9 October 2009_ ===
 
