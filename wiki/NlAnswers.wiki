@@ -1,4 +1,4 @@
-#summary Answers on your questions.
+#summary Antwoorden op uw vragen.
 #sidebar Nl
 <wiki:comment>revision: 1</wiki:comment>
 
