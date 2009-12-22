@@ -2,7 +2,7 @@
 #sidebar Nl
 <wiki:comment>revision: 1</wiki:comment>
 
-With *phpDays* You will be able to speed up and simplify the process of creating a Web site. This site will be easier to maintain and refine.
+Met * phpDays * zal u in staat zijn het proces te versnellen en het creëren van een website te vereenvoudigen. Deze site zal makkelijker te onderhouden zijn en te verfijnen.
 
 === phpDays features ===
 
