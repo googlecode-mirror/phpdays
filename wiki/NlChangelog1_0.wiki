@@ -8,19 +8,19 @@ De eerste release inclusief ORM implementatie, logging, stabiele project structu
 
 === 1.0 final release - _9 October 2009_ ===
 
- * improve method `find()` for "one" row: return null if row not exists
- * fix error in method `find()` for "one" row (if row not exists)
- * fix bug with method `create()` in [EnLibDaysDbRowset Days_Db_Rowset] and [EnLibDaysDbTable Days_Db_Table]
- * bring to a working state of php-templates *(xaoc)*
- * even small editing the blog-example *(xaoc)*
- * presented in the working condition the blog-example *(xaoc)*
+ * Verbetering van de methode `find()` voor "one" row: ga terug naar null als de rij niet bestaat
+ * verbeter fouten in method `find()` voor "one" rij (als de rij niet bestaat)
+ * verbeter bug met method `create()` in [EnLibDaysDbRowset Days_Db_Rowset] en [EnLibDaysDbTable Days_Db_Table]
+ * breng in een werkende staat van php-templates *(xaoc)*
+ * even verkleinen in het blog-example *(xaoc)*
+ * presenteren in een goed werkend conditie in blog-example *(xaoc)*
 
 === 1.0 release candidate 2 - _7 October 2009_ ===
 
- * improve `profile()` method in [EnLibDaysLog Days_Log] class _(send message only if firephp logging enabled)_
- * fix bug with incorrect definition controller/action with empty base path
- * fix incorrect replace pathes with empty base path
- * fix show warning on servers without default timezone
+ * verbeter `profile()` method in [EnLibDaysLog Days_Log] class _(stuur bericht alleen als firephp logging)_
+* Bug fix met onjuiste definitie controller / actie met lege basis pad
+ * Fix onjuiste Pathes vervangen met lege basis pad
+ * Fix show waarschuwing op servers zonder standaard tijdzone
 
 === 1.0 release candidate - _6 October 2009_ ===
 
