@@ -1,41 +1,41 @@
-#summary Getting Involved in the Project.
-#sidebar En
+#summary Bij het project betrokken zijn.
+#sidebar Nl
 <wiki:comment>revision: 1</wiki:comment>
 
-If you've become familiar with the project and feel confident and interested in the participating in it, then read the following guidelines.
+Als u vertrouwd bent geraakt met het project en zich zelfverzekerd en geïnteresseerd in de deelname voelt, lees dan de volgende richtlijnen.
 
-=== Joining the phpDays team ===
+=== Deelnamen phpDays team ===
 
- * leave your request to join the team as a comment on the [EnAnswers Discussions] page or send it to [http://groups.google.com/group/phpdays-en project support group]
- * in your message state a role you would like to take on _(php developer, web designer, documentation translator, typesetter, !JavaScript developer)_ and include your Gmail address _(your Gmail username is enough)_
- * after some consideration you'll receive an email with our decision about including you in the project _(if you don't get the response in three days, send your request again)_
- * if everything goes well, you'll become a member of the project and will be able to do more than a non-member can _(you'll be able to change the project's code, documentation and tasks)_
- * also you will be added to [http://code.google.com/p/phpdays/people/list the project's member list] _(don't forget to add this link to your resume)_
+ * Laat uw verzoek om toetreding tot het team als een commentaar op de [EnAnswers Discussions] pagina of stuur het naar[http://groups.google.com/group/phpdays-en project support group]
+ * in het bericht staat een rol dat u zou willen nemen_(php developer, web designer, documentation translator, typesetter, !JavaScript developer)_ and include your Gmail address _(your Gmail username is enough)_
+ * na enige tegenprestatie ontvangt u een e-mail met onze beslissing over het opnemen van je in het project _(als je niet het antwoord in drie dagen hebt, stuur dan uw verzoek opnieuw
+ * als alles goed gaat, dan wordt u een lid van het project en zal in staat zijn om meer te doen dan een niet-lid kan _(je kunt de code van het project, documentatie en taak wijzigen)_
+ * ook u zal worden toegevoegd aan[http://code.google.com/p/phpdays/people/list the project's member list] _(vergeet niet om deze koppeling toe te voegen je cv)_
 
-=== General Information about the Site ===
+=== Algemene informatie over de site ===
 
- * [http://code.google.com/p/phpdays/downloads/list Downloads] - Download page, where the project's working copies are available, intended for the end user
- * [http://code.google.com/p/phpdays/w/list Wiki] - project's documentation
- * [http://code.google.com/p/phpdays/issues/list Issues] - list of issues and tasks
- * [http://code.google.com/p/phpdays/source/list Source] - information about the project's SVN repository and change log history
+ * [http://code.google.com/p/phpdays/downloads/list Downloads] - Download pagina, waar de werkomstandigheden van het project exemplaren beschikbaar zijn, bestemd voor de eindgebruiker
+ * [http://code.google.com/p/phpdays/w/list Wiki] - project's documentatie
+ * [http://code.google.com/p/phpdays/issues/list Issues] - lijst van onderwerpen en taken
+ * [http://code.google.com/p/phpdays/source/list Source] - informatie over het project SVN repository en change log geschiedenis
 
-=== Uploading the Project's working copy ===
+=== Uploaden en een werkende kopie van het Project ===
 
- * download and install an SVN client to work with the project's files
- * download a project's working copy _(for more information see [http://code.google.com/p/phpdays/source/checkout Checkout])_
- * if you haven't worked with Subversion before, take your time to learn it
+ * Download en installeer een SVN-client om te werken met bestanden van het project
+ * download een werkend project kopie _ (voor meer informatie zie[http://code.google.com/p/phpdays/source/checkout Checkout])_
+ * als je nog niet hebt gewerkt met Subversion, neem dan uw tijd om het te leren
 
-=== Guidelines for Applying Changes _(SVN commit)_ ===
+=== Guidelines voor het toepassen van veranderingen _(SVN commit)_ ===
 
-For comments follow the format listed below
+Voor opmerkingen volgen het formaat hieronder
 
- * `Fix #1234: The name of the bug` - for a fix of the error number `1234`. If the bug is not in the [http://code.google.com/p/phpdays/issues/list Issues], then you should add the issue first and only then make a `SVN commit`
- * write each bug/issue in a separate line. Put a dot at the end of line.
+ * `Regel #1234: De naam van de fout ` - voor de fout van het nummer `1234`. Als de bug niet in de [http://code.google.com/p/phpdays/issues/list Issues], dan moet u het probleem toe te voegen eerste en pas daarna een `SVN commit"
+ * Schrijf elke bug / issue in een aparte regel. Zet een punt aan het einde van de lijn.
 
-=== Test Yourself ===
+=== Test Jezelf ===
 
-Set up [http://blogs.sun.com/netbeansphp/entry/recent_improvements_in_phpunit_support PHPUnit]. This will allow you to create unit tests to ensure that a new fix in code will not break something else. Only after this should you run `SVN commit`.
+Start op [http://blogs.sun.com/netbeansphp/entry/recent_improvements_in_phpunit_support PHPUnit]. Dit zal u toelaten om unit tests te testen en om ervoor te zorgen dat er een nieuw vast te stellen code niet zal breken. Pas daarna moet je draaien `SVN commit".
 
-=== Write Better Code ===
+=== Schrijf betere code ===
 
-Read about the [EnCodingStyle coding style] adopted in our project. Following uniform style allows all developers to communicate in a single, comprehensible language. 
+Lees meer over de[EnCodingStyle coding style] aangenomen in ons project. Na uniforme stijl, zodat alle ontwikkelaars te communiceren in een enkele, begrijpelijke taal.
