@@ -1,18 +1,21 @@
- EnCodingStyle   
-Coding style.
+#summary Coding style.
+#sidebar En
+<wiki:comment>revision: 1</wiki:comment>
 
-To participate in the project phpDays you should follow the same coding style (syntax for php, html, css, js and yaml files).
-General rules
+To participate in the project phpDays you should follow the same coding style _(syntax for php, html, css, js and yaml files)_.
 
-    * save all files and folders in lower case only (use file_name.html instead of fileName.html). In Windows this create a problems
-    * recommend a development environment IDE NetBeans (but can be used and other such as Eclipse PDT)
-    * keep all the files in UTF-8 encoding
-    * newlines must be in UNIX format
-    * configure the IDE to automatically remove extra spaces at the end of lines (trailing spaces)
-    * configure the IDE to automatically replace tabs by 4 spaces in php files and 2 spaces in all other (including html, css, js and yaml files) 
+=== General rules ===
 
-Code sample
+ * save all files and folders in lower case only _(use `file_name.html` instead of `fileName.html`)_. _In Windows this create a problems_
+ * recommend a development environment IDE [http://netbeans.org/ NetBeans] _(but can be used and other such as [http://eclipse.org/pdt/ Eclipse PDT])_
+ * keep all the files in *UTF-8* encoding
+ * newlines must be in UNIX format
+ * configure the IDE to automatically remove extra spaces at the end of lines _(trailing spaces)_
+ * configure the IDE to automatically replace tabs by 4 spaces in php files and 2 spaces in all other _(including html, css, js and yaml files)_
 
+=== Code sample ===
+
+{{{
 class Days_Model_User {
   // first position for constants: usee capital letters
   const USER_FIELD = 'username';
@@ -37,31 +40,33 @@ class Days_Model_User {
     return false;
   }
 }
+}}}
 
-Autoformat your code
+=== Autoformat your code ===
 
 Use this regular expressions for automatically format code:
-From 	To 	Description
-\t 	4 spaces 	replace tab to 4 spaces
-[ ]+$ 		delete all spaces in end of line
-!([a-z$]) 	! $1 	set space after not operator
-^[\t ]*\n 		delete empty lines
-else *\n([ ]*)\{ 	else\n$1{ 	set { after else
-if( 	if ( 	use space after if and elseif
-\)[ ]*\n[ ]*\{ 	) {\n 	set java code style
-^([ ]*)(public|protected|private) 	\n$1$2 	set { in line with function
-Rules for work with php files
+|| *From*             || *To*        || *Description*                      ||
+|| `\t`               || _4 spaces_  || replace tab to 4 spaces            ||
+|| `[ ]+$`            ||             || delete all spaces in end of line   ||
+|| `!([a-z$])`        || `! $1`      || set space after not operator       ||
+|| `^[\t ]*\n`        ||             || delete empty lines                 ||
+|| `else *\n([ ]*)\{` || `else\n$1{` || set `{` after `else`               ||
+|| `if(`              || `if (`      || use space after if and elseif      ||
+|| `\)[ ]*\n[ ]*\{`   || `) {\n`     || set java code style                ||
+|| `^([ ]*)(public|protected|private)`  || \n$1$2 || set `{` in line with function ||
 
-    * phpDoc standarts
-    * php coding standarts
-    * coding standard in Zend Framework
-    * coding standard in the Kohana framework
-    * PEAR Coding Standards
-    * writing comments in phpDoc style 
+=== Rules for work with php files ===
+
+ * [http://en.wikipedia.org/wiki/PHPDoc phpDoc] standarts
+ * [http://cvs.php.net/viewvc.cgi/php-src/CODING_STANDARDS?view=markup php coding standarts]
+ * [http://framework.zend.com/manual/ru/coding-standard.html coding standard in Zend Framework]
+ * [http://dev.kohanaphp.com/wiki/CodingStyle coding standard in the Kohana framework]
+ * [http://pear.php.net/manual/ru/standards.php PEAR Coding Standards]
+ * [http://en.wikipedia.org/wiki/PHPDoc writing comments in phpDoc style]
 
 Safety Information:
 
-    * SQL injection
-    * cross-site scripting
-    * Remote File Inclusion
-    * cross-site request forgery 
+ * [http://en.wikipedia.org/wiki/SQL_injection SQL injection]
+ * [http://en.wikipedia.org/wiki/Cross-site_scripting cross-site scripting]
+ * [http://en.wikipedia.org/wiki/Remote_File_Inclusion Remote File Inclusion]
+ * [http://en.wikipedia.org/wiki/Cross-site_request_forgery cross-site request forgery]
