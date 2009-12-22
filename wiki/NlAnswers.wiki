@@ -1,0 +1,17 @@
+#summary Answers on your questions.
+#sidebar Nl
+<wiki:comment>revision: 1</wiki:comment>
+
+On this page will publish frequently asked questions and their answers.
+
+=== How to ask a question? ===
+
+To ask a question, you should write a comment at the bottom of this page.
+
+Also you can ask questions in our project [http://groups.google.com/group/phpdays Support Group].
+
+=== Online chat ===
+
+You must log in to GTalk network using the Gmail account and contact me (my nic `anton.danilchenko`).
+
+<wiki:gadget url="http://phpdays.org/static/gtalk/gtalk-en.xml" height="25" border="1" />
