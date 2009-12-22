@@ -4,9 +4,9 @@
 
 == Overview ==
 
-The [http://code.google.com/p/phpdays/source/browse/trunk/lib/Days/Event.php Days_Event] class implements an [http://en.wikipedia.org/wiki/Observer_pattern Observer] design pattern. It allows to subscribe to a specific event and be notified upon the occurrence of the event. One event can have several listeners and each one of them will be notified when the event occurs.
+De [http://code.google.com/p/phpdays/source/browse/trunk/lib/Days/Event.php Days_Event] klasse implementeert een [http://en.wikipedia.org/wiki/Observer_pattern Observer] ontwerp patroon. Het maakt het mogelijk om je te abonneren op een specifieke gebeurtenis en wordt aangemeld bij het plaatsvinden van het evenement. Een evenement kan verschillende luisteraars en elk van hen zal worden meegedeeld wanneer de gebeurtenis plaatsvindt.
 
-Events can be system or user events.
+Evenementen kunnen worden systeem of gebruiker gebeurtenissen.
 
 === System Events ===
 
