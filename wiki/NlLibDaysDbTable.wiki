@@ -4,13 +4,13 @@
 
 === General information ===
 
-[http://en.wikipedia.org/wiki/Object-relational_mapping ORM] - allows you to work with the database as if you are working with objects of language php. You do not have to write SQL queries to obtain or save data. Instead, you must call the methods for obtaining data.
+[http://en.wikipedia.org/wiki/Object-relational_mapping ORM] - U bent in staat om te werken met de database dan werkt u met objecten van de taal PHP. Je hoeft niet om SQL queries te schrijven en/of te verkrijgen voor je gegevens op te slaan. In plaats daarvan moet u bellen met de methoden voor het verkrijgen van gegevens.
 
-ORM will help you to accelerate the application development and simplify the process of further changes in the application.
+ORM zal u helpen om de applicatie-ontwikkeling te versnellen en vereenvoudigen van het proces van verdere veranderingen in de aanvraag.
 
-=== How work ORM ===
+=== Hoe werkt ORM ===
 
-Create a class for the desired table `blog_category` _(stores category posts)_. To do this we create a file "/var/www/myblog/app/Model/Table/*Blog/Category.php*" with class definition:
+Maak een klasse voor de gewenste tabel `blog_category` _(stores category posts)_. Om dit te creëren maken we een bestand "/ var / www / myblog / app / Model / Tabel / * Blog / category.php doen *" met klasse definitie:
 {{{
 <?php
 class Model_Table_Blog_Category extends Days_Db_Table {
