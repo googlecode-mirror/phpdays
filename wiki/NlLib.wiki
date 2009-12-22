@@ -17,7 +17,7 @@
 
 === In ontwikkeling ===
 
- * [EnLibDaysAcl Days_Acl] _(Aceess Control List)_ - delineation of rights of access to sections of the site
- * [EnLibDaysFilter Days_Filter] - filtering data coming from the user _(also known as validation or verification of data)_
- * [EnLibDaysForm Days_Form] - processing of data coming from html forms
- * [EnLibDaysUser Days_User] - work with user _(authorization, authentication, end of session)_
+ * [EnLibDaysAcl Days_Acl] _(Aceess Control List)_ - afbakening van de rechten van toegang tot delen van de site
+ * [EnLibDaysFilter Days_Filter] - filteren van gegevens afkomstig van de gebruiker _ (ook bekend als validatie of verificatie van gegevens) _
+ * [EnLibDaysForm Days_Form] - verwerking van gegevens uit HTML-formulieren
+ * [EnLibDaysUser Days_User] - werk met user _(authorization, authentication, end of session)_
