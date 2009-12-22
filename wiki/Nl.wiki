@@ -3,7 +3,7 @@
 
 <wiki:comment>revision: 1</wiki:comment>
 
-[Nl Nederlands], [En English], [Ru Русский], [De Deutsche], [Fr French], [It Italiano], [Tu Türkçe], [Nl Nederlandse]
+[Nl Nederlands], [En English], [Ru Русский], [De Deutsche], [Fr French], [It Italiano], [Tr Türkçe], [Nl Nederlandse]
 
 ----
 
