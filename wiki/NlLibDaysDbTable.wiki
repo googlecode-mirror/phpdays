@@ -104,9 +104,9 @@ Dit is een echte voorstelling van een echte tabel, en u kunt bewerkingen uitvoer
  * `delete(Days_Db_Row $row)` - delete specified row
  * `join($table)` - attach the specified table to the result
 
-=== Using [http://code.google.com/p/phpdays/source/browse/trunk/lib/Days/Db/Rowset.php Days_Db_Rowset] ===
+=== Gebruik [http://code.google.com/p/phpdays/source/browse/trunk/lib/Days/Db/Rowset.php Days_Db_Rowset] ===
 
-Represents a set of rows `Days_Db_Row`. Allows you to change the set of rows.
+Vertegenwoordigt een reeks rijen `Days_Db_Row`. Hiermee kunt u de set van rijen veranderen.
 
  * `create(array $data=array())` - create new row `Days_Db_Row`
  * `save(Days_Db_Row $row)` - save specified row
@@ -114,15 +114,15 @@ Represents a set of rows `Days_Db_Row`. Allows you to change the set of rows.
  * `count()` - number of rows in a given set
  * `toArray()` - returns a set of rows as an array
 
-Also provides data from the current row, as if we are working with this row.
+Ook levert de gegevens van de huidige rij, alsof we werken met deze rij.
 {{{
 // displays the name of the first category
 echo $categories->name;
 }}}
 
-=== Using [http://code.google.com/p/phpdays/source/browse/trunk/lib/Days/Db/Row.php Days_Db_Row] ===
+=== Gebruik [http://code.google.com/p/phpdays/source/browse/trunk/lib/Days/Db/Row.php Days_Db_Row] ===
 
-Represents a table row and allows you to work with it.
+Vertegenwoordigt een tabel/rij en je kan er aan werken.
 
  * `save()` - save the current line
  * `delete()` - delete the current line
