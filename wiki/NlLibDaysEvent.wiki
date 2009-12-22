@@ -1,5 +1,5 @@
-#summary Implementation of the Observer Design Pattern
-#sidebar EnLib
+#summary Uitvoering van de Design Observer Pattern
+#sidebar NlLib
 <wiki:comment>revision: 1</wiki:comment>
 
 == Overview ==
