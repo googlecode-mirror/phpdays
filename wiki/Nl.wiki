@@ -1,8 +1,9 @@
 #summary Nederlandse Startpagina.
+#labels Featured,Lang-Nl
 
 <wiki:comment>revision: 1</wiki:comment>
 
-[Nl Nederlands], [En English], [Ru Русский], [De Deutsche], [Fr French], [It Italiano], [Tu Türkçe]
+[Nl Nederlands], [En English], [Ru Русский], [De Deutsche], [Fr French], [It Italiano], [Tu Türkçe], [Nl Nederlandse]
 
 ----
 
