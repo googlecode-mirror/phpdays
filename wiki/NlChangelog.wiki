@@ -2,46 +2,46 @@
 #sidebar Nl
 <wiki:comment>revision: 1</wiki:comment>
 
-== List of changes in version 1.1 ==
+== Lijst van de veranderingen in versie 1.1 ==
 
 === 1.1 beta3 ===
 
- * no changes
+ * geen veranderingen
 
 === 1.1 beta2 ^(15 November 2009)^ ===
 
- * Created `apps/phpdays.org`
- * Added class [EnLibDaysEvent Days_Event], Observer design pattern implementation
- * Added Unit tests for `Days_View_*` and [EnLibDaysEvent Days_Event]
- * r59 [EnLibDaysEngine Days_Engine] Delete auto-conversion all Ajax data to JSON
- * r193 Fix bug in Templum: throw exception if template contein php tags
- * r200 Change url from sf.net to googlecode.com
- * r247 Create [EnLibDaysToolAppGenerator Days_Tool_AppGenerator]. Change `@package` and `@subpackage` in all Days classes
- * r255 Add class [EnLibDaysRouter Days_Router]. Add methods "copy" and "rename" to [EnLibDaysDbTable Days_Db_Table]
- * r262, r275 Refactor [EnLibDaysView View] classes. Add empty helpers base
- * r263 Extend helper classes by [EnLibDaysHelperAbstract Days_Helper_Abstract]
- * r266 Fix #22: Extract [EnLibDaysException Days_Exception] from `Engine.php`
- * r267 Added methods [EnLibDaysResponse Days_Response]::getContent and [EnLibDaysResponse Days_Response]::setContent for comfort and control output of the engine
- * r268 Added method [EnLibDaysEvent Days_Event]:: get($event) for all subscribers of certain event
- * r282 Added first [EnLibDaysHelper Helpers]
- * r283 `[lib/Templum]` Create new Pages function
- * r284 `[lib/Templum]` Create new Collect block
- * r285 `[lib/Templum]` Add new tests in template
- * r288 Creating a branch for Issue #24
- * r290 `[apps/phpdays.org]` Change menu links
- * r291 `[apps/phpdays.org]` Rename service "dev" to "lab"
+ * Maak `apps/phpdays.org`
+ * Voeg een class [EnLibDaysEvent Days_Event], Observeer design pattern implementeren
+ * Voeg unit tests uit `Days_View_*` en [EnLibDaysEvent Days_Event]
+ * r59 [EnLibDaysEngine Days_Engine] Verwijder auto-conversion van Ajax data naar JSON
+ * r193 Fix bug in Templum: gooi uitzondering als sjabloon contein php-tags
+ * r200 Verander url sf.net naar googlecode.com
+ * r247 Maak [EnLibDaysToolAppGenerator Days_Tool_AppGenerator]. Verander `@package` en `@subpackage` in all Days classes
+ * r255 Voeg een class [EnLibDaysRouter Days_Router]. Voeg methods "copy" en "rename" naar [EnLibDaysDbTable Days_Db_Table]
+ * r262, r275 Refactor [EnLibDaysView View] classes. Voeg lege helpers toe in base
+ * r263 Uitgebreide classes bij [EnLibDaysHelperAbstract Days_Helper_Abstract]
+ * r266 Fix #22: Pak uit [EnLibDaysException Days_Exception] van `Engine.php`
+ * r267 Voeg toe methods [EnLibDaysResponse Days_Response]::getContent en [EnLibDaysResponse Days_Response]::setContent voor comfort en controle-uitgang van de enige
+ * r268 Voeg toe methods [EnLibDaysEvent Days_Event]:: get($event) for all subscribers of certain event
+ * r282 Voeg eerst [EnLibDaysHelper Helpers] toe
+ * r283 `[lib/Templum]` Maak een nieuwe pagina functie
+ * r284 `[lib/Templum]` Maak een nieuwe Collect block
+ * r285 `[lib/Templum]` Voeg nieuwe tests toe in template
+ * r288 Maak een nieuwe branch voor Issue #24
+ * r290 `[apps/phpdays.org]` Verander menu links
+ * r291 `[apps/phpdays.org]` Hernoem service "dev" naar "lab"
 
-=== 1.1 beta1 ^(18 October 2009)^ ===
+=== 1.1 beta1 ^(18 Oktober 2009)^ ===
 
  * r19-r20 Added [http://templum.googlecode.com Templum] support - new template engine.
  * `apps/new`: Fix css text-align (created by yui library).
  * Changes in apps/new: added jquery library, added yui css reset, changed index layout.
  * Fix bug in application "phpdays.org" in tag script.
- * Add Smarty plugin block for show block template by name.
- * Add application "phpdays.org" with static main page.
+ * Voeg toe Smarty plugin block for show block template by name.
+ * Voeg toe applicatie "phpdays.org" with static main page.
 
 === Archive versions ===
 
-Select the appropriate version of the framework, to see a list of changes.
+Selecteer de juiste versie van framework, om een lijst van veranderingen.
 
  * [EnChangelog1_0 1.0]
