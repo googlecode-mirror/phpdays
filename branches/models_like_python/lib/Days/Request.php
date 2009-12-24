@@ -43,28 +43,38 @@ class Days_Request {
     }
 
     /**
-     * Set and get POST value.
+     * Get POST value.
      *
-     * @return bool
+     * @return mixed
      */
-    public static function post($name, $value=null) {
-        // set variable
-        if (! is_null($value)) {
-            $_POST[$name] = $value;
-        }
-        return (isset($_POST[$name]) ? $_POST[$name] : null);
+    public static function getPost($name, $default=null) {
+        // get variable`
+        return (isset($_POST[$name]) ? $_POST[$name] : $default);
     }
 
     /**
-     * Set and get SESSION value.
-     *
-     * @return bool
+     * Set POST value.
      */
-    public static function session($name, $value=null) {
+    public static function setPost($name, $value) {
         // set variable
-        if (! is_null($value)) {
-            $_SESSION[$name] = $value;
-        }
-        return (isset($_SESSION[$name]) ? $_SESSION[$name] : null);
+        $_POST[$name] = $value;
+    }
+
+    /**
+     * Get SESSION value.
+     */
+    public static function getSession($name, $default=null) {
+        // get variable
+        return (isset($_SESSION[$name]) ? $_SESSION[$name] : $default);
+    }
+
+    /**
+     * Set SESSION value.
+     *
+     * @return mixed
+     */
+    public static function setSession($name, $value) {
+        // set variable
+        $_SESSION[$name] = $value;
     }
 }
