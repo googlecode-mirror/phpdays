@@ -23,11 +23,8 @@ class Days_Controller {
 
     /**
      * Create template engine object.
-     *
-     * @param string $template Path to content template file
      */
-    public function __construct($template) {
-        $this->_content = $template;
+    public function __construct() {
         $templateEngine = Days_Config::load()->get('view/engine', 'php');
         $this->_view = Days_View::factory($templateEngine);
     }
@@ -48,14 +45,26 @@ class Days_Controller {
     }
 
     /**
-     * Set layout name.
+     * Set layout template name.
      *
-     * @param string $template Template name
-     * @param bool $rewrite Replace defined layout name
+     * @param string $template Layout template name
+     * @param bool $rewrite Replace defined layout template name
      */
     public function setLayout($template, $rewrite=true) {
         if (is_null($this->_layout) OR $rewrite) {
             $this->_layout = "layout/{$template}." . Days_Url::getSpec('ext');
+        }
+    }
+
+    /**
+     * Set template name.
+     *
+     * @param string $template Template name
+     * @param bool $rewrite Replace defined template name
+     */
+    public function setTemplate($template, $rewrite=true) {
+        if (is_null($this->_content) OR $rewrite) {
+            $this->_content = "content/{$template}." . Days_Url::getSpec('ext');
         }
     }
 

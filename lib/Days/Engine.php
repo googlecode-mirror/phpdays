@@ -167,12 +167,13 @@ final class Days_Engine {
             // set action name
             $actionMethod = (Days_Request::isAjax() ? "{$action}AjaxAction" : "{$action}Action");
             // set template path
-            $template = "content/{$controller}/{$action}.{$ext}";
+            $template = "{$controller}/{$action}";
             // create controller
             if (! class_exists($controllerClass)) {
                 throw new Days_Exception("Controller '{$controllerClass}' not found");
             }
-            $controllerObj = new $controllerClass($template);
+            $controllerObj = new $controllerClass();
+            $controllerObj->setTemplate($template);
             if (! $controllerObj instanceof Days_Controller) {
                 throw new Days_Exception("Controller '{$controllerClass}' should be extended from 'Days_Controller'");
             }
