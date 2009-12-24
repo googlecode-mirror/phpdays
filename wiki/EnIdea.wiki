@@ -189,3 +189,29 @@ function rssNotLoaded() {
 == Form ==
 
 [EnLibDaysForm Days_Form] - process html forms. If all data is passed correctly - execute a form handler.
+
+{{{
+$form = new Days_Form('user_register');
+// form sended
+if ($form->sended()) {
+  // form valid
+  if ($form->valid()) {
+    // register user
+  }
+  // incorrect filled form
+  else {
+    // show form with error messages
+    $this->errors = $form->errors();
+  }
+}
+}}}
+
+Form settings saved into file `app/config/forms.yaml`
+
+{{{
+user_register:
+  User.name: {}
+  User.email: {}
+  User.posts: {disabled}
+  User.role: {}
+}}}
