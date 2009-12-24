@@ -24,8 +24,10 @@ $statusDesc = array(
         'description' => 'OK')
     );
 
-$docs = getStatus();
-doReport($docs);
+$status = getStatus();
+$report = createReport($status);
+printReport($report);
+createWikiPage($report);
 
 /**
  * Collect information about documentation files.
@@ -69,14 +71,18 @@ function getStatus() {
 	        }
 	    }
 	}
-	createReportTable($docs, $languages, $topRevisions);
-	return $docs;
+	return array( 'docs' => $docs,
+	    'languages' => $languages,
+	    'topRevisions' => $topRevisions);
 }
 /**
  * Prepare the report table.
  */
-function createReportTable($docs, $languages, $topRevisions) {
+function createReport($status) {
     global $statusDesc;
+    $languages = $status['languages'];
+    $topRevisions = $status['topRevisions'];
+    $docs = $status['docs'];
     sort($languages);
     $names = array_keys($docs);
     sort($names);
@@ -103,7 +109,72 @@ function createReportTable($docs, $languages, $topRevisions) {
         }
         $reportTable[] = $line;
     }
-    print_r($reportTable);
+    return $reportTable;
+}
+/**
+ * Print the report on the screen.
+ */
+function printReport($reportTable) {
+    // Calculate column widths.
+    $columnWidths = array();
+    for ($i = 0, $size = sizeof($reportTable[0]);
+        $i < $size; ++$i) {
+        $columnWidths[$i] = getMaxColumnWidth($i, $reportTable);
+    }
+    // Create a format string.
+    $formatStr = '';
+    foreach ($columnWidths as $width) {
+        $formatStr .= ' %-' . $width . 's |';
+    }
+    $formatStr .= "\n";
+    // Line separator.
+    $lineWidth = 0;
+    foreach ($columnWidths as $width) {
+        $lineWidth += $width + 3; // ' ' + ' ' + '|'
+    }
+    $lineSeparator = sprintf('%\'-' . $lineWidth . "s\n", '-');
+    // Print the table header.
+    vprintf($formatStr, $reportTable[0]);
+    echo $lineSeparator;
+    for ($i = 1, $size = sizeof($reportTable); $i < $size; ++$i) {
+        vprintf($formatStr, $reportTable[$i]);
+    }
+    echo $lineSeparator;
+    echo printLegend() ."\n";
+}
+/**
+ * Create the documentation status wiki page.
+ */
+function createWikiPage($reportTable) {
+    $file = 'documentationStatus.wiki';
+    $table[] = '#summary Documentation status. ' . date('d.m.Y') . "\n";
+    $table[] = getWikiHeader() . "\n";
+    // Print the table header in bold.
+    $line = '|| ';
+    foreach ($reportTable[0] as $item) {
+        $line .= '*' . $item . '* || ';
+    }
+    $table[] = $line . "\n";
+    for ($i = 1, $size = sizeof($reportTable); $i < $size; ++$i) {
+        $line = '|| ';
+        foreach ($reportTable[$i] as $item) {
+            $line .= $item . ' || ';
+        }
+        $table[] = $line . "\n";
+    }
+    $table[] = "\n";
+    $table[] = getWikiLegend();
+    file_put_contents($file, $table);
+}
+function getMaxColumnWidth($col, $arr) {
+    $max = 0;
+    for ($i = 0, $size = sizeof($arr); $i < $size; ++$i) {
+        $length = strlen($arr[$i][$col]);
+        if ($max < $length) {
+            $max = $length;
+        }
+    }
+    return $max;
 }
 /** 
  * Get the maximum name length.
@@ -132,74 +203,6 @@ function getTopRevision($revisions) {
     return $topRevision;
 }
 
-function doReport($docs) {
-    // Document names.
-    $names = array_keys($docs);
-    sort($names);
-    // Languages.
-    $languages = array_keys($docs[$names[0]]);
-    sort($languages);
-    // Top revisions.
-    $topRevisions = array();
-    foreach ($names as $name) {
-        $topRevisions[$name] = getTopRevision($docs[$name]);
-    } 
-
-    // Formatting.
-    $docHeader = 'Document';
-    $topRevHeader = 'Top Rev.';
-    $maxNameLength = getMaxNameLength($names);
-    if ($maxNameLength < strlen($docHeader)) {
-        $maxNameLength = strlen($docHeader);
-    }
-    $docLineFormat = '%-' . $maxNameLength . 's  |';
-    $docLineFormat .= ' %' . strlen($topRevHeader) . 's |';
-    $langTitleLine = sprintf($docLineFormat, $docHeader, $topRevHeader);
-
-    foreach($languages as $lang) {
-        $langTitleLine .= sprintf(' %2s  |', $lang);
-        $docLineFormat .= '  %s  |';
-    }
-    $docLineFormat .= "\n";
-    $lineSeparator = sprintf('%\'-' . strlen($langTitleLine) . 's', '-');
-    
-    echo $langTitleLine . "\n";
-    echo $lineSeparator . "\n";
-
-    $status[] = array_merge(array($docHeader, $topRevHeader), $languages);
-    
-    foreach($names as $name) {
-        $out = array();
-        $out[] = empty($name) ? '_Root_' : $name;
-        $topRevision = $topRevisions[$name];
-        $out[] = $topRevision == MISSING_REVISION ? '?' : $topRevision;
-        $doc = $docs[$name];
-        foreach ($languages as $lang) {
-            switch ($doc[$lang]) {
-                case MISSING_FILE: 
-                    $out[] = '-';
-                    break;
-                case FILE_ERROR:
-                    $out[] = 'e';
-                    break;
-                case MISSING_REVISION:
-                    $out[] = '?';
-                    break;
-                default:
-                if ($doc[$lang] == $topRevision) {
-                    $out[] = ' ';
-                } else {
-                    $out[] = '+';
-                }
-            }
-        }
-        $status[] = $out;
-        vprintf($docLineFormat, $out);
-    }
-    echo $lineSeparator . "\n";
-    echo printLegend() ."\n";
-    createWikiPage($status, $topRevisions);
-}
 function printLegend() {
     global $statusDesc;
     $out = '';
@@ -221,29 +224,13 @@ file run the script and commit the change to the wiki's svn repository.
 EndOfHeader;
     return $out;
 }
-function createWikiPage($status, $topRevisions) {
-    $file = 'documentationStatus.wiki';
-    $table[] = '#summary Documentation status. ' . date('d.m.Y') . "\n";
-    $table[] = getWikiHeader() . "\n";
-    // Print the table header in bold.
-    $line = '|| ';
-    foreach ($status[0] as $item) {
-        $line .= '*' . $item . '* || ';
+function getWikiLegend() {
+    global $statusDesc;
+    $out = '|| ';
+    foreach ($statusDesc as $item) {
+        $out .= $item['symbol']
+            . ' || ' . $item['description'] . " ||\n";
     }
-    $table[] = $line . "\n";
-    for ($i = 1, $size = sizeof($status); $i < $size; ++$i) {
-        $line = '|| ';
-        foreach ($status[$i] as $item) {
-            $line .= $item . ' || ';
-        }
-        $table[] = $line . "\n";
-    }
-    $table[] = "\n";
-    $footer = printLegend();
-    $footer = preg_replace('/$/m', "\n\n", $footer);
-    if (!is_null($footer)) {
-        $table[] = $footer;
-    }
-    file_put_contents($file, $table);
+    return $out;
 }
 ?>
