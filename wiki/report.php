@@ -162,7 +162,6 @@ function createWikiPage($reportTable) {
         }
         $table[] = $line . "\n";
     }
-    $table[] = "\n";
     $table[] = getWikiLegend();
     file_put_contents($file, $table);
 }
@@ -226,9 +225,9 @@ EndOfHeader;
 }
 function getWikiLegend() {
     global $statusDesc;
-    $out = '|| ';
+    $out = "\n";
     foreach ($statusDesc as $item) {
-        $out .= $item['symbol']
+        $out .= '|| ' . $item['symbol']
             . ' || ' . $item['description'] . " ||\n";
     }
     return $out;

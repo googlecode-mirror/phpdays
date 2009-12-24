@@ -29,7 +29,7 @@ file run the script and commit the change to the wiki's svn repository.
 || StartModel || 1 || - ||   || - || - ||   ||   || - || 
 
 || - || missing file ||
-e || error reading file ||
-? || missing revision number ||
-+ || old revision ||
-  || OK ||
+|| e || error reading file ||
+|| ? || missing revision number ||
+|| + || old revision ||
+||   || OK ||
