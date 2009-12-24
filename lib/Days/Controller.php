@@ -75,37 +75,45 @@ class Days_Controller {
     }
 
     /**
-     * Return SESSION variable by name.
+     * Get SESSION variable.
      *
      * @return mixed
      */
-    public function session($name, $value=null) {
-        // set value
-        if (! is_null($value)) {
-            Days_Request::session($name, $value);
-        }
+    public function getSession($name, $default=null) {
         // return value
-        return Days_Request::session($name);
+        return Days_Request::getSession($name, $default);
     }
 
     /**
-     * Return POST variable by name.
+     * Set SESSION variable.
+     */
+    public function setSession($name, $value) {
+        // set value
+        Days_Request::setSession($name, $value);
+    }
+
+    /**
+     * Get POST variable.
      *
      * @return mixed
      */
-    public function post($name, $value=null) {
-        // set value
-        if (! is_null($value)) {
-            Days_Request::post($name, $value);
-        }
+    public function getPost($name, $default=null) {
         // return value
-        return Days_Request::post($name);
+        return Days_Request::getPost($name, $default);
     }
 
     /**
-     * Return URL variable by name.
+     * Set POST variable.
+     */
+    public function setPost($name, $value) {
+        // set value
+        Days_Request::setPost($name, $value);
+    }
+
+    /**
+     * Get URL variable.
      *
-     * @return mixed
+     * @return string
      */
     public function url($name) {
         // return value
@@ -113,13 +121,11 @@ class Days_Controller {
     }
 
     /**
-     * Add EVENT handler by event name.
-     *
-     * @return mixed
+     * Add EVENT handler.
      */
     public function event($name, array $observer) {
         // set value
-        return Days_Event::add($name, $observer);
+        Days_Event::add($name, $observer);
     }
 
     /**

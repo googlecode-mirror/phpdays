@@ -143,11 +143,11 @@ final class Days_Engine {
         ob_start();
         try {
             if (Days_Config::load()->get('engine/autorun', 0)) {
-                $autorunClass = "Controller_System_Autorun";
+                $systemController = "Controller_System";
                 // run predefined class
-                if (class_exists($autorunClass)
-                    AND is_callable(array($autorunClass, 'run'))) {
-                    call_user_func(array($autorunClass, 'run'));
+                if (class_exists($systemController)
+                    AND is_callable(array($systemController, 'autorun'))) {
+                    call_user_func(array($systemController, 'autorun'));
                 }
             }
             Days_Event::run('engine.start');
