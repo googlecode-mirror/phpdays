@@ -24,12 +24,12 @@ class Controller_Index extends Days_Controller {
         $blogPosts->limit(10)->sort('date DESC');
         // work with environment
         // get values
-        $userName   = $this->post('name') OR 'noname';
-        $sessEmail  = $this->session('email') OR '';
-        $urlAddress = $this->url('address') OR '';
+        $userName   = $this->getPost('name', 'noname');
+        $sessEmail  = $this->getSession('email', '');
+        $urlAddress = $this->url('address', '');
         // set value
-        $this->post('name', 'Anton');
-        $this->session('email', 'test@mail.com');
+        $this->setPost('name', 'Anton');
+        $this->setSession('email', 'test@mail.com');
         // send message to developer (in firebug or in log file)
         $this->log('All right. All work well!');
         // add event handler (need create method for handle this event)
