@@ -1,0 +1,11 @@
+#summary Wat is MVC?
+#sidebar Nl
+<wiki:comment>revision: 1</wiki:comment>
+
+[http://en.wikipedia.org/wiki/Model–view–controller MVC] is een architectonische oplossing die toelaat om de verschillende delen van een aanvraag van elkaar te scheiden. Door deze aanpak, wordt het makkelijker te begrijpen van een project en voor nieuwe leden, en de mogelijkheden daarvan.
+
+Denk aan het gebruik bij de volgende regels en het maken van een nieuwe aanvraag:
+
+ * [EnController Controller] - Beslis welke acties er zijn, en maak gebruik van verschillende modellen om gegevens te verkrijgen en dan geeft de gegevens naar de mening een component.
+ * [EnView View] - informatie weergegeven. Het is een sjabloon html pagina waarin de gegevens is opgesteld wat door de controller wordt ingevoegd
+ * [EnModel Model] - haalt en wijzigt gegevens in een database
