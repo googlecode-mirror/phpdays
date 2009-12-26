@@ -1,32 +1,32 @@
 #summary Multisites.
-#sidebar En
+#sidebar Nl
 <wiki:comment>revision: 1</wiki:comment>
 
-If a complex, feature-rich section has to be added to a site, it is best to make it as a separate project. Then the project can be integrated into another site. It gives a semblance of Lego bricks, from which you can build a web site on the basis of other projects.
+Als het een complexe site wordt, moet er een deel feature-rich worden toegevoegd aan de site, dit is om het beste te maken voor een afzonderlijk project. Het project kan worden geïntegreerd in een andere site. Het geeft een schijn van Lego stenen, waaruit u een website kan bouwen op basis van andere projecten.
 
-=== Creating a site ===
+=== Maken van een site ===
 
-Suppose that you need to create a complex _forum section_. Create a separate [EnInstall project], and implement only the forum section. The same way deal with the other complex sections of the site _(including a blog, catalog, etc)_.
+Stel dat je nog meer nodig hebt om een complexe _forum_section te maken_. Maak dan een aparte [NlInstall project], en uit te voeren enkel de forum sectie. Dezelfde manier omgaan met de andere complexe onderdelen van de site _ (met inbegrip van een blog, catalogus, enz.) _.
 
-The project will be located in the `/var/www/forum` directory.
+Het project zal worden gevestigd in `/var/www/forum` directory.
 
-Now prepare your forum for inclusion in another section of the site. Create a new configuration file `/var/www/forum/app/config/myblog_development.yaml`. Edit it to work with a database of your application. Set the `url/base: myblog/forum` option.
+Nu de voorbereiding van uw forum voor opname in een ander gedeelte van de site. Maak een nieuw configuratiebestand `/var/www/forum/app/config/myblog_development.yaml`. Bewerk zo de database dat de applicatie goed werkt. Maak `url/base: myblog/forum` option.
 
-Implement all the simple parts of the site the same way as before - by creating a separate [EnController controller].
+Voer alle eenvoudige delen van de site op dezelfde manier uit als voorheen - door het creëren van een aparte [EnController controller].
 
-=== Including the Project into the Current Section of the Site ===
+=== Met inbegrip van het project in de huidige sectie van de site ===
 
-Files and the `static` directory are located in the `/var/www/myblog/public` directory.
+Files en de `static` directory bevinden zich in de `/var/www/myblog/public` directory.
 
-We have to create a `/var/www/myblog/public/forum` directory for our new forum section. Copy the contents of `/var/www/forum/public` into the new directory. 
+We hebben om een `/var/www/myblog/public/forum` directory voor ons nieuwe forum gedeelte. Kopieer de inhoud van `/var/www/forum/public` in een nieuwe map.
 
-Edit the file `/var/www/myblog/public/forum/index.php`:
- * set the path to the phpDays library
- * set the path to the forum application
- * change the configuration from `development` to `myblog_development`
+Bewerk dit bestand `/var/www/myblog/public/forum/index.php`:
+* Stel het pad naar de phpDays bibliotheek
+ * Stel het pad naar het forum toepassing
+* Wijziging van de configuratie van `ontwikkeling` in `myblog_development`
 
-=== Explanations ===
+=== Uitleg ===
 
-Now when you go to [http://localhost/myblog/forum], you will be redirected to `/var/www/myblog/public/forum` and the appropriate application will be launched. As a result we'll get "a site within a site."
+Wanneer u naar gaat [http://localhost/myblog/forum], dan wordt je door gestuurd naar `/var/www/myblog/public/forum` en de juiste toepassing zal worden gelanceerd. Als gevolg daarvan zullen we krijgen "a site within a site."
 
-If you have to use a similar forum section in another project, this will save you time. All you'll have to do is to include one project into another.
+Als u een soortgelijk forum sectie gebruikt en dit in een ander project toepast, zal dit tijd besparen. Alles wat je je hoeft te doen is een project in een ander project stoppen.
