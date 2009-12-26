@@ -1,15 +1,13 @@
-#summary Het maken van een website sneller.
-#sidebar Nl
-<wiki:comment>revision: 1</wiki:comment>
+#summary One-sentence summary of this page.
 
-Om effectief gebruik te maken van de middelen van een server en de verdeling daarvan kunnen we redelijk raden hoeveel aantal nuttige toepassingen van technologieën nog hebben.
+= Introduction =
 
-=== Memory geheugen verbruik ===
+Add your content here.
 
-[http://ru.wikipedia.org/wiki/Memcached memcached] De winkels laten resultaten van sets van query naar een database in het geheugen zien _ (bijv. MySQL) _. Dit laat toe om het aantal vragen te beperken tot een database.
 
-Zie de instructie hoe het gaat om memcached te installeren: [http://pureform.wordpress.com/2008/01/10/installing-memcache-on-windows-for-php/ Windows]. Ga naar installatie memcached in Ubuntu en druk op enter. Vul de volgende twee commando's in.
-(((
-sudo aptitude install memcached
-sudo aptitude install php5-memcache
-)))
+= Details =
+
+Add your content here.  Format your content with:
+  * Text in *bold* or _italic_
+  * Headings, paragraphs, and lists
+  * Automatic links to other wiki pages
