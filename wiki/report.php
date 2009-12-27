@@ -175,19 +175,6 @@ function getMaxColumnWidth($col, $arr) {
     }
     return $max;
 }
-/** 
- * Get the maximum name length.
- */
-function getMaxNameLength ($names) {
-    $maxLength = 0;
-    foreach ($names as $name) {
-        $length = strlen($name);
-        if ($maxLength < $length) {
-            $maxLength = $length;
-        }
-    }
-    return $maxLength;
-}
 
 /**
  * Get the top revision number.
