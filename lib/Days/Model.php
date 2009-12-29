@@ -11,28 +11,17 @@
  * @subpackage   Days
  * @author       Anton Danilchenko <happy@phpdays.org>
  */
-abstract class Days_Model {
-    /** @var string Name of current model (without prefix "Model") */
-    protected $_name;
-    /** @var int Count of returned rows in result set (maximum value is 1000) */
-    protected $_limit = 1000;
-    /** @var int Page number for results show */
-    protected $_page = 1;
-    /** @var array Sort order (column names) */
-    protected $_sort = array();
-    /** @var array Conditions as [tableName]=>[where clause with inserted values] */
-    protected $_where = array();
-
+abstract class Days_Model extends Days_Db_Table {
     /**
      * Create model object and set conditions.
      *
      * @param mixed Condition and placeholder values
      */
     public function __construct() {
+        // execute parent constructor
+        parent::__construct();
         // get all parameters, passed to method
         $params = func_get_args();
-        // autodetect name of current model and save it
-        $this->_name = substr(__CLASS__, strpos(__CLASS__, 'Model_'));
         // set conditions to current model object
         if (count($params) > 0) {
             $this->where($params);
@@ -99,50 +88,21 @@ abstract class Days_Model {
     }
 
     /**
-     * Set limit of returned lines.
-     *
-     * @param int $rows Count of result rows
-     * @param int $page Number of page
-     * @return Days_Model
-     */
-    public function limit($rows, $page=1) {
-        // set page number
-        if (is_numeric($page) AND $page >= 1) {
-            $this->_page = $page;
-        }
-        // set limit of rows
-        if ($rows < 1000 AND $rows > 0) {
-            $this->_limit = $rows;
-        }
-        // link to current model
-        return $this;
-    }
-
-    /**
      * Set sort order of returned lines.
      *
      * @param int $column Name of column with ASC or DESC
      * @return Days_Model
      */
-    public function sort($column) {
-        // get all parameters, passed to method
-        $params = func_get_args();
-        // set parameters to sort order
-        foreach ($params as $column) {
-            $this->_sort[] = $column;
-        }
-        // link to current model
-        return $this;
-    }
-
-    /**
-     * Return model name (without prefix "Model")
-     *
-     * @return string
-     */
-    public function name() {
-        return $this->_name;
-    }
+//    public function sort($column) {
+//        // get all parameters, passed to method
+//        $params = func_get_args();
+//        // set parameters to sort order
+//        foreach ($params as $column) {
+//            $this->_sort[] = $column;
+//        }
+//        // link to current model
+//        return $this;
+//    }
 
     /**
      * Return database object.
@@ -150,9 +110,9 @@ abstract class Days_Model {
      * @param string $schema Name of database configuration section
      * @return Days_Db
      */
-    public function db($schema=null) {
-        return Days_Db::factory($schema);
-    }
+//    public function db($schema=null) {
+//        return Days_Db::factory($schema);
+//    }
 
     /**
      * Return unique key for current row.

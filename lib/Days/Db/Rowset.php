@@ -11,15 +11,9 @@
  * @subpackage   Db
  * @author       Anton Danilchenko <happy@phpdays.org>
  */
-class Days_Db_Rowset implements Countable, ArrayAccess, Iterator {
+abstract class Days_Db_Rowset implements Countable, ArrayAccess, Iterator {
     /** @var array Instances of Days_Db_Row */
     protected $_rows = array();
-    /** @var Days_Db_Table Parent table */
-    protected $_table;
-
-    public function  __construct(Days_Db_Table $table) {
-        $this->_table = $table;
-    }
 
     /**
      * Create new row.
@@ -28,17 +22,9 @@ class Days_Db_Rowset implements Countable, ArrayAccess, Iterator {
      * @return Days_Db_Row
      */
     public function create(array $data=array()) {
-        $row = new Days_Db_Row($data, $this->_table, $this);
+        $row = new Days_Db_Row($data, $this, $this);
         $this->_rows[] = $row;
         return $row;
-    }
-
-    public function save(Days_Db_Row $row) {
-        $this->_table->save($row);
-    }
-
-    public function delete(Days_Db_Row $row) {
-        $this->_table->delete($this);
     }
 
     /**
@@ -110,20 +96,24 @@ class Days_Db_Rowset implements Countable, ArrayAccess, Iterator {
         // set row into rowset
         if (is_null($offset) OR is_numeric($offset)) {
             // check row type
-            if (! $value instanceof Days_Db_Row)
+            if (! $value instanceof Days_Db_Row) {
                 throw new Days_Exception('Value should be a type of Days_Db_Row');
+            }
             // add new element
-            if (is_null($offset))
+            if (is_null($offset)) {
                 $this->_rows[] = $value;
+            }
             // replace existing row
-            else
+            else {
                 $this->_rows[$offset] = $value;
+            }
         }
         // set value for current row
         else {
             // check current row position
-            if (! $this->current())
+            if (! $this->current()) {
                 throw new Days_Exception('Not exist current row in rowset');
+            }
             $this->current()->$offset = $value;
         }
     }
@@ -174,8 +164,9 @@ class Days_Db_Rowset implements Countable, ArrayAccess, Iterator {
      * @return mixed
      */
     public function __call($offset, array $params=array()) {
-        if (! $this->valid())
+        if (! $this->valid()) {
             return null;
+        }
         return $this->current()->__call($offset, $params);
     }
 
@@ -202,16 +193,18 @@ class Days_Db_Rowset implements Countable, ArrayAccess, Iterator {
         }
         // return field value from current row
         else {
-            if (! $this->valid())
+            if (! $this->valid()) {
                 return null;
+            }
             return $this->current()->$offset;
         }
     }
 
     public function toArray() {
         $rows = array();
-        foreach ($this->_rows as $row)
+        foreach ($this->_rows as $row) {
             $rows[] = $row->toArray();
+        }
         return $rows;
     }
 

@@ -79,7 +79,7 @@ class Days_Controller {
      *
      * @return mixed
      */
-    public function getSession($name, $default=null) {
+    public function session($name, $default=null) {
         // return value
         return Days_Request::getSession($name, $default);
     }
@@ -97,7 +97,7 @@ class Days_Controller {
      *
      * @return mixed
      */
-    public function getPost($name, $default=null) {
+    public function post($name, $default=null) {
         // return value
         return Days_Request::getPost($name, $default);
     }
