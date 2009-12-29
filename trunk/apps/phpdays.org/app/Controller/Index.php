@@ -21,19 +21,19 @@ class Controller_Index extends Days_Controller {
     public function indexAction() {
         // find blog posts
         $blogPosts = new Model_BlogPost();
-        $blogPosts->limit(10)->sort('date DESC');
+        $blogPosts->limit(10);//->sort('date DESC');
         // work with environment
         // get values
-        $userName   = $this->getPost('name', 'noname');
-        $sessEmail  = $this->getSession('email', '');
+        $userName   = $this->post('name', 'noname');
+        $sessEmail  = $this->session('email', '');
         $urlAddress = $this->url('address', '');
         // set value
         $this->setPost('name', 'Anton');
         $this->setSession('email', 'test@mail.com');
         // send message to developer (in firebug or in log file)
         $this->log('All right. All work well!');
-        // add event handler (need create method for handle this event)
-//        $this->event('user/logged', array($this, '_onUserLogin'));
+        // add event handler (should be created method for handle this event)
+//        $this->event('user.logged', array($this, '_onUserLogin'));
         // set data to template
         $this->posts = $blogPosts;
     }
