@@ -11,52 +11,45 @@
  * @subpackage   Db
  * @author       Anton Danilchenko <happy@phpdays.org>
  */
-class Days_Db_Table {
-    /** Table name */
+abstract class Days_Db_Table extends Days_Db_Rowset {
+    /** @var string Table name */
     protected $_name;
+    /** @var array Return rows in specified range (maximum range is 1000) */
+    protected $_limit = array(0, 1000);
+    /** @var array Sort order (column names) */
+    protected $_sort = array();
+    /** @var array Conditions as [tableName]=>[where clause with inserted values] */
+    protected $_where = array();
+
     /** @var Zend_Db_Adapter_Abstract */
     protected $_db;
     /** @var Zend_Db_Select */
     protected $_select;
-    /** Order by column */
-    protected $_order = 'date_create';
-    /** Table names to join */
+    /** @var array Table names to join */
     protected $_join = array();
+    /** @var array References between all tables */
     protected static $_structure;
 
     public function __construct() {
         // automatically define table name (if not defined)
         if (! isset($this->_name)) {
-            // delete prefix
-            $className = preg_replace('`^.*Model_Table_`', '', get_class($this));
-            // add slash after upper case letters
-            $name = preg_replace('`[^_]([A-Z])`', '_$1', $className);
-            // table name in lower case
-            $this->_name = strtolower($name);
+            // autodetect name of current table
+//            $this->_name = substr(get_class($this), strpos(get_class($this), 'Model_'));
+            $this->_name = preg_replace('`^.*Model_`', '', get_class($this));
         }
         // load tables structure
         if (is_null(self::$_structure)) {
-            self::$_structure = Days_Config::load('database')->get();
+            self::$_structure = Days_Config::load('models')->get();
         }
         // check table definition
         if (! array_key_exists($this->_name, self::$_structure)) {
-            throw new Days_Exception("Not defined table structure for `{$this->_name}`");
+            throw new Days_Exception("Not defined structure for table `{$this->_name}`");
         }
-        // set adapter for all tables
-        if (! $this->_db) {
-            $this->_db = Days_Db::factory();
-            $this->_select = $this->_db->select();
-        }
-    }
-
-    /**
-     * Quote table name or column name.
-     *
-     * @param string $name Column or table name
-     * @return string
-     */
-    protected function _quote($name) {
-        return $this->_db->quoteIdentifier($name);;
+        // set database connection
+        $this->_db = Days_Db::factory();
+        $this->_select = $this->_db->select();
+        // call parent constructor
+//        parent::__construct();
     }
 
     /**
@@ -149,14 +142,20 @@ class Days_Db_Table {
                 }
                 break;
             case 'last':
-                $results = $select->order("{$this->_order} DESC")->query();
+                foreach ($this->_sort as $column) {
+                    $select->order("{$column} DESC");
+                }
+                $results = $select->query();
                 while ($row = $results->fetch(Zend_Db::FETCH_ASSOC)) {
                     if (is_array($row))
                         $rowset[] = new Days_Db_Row($row, $this, $rowset);
                 }
                 break;
             case 'first':
-                $results = $select->order("{$this->_order} ASC")->query();
+                foreach ($this->_sort as $column) {
+                    $select->order("{$column} ASC");
+                }
+                $results = $select->query();
                 while ($row = $results->fetch(Zend_Db::FETCH_ASSOC)) {
                     if (is_array($row))
                         $rowset[] = new Days_Db_Row($row, $this, $rowset);
@@ -204,6 +203,26 @@ class Days_Db_Table {
     }
 
     /**
+     * Set limit of returned lines.
+     *
+     * @param int $rows Count of result rows
+     * @param int $page Number of page
+     * @return Days_Model
+     */
+    public function limit($rows, $page=1) {
+        // check page number
+        if (! is_numeric($page) OR $page < 1) {
+            $page = 1;
+        }
+        // set limit of rows
+        if ($rows < 1000 AND $rows > 0) {
+            $this->_limit = array(($page-1)*$rows, $page*$rows);
+        }
+        // link to current model
+        return $this;
+    }
+
+    /**
      * Get table info.
      *
      * @param string $column Return only this column info (or all columns, if not specified)
@@ -215,15 +234,15 @@ class Days_Db_Table {
         $table = (is_null($table) ? $this->_name : $table);
         // return info for all columns
         if (is_null($column)) {
-            return self::$_structure[$table]['columns'];
+            return self::$_structure[$table];
         }
         // convert magic column name
         $column = $this->column($column);
         // check column in table
-        if (! isset(self::$_structure[$table]['columns'][$column]))
+        if (! isset(self::$_structure[$table][$column]))
             return null;
         // return info about one column
-        return self::$_structure[$table]['columns'][$column];
+        return self::$_structure[$table][$column];
     }
 
     /**
@@ -234,20 +253,21 @@ class Days_Db_Table {
      */
     public function column($name) {
         // replace column name
-        if ('id'==$name OR 'pid'==$name)
+        if ('id'==$name OR 'pid'==$name) {
             $name = "_{$this->_name}_{$name}";
+        }
         return $name;
     }
 
     /**
-     * Create empty rowset.
+     * Create empty row.
      *
-     * @return Days_Db_Rowset
+     * @return Days_Db_Row
      */
-    public function create() {
-        $rowset = new Days_Db_Rowset($this);
-        return $rowset;
-    }
+//    public function create() {
+//        $row = new Days_Db_Row($this);
+//        return $row;
+//    }
 
     /**
      * Rename current table.
@@ -255,10 +275,10 @@ class Days_Db_Table {
      * @param string $newName New table name
      * @return Days_Db
      */
-    public function rename($newName) {
-        $this->_db->query("RENAME TABLE `{$this->_name}` TO `{$newName}`");
-        return $this;
-    }
+//    public function rename($newName) {
+//        $this->_db->query("RENAME TABLE `{$this->_name}` TO `{$newName}`");
+//        return $this;
+//    }
 
     /**
      * Create copy of current table.
@@ -267,18 +287,20 @@ class Days_Db_Table {
      * @param bool $withContent Also copy current table content to new table
      * @return Days_Db
      */
-    public function copy($newName, $withContent=false) {
-        $this->_db->query("CREATE TABLE `{$newName}` LIKE `{$this->_name}`");
-        if ($withContent)
-            $this->_db->query("INSERT INTO `{$newName}` SELECT * FROM `{$this->_name}` ");
-        return $this;
-    }
+//    public function copy($newName, $withContent=false) {
+//        $this->_db->query("CREATE TABLE `{$newName}` LIKE `{$this->_name}`");
+//        if ($withContent)
+//            $this->_db->query("INSERT INTO `{$newName}` SELECT * FROM `{$this->_name}` ");
+//        return $this;
+//    }
 
     public function save(Days_Db_Row $row) {
-        if (! isset($row->id))
+        if (! isset($row->id)) {
             $this->_insert($row);
-        else
+        }
+        else {
             $this->_update($row);
+        }
     }
 
     /**
@@ -290,7 +312,7 @@ class Days_Db_Table {
         if (! isset($row->id)) {
             throw new Days_Exception('Not specified `id` for row to delete');
         }
-        $where = $this->_db->quoteInto("_{$this->_name}_id=?", $row->id);
+        $where = $this->_db->quoteInto("{$this->column('id')}=?", $row->id);
         return ($this->_db->delete($this->_name, $where) > 0);
     }
 
@@ -310,7 +332,17 @@ class Days_Db_Table {
      */
     protected function _update(Days_Db_Row $row) {
         $data = $row->toArray();
-        $where = $this->_db->quoteInto("_{$this->_name}_id=?", $row->id);
+        $where = $this->_db->quoteInto("{$this->column('id')}=?", $row->id);
         return $this->_db->update($this->_name, $data, $where);
+    }
+
+    /**
+     * Quote table name or column name.
+     *
+     * @param string $name Column or table name
+     * @return string
+     */
+    protected function _quote($name) {
+        return $this->_db->quoteIdentifier($name);
     }
 }
