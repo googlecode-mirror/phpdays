@@ -24,6 +24,35 @@ require_once dirname(__FILE__) . '/InterfaceTest.php';
 class Days_View_DwooTest extends Days_View_InterfaceTest {
 
     protected function setUp() {
-        $this->view = new Days_View_Dwoo(new Days_View_Config());
+        $this->createDirectories();
+        // Create a stub for the Days_View_Config class.
+        $config = $this->getMock('Days_View_Config');
+        // Configure the stub.
+        $config->expects($this->once())
+            ->method('getTemplateDir')
+            ->will($this->returnValue($this->getTemplateDir()));
+        $config->expects($this->once())
+            ->method('getCompileDir')
+            ->will($this->returnValue($this->getCompileDir()));
+        $config->expects($this->once())
+            ->method('getCacheDir')
+            ->will($this->returnValue($this->getCacheDir()));
+        $this->view = new Days_View_Dwoo($config);
+    }
+    
+    protected function tearDown() {
+        $this->removeDirectories();
+    }
+    
+    private function createDirectories() {
+        mkdir($this->getTemplateDir());
+        mkdir($this->getCompileDir(), 0777, true);
+        mkdir($this->getCacheDir(), 0777, true);
+    }
+    
+    private function removeDirectories() {
+        rmdir($this->getTemplateDir());
+        rmdir($this->getCompileDir());
+        rmdir($this->getCacheDir());    
     }
 }

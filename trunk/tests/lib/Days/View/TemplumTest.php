@@ -21,6 +21,30 @@ require_once dirname(__FILE__) . '/InterfaceTest.php';
 class Days_View_TemplumTest extends Days_View_InterfaceTest {
 
     protected function setUp() {
-        $this->view = new Days_View_Templum(new Days_View_Config());
+        $this->createDirectories();
+        // Create a stub for the Days_View_Config class.
+        $config = $this->getMock('Days_View_Config');
+        // Configure the stub.
+        $config->expects($this->once())
+            ->method('getTemplateDir')
+            ->will($this->returnValue($this->getTemplateDir()));
+        $config->expects($this->once())
+            ->method('getCompileDir')
+            ->will($this->returnValue($this->getCompileDir()));
+        $this->view = new Days_View_Templum($config);
+    }
+    
+    protected function tearDown() {
+        $this->removeDirectories();
+    }
+    
+    private function createDirectories() {
+        mkdir($this->getTemplateDir());
+        mkdir($this->getCompileDir(), 0777, true);
+    }
+    
+    private function removeDirectories() {
+        rmdir($this->getTemplateDir());
+        rmdir($this->getCompileDir());
     }
 }
