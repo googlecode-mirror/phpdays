@@ -16,7 +16,6 @@ require_once dirname(__FILE__) . '/_stubs/Days_Config.php';
 abstract class Days_View_InterfaceTest extends PHPUnit_Framework_TestCase {
     /** @var Days_View_Interface */
     protected $view;
-    protected static $viewConfig;
 
     public function testTemplateNotFound() {
         $this->setExpectedException('Days_Exception');
@@ -80,9 +79,6 @@ abstract class Days_View_InterfaceTest extends PHPUnit_Framework_TestCase {
      * Fixture setup.
      */
     
-    /** @var array View configuration */
-    //protected static $viewConfig = null;
-        
     /** @var string Application directory */
     private static $_tempDir = null;
 
@@ -103,9 +99,24 @@ abstract class Days_View_InterfaceTest extends PHPUnit_Framework_TestCase {
      * End of the fuxture setup.
      */
     
+    /**
+     * Mock Days_View_Config's functions.
+     */
+    protected function getTemplateDir() {
+        return self::$_tempDir . 'Template';
+    }
+    
+    protected function getCompileDir() {
+        return self::$_tempDir . 'Compile';
+    }
+    
+    protected function getCacheDir() {
+        return self::$_tempDir . 'Cache';
+    }
+    
     /** 
      * Utility functions
-     */
+     */   
     private static function _tempDir() {
         $tempName = tempnam(sys_get_temp_dir(), 'phpdays_');
         if ($tempName && unlink($tempName) && mkdir($tempName)) {
@@ -126,6 +137,6 @@ abstract class Days_View_InterfaceTest extends PHPUnit_Framework_TestCase {
         $config = new Days_View_Config();
         mkdir($config->getTemplateDir());
         mkdir($config->getCompileDir(), 0777, true);
-        mkdir($config->getCacheDir(), 0777, true); 
+        mkdir($config->getCacheDir(), 0777, true);
     }
 }
