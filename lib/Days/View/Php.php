@@ -50,21 +50,12 @@ class Days_View_Php extends Days_View_Abstract implements Days_View_Interface {
     }
 
     /**
-     * Set variable.
+     * Set a variable.
      *
      * @param string $var Variable name
      * @param mixed $value Variable value
-     * @param string $delimiter Values separator
      */
-    public function set($var, $value, $delimiter=null) {
-        // add value to existing
-        if (! is_null($delimiter) AND is_string($delimiter)) {
-            $oldValue = $this->get($var, '');
-            // set seperator for existing value only
-            if (! empty($oldValue))
-                $value = "{$value}{$delimiter}{$oldValue}";
-        }
-        // set new value
+    public function set($var, $value) {
         $this->_vars[$var] = $value;
     }
 
