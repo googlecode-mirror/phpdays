@@ -14,5 +14,5 @@
 interface Days_View_Interface {
     public function render($template);
     public function get($var, $default=null);
-    public function set($var, $value, $delimiter=null);
+    public function set($var, $value);
 }
