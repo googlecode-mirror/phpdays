@@ -102,7 +102,7 @@ If user use call `witch(model1, model2, ...)` - than into model processed:
 
 == Validator ==
 
-[EnLibDaysValidate Days_Validate] - controleer of een variabele door criteria en terugkeer heeft gemaakt en een `echte waarde heeft.
+[NlLibDaysValidate Days_Validate] - controleer of een variabele door criteria en terugkeer heeft gemaakt en een `echte waarde heeft.
 {{{
 $age = 21;
 $mail = 'Tom@Jerry.com';
@@ -124,7 +124,7 @@ Tasks:
 
 == Event (issue #15) ==
 
-[EnLibDaysEvent Days_Event] - een implementatie van de Observer patroon. Helpt join veel componenten op een systeem zonder wijzigingen in een component.
+[NlLibDaysEvent Days_Event] - een implementatie van de Observer patroon. Helpt join veel componenten op een systeem zonder wijzigingen in een component.
 
 Days library events:
 {{{
@@ -145,7 +145,7 @@ class Days_User {
 ...
 }}}
 
-Jou appplicatie events zijn in de [EnLibDaysModel models] _ (voeg de naam van uw aanvraag voor een evenement naam) _:
+Jou appplicatie events zijn in de [NlLibDaysModel models] _ (voeg de naam van uw aanvraag voor een evenement naam) _:
 {{{
 class Myapp_Model_Rss {
   public function import($path) {
@@ -186,4 +186,4 @@ function rssNotLoaded() {
 
 == Form ==
 
-[EnLibDaysForm Days_Form] - proces HTML-formulieren. Als alle gegevens correct worden doorgegeven - dan is de uitvoering van een formulier handler.
+[NlLibDaysForm Days_Form] - proces HTML-formulieren. Als alle gegevens correct worden doorgegeven - dan is de uitvoering van een formulier handler.
