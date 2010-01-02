@@ -36,7 +36,7 @@ class App_Controller_System_Autorun {
 }
 }}}
 
-In the static method `run()`, call `Days_Event::add` and the rest of the code that must be executed immediately after the framework's core initialization. The `engine/autorun` parameter in the application's [EnLibDaysConfig configuration file] must be equal to `true`.
+In the static method `run()`, call `Days_Event::add` and the rest of the code that must be executed immediately after the framework's core initialization. The `engine/autorun` parameter in the application's [NlLibDaysConfig configuration file] must be equal to `true`.
 
 ==== An Example ====
 
@@ -51,7 +51,7 @@ In your application, you can define your own custom events. In this case, your a
 
 ==== Examples ====
 
-1) Events from the framework's [EnLibDaysUser Days_User] class
+1) Events from the framework's [NlLibDaysUser Days_User] class
 {{{
 class Days_User {
   public function login($username, $password) {
