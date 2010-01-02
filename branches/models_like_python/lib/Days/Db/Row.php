@@ -57,8 +57,6 @@ class Days_Db_Row implements ArrayAccess {
      * @param $value string: Value of specified variable
      */
     final public function offsetSet($offset, $value) {
-        // magic field name
-        $offset = $this->_table->column($offset);
         $this->_values[$offset] = $value;
     }
 
@@ -90,10 +88,8 @@ class Days_Db_Row implements ArrayAccess {
      * @return mixed
      */
     final public function offsetGet($offset) {
-        // magic field name
-        $offset = $this->_table->column($offset);
         // load virtual value
-        if (! array_key_exists($offset, $this->_table->info()) AND ! array_key_exists($offset, $this->_values)) {
+        if (! array_key_exists($offset, Days_Db_Table::info()) AND ! array_key_exists($offset, $this->_values)) {
             // current row not saved physical
             if (! isset ($this->id))
                 return null;
@@ -115,15 +111,15 @@ class Days_Db_Row implements ArrayAccess {
             // set column name and value
             switch ($offset) {
                 case 'child':
-                    $currentTableColumnName  = $this->_table->column('pid');
+                    $currentTableColumnName  = 'pid';
                     $currentTableColumnValue = $this->id;
                     break;
                 case 'parent':
-                    $currentTableColumnName  = $this->_table->column('pid');
+                    $currentTableColumnName  = 'pid';
                     $currentTableColumnValue = $this->pid;
                     break;
                 default:
-                    $currentTableColumnName  = $this->_table->column('id');
+                    $currentTableColumnName  = 'id';
                     $currentTableColumnValue = $this->id;
                     break;
             }
@@ -158,8 +154,6 @@ class Days_Db_Row implements ArrayAccess {
      * @return bool
      */
     final public function offsetExists($offset) {
-        // magic field name
-        $offset = $this->_table->column($offset);
         return isset($this->_values[$offset]);
     }
 
@@ -178,8 +172,6 @@ class Days_Db_Row implements ArrayAccess {
      * @param string $offset Int or string variable name
      */
     final public function offsetUnset($offset) {
-        // magic field name
-        $offset = $this->_table->column($offset);
         unset ($this->_values[$offset]);
     }
 
