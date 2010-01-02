@@ -1,5 +1,5 @@
 #summary Ideeën voor verbetering van het project..
-#sidebar En
+#sidebar Nl
 <wiki:comment>revision: 1 </wiki:comment>
 
 Op deze pagina hebben we nieuwe ideeën te bespreken voor phpDays. Plaats uw ideeën hieronder in opmerkingen.
