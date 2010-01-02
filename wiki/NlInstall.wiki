@@ -1,5 +1,5 @@
 #summary Installeer in een framework en maak een nieuw project.
-#sidebar En
+#sidebar Nl
 <wiki:comment>revision: 1</wiki:comment>
 
 === Downloaden ===
