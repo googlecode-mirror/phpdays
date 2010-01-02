@@ -11,7 +11,7 @@
 === 1.1 beta2 ^(15 November 2009)^ ===
 
  * Maak `apps/phpdays.org`
- * Voeg een class [EnLibDaysEvent Days_Event], Observeer design pattern implementeren
+ * Voeg een class [NlLibDaysEvent Days_Event], Observeer design pattern implementeren
  * Voeg unit tests uit `Days_View_*` en [EnLibDaysEvent Days_Event]
  * r59 [EnLibDaysEngine Days_Engine] Verwijder auto-conversion van Ajax data naar JSON
  * r193 Fix bug in Templum: gooi uitzondering als sjabloon contein php-tags
