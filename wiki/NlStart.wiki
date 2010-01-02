@@ -4,9 +4,9 @@
 
 === [En NL] » Table of Contents ===
 
- * [EnStartAbout Algemene informatie]
- * applicaties [EnStartModel models]
- * applicaties [EnStartController controllers]
- * [EnStartView pagina presentatie] een gebruiker
- * processing html [EnStartForm forms]
- * toevoegen [EnStartAjax Ajax] tot een applicatie
+ * [NlStartAbout Algemene informatie]
+ * applicaties [NlStartModel models]
+ * applicaties [NlStartController controllers]
+ * [NlStartView pagina presentatie] een gebruiker
+ * processing html [NlStartForm forms]
+ * toevoegen [NlStartAjax Ajax] tot een applicatie
