@@ -1,5 +1,5 @@
 #summary samenvatting blog applicatie modellen (snel start).
-#sidebar EnStart
+#sidebar NlStart
 <wiki:comment>revision: 1</wiki:comment>
 
 Alle modellen die gebruikt worden, worden verwerkt in onze blog applicatie. We kunnen gebruik maken van standaard basis phpDays 'modellen, we kunnen ze uitbreiden naar uw wensen en het beste wat bij u past. En dat is wat wij doen.
@@ -79,4 +79,4 @@ We hebben een klasse voor modellen die objecten voor een data-opslag. De gegeven
 
 Wat we opmerkte is dat we niet kunnen verklaren over eventuele specialistische gegevens, zoals de belangrijkste gebieden van objecten. Key velden worden automatisch aangemaakt.
 
-Nu is het tijd om verder te gaan tot het creëren [EnStartController application's controllers] van controllers applicaties.
+Nu is het tijd om verder te gaan tot het creëren [NlStartController application's controllers] van controllers applicaties.
