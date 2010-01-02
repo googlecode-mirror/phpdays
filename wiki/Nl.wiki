@@ -7,29 +7,29 @@
 
 ----
 
-*phpDays* -  flexibele php5 kader gebaseerd op de [EnMvc MVC] en [EnLibDaysDbTable ORM] design patterns.
+*phpDays* -  flexibele php5 kader gebaseerd op de [NlMvc MVC] en [NlLibDaysDbTable ORM] design patterns.
 
 === Begin Nu ===
 
- * [EnAbout About] het project _(kenmerken)_
- * [EnChangelog Changelog] _(veranderingen tussen project-versies)_
- * [EnInstall Install] het kader op uw server en vervolgens configureren van een nieuw project
- * [EnUpgrade Upgrade] een aanvraag van een vorige versie
- * [EnStart Snel start] voor je eerste applicaties als ze draaien
- * [EnAnswers Antwoord] Antwoord op u vragen
+ * [NlAbout About] het project _(kenmerken)_
+ * [NlChangelog Changelog] _(veranderingen tussen project-versies)_
+ * [NlInstall Install] het kader op uw server en vervolgens configureren van een nieuw project
+ * [NlUpgrade Upgrade] een aanvraag van een vorige versie
+ * [NlStart Snel start] voor je eerste applicaties als ze draaien
+ * [NlAnswers Antwoord] Antwoord op u vragen
  * [http://code.google.com/p/phpdays/w/list?q=label:Lang-En Alle pagina's] in het Engels
 
 === Elke dag gebruik ===
 
- * [EnMvc MVC] - Basisbegrippen die nodig zijn om te werken met het kader
- * [EnLib Library] klasse referentie beschrijvingen
- * [EnAjax Ajax] ondersteuning in uw toepassingen
- * [EnMultisite Multisite] - beheren van veel sites in framework
+ * [NlMvc MVC] - Basisbegrippen die nodig zijn om te werken met het kader
+ * [NlLib Library] klasse referentie beschrijvingen
+ * [NlAjax Ajax] ondersteuning in uw toepassingen
+ * [NlMultisite Multisite] - beheren van veel sites in framework
 
 === Voor projectleden ===
 
- * [EnCoding Entry] Inschrijving in het development team
- * [EnCodingStyle Coding style] _(syntaxis normen van php, html, css, js en YAML-bestanden)_
- * [EnCodingApp Improve application] base in framework
- * [EnIdea Ideas] voor verbetering van het project
- * [EnDoc Documentation] maak _(wiki pagina syntax, pagina names, translations)_es
+ * [NlCoding Entry] Inschrijving in het development team
+ * [NlCodingStyle Coding style] _(syntaxis normen van php, html, css, js en YAML-bestanden)_
+ * [NlCodingApp Improve application] base in framework
+ * [NlIdea Ideas] voor verbetering van het project
+ * [NlDoc Documentation] maak _(wiki pagina syntax, pagina names, translations)_es
