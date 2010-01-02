@@ -7,14 +7,14 @@ Met * phpDays * zal u in staat zijn het proces te versnellen en het creëren van
 === phpDays functies ===
 
  * best [http://code.google.com/p/phpdays/people/list phpDays community]
- * phpDays is gebouwd of basis van [EnMvc MVC]
- * De volledige ondersteuning [EnLibDaysDbTable ORM] _(no need to write SQL queries)_
- * Biedt toegang tot databases met behulp van een [EnLibDaysDb database abstraction layer] _(writing SQL queries)_
- * phpDays alle instellingen zijn vastgelegd in een[EnLibDaysConfig configuration file] in het [http://en.wikipedia.org/wiki/YAML YAML] format
+ * phpDays is gebouwd of basis van [NlMvc MVC]
+ * De volledige ondersteuning [NlLibDaysDbTable ORM] _(no need to write SQL queries)_
+ * Biedt toegang tot databases met behulp van een [NlLibDaysDb database abstraction layer] _(writing SQL queries)_
+ * phpDays alle instellingen zijn vastgelegd in een[NlLibDaysConfig configuration file] in het [http://en.wikipedia.org/wiki/YAML YAML] format
  * De klassen worden automatisch geladen _(vergeet niet `include()` and `require()`)_
  * Volledige steun van alle geschreven talen _(inclusief Russian)_ door het gebruik van *UTF-8* encoding
- * Voor het volledige support [EnAjax AJAX] _(aangeraden om hier te kijken [http://jquery.com jQuery])_
- * [EnDaysLog show errors] volgens uw wensen _(ondersteund in [http://firephp.org FirePHP], in browser, in simpele file, en in een SQLite)_
+ * Voor het volledige support [NlAjax AJAX] _(aangeraden om hier te kijken [http://jquery.com jQuery])_
+ * [NlDaysLog show errors] volgens uw wensen _(ondersteund in [http://firephp.org FirePHP], in browser, in simpele file, en in een SQLite)_
  * print informatie over de toepassingen uitvoering _(executed SQL queries, namen van de uitgevoerde methoden)_
  * Handige klasse hiërarchie_(like used in Zend Framework)_
  * _and something else_
