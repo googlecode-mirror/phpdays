@@ -10,36 +10,36 @@ De eerste release inclusief ORM implementatie, logging, stabiele project structu
 
  * Verbetering van de methode `find()` voor "one" row: ga terug naar null als de rij niet bestaat
  * verbeter fouten in method `find()` voor "one" rij (als de rij niet bestaat)
- * verbeter bug met method `create()` in [EnLibDaysDbRowset Days_Db_Rowset] en [EnLibDaysDbTable Days_Db_Table]
+ * verbeter bug met method `create()` in [NlLibDaysDbRowset Days_Db_Rowset] en [NlLibDaysDbTable Days_Db_Table]
  * breng in een werkende staat van php-templates *(xaoc)*
  * even verkleinen in het blog-example *(xaoc)*
  * presenteren in een goed werkend conditie in blog-example *(xaoc)*
 
 === 1.0 release candidate 2 - _7 October 2009_ ===
 
- * verbeter `profile()` method in [EnLibDaysLog Days_Log] class _(stuur bericht alleen als firephp logging)_
+ * verbeter `profile()` method in [NlLibDaysLog Days_Log] class _(stuur bericht alleen als firephp logging)_
 * Bug fix met onjuiste definitie controller / actie met lege basis pad
  * Fix onjuiste Pathes vervangen met lege basis pad
  * Fix show waarschuwing op servers zonder standaard tijdzone
 
 === 1.0 release candidate - _6 October 2009_ ===
 
- * Voeg profiel toe [EnLibDaysDbTable Days_Db_Table] class
- * Voegtoe `child` en `parent` magic fields into [EnLibDaysDbRow Days_Db_Row]
- * Voegtoe `profile()` method into [EnLibDaysLog Days_Log]
+ * Voeg profiel toe [NlLibDaysDbTable Days_Db_Table] class
+ * Voegtoe `child` en `parent` magic fields into [NlLibDaysDbRow Days_Db_Row]
+ * Voegtoe `profile()` method into [NlLibDaysLog Days_Log]
  * update Spyc yaml parser to version 0.4.5
  * Verander applications into "apps" directory (voegtoe directories "app" en "public")
  * Voegtoe smarty plugin `helper` voor call helpers in templates
  * Voegtoe ondersteuning van de path (voor werk in directory)
  * reworked en presented in de werking condition the blog-example *(xaoc)*
- * Voegtoe method `_quote` in [EnLibDaysDbTable Days_Db_Table] for quote identifiers
- * quote column names and table names in join statements (method `find()` in [EnLibDaysDbTable Days_Db_Table])
+ * Voegtoe method `_quote` in [NlLibDaysDbTable Days_Db_Table] for quote identifiers
+ * quote column names and table names in join statements (method `find()` in [NlLibDaysDbTable Days_Db_Table])
  * add prefix to model classes. _Change this into you projects_
  * separetely handle `PostAction` before execute specified action
  * reworked and presented in the working condition the blog-example *(xaoc)*
  * Verbeter fout met connection View in ORM (link MxN), voegtoe shielding behalf View *(xaoc)*
  * Verander applicatie examples (fix bugs)
- * Verbeter in [EnLibDaysEngine DaysEngine] for loading file in `CamelCase`
+ * Verbeter in [NlLibDaysEngine DaysEngine] for loading file in `CamelCase`
  * Verbeter een fout in native php templates bij default
  * Voeg een nieuwe template engine toe - Dwoo
  * code cleanup and refactoring
@@ -48,24 +48,24 @@ De eerste release inclusief ORM implementatie, logging, stabiele project structu
 
 === 1.0 beta 3 - _21 September 2009_ ===
 
- * verander method info() in [EnlibDaysDbTable Days_Db_Table] en keer terug "null" if column not exists
- * implement 1x1, 1xN, MxN relations in [EnLibDaysDbTable Days_Db_Table] (need full tests)
- * verander de method info() in [EnLibDaysDbTable Days_Db_Table] voor het terug info over specifieke tabel
- * refactoring code into [EnLibDaysEngine DaysEngine] class
- * [EnLibDaysLog Days_Log]: voegtoe implementatie van de method `logtoSqlite()` *(xaoc)*
+ * verander method info() in [NllibDaysDbTable Days_Db_Table] en keer terug "null" if column not exists
+ * implement 1x1, 1xN, MxN relations in [NlLibDaysDbTable Days_Db_Table] (need full tests)
+ * verander de method info() in [NlLibDaysDbTable Days_Db_Table] voor het terug info over specifieke tabel
+ * refactoring code into [NlLibDaysEngine DaysEngine] class
+ * [NlLibDaysLog Days_Log]: voegtoe implementatie van de method `logtoSqlite()` *(xaoc)*
  * slightly verander het formaat van de output `FirePhp` *(xaoc)*
  * Verbeter Days_Log: voegtoe error levels
  * Repareer fout [EnLibDaysLog DaysLog]: voegtoe method `logtoSqlite` voor sqlite logging
  * Voegtoe comments in configuratie files
  * Voegtoe configuratie parameter "log/level"
  * Voegtoe "View/block" folder into applications for template blocks
- * refactoring van [EnLibDaysController Days_Controller], [EnLibDaysEngine Days_Engine]: pass inhoud naam sjabloon op controller object creatie
- * refactoring of [EnLibDaysController Days_Controller]: change logic in "getContent" method - return content without layout
- * Toegevoegde method "toArray" voor terugkeer van alle gegevens arrays in [EnLibDaysDbRowset Days_Db_Rowset]
- * Herstel fout in [EnLibDaysDbTable Days_Db_Table]: vervang en creëer een object uit Zend_Db tot innerlijke in de class
- * Herstel fout in [EnLibDaysDbRow Days_Db_Row] voor het niet bestaande kolommen zijn er uitzonderingen
- * Herstel fout in [EnLibDaysDbRow Days_Db_Row] en controleer de tabel structuur.
- * Verbeter [EnLibDaysDbRow Days_Db_Row] de bovenstaande tabel.
+ * refactoring van [NlLibDaysController Days_Controller], [NlLibDaysEngine Days_Engine]: pass inhoud naam sjabloon op controller object creatie
+ * refactoring of [NlLibDaysController Days_Controller]: change logic in "getContent" method - return content without layout
+ * Toegevoegde method "toArray" voor terugkeer van alle gegevens arrays in [NlLibDaysDbRowset Days_Db_Rowset]
+ * Herstel fout in [NlLibDaysDbTable Days_Db_Table]: vervang en creëer een object uit Zend_Db tot innerlijke in de class
+ * Herstel fout in [NlLibDaysDbRow Days_Db_Row] voor het niet bestaande kolommen zijn er uitzonderingen
+ * Herstel fout in [NlLibDaysDbRow Days_Db_Row] en controleer de tabel structuur.
+ * Verbeter [NlLibDaysDbRow Days_Db_Row] de bovenstaande tabel.
  * Voeg ondersteuning `AjaxAction` en `PostAction` in controllers
 
 === 1.0 beta 2 - _8 September 2009_ ===
@@ -74,7 +74,7 @@ De eerste release inclusief ORM implementatie, logging, stabiele project structu
 
 === 1.0 beta 1 - _4 September 2009_ ===
 
- * Toegevoegd ORM ondersteuning met [EnLibDaysDbTable Days_Db_Table] _(Active Record and Date Mapper patterns)_
+ * Toegevoegd ORM ondersteuning met [NlLibDaysDbTable Days_Db_Table] _(Active Record and Date Mapper patterns)_
  * Toegevoegd `apps/blog` directory voor develop blog applicatie
  * verplaatst pld test applicatie naar `app` to `apps/new`
  * update Zend Framework library to versie 1.9.2
@@ -82,7 +82,7 @@ De eerste release inclusief ORM implementatie, logging, stabiele project structu
 
 === 1.0 alpha 5 - _17 August 2009_ ===
 
- * Voeg een nieuw component toe [EnLibDaysDbTable Days_Db_Table] (user for create models)
+ * Voeg een nieuw component toe [NlLibDaysDbTable Days_Db_Table] (user for create models)
  * upgrade Zend Framework naar version 1.9.1
  * Repareer de fouten en voeg de model class name toe
 
@@ -92,13 +92,13 @@ De eerste release inclusief ORM implementatie, logging, stabiele project structu
 
 === 1.0 alpha 3 - _9 August 2009_ ===
 
- * [EnLibDaysLog show error page] (404 - page not found; redirect; etc)
- * [EnAjax ajax support] Toegevoegd
+ * [NlLibDaysLog show error page] (404 - page not found; redirect; etc)
+ * [NlAjax ajax support] Toegevoegd
  * Maak de bug in Return part of URL addres by parameter nummer
 
 === 1.0 alpha 2 - _30th July 2009_ ===
 
- * U moet nu een `app/Controller/Index.php` in plaats van de oude `app/controller/IndexController.php` tot wijziging van de structuur van het project. Kijk naar de [EnMvc updated manual]. Deze wijzigingen hebben betrekking op [EnMvc model] en [EnMvc presentation]
+ * U moet nu een `app/Controller/Index.php` in plaats van de oude `app/controller/IndexController.php` tot wijziging van de structuur van het project. Kijk naar de [NlMvc updated manual]. Deze wijzigingen hebben betrekking op [NlMvc model] en [NlMvc presentation]
 
 === 1.0 alpha 1 - _23 July 2009_ ===
 
