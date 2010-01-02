@@ -1,5 +1,5 @@
 #summary ORM te werken met tabellen.
-#sidebar EnLib
+#sidebar NlLib
 <wiki:comment>revision: 1</wiki:comment>
 
 === General information ===
