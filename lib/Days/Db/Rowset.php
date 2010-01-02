@@ -28,7 +28,7 @@ abstract class Days_Db_Rowset implements Countable, ArrayAccess, Iterator {
     }
 
     /**
-     * Return count of variables.
+     * Return count of elements.
      *
      * @return int
      */

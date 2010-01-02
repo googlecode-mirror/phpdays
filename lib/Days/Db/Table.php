@@ -80,11 +80,11 @@ abstract class Days_Db_Table extends Days_Db_Rowset {
             $joinId = "_{$joinTable}_id";
             $currentId = "_{$currentTable}_id";
             // 1x1
-            if (is_array($this->info($joinId))) {
+            if (is_array(self::info($this->name(), $joinId))) {
                 $select->join($joinTable, "{$this->_quote($currentTable)}.{$this->_quote($joinId)}={$this->_quote($joinTable)}.{$this->_quote($joinId)}", array());
             }
             // 1xN
-            elseif (is_array($this->info($currentId, $joinTable))) {
+            elseif (is_array(self::info($joinTable, $currentId))) {
                 $select->join($joinTable, "{$this->_quote($currentTable)}.{$this->_quote($currentId)}={$this->_quote($joinTable)}.{$this->_quote($currentId)}", array());
             }
             // MxN
@@ -111,12 +111,12 @@ abstract class Days_Db_Table extends Days_Db_Rowset {
                 else {
                     // replace magic column names
                     preg_match('`([a-z0-9_.]+) *(<|>|<=|>=|<>|!=|=|IN|NOT IN)?`i', $name, $mathes);
-                    // real column name (from magic column name)
-                    $column = $this->column($mathes[1]);
-                    $sign = (isset($mathes[2]) ? strtoupper($mathes[2]) : '=');
+                    $column = $mathes[1];
+                    $sign   = (isset($mathes[2]) ? strtoupper($mathes[2]) : '=');
                     // many values in one position
-                    if (is_array($value) AND count($value)>1 AND 'NOT IN'!=$sign)
+                    if (is_array($value) AND count($value)>1 AND 'NOT IN'!=$sign) {
                         $sign = 'IN';
+                    }
                     $question = (('IN'==$sign OR 'NOT IN'==$sign) ? '(?)' : '?');
                     $name = "{$column} {$sign} {$question}";
                     $select->where($name, $value);
@@ -225,38 +225,23 @@ abstract class Days_Db_Table extends Days_Db_Rowset {
     /**
      * Get table info.
      *
+     * @param string $table Table name
      * @param string $column Return only this column info (or all columns, if not specified)
-     * @param string $table Table name (or current table, if not specified)
      * @return array
      */
-    public function info($column=null, $table=null) {
+    public static function info($table, $column=null) {
         // set table name
-        $table = (is_null($table) ? $this->_name : $table);
+//        $table = (is_null($table) ? $this->_name : $table);
         // return info for all columns
         if (is_null($column)) {
             return self::$_structure[$table];
         }
-        // convert magic column name
-        $column = $this->column($column);
         // check column in table
-        if (! isset(self::$_structure[$table][$column]))
+        if (! isset(self::$_structure[$table][$column])) {
             return null;
+        }
         // return info about one column
         return self::$_structure[$table][$column];
-    }
-
-    /**
-     * Convert magic column name to physical.
-     *
-     * @param string $name Column name
-     * @return Physical column name
-     */
-    public function column($name) {
-        // replace column name
-        if ('id'==$name OR 'pid'==$name) {
-            $name = "_{$this->_name}_{$name}";
-        }
-        return $name;
     }
 
     /**
@@ -312,7 +297,7 @@ abstract class Days_Db_Table extends Days_Db_Rowset {
         if (! isset($row->id)) {
             throw new Days_Exception('Not specified `id` for row to delete');
         }
-        $where = $this->_db->quoteInto("{$this->column('id')}=?", $row->id);
+        $where = $this->_db->quoteInto("id=?", $row->id);
         return ($this->_db->delete($this->_name, $where) > 0);
     }
 
@@ -332,7 +317,7 @@ abstract class Days_Db_Table extends Days_Db_Rowset {
      */
     protected function _update(Days_Db_Row $row) {
         $data = $row->toArray();
-        $where = $this->_db->quoteInto("{$this->column('id')}=?", $row->id);
+        $where = $this->_db->quoteInto("id=?", $row->id);
         return $this->_db->update($this->_name, $data, $where);
     }
 
