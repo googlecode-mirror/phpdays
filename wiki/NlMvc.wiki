@@ -6,6 +6,6 @@
 
 Denk aan het gebruik bij de volgende regels en het maken van een nieuwe aanvraag:
 
- * [NlController Controller] - Beslis welke acties er zijn, en maak gebruik van verschillende modellen om gegevens te verkrijgen en dan geeft de gegevens naar de mening een component.
- * [NlView View] - informatie weergegeven. Het is een sjabloon html pagina waarin de gegevens is opgesteld wat door de controller wordt ingevoegd
- * [NlModel Model] - haalt en wijzigt gegevens in een database
+ * [EnController Controller] - Beslis welke acties er zijn, en maak gebruik van verschillende modellen om gegevens te verkrijgen en dan geeft de gegevens naar de mening een component.
+ * [EnView View] - informatie weergegeven. Het is een sjabloon html pagina waarin de gegevens is opgesteld wat door de controller wordt ingevoegd
+ * [EnModel Model] - haalt en wijzigt gegevens in een database
