@@ -4,7 +4,7 @@
 
 Alle modellen die gebruikt worden, worden verwerkt in onze blog applicatie. We kunnen gebruik maken van standaard basis phpDays 'modellen, we kunnen ze uitbreiden naar uw wensen en het beste wat bij u past. En dat is wat wij doen.
 
-Als u nog niets gelezen heeft over de de modellen? dan is het tijd om dat te doen. Hieronder wij maken modellen [EnLibDaysModel models] voor onze toepassing.
+Als u nog niets gelezen heeft over de de modellen? dan is het tijd om dat te doen. Hieronder wij maken modellen [NlLibDaysModel models] voor onze toepassing.
 
 === Het creëren van modellen voor de blog toepassing ===
 
