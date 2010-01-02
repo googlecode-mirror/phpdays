@@ -1,23 +1,23 @@
 #summary phpDays bibliotheek.
-#sidebar En
+#sidebar Nl
 <wiki:comment>revision: 1</wiki:comment>
 
 === [NlLib] » System engine ===
 
- * [EnMvc MVC] ([EnLibDaysModel Days_Model], [EnLibDaysView Days_View], [EnLibDaysController Days_Controller]) - basisbegrippen die nodig zijn om te werken met framework
- * [EnLibDaysConfig Days_Config] - werken met de configuratie van de site
- * [EnLibDaysDb Days_Db] - werk met database
- * [EnLibDaysDbTable Days_Db_Table] - implementeren ORM vertegenwoordiging van de database tabellen
- * [EnLibDaysEngine Days_Engine] - uitgangspunt van binnenkomst
- * [EnLibDaysEvent Days_Event] - implementeren van [http://en.wikipedia.org/wiki/Observer_pattern observer] design patroon
- * [EnLibDaysLog Days_Log] fouten opslaan en debugging informatie- 
- * [EnLibDaysRequest Days_Request] - user antwoordt in de browser
- * [EnLibDaysResponse Days_Response] - user reactie in de browser
- * [EnLibDaysUrl Days_Url] - werken met url addressen
+ * [NlMvc MVC] ([NlLibDaysModel Days_Model], [NlLibDaysView Days_View], [NlLibDaysController Days_Controller]) - basisbegrippen die nodig zijn om te werken met framework
+ * [NlLibDaysConfig Days_Config] - werken met de configuratie van de site
+ * [NlLibDaysDb Days_Db] - werk met database
+ * [NlLibDaysDbTable Days_Db_Table] - implementeren ORM vertegenwoordiging van de database tabellen
+ * [NlLibDaysEngine Days_Engine] - uitgangspunt van binnenkomst
+ * [NlLibDaysEvent Days_Event] - implementeren van [http://en.wikipedia.org/wiki/Observer_pattern observer] design patroon
+ * [NlLibDaysLog Days_Log] fouten opslaan en debugging informatie- 
+ * [NlLibDaysRequest Days_Request] - user antwoordt in de browser
+ * [NlLibDaysResponse Days_Response] - user reactie in de browser
+ * [NlLibDaysUrl Days_Url] - werken met url addressen
 
 === In ontwikkeling ===
 
- * [EnLibDaysAcl Days_Acl] _(Aceess Control List)_ - afbakening van de rechten van toegang tot delen van de site
- * [EnLibDaysFilter Days_Filter] - filteren van gegevens afkomstig van de gebruiker _ (ook bekend als validatie of verificatie van gegevens) _
- * [EnLibDaysForm Days_Form] - verwerking van gegevens uit HTML-formulieren
- * [EnLibDaysUser Days_User] - werk met user _(authorization, authentication, end of session)_
+ * [NlLibDaysAcl Days_Acl] _(Aceess Control List)_ - afbakening van de rechten van toegang tot delen van de site
+ * [NlLibDaysFilter Days_Filter] - filteren van gegevens afkomstig van de gebruiker _ (ook bekend als validatie of verificatie van gegevens) _
+ * [NlLibDaysForm Days_Form] - verwerking van gegevens uit HTML-formulieren
+ * [NlLibDaysUser Days_User] - werk met user _(authorization, authentication, end of session)_
