@@ -1,10 +1,10 @@
 #summary Overzicht (snel start).
-#sidebar EnStart
+#sidebar NlStart
 <wiki:comment>revision: 1</wiki:comment>
 
 === Snelstart Handleiding ===
 
-Eerst [EnInstall installeer de phpDays framework] op je server. Leer over phpDays' [EnCodingStyle coding standard] _(Dit zal u helpen en andere projectleden te begrijpen van de code die u hebt gemaakt, zelfs een paar jaar later)_.
+Eerst [NlInstall installeer de phpDays framework] op je server. Leer over phpDays' [NlCodingStyle coding standard] _(Dit zal u helpen en andere projectleden te begrijpen van de code die u hebt gemaakt, zelfs een paar jaar later)_.
 
 === Project Structuur ===
 
@@ -20,10 +20,10 @@ Het "systeem" directory bevat submappen: "cache" (cache), `doc` (documentatie pr
 
 De `config" directory bevat configuratie-bestanden van toepassing: `development.yaml` (voor een toepassing in ontwikkeling) en "production.yaml" (voor een productie).
 
-Nu zie je de drie belangrijkste mappen met die we voortdurend zullen werken: "Model`, `Hobby`, `Controller` (afgekort als [EnMvc MVC] - lees meer over).
+Nu zie je de drie belangrijkste mappen met die we voortdurend zullen werken: "Model`, `Hobby`, `Controller` (afgekort als [NlMvc MVC] - lees meer over).
 
 === Maken van een blog site ===
 
 Waar valt te beginnen? Laten we een eenvoudig naar een zeer doeltreffend voorbeeld kijken - een blog site. De gebruikers moeten in staat zijn om door de artikelen heen te bladeren en op de site. Verder registreren ze hun eigen artikelen en commentaar toevoegen.
 
-Laten we eens zien hoe snel en elegant kan worden gedaan in 2 uur. Is er genoeg tijd? Dan verder naar het volgende onderdeel - modellen [EnStartModel aanvraag's].
+Laten we eens zien hoe snel en elegant kan worden gedaan in 2 uur. Is er genoeg tijd? Dan verder naar het volgende onderdeel - modellen [NlStartModel aanvraag's].
