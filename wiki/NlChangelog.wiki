@@ -12,18 +12,18 @@
 
  * Maak `apps/phpdays.org`
  * Voeg een class [NlLibDaysEvent Days_Event], Observeer design pattern implementeren
- * Voeg unit tests uit `Days_View_*` en [EnLibDaysEvent Days_Event]
- * r59 [EnLibDaysEngine Days_Engine] Verwijder auto-conversion van Ajax data naar JSON
+ * Voeg unit tests uit `Days_View_*` en [NlLibDaysEvent Days_Event]
+ * r59 [NlLibDaysEngine Days_Engine] Verwijder auto-conversion van Ajax data naar JSON
  * r193 Fix bug in Templum: gooi uitzondering als sjabloon contein php-tags
  * r200 Verander url sf.net naar googlecode.com
- * r247 Maak [EnLibDaysToolAppGenerator Days_Tool_AppGenerator]. Verander `@package` en `@subpackage` in all Days classes
- * r255 Voeg een class [EnLibDaysRouter Days_Router]. Voeg methods "copy" en "rename" naar [EnLibDaysDbTable Days_Db_Table]
- * r262, r275 Refactor [EnLibDaysView View] classes. Voeg lege helpers toe in base
- * r263 Uitgebreide classes bij [EnLibDaysHelperAbstract Days_Helper_Abstract]
- * r266 Fix #22: Pak uit [EnLibDaysException Days_Exception] van `Engine.php`
- * r267 Voeg toe methods [EnLibDaysResponse Days_Response]::getContent en [EnLibDaysResponse Days_Response]::setContent voor comfort en controle-uitgang van de enige
- * r268 Voeg toe methods [EnLibDaysEvent Days_Event]:: get($event) for all subscribers of certain event
- * r282 Voeg eerst [EnLibDaysHelper Helpers] toe
+ * r247 Maak [NlLibDaysToolAppGenerator Days_Tool_AppGenerator]. Verander `@package` en `@subpackage` in all Days classes
+ * r255 Voeg een class [NlLibDaysRouter Days_Router]. Voeg methods "copy" en "rename" naar [NlLibDaysDbTable Days_Db_Table]
+ * r262, r275 Refactor [NlLibDaysView View] classes. Voeg lege helpers toe in base
+ * r263 Uitgebreide classes bij [NlLibDaysHelperAbstract Days_Helper_Abstract]
+ * r266 Fix #22: Pak uit [NlLibDaysException Days_Exception] van `Engine.php`
+ * r267 Voeg toe methods [NlLibDaysResponse Days_Response]::getContent en [NlLibDaysResponse Days_Response]::setContent voor comfort en controle-uitgang van de enige
+ * r268 Voeg toe methods [NlLibDaysEvent Days_Event]:: get($event) for all subscribers of certain event
+ * r282 Voeg eerst [NlLibDaysHelper Helpers] toe
  * r283 `[lib/Templum]` Maak een nieuwe pagina functie
  * r284 `[lib/Templum]` Maak een nieuwe Collect block
  * r285 `[lib/Templum]` Voeg nieuwe tests toe in template
