@@ -6,7 +6,7 @@ Als u vertrouwd bent geraakt met het project en zich zelfverzekerd en geïnteres
 
 === Deelnamen phpDays team ===
 
- * Laat uw verzoek om toetreding tot het team als een commentaar op de [EnAnswers Discussions] pagina of stuur het naar[http://groups.google.com/group/phpdays-en project support group]
+ * Laat uw verzoek om toetreding tot het team als een commentaar op de [NlAnswers Discussions] pagina of stuur het naar[http://groups.google.com/group/phpdays-en project support group]
  * in het bericht staat een rol dat u zou willen nemen_(php developer, web designer, documentation translator, typesetter, !JavaScript developer)_ and include your Gmail address _(your Gmail username is enough)_
  * na enige tegenprestatie ontvangt u een e-mail met onze beslissing over het opnemen van je in het project _(als je niet het antwoord in drie dagen hebt, stuur dan uw verzoek opnieuw
  * als alles goed gaat, dan wordt u een lid van het project en zal in staat zijn om meer te doen dan een niet-lid kan _(je kunt de code van het project, documentatie en taak wijzigen)_
@@ -38,4 +38,4 @@ Start op [http://blogs.sun.com/netbeansphp/entry/recent_improvements_in_phpunit_
 
 === Schrijf betere code ===
 
-Lees meer over de[EnCodingStyle coding style] aangenomen in ons project. Na uniforme stijl, zodat alle ontwikkelaars te communiceren in een enkele, begrijpelijke taal.
+Lees meer over de[NlCodingStyle coding style] aangenomen in ons project. Na uniforme stijl, zodat alle ontwikkelaars te communiceren in een enkele, begrijpelijke taal.
