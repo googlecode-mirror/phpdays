@@ -1,5 +1,5 @@
 #summary Coding Stijl.
-#sidebar En
+#sidebar Nl
 <wiki:comment>revision: 1</wiki:comment>
 
 Om deel te nemen aan het project phpDays dient u dezelfde codering stijl volgen _ (syntax voor php, html, css, js en YAML bestanden) _.
