@@ -49,7 +49,7 @@ class Days_Tool_AppGenerator {
      * @return bool
      */
     public function createProject($proj_name){
-        $proj_root = realpath(__FILE__.'/../../../../..');
+        $proj_root = realpath(dirname(__FILE__).'/../../../..');
         $proj_dir = $proj_root."/{$proj_name}";
         if(is_dir($proj_dir)){
             throw new Exception("Project '{$proj_name}' already exists");
