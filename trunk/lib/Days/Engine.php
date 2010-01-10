@@ -119,6 +119,7 @@ final class Days_Engine {
         self::$_publicPath = getcwd() . '/';
         set_include_path(get_include_path() . PATH_SEPARATOR . self::$_libPath);
         spl_autoload_register(array(__CLASS__, 'autoload'));
+        Days_Session::init();
         // set config main file
         if (! empty($mode))
             Days_Config::setDefaultConfig($mode);
