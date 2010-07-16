@@ -63,6 +63,7 @@ try {
     print "\n";
     print "Commands:\n";
     print " - NEW:     create new project\n";
+    print " - REMOVE:  remove an existing project. Backup saved in user chosen location.\n";
     print " - ADD:     create new controller with actions (always create default action 'index')\n";
     print " - DEL:     delete actions in controller. Backup files save in directory 'backup'\n";
     print " - REPLACE: replace selected actions in controller to new empty actions. Backup files save in directory 'backup'\n";
@@ -82,7 +83,7 @@ try {
             // parse string
             $aCommandLineParams = explode(' ', $commandLine);
             foreach ($aCommandLineParams as &$sParam){
-                if($aCommandLineParams[0]=='new'){
+                if($aCommandLineParams[0]=='new'||$aCommandLineParams[0]=='remove'){
                     if($aCommandLineParams[1]){
                         break;
                     }
@@ -96,8 +97,15 @@ try {
             switch ($command) {
                 case 'new':
                     //create new project
-                    $generator->createProject($sController);
-                    echo "Project '{$sController}' succesfully created.\n";
+                    if($generator->createProject($sController)){
+                        echo "Project '{$sController}' succesfully created.\n";
+                    }
+                    break;
+                case 'remove':
+                    //remove an existing project after backup
+                    if($generator->deleteProject($sController)){
+                            echo "Project '{$sController}' succesfully deleted.\n";
+                    }
                     break;
                 case 'add':
                 case 'create':
