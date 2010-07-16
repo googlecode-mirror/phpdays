@@ -51,16 +51,91 @@ class Days_Tool_AppGenerator {
     public function createProject($proj_name){
         $proj_root = realpath(dirname(__FILE__).'/../../../..');
         $proj_dir = $proj_root."/{$proj_name}";
+        //check if another project with the entered name already exist
         if(is_dir($proj_dir)){
-            throw new Exception("Project '{$proj_name}' already exists");
-        }
+            echo "Project '{$proj_name}' already exists!!\n";
+            return;
+            }
         if(!mkdir($proj_dir,0755)){
             throw new Exception ("Directory '{$proj_dir}' could not be created.\nFail! Project '{$proj_name}' not created");
         }
         $source_dir = $proj_root.'/phpDays/apps/new';
+        //Creating new project
         $this->_copyDir($source_dir,$proj_dir);
+        return true;
     }
 
+    /**
+     * Delete a project
+     *
+     * @params $proj_name: Name of project to be deleted
+     * @return
+     */
+    public function deleteProject($proj_name){
+        $proj_root = realpath(dirname(__FILE__).'/../../../..');
+        $proj_dir = $proj_root."/{$proj_name}";
+        //Check if project is an existing one
+            if(!file_exists($proj_dir)){
+                echo "Project does not exist!!\n";
+                return;
+            }
+            else{
+                //Confirmation regarding removal of project
+                echo "Are you sure you want to delete the project from web server? (y/n) ";
+                $confirm = trim(fgets(STDIN));
+                if($confirm=='y'){
+                    echo "Would you like to backup the project? (y/n) ";
+                    //Backup project upon user's confirmation
+                    $bkup_confirm = trim(fgets(STDIN));
+                    if($bkup_confirm=='y'){
+                        //Getting the location of backup folder from user
+                        echo "Please enter the absolute path of the backup folder\n";
+                        $bkup_dir = trim(fgets(STDIN));
+                        //Backing up project to the user-chosen location
+                        if(!$this->_copyDir($proj_dir,$bkup_dir)){
+                            throw new Exception("Project could not be backed up. Make sure that backup folder exists.");
+                        }
+                        else{
+                            echo "Backup successfully completed!!!\n";
+                        }
+                    }
+                    $this->del_dir($proj_dir);
+                    if(!@rmdir($proj_dir)){
+                        throw new Exception ("Project could not be deleted. Ensure that no other application is accessing the root directory of the project.\n");
+                    }
+                    return true;
+                }
+                else{
+                    return false;
+                }
+            }
+    }
+
+    /**To recursively delete a directory
+     *
+     * @params $dir_name: Name of the Directory to be deleted
+     * @return
+     */
+    public function del_dir($dir_name){
+        $dir_iterator = new DirectoryIterator($dir_name);
+        foreach($dir_iterator as $item){
+            //Stepping over '.'&'..'
+            if(!$item->isDot()){
+                //Deletion of directories
+                if($item->isDir()){
+                    $this->del_dir($item->getPathname());
+                    if(!@rmdir($item->getPathname())){
+                        throw new Exception("Directory {$item->getPathname()} could not be deleted. Ensure that no other application is using this directory.\n");
+                    }
+                }
+                //Deletion of Files
+                else{
+                    if(!@unlink($item->getPathname()))
+                        throw new Exception("\n File {$item->getPathname()} could not be deleted. Ensure that the user is having write permission for the file to be deleted. \n");
+                }
+            }
+        }
+    }
     /**
      * Create new controller with actions.
      *
@@ -215,6 +290,7 @@ class Days_Tool_AppGenerator {
             }
             closedir($dir);
         }
+        return true;
     }
 
 
