@@ -9,6 +9,7 @@ db:
     username: root
     password: 123321
     dbname: phpdays
+    model_simulation: false
 engine:
   # collect debug info (1 - enable, 0 - disable)
   debug: 1
