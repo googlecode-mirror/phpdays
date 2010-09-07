@@ -139,6 +139,12 @@ final class Days_Engine {
         date_default_timezone_set(
             Days_Config::load()->get('engine/timezone', 'Europe/Helsinki')
         );
+        //Update DB
+        $DB_update= Days_Config::load()->get("db/default/model_simulation",false);
+        if($DB_update==true){
+        $path = self::appPath();
+        Days_Db::dbUpdate($path);
+        }
         // not send execution errors to user
         ob_start();
         try {

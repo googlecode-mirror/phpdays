@@ -9,6 +9,7 @@ db:
     username: root
     password: 123321
     dbname: blog
+    model_simulation: false
 engine:
   # collect debug info (1 - enable, 0 - disable)
   debug: 1
@@ -23,7 +24,7 @@ url:
   lang: ru
   ext: html
   # base path (need if site installed not in root directory)
-  base: 
+  base:
 view:
   engine: smarty
 cache:

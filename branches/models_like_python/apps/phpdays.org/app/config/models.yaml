@@ -59,9 +59,9 @@ User:
 UserGroup:
   name: {type: string, max: 200, required, key}
   created: {type: date}
-  users: {type: +User}
-  admins: {type: +User, required}
-  moderators: {type: +User}
+#  users: {type: +User}
+#  admins: {type: +User, required}
+#  moderators: {type: +User}
 
 Blog:
   name: {type: string, max: 50, required}
@@ -70,8 +70,8 @@ BlogPost:
   url: {type: string, max: 50, required}
   title: {type: string, max: 150, required}
   content: {type: text, max: 5000, required}
-  blog: {type: Blog}
-  category: {type: BlogCategory}
+#  blog: {type: Blog}
+#  category: {type: BlogCategory}
   tags: {type: BlogTag}
 
 BlogCategory:
